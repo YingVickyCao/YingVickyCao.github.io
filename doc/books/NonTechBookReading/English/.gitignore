@@ -1,0 +1,4 @@
+# Ref: https://github.com/github/gitignore
+*/.DS_Store
+.DS_Store
+/*/.DS_Store

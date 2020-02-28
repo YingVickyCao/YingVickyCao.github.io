@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Base64 decode and encode</title>
+  </head>
+  <body>
+    <h1>Base64 decode and encode</h1>
+
+    <p style="width: 40%; vertical-align: middle;">String</p>
+    <p>
+      <input type="text" id="stringValue" style="width: 40%;height:200px;" />
+      <button type="button" id="convertType" value="stringToBase64" style="width: 100px;height:60px;font-size: 50px;" onclick="_convert()">
+        ->
+      </button>
+
+      <input type="text" id="base64Value" style="width: 40%;height:200px; " />
+    </p>
+
+    <p style="width: 60%;height:50px;text-align: end">Base 64</p>
+
+    <script>
+      const STRING_2_BASE64 = "STRING_2_BASE64";
+      const BASE64_2_STRING = "BASE64_2_STRING";
+
+      function _convert() {
+        reverseType();
+        if (document.getElementById("convertType").value == STRING_2_BASE64) {
+          stringToBase64();
+        } else {
+          base64ToString();
+        }
+      }
+
+      function reverseType() {
+        if (document.getElementById("convertType").value == STRING_2_BASE64) {
+          document.getElementById("convertType").value = BASE64_2_STRING;
+          document.getElementById("convertType").innerText = "<-";
+        } else {
+          document.getElementById("convertType").value = STRING_2_BASE64;
+          document.getElementById("convertType").innerText = "->";
+        }
+      }
+
+      // "ABC" <-> QUJD
+      function base64ToString() {
+        // var str = "QUJD";
+        var str = document.getElementById("base64Value").value;
+        var decoded = window.atob(str);
+        document.getElementById("stringValue").value = decoded;
+        console.log(str, decoded);
+      }
+
+      function stringToBase64() {
+        // var str = "ABC";
+        var str = document.getElementById("stringValue").value;
+        var encoded = window.btoa(str);
+        console.log(str, encoded);
+        document.getElementById("base64Value").value = encoded;
+      }
+    </script>
+  </body>
+</html>

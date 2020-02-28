@@ -1,0 +1,48 @@
+# Mac Installation List
+
+- Kanban
+- Trello
+- IDEA
+- launchy
+- cleanmymac
+- Git
+- SourceTree
+- JIRA
+- Bitbucket
+- Confluence
+- GitHub Desktop
+- Gradle
+- Android Studio + NDK + SDk
+- JDK
+- Node.js
+- Visual Studio Code
+- 有道云笔记
+- 百度网盘
+- diffmerge
+- Beyond Compare
+- Clean My PC
+- NTFS for Mac
+- MacBooster
+- Lantern
+- Chrome
+- Thunder
+- QQ
+- WeiXin
+- avast (free)
+- Monolingual
+- Only X (free)
+- 搜狗输入法
+- Microsoft Remote Desktop for mac
+- macdown
+- MacDownPad2
+- Typora
+- World
+- Exccel
+- Outlook
+- PPT
+- Bing dict
+- Thunder
+- 滴答清单
+- 截图
+- Charles
+- 爱奇艺
