@@ -67,11 +67,11 @@
 
 ## 手动部署
 
-![manual-deploy-javaee-project.png](https://yingvickycao.github.io/img/manual-deploy-javaee-project.png)
+![manual_deploy_javaee_project](https://yingvickycao.github.io/img/manual_deploy_javaee_project.png)
 
 ## 自动化部署
 
-![auto-deploy-javaee-project.png](https://yingvickycao.github.io/img/auto-deploy-javaee-project.png)
+![auto_deploy_javaee_project](https://yingvickycao.github.io/img/auto_deploy_javaee_project.png)
 
 自动化的体现：  
 当代码库更新代码后，应用服务器上自动部署，用户或测试人员使用的马上就是最新的应用程序。
