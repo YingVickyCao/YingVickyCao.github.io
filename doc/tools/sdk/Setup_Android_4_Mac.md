@@ -101,6 +101,10 @@ Matching Java Virtual Machines (1):
 
 # 2.Gradle
 
+https://gradle.org/releases/
+Downloading https://services.gradle.org/distributions/gradle-6.2.1-bin.zip  
+Downloading https://services.gradle.org/distributions/gradle-6.2.1-all.zip
+
 ```
 # Gradle
 # 配置Gradle 环境变量
@@ -114,7 +118,7 @@ export PATH=$PATH:$GRADLE_HOME/bin
 gradle -v
 ```
 
-3.  Android Studio
+# 3. Android Studio
 
 https://developer.android.google.cn/studio
 
