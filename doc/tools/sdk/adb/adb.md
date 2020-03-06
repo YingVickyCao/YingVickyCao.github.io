@@ -281,8 +281,15 @@ $ adb shell getprop ro.sf.lcd_density
 $ adb shell getprop | grep density
 [ro.sf.lcd_density]: [440]
 
+// get
 $ adb shell wm density
 Physical density: 440
+
+// reset
+$ adb shell wm density reset
+
+// set.不改变app运行时要使用哪个文件夹：layout/layout-xlarge/layout-large.仅改变显示效果
+$ adb shell wm density 600
 ```
 
 # 查看屏幕尺寸
@@ -290,8 +297,15 @@ Physical density: 440
 ```
 # Pixel 3
 
+// get
 $ adb shell wm size
 Physical size: 1080x2160
+
+// reset
+$ adb shell wm size reset
+
+// set.不改变app运行时要使用哪个文件夹：layout/layout-xlarge/layout-large.仅改变显示效果
+$ adb shell wm size 1920x2560
 ```
 
 # 查看手机型号等相关信息
