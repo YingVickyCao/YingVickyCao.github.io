@@ -99,3 +99,8 @@ MovieActivity: onConfigurationChanged: newConfig=2
       adjustFullScreen(newConfig);
     }
 ```
+
+# QA: Can support other color icon instead of white icon ?
+
+Only support white.  
+If set not white icon, displayed as white icon,too.
