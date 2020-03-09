@@ -2,7 +2,7 @@
 
 Common attribue for Widget.
 
-# `onClick` vs `android:clickable`
+# 1 `onClick` vs `android:clickable`
 
 `TestTextViewClickFragment.java`
 `onClick` 会影响 `android:clickable`. 添加的 OnClick`后，自动设置`android:clickable=true`. 但要注意调用的顺序.
@@ -35,7 +35,7 @@ clickable = true;
 
 clickable = true，意味着对点击动作有反应，例如：根据设置的 textColor 变颜色，根据设置的 background 改变背景色等
 
-# `setMovementMethod(LinkMovementMethod.getInstance())` vs `android:linksClickable`
+# 2 `setMovementMethod(LinkMovementMethod.getInstance())` vs `android:linksClickable`
 
 `textView1.setMovementMethod(LinkMovementMethod.getInstance())` 与 `android:linksClickable` 类似。
 
@@ -52,7 +52,7 @@ textView1.setMovementMethod(LinkMovementMethod.getInstance());
 
 - Method2：Spannable
 
-# TextView change text and bg color
+# 3 TextView change text and bg color
 
 `TestTextViewFragment.java`
 
@@ -118,7 +118,7 @@ textView1.setMovementMethod(LinkMovementMethod.getInstance());
 </ViewGroup, such as LinearLayout>
 ```
 
-# 显示一个高亮绿灯的数字时钟
+# 4 显示一个高亮绿灯的数字时钟
 
 - 自定义字体
 - 发光效果
@@ -138,7 +138,7 @@ android:shadowRadius
 1. as 背景，显示 88：88：88 的阴影
 2. 当前时间
 
-# View.setId()?
+# 5 View.setId()?
 
 ```
 // SDK >= 17
@@ -156,7 +156,7 @@ my_view.setId(View.generateViewId());
 my_view.setId(R.id.my_view);
 ```
 
-# View vs SurfaceView vs GLSurfaceView
+# 6 View vs SurfaceView vs GLSurfaceView
 
 | 比较             | View              | SurfaceView                        | GLSurfaceView                      |
 | ---------------- | ----------------- | ---------------------------------- | ---------------------------------- |
