@@ -39,7 +39,17 @@
    	app:theme="@style/checkBox" />
 
 <style name="checkBox" parent="AppTheme">
-    <item name="colorAccent">@android:color/holo_orange_dark</item>
+  <!-- Option 2 -->
+  <!-- UnChecked -->
+  <item name="colorAccent">@android:color/holo_orange_dark</item>
+  <!-- Checked: no color -->
+  <item name="android:textColorSecondary">@android:color/holo_green_dark</item>
+
+  <!-- Option 1 -->
+  <!-- UnChecked ( 更优先 )-->
+  <item name="colorControlActivated">@android:color/holo_blue_dark</item>
+  <!-- Checked: no color ( 更优先 ) -->
+  <item name="colorControlNormal">@android:color/holo_purple</item>
 </style>
 ```
 
