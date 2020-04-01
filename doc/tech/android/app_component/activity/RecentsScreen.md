@@ -93,5 +93,6 @@ finish()
 # Ref：
 
 - https://developer.android.google.cn/guide/components/activities/recents
+- https://developer.android.google.cn/guide/components/activities/tasks-and-back-stack?hl=en
 - https://github.com/android/user-interface-samples/tree/master/DocumentCentricApps
 - https://developer.android.google.cn/guide/topics/manifest/activity-element
