@@ -1,12 +1,13 @@
-| Book Name                               | Author | Read Status |
-| --------------------------------------- | ------ | ----------- |
-| 我不是教你诈                            | 刘墉   | TBD         |
-| 漂泊的人生                              | 刘墉   | TBD         |
-| 点一盏心灯                              | 刘墉   | TBD         |
-| 肯定自己                                | 刘墉   | TBD         |
-| 创造自己                                | 刘墉   | TBD         |
-| [超越自己](SurpassYourself/Contents.md) | 刘墉   | TBD         |
-| Android 高级应用开发-深入篇             |        |
-| 疯狂 Android 讲义                       | 李刚   |
-| 人性的优点                              | 卡耐基 | Finish      |
-| 人性的弱点                              | 卡耐基 | Finish      |
+| Book Name                                                  | Author   |
+| ---------------------------------------------------------- | -------- |
+| 我不是教你诈                                               | 刘墉     |
+| 漂泊的人生                                                 | 刘墉     |
+| 点一盏心灯                                                 | 刘墉     |
+| 肯定自己                                                   | 刘墉     |
+| 创造自己                                                   | 刘墉     |
+| [超越自己](SurpassYourself/Contents.md)                    | 刘墉     |
+| Android 高级应用开发-深入篇                                |          |
+| 疯狂 Android 讲义                                          | 李刚     |
+| 人性的优点                                                 | 卡耐基   |
+| 人性的弱点                                                 | 卡耐基   |
+| [Head First 设计模式](Head_First_Design_Pattern/Readme.md) | O'Reilly |
