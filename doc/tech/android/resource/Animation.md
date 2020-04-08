@@ -166,6 +166,8 @@ Exit： 加速  // accelerate_interpolator 效果不明显，看不出来加速
 
 # 3 Custom activity enter or exit animation
 
+## Android <=5.0
+
 Way 1 : theme
 
 ```xml
@@ -218,6 +220,34 @@ void overridePendingTransition(int enterAnim, int exitAnim)
 ```
 
 - 在主线程运行定义入场动画
+
+## Android >=5.1 Transition
+
+- Enter:Explode,Slide,Fade
+- Exit : Explode,Slide,Fade
+- Shared elements:(two activities, activity-fragment). e.g, 两个 view 使用同一个图片
+
+```java
+
+// Enter,Exit  
+// A -> B.
+// B ->A. A重新显示的动画，与A消失时的动作相反
+getWindow().requestFeature(Window.FEATURE_ACTIVITY_TRANSITIONS);
+getWindow().setExitTransition(new Explode());
+startActivity(new Intent(this, FirstPageActivity.class), ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
+```
+
+```java
+ // Shared
+ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this, findViewById(R.id.view3), "share_ImageView");
+/
+ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this, Pair.create(findViewById(R.id.view3), "share_ImageView"));
+startActivity(new Intent(this, FirstPageActivity.class), options.toBundle());
+```
+
+https://developer.android.google.cn/training/transitions/start-activity#start-transition  
+https://www.zoftino.com/android-activity-transition-animation-examples  
+https://www.jianshu.com/p/0af52be90ae6
 
 ## References:
 
