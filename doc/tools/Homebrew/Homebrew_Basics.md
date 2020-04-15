@@ -258,15 +258,36 @@ echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebre
 source ~/.bash_profile
 ```
 
+# 5 Taps(third-party-repositories)
+
+```
+#  添加第三方仓库
+$ brew tap <gihhub_user/repo>
+e.g. brew tap denji/homebrew-nginx
+```
+
+```
+# Update and List tapped repos
+$ brew tap
+denji/nginx
+homebrew/core	// Default repo
+```
+
+```
+# Remove installed repo
+brew untap <gihhub_user>/<repo>
+```
+
 # Refs
 
 - [Homebrew GitHub](https://github.com/Homebrew/brew)
 - [Homebrew WebSite](https://brew.sh/)
 - [uninstall Homebrew](https://docs.brew.sh/FAQ#how-do-i-uninstall-homebrew)
-- [Bottles (binary packages)](https://homebrew.bintray.com/bottles)  
-  https://docs.brew.sh/Bottles.html  
+- [Bottles (binary packages)](https://homebrew.bintray.com/bottles)
+  https://docs.brew.sh/Bottles.html
   https://bintray.com/homebrew
 - [Homebrew 镜像使用帮助](https://mirror.tuna.tsinghua.edu.cn/help/homebrew/)
 - [ustc Homebrew 源使用帮助](https://mirrors.ustc.edu.cn/help/brew.git.html)
 - https://blog.csdn.net/jt521xlg/article/details/47129869
 - https://blog.csdn.net/huangdingsheng/article/details/83385992
+- [Taps](https://github.com/Homebrew/brew/blob/master/docs/Taps.md)
