@@ -14,6 +14,11 @@
   特点：易懂、简单、有趣。  
   可以作为设计模式的入门。
 - 设计模式适合任何 OO 语言
+- 采用“类” UML 图，而非 UML 类图。
+- 没有包含所有的设计模式  
+  设计模式有很多：Gof 的基础模式、Sun 的 J2EE 模式、JSP 模式、架构模式、游戏设计模式  
+  书中焦点是 Gof 的重要模式，Gof 的其他模式在附录中概略介绍
+- 书中“组合（Composition）”，指 OO 一般概念中的组合 Composition，不是 UML 严格定义的 Composition
 - Book Code  
   http://wickedlysmart.com/headfirstdesignpatterns/code.html
 
