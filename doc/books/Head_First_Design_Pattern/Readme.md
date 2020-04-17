@@ -20,7 +20,7 @@
   书中焦点是 Gof 的重要模式，Gof 的其他模式在附录中概略介绍
 - 书中“组合（Composition）”，指 OO 一般概念中的组合 Composition，不是 UML 严格定义的 Composition
 - Book Code  
-  http://wickedlysmart.com/headfirstdesignpatterns/code.html
+  https://www.wickedlysmart.com/head-first-design-patterns/
 
 - 设计模式是针对一些特定场景的、比较通用的解决方案。
 - 学习设计模式  
@@ -42,8 +42,8 @@
 
 ## OO 模式（设计模式）(13)
 
-- [策略模式(Strategy Ppatttern)](策略模式.md)
-- [观察者模式](观察者模式.md)
+- [策略模式(Strategy Pattern)](策略模式.md)
+- [观察者模式(Observer Pattern)](观察者模式.md)
 - 装设者模式
 - 工厂模式
 - 单件模式命令模式
