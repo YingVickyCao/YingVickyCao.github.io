@@ -40,14 +40,20 @@
 
 ## [OO 原则（设计原则）（10）](设计原则.md)
 
+- [原则 1：封装变化](策略模式.md#design_principles_1)
+- [原则 2：多用组合，少用继承](策略模式.md#design_principles_2)
+- [原则 3：针对接口编程，而不是针对实现编程](策略模式.md#design_principles_3)
+- [原则 4：松耦合](观察者模式.md#design_principles_4)
+- [原则 5: 开放-关闭原则](装饰者模式.md#design_patterns_decorator)
+
 ## OO 模式（设计模式）(13)
 
 - [策略模式(Strategy Pattern)](策略模式.md)
 - [观察者模式(Observer Pattern)](观察者模式.md)
-- 装设者模式
-- 工厂模式
+- [装设者模式（Decorator Pattern）](装饰者模式.md)
+- 工厂模式（Factory Pattern）
 - 单件模式命令模式
-- 适配器模式
+- 适配器模式（Builder Pattern）
 - 外观模式
 - 模版方法模式
 - 迭代模式
