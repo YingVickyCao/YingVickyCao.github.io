@@ -1,32 +1,80 @@
 # 加密和解密
 
-## 何为 加密 和 解密 ？
+- 密码(cipher)  
+  一种用于加密或者解密的算法
+- 密钥(key)  
+  密钥是一种参数，它是在使用密码（cipher）算法过程中输入的参数。  
+  同一个明文在相同的密码算法和不同的密钥计算下会产生不同的密文。  
+  密钥才是决定密文是否安全的重要参数，通常密钥越长，破解的难度越大。  
+  密钥分为对称密钥与非对称密钥。
+- 对称密钥 (Symmetric-key algorithm)  
+  又称为`共享密钥加密`。  
+  对称密钥在加密和解密的过程中使用同一个密钥。
 
-加密：把传入的内容，经过一定的算法，变成内容  
-解密：传入变后的内容，经过一定的算法，还原成原来的内容
+  常见的对称加密算法有 DES、3DES、AES、RC5、RC6。
 
-<h2 id="symmetric_encryption">2 对称加密</h2>
-加密与解密用的是同一个密钥。
+  优点：计算速度快
+  缺点：  
+  因为密钥需要在通讯的两端共享：  
+  如果所有客户端都共享同一个密钥，那么这个密钥能破解所有人的密文了。
+  如果每个客户端与服务端单独维护一个密钥，那么服务端需要管理的密钥将是成千上万，这会给服务端带来噩梦。
 
-指定的密钥，按照密码的长度截取数据，分成数据块，和密钥进行复杂的移位、算数运算或者数据处理等操作，形成只有特定的密码才能够解开的数据。
+- 非对称密钥（public-key cryptography）  
+  又称为`公开密钥加密`.  
+  服务端会生成一对密钥，一个`私钥`保存在服务端，仅自己知道，另一个是`公钥`，公钥可以自由发布供任何人使用。  
+  公钥加密,私钥解密。  
+  非对称密钥在加密和解密的过程的使用的密钥是不同的密钥，加密和解密是不对称的.  
+  与对称密钥加密相比，非对称加密无需在客户端和服务端之间共享密钥，只要私钥不发给任何用户，即使公钥在网上被截获，也无法被解密，仅有被窃取的公钥是没有任何用处的。
 
-## 碰撞攻击
+  常见的非对称加密有 RSA，
 
-抗碰撞性是相对与碰撞攻击讲，碰撞攻击指两个不同的原数据在算法加密后得到了相同的值。
+  非对称加解密的过程：  
+  1.服务端生成配对的公钥和私钥  
+  2.私钥保存在服务端，公钥发送给客户端  
+  3.客户端使用公钥加密明文传输给服务端  
+  4.服务端使用私钥解密密文得到明文
 
-## Hash vs Encrypting
+- 明文（plaintext）, 密文（ciphertext）  
+  明文是加密之前的数据。  
+  密文是通过密码（cipher）运算后得到的结果成为密文（ciphertext）
 
-Hashing is a one way function  
-Encrypting is a proper (two way) function.
+- 何为 加密 和 解密 ？  
+  加密：把传入的内容，经过一定的算法，变成内容  
+  解密：传入变后的内容，经过一定的算法，还原成原来的内容
+
+  <li id="symmetric_encryption">对称加密</li>
+  加密与解密用的是对称密钥。
+
+- 非对称加密  
+  加密时使用非对称密钥。
+
+- 碰撞攻击  
+  抗碰撞性是相对与碰撞攻击讲，碰撞攻击指两个不同的原数据在算法加密后得到了相同的值。
+- Hash vs Encrypting  
+  Hashing is a one way function  
+  Encrypting is a proper (two way) function.
 
 # Encrypting
 
-- [Dec](Dec.md)
+| 对称加密      |
+| ------------- |
+| [Dec](Dec.md) |
+| 3DES          |
+| AES           |
+| RC6           |
+
+| 非对称加密 |
+| ---------- |
+| RSA        |
 
 # Hashing
 
-- [MD5](MD5.md)
+| Hashing       |
+| ------------- |
+| [MD5](MD5.md) |
+| Base 64       |
 
 # Refs
 
-[Difference between Hashing a Password and Encrypting it](https://stackoverflow.com/questions/326699/difference-between-hashing-a-password-and-encrypting-it)
+- [Difference between Hashing a Password and Encrypting it](https://stackoverflow.com/questions/326699/difference-between-hashing-a-password-and-encrypting-it)
+- https://www.cnblogs.com/btgyoyo/p/6245618.html

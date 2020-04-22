@@ -5,6 +5,7 @@
 - [对称加密](Readme.md#symmetric_encryption)
 - 密钥必须是 8 个字节(byte[])，即 64bit 长度
 - 要加密、解密的内容是字节数组(`byte[]`),结果也是字节数组(`byte[]`)
+- 已被破解，不安全
 
 - TODO  
   https://blog.csdn.net/defonds/article/details/42775183
