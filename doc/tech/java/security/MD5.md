@@ -10,26 +10,6 @@
 - MD5 的前身有 MD2、MD3 和 MD4。
 - MD5 是 其中一种摘要算法（哈希算法,Hash）, 不是加解密算法
 
-# 特点
-
-- 强抗碰撞
-- MD5 不可逆：不能通过 MD5 值反推出原始数据的值
-
-## 使用场景
-
-- 一致性验证  
-  监测文件完整性：  
-  使用 MD5 checksum 校验下载后的软件包是否被修改
-
-  监测数据完整性：  
-  服务器使用 MD5 验证收到的数据是否完整
-
-  ![MD5_server_check_user_info](https://yingvickycao.github.io/img/MD5_server_check_user_info.png)
-
-- 数字签名
-- 安全访问认证  
-  操作系统的登陆认证：hashed 并存储用户设置的密码。当用户下次登录时，MD5 Hash 密码，判断与 saved 是否一致。
-
 ## 优化
 
 - 对 MD5 算法偏移  
