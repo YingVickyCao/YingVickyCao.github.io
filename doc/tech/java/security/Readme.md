@@ -50,9 +50,16 @@
 
 - 碰撞攻击  
   抗碰撞性是相对与碰撞攻击讲，碰撞攻击指两个不同的原数据在算法加密后得到了相同的值。
+
 - Hash vs Encrypting  
   Hashing is a one way function  
   Encrypting is a proper (two way) function.
+
+- 数字证书：TBD
+- 数字签名：TBD
+- 签名：TBD
+- 验证签名：TBD
+- 信息摘要（Message Digests）：TBD
 
 # Encrypting
 

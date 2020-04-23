@@ -44,14 +44,18 @@
 - [原则 2：多用组合，少用继承](策略模式.md#design_principles_2)
 - [原则 3：针对接口编程，而不是针对实现编程](策略模式.md#design_principles_3)
 - [原则 4：松耦合](观察者模式.md#design_principles_4)
-- [原则 5: 开放-关闭原则](装饰者模式.md#design_patterns_decorator)
+- [原则 5: 开放-关闭原则](装饰者模式.md#Open_Close_Principle)
+- [原则 6: 依赖倒置原则](工厂模式.md#Depency_Inverse_Principle)
 
 ## OO 模式（设计模式）(13)
 
 - [策略模式(Strategy Pattern)](策略模式.md)
 - [观察者模式(Observer Pattern)](观察者模式.md)
 - [装设者模式（Decorator Pattern）](装饰者模式.md)
-- 工厂模式（Factory Pattern）
+- [工厂模式（Factory Pattern)](工厂模式.md)  
+  [简单工厂](工厂模式.md#Simple_Factory)  
+  [工厂方法模式](工厂模式.md#Factory_Method_Pattern)  
+  [抽象工厂模式](工厂模式.md#Abstact_Factory_Pattern)
 - 单件模式命令模式
 - 适配器模式（Builder Pattern）
 - 外观模式
