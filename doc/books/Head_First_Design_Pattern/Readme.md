@@ -53,10 +53,11 @@
 - [观察者模式(Observer Pattern)](观察者模式.md)
 - [装设者模式（Decorator Pattern）](装饰者模式.md)
 - [工厂模式（Factory Pattern)](工厂模式.md)  
-  [简单工厂](工厂模式.md#Simple_Factory)  
-  [工厂方法模式](工厂模式.md#Factory_Method_Pattern)  
-  [抽象工厂模式](工厂模式.md#Abstact_Factory_Pattern)
-- 单件模式命令模式
+  [简单工厂(Simple Factory)](工厂模式.md#Simple_Factory)  
+  [工厂方法模式(Factory Method Pattern)](工厂模式.md#Factory_Method_Pattern)  
+  [抽象工厂模式(Abstact Factory Pattern)](工厂模式.md#Abstact_Factory_Pattern)
+- [单件模式 (Singleton Pattern)](单例模式.md)
+- 命令模式
 - 适配器模式（Builder Pattern）
 - 外观模式
 - 模版方法模式
