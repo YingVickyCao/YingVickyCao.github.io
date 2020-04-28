@@ -4,3 +4,14 @@
 熟悉业务  
 Product Manager 角度 看业务  
 程序并非完美
+
+3 Remove useless code regularly.  
+Resources  
+Code commenting  
+Method  
+Var  
+Class
+
+4 Run lint beore change code
+
+5 Refactor code
