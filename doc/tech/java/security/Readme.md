@@ -69,6 +69,8 @@
 - 签名：TBD
 - 验证签名：TBD
 - 信息摘要（Message Digests）：TBD
+- 数字摘要 ：TBD  
+  内容的 Hash 值
 
 # Encrypting
 
@@ -79,9 +81,9 @@
 | AES           |
 | RC6           |
 
-| 非对称加密 |
-| ---------- |
-| RSA        |
+| 非对称加密    |
+| ------------- |
+| [RSA](RSA.md) |
 
 # Hashing
 
@@ -90,6 +92,7 @@
 | [MD5](MD5.md) |
 | Base 64       |
 | SHA256        |
+| SHA1          |
 
 ## 特点
 
