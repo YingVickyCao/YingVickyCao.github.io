@@ -56,3 +56,16 @@
 - QA : Left of dynamic Circle when Clicked is hidden  
   android:layout_marginStart : Work  
   android:paddingStart : Not work
+
+- QA : Change icon size  
+  Way 1 : Depressed  
+  同时放缩文字和图片大小。图片清晰度改变。
+
+```xml
+<CheckBox
+   android:scaleX="0.7"
+   android:scaleY="0.7"/>
+```
+
+Way 2 : Recommended  
+导入 svg 时，设置大小。不改变图片清晰度。
