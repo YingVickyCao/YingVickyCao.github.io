@@ -61,8 +61,10 @@ java -version
 ## MAC JDK 版本切换
 
 - Download  
-  https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html // Current use  
-  http://openjdk.java.net/install/index.html
+  https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html  
+  https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html // Current use
+
+http://openjdk.java.net/install/index.html
 
 - https://www.mkyong.com/java/how-to-set-java_home-environment-variable-on-mac-os-x/
 

@@ -64,6 +64,9 @@
   Hashing is a one way function  
   Encrypting is a proper (two way) function.
 
+- Hash?  
+  A hashing algorithm is a mathematical function that condenses data to a fixed size
+
 - 数字证书：TBD
 - 数字签名：TBD
 - 签名：TBD
@@ -78,8 +81,10 @@
 | ------------- |
 | [Dec](Dec.md) |
 | 3DES          |
-| AES           |
+| [AES](AES.md) |
 | RC6           |
+
+---
 
 | 非对称加密    |
 | ------------- |
@@ -87,17 +92,26 @@
 
 # Hashing
 
-| Hashing       |
-| ------------- |
-| [MD5](MD5.md) |
-| Base 64       |
-| SHA256        |
-| SHA1          |
+| Hashing              | Encoded bytes |
+| -------------------- | ------------- |
+| [MD5](MD5.md)        | 16            |
+| [Base 64](Base64.md) |
+| [SHA](SHA.md)        |               |
+
+---
+
+- A cryptographic hash can be used to make a signature for a text or a data file.
+- There are hundreds of hashing algorithms out there and they all have specific purposes – some are optimized for certain types of data, others are for speed, security, etc.
+- cryptographic hash algorithms produce irreversible and unique hashes
 
 ## 特点
 
 - 强抗碰撞
-- MD5 不可逆：不能通过 MD5 值反推出原始数据的值
+- unique  
+  determinism : Same content -> same hash value  
+   ![determinism](https://www.thesslstore.com/blog/wp-content/uploads/2018/08/Hashing.png)
+- one-way hash  
+  不可逆(irreversible).不能通过 Hash 值反推出原始数据的值
 
 ## 使用场景
 
@@ -117,6 +131,8 @@
   若没有，则上传； b
   若已上传，则共享。  
   目的：服务器文件去重，降低服务器负载，减少服务器存储占用
+
+# 数字签名
 
 # Refs
 
