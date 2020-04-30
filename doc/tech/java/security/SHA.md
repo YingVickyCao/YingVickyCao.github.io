@@ -69,7 +69,25 @@ Case 3 : 访问的网站域名与证书绑定的域名不一致
 - 中间人攻击  
   对 HTTPS 最常见的攻击手段就是 SSL 证书欺骗或者叫 SSL 劫持
 - 网上交易一定要证书受信任才可以
-- 自我描述这个过程
+
+- 自我描述过程：app 判断 UAT 服务器的域名不合法
+
+```
+  app 发送 https 请求到 服务器。在建立 SSL 过程中，
+  Step 1 ：公司花钱为某个服务器向 CA 申请证书(.cert)。
+  Step 2 ：CA 批准，制作完成后，把证书文件发给 公司，公司会部署在服务器上。
+  Step 3 ：公司还会把证书发给 mobile 组，
+  Step 4 ：mobile 组从证书中提取 public key，然后 得到 public key 的 hash value。
+          并 在代码中把 host name 和 hash value 写入 map。
+  Step 5 ：app 向服务器发送 含域名的https 请求。
+          服务器返回数据时，https的低层实现自动把证书的相关信息，包括 public key ，返回。
+  Step 6 ：app 收到 response时，判断 response 带 的public key 的 hash 值 与 map 中public key 的 hash value
+          是否一致。如果不一致，说明有问题，报错。
+```
+
+- 如果是服务器的证书过期了，会怎么样？
+  Step 1 ： 客户端发送请求到服务器。
+  Step 2 ： 服务器收到后，https 低层实现自动把证书中的带的域名、签名机构等信息提取出来，然后向该签名机构发送请求验证：当前签名的信息（e.g,到期日期）是否与在该机构中注册的一致？如果不一致，说明当前服务器是伪装的服务器，握手失败。 如果一致，继续与客户端握手。
 
 # Refs
 
