@@ -57,8 +57,10 @@
    利用非对称加密来加密对称加密的密钥，然后用对称加密的密钥加密整个网络交互的数据包  
   ![Combine_Asymmetric_and_Symmetric_cryptography_4_newwork.png](https://yingvickycao.github.io/img/Combine_Asymmetric_and_Symmetric_cryptography_4_newwork.png)
 
-- 碰撞攻击  
+- 碰撞(collision )攻击  
   抗碰撞性是相对与碰撞攻击讲，碰撞攻击指两个不同的原数据在算法加密后得到了相同的值。
+
+  > collision: if two different values or files can produce the same hash, you create what we call a collision.
 
 - Hash vs Encrypting  
   Hashing is a one way function  
@@ -107,9 +109,13 @@
 ## 特点
 
 - 强抗碰撞
-- unique  
-  determinism : Same content -> same hash value  
-   ![determinism](https://www.thesslstore.com/blog/wp-content/uploads/2018/08/Hashing.png)
+- produces unique hashes  
+  determinism :
+  Same content -> same hash value  
+  Different content -> different hash value
+
+  ![determinism](https://www.thesslstore.com/blog/wp-content/uploads/2018/08/Hashing.png)
+
 - one-way hash  
   不可逆(irreversible).不能通过 Hash 值反推出原始数据的值
 

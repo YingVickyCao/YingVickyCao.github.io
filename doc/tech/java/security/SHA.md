@@ -91,6 +91,19 @@ Case 3 : 访问的网站域名与证书绑定的域名不一致
   Step 1 ： 客户端发送请求到服务器。  
   Step 2 ： 服务器收到后，https 低层实现自动把证书中的带的域名、签名机构等信息提取出来，然后向该签名机构发送请求验证：当前签名的信息（e.g,到期日期）是否与在该机构中注册的一致？如果不一致，说明当前服务器是伪装的服务器，握手失败。 如果一致，继续与客户端握手。
 
+- The SSL industry has picked SHA as its hashing algorithm for digital signatures
+
+  网站的 SSL 证书的 SHA-1 和 SHA-2 哈希值:  
+  ![Hash of www.thesslstore.com certificate](https://www.thesslstore.com/blog/wp-content/uploads/2016/07/SHA1SHA2.png)
+
+  证书第 1 代：SHA-1  
+  SHA-1 被认为是不安全的，因为由于其大小和构造，产生碰撞是可行的。已经被淘汰。  
+  SHA-1 证书在浏览器会被警告：  
+  ![certifacte with SHA-1 is showed wrong in Chrome](https://www.thesslstore.com/blog/wp-content/uploads/2016/07/SHA1BadSSL.png)
+
+  证书第 2 代：SHA-2  
+  正在使用
+
 # Refs
 
 - [Hash fucntions](https://cryptii.com/pipes/hash-function)
