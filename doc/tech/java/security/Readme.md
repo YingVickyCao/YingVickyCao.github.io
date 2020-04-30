@@ -66,16 +66,22 @@
   Hashing is a one way function  
   Encrypting is a proper (two way) function.
 
-- Hash?  
+- Hash ?  
   A hashing algorithm is a mathematical function that condenses data to a fixed size
 
-- 数字证书：TBD
-- 数字签名：TBD
-- 签名：TBD
-- 验证签名：TBD
-- 信息摘要（Message Digests）：TBD
-- 数字摘要 ：TBD  
-  内容的 Hash 值
+- 数字证书(Digital certificate)/数字签名(Digital Signatures) /签名  
+  CA 认证的文档(.cert)。  
+  过程：使用对称加密 产生公钥和私钥。私钥 CA 自己保存。把公钥、包括 host name、签名公司、、加密算法、Hash 算法、到日日期等存入一个.cert 文件（证书）中。这就是签名。
+
+- [证书锁定 Certificate Pinning / 验证签名](https://www.cnblogs.com/daxueba-ITdaren/p/6495468.html)  
+  证书锁定 是 SSL/TLS 加密的额外保证手段。它会将服务器的证书公钥预先保存在客户端。
+  在建立安全连接的过程中，客户端会将预置的公钥和接受的证书做比较。如果一致，就建立连接，否则就拒绝连接。
+
+- 信息摘要（Message Digests）/ 摘要:  
+  对信息使用某种 Hash 算法，得到的 Hash 值
+
+- 数字摘要 ：  
+  对签名的信息，使用某种 Hash 算法，得到的 Hash 值。
 
 # Encrypting
 
