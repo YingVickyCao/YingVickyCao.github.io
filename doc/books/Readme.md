@@ -11,3 +11,8 @@
 | 人性的优点                                                 | 卡耐基   |
 | 人性的弱点                                                 | 卡耐基   |
 | [Head First 设计模式](Head_First_Design_Pattern/Readme.md) | O'Reilly |
+
+# Other
+
+- 207 | 亲历疫情之后，如何让生活回归正轨？
+- [快乐是习得](快乐是习得.md)
