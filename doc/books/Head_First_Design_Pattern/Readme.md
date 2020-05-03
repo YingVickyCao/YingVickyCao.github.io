@@ -57,7 +57,8 @@
   [工厂方法模式(Factory Method Pattern)](工厂模式.md#Factory_Method_Pattern)  
   [抽象工厂模式(Abstact Factory Pattern)](工厂模式.md#Abstact_Factory_Pattern)
 - [单件模式 (Singleton Pattern)](单例模式.md)
-- 命令模式
+- [命令模式(Command Pattern)](命令模式.md#Command_Pattern)
+- [空对象(NULL Object)](命令模式.md#NULL_Object)
 - 适配器模式（Builder Pattern）
 - 外观模式
 - 模版方法模式
