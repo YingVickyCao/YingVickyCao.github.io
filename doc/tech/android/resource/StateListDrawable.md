@@ -25,9 +25,7 @@
 
 # 2 How to use selector
 
-+-
-
-## android:textColor
+## `android:textColor`
 
 ```
 <Button android:textColor="@color/color_v1_2" />
@@ -45,11 +43,9 @@
 </selector>
 ```
 
-- LinearLayout 中 Item View，不能使用`android:duplicateParentState="true"`，否则不能改变 bg 和 text color
-
-TestLinearLayoutCannotChangeColorFragment.java
-
-TestLinearLayoutCannotChangeColorFragment2.java
+- LinearLayout 中 Item View，不能使用`android:duplicateParentState="true"`，否则不能改变 bg 和 text color  
+  TestLinearLayoutCannotChangeColorFragment.java  
+  TestLinearLayoutCannotChangeColorFragment2.java
 
 - ListView 中 Item View，能使用`android:duplicateParentState="true"`，  可以改变 bg 和 text color
 
