@@ -46,7 +46,7 @@
 - [原则 4：松耦合](观察者模式.md#design_principles_4)
 - [原则 5: 开放-关闭原则](装饰者模式.md#Open_Close_Principle)
 - [原则 6: 依赖倒置原则](工厂模式.md#Depency_Inverse_Principle)
-- [原则 7: 最少知识原则](外观模式.md#Depency_Inverse_Principle)
+- [原则 7: 最少知识原则](外观模式.md#（Least_Knowledge_Principle)
 
 ## OO 模式（设计模式）(13)
 
@@ -60,7 +60,7 @@
 - [单件模式 (Singleton Pattern)](单例模式.md)
 - [命令模式(Command Pattern)](命令模式.md#Command_Pattern)
 - [空对象(NULL Object)](命令模式.md#NULL_Object)
-- [适配器模式（ Adapter Pattern）](适配器模式.md)
+- [适配器模式 (Adapter Pattern）](适配器模式.md)
 - [外观模式( Facade Pattern)](外观模式.md)
 - 模版方法模式
 - 迭代模式
