@@ -48,21 +48,23 @@
 - [原则 6: 依赖倒置原则](工厂模式.md#Depency_Inverse_Principle)
 - [原则 7: 最少知识原则](外观模式.md#（Least_Knowledge_Principle)
 
-## OO 模式（设计模式）(13)
+## OO 模式（设计模式）(10+)
 
 - [策略模式(Strategy Pattern)](策略模式.md)
 - [观察者模式(Observer Pattern)](观察者模式.md)
 - [装设者模式（Decorator Pattern）](装饰者模式.md)
 - [工厂模式（Factory Pattern)](工厂模式.md)  
-  [简单工厂(Simple Factory)](工厂模式.md#Simple_Factory)  
-  [工厂方法模式(Factory Method Pattern)](工厂模式.md#Factory_Method_Pattern)  
+  [简单工厂(Simple Factory)](工厂模式.md#Simple_Factory) ：不是模式  
+  [工厂方法模式(Factory Method Pattern)](工厂模式.md#F actory_Method_Pattern)  
   [抽象工厂模式(Abstact Factory Pattern)](工厂模式.md#Abstact_Factory_Pattern)
 - [单件模式 (Singleton Pattern)](单例模式.md)
 - [命令模式(Command Pattern)](命令模式.md#Command_Pattern)
 - [空对象(NULL Object)](命令模式.md#NULL_Object)
-- [适配器模式 (Adapter Pattern）](适配器模式.md)
+- [适配器模式 (Adapter Pattern）](适配器模式.md)  
+  类适配器模式  
+  对象适配器模式
 - [外观模式( Facade Pattern)](外观模式.md)
-- 模版方法模式
+- [模版方法模式(Template method pattern)](模版方法模式.md)
 - 迭代模式
 - 组合模式
 - 状态模式
