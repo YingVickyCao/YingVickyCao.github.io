@@ -65,7 +65,7 @@
   类适配器模式  
   对象适配器模式
 - [外观模式( Facade Pattern)](外观模式.md)
-- [模版方法模式(Template method pattern)](模版方法模式.md)  
+- [模版方法模式(Template Method Pattern)](模版方法模式.md)  
   钩子
 - 迭代模式
 - 组合模式
