@@ -47,6 +47,7 @@
 - [原则 5: 开放-关闭原则](装饰者模式.md#Open_Close_Principle)
 - [原则 6: 依赖倒置原则](工厂模式.md#Depency_Inverse_Principle)
 - [原则 7: 最少知识原则](外观模式.md#（Least_Knowledge_Principle)
+- [原则 8: 好莱坞原则](模版方法模式.md#Hollywood_Principle)
 
 ## OO 模式（设计模式）(10+)
 
@@ -64,7 +65,8 @@
   类适配器模式  
   对象适配器模式
 - [外观模式( Facade Pattern)](外观模式.md)
-- [模版方法模式(Template method pattern)](模版方法模式.md)
+- [模版方法模式(Template method pattern)](模版方法模式.md)  
+  钩子
 - 迭代模式
 - 组合模式
 - 状态模式
