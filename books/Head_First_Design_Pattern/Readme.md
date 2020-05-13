@@ -51,28 +51,34 @@
 
 ## OO 模式（设计模式）(10+)
 
-- [策略模式(Strategy Pattern)](策略模式.md)
-- [观察者模式(Observer Pattern)](观察者模式.md)
-- [装设者模式（Decorator Pattern）](装饰者模式.md)
+| 模式                                                     | 描述                                                           |
+| -------------------------------------------------------- | -------------------------------------------------------------- |
+| [策略模式(Strategy Pattern)](策略模式.md)                | 封装可互换的行为，然后使用委托（对象组合）来决定采用哪一个行为 |
+| [观察者模式(Observer Pattern)](观察者模式.md)            | 当某个状态改变时，允许一群对象能被通知到                       |
+| [装设者模式（Decorator Pattern）](装饰者模式.md)         | -                                                              |
+| [工厂模式（Factory Pattern)](工厂模式.md)                | 工厂方法：由子类决定实例化哪个具体类                           |
+| [单件模式 (Singleton Pattern)](单例模式.md)              | -                                                              |
+| [命令模式(Command Pattern)](命令模式.md#Command_Pattern) | -                                                              |
+| [空对象(NULL Object)](命令模式.md#NULL_Object)           | -                                                              |
+| [适配器模式 (Adapter Pattern）](适配器模式.md)           | 改变一个或多个类的接口                                         |
+| [外观模式( Facade Pattern)](外观模式.md)                 | 简化一群类的接口                                               |
+| [单件模式 (Singleton Pattern)](单例模式.md)              | -                                                              |
+| [模版方法模式(Template Method Pattern)](模版方法模式.md) | 由子类决定如何实现算法中的步骤                                 |
+| [迭代器模式)](迭代器模式.md)                             | 提供一个方式来遍历集合，而无需暴露集合的实现                   |
+| [组合模式(Composite Pattern)](组合模式.md)               | 客户可以将对象的集合以及个别的对象一视同仁                     |
+| [状态模式(Status Pattern)](状态模式.md)                  | -                                                              |
+| [代理模式](代理模式.md)                                  | -                                                              |
+| [复合模式](复合模式.md)                                  | -                                                              |
+
 - [工厂模式（Factory Pattern)](工厂模式.md)  
   [简单工厂(Simple Factory)](工厂模式.md#Simple_Factory) ：不是模式  
-  [工厂方法模式(Factory Method Pattern)](工厂模式.md#F actory_Method_Pattern)  
+  [工厂方法模式(Factory Method Pattern)](工厂模式.md#Factory_Method_Pattern)  
   [抽象工厂模式(Abstact Factory Pattern)](工厂模式.md#Abstact_Factory_Pattern)
-- [单件模式 (Singleton Pattern)](单例模式.md)
-- [命令模式(Command Pattern)](命令模式.md#Command_Pattern)
-- [空对象(NULL Object)](命令模式.md#NULL_Object)
 - [适配器模式 (Adapter Pattern）](适配器模式.md)  
   类适配器模式  
   对象适配器模式
-- [外观模式( Facade Pattern)](外观模式.md)
 - [模版方法模式(Template Method Pattern)](模版方法模式.md)  
   钩子
-- 迭代模式
-- 组合模式
-- 状态模式
-- 代理模式
-- 复合模式
-- 真实世界中的模式
 
 # Refs
 
