@@ -44,31 +44,32 @@
 - [原则 2：多用组合，少用继承](策略模式.md#design_principles_2)
 - [原则 3：针对接口编程，而不是针对实现编程](策略模式.md#design_principles_3)
 - [原则 4：松耦合](观察者模式.md#design_principles_4)
-- [原则 5: 开放-关闭原则](装饰者模式.md#Open_Close_Principle)
-- [原则 6: 依赖倒置原则](工厂模式.md#Depency_Inverse_Principle)
-- [原则 7: 最少知识原则](外观模式.md#（Least_Knowledge_Principle)
-- [原则 8: 好莱坞原则](模版方法模式.md#Hollywood_Principle)
+- [原则 5: 开放-关闭原则 (Open Close Principle)](装饰者模式.md#Open_Close_Principle)
+- [原则 6: 依赖倒置原则 (Depency Inverse Principle)](工厂模式.md#Depency_Inverse_Principle)
+- [原则 7: 最少知识原则 (（Least Knowledge Principle)](外观模式.md#（Least_Knowledge_Principle)
+- [原则 8: 好莱坞原则 (Hollywood Principle)](模版方法模式.md#Hollywood_Principle)
+- [原则 9: 单一责任原则 (Single Responsibility Principle) ](迭代器模式.md#Single_Responsibility_Principle)
 
 ## OO 模式（设计模式）(10+)
 
-| 模式                                                     | 描述                                                           |          |
-| -------------------------------------------------------- | -------------------------------------------------------------- | -------- |
-| [策略模式(Strategy Pattern)](策略模式.md)                | 封装可互换的行为，然后使用委托（对象组合）来决定采用哪一个行为 | -        |
-| [观察者模式(Observer Pattern)](观察者模式.md)            | 当某个状态改变时，允许一群对象能被通知到                       | -        |
-| [装设者模式（Decorator Pattern）](装饰者模式.md)         | -                                                              | -        |
-| [工厂模式（Factory Pattern)](工厂模式.md)                | 工厂方法：由子类决定实例化哪个具体类                           | -        |
-| [单件模式 (Singleton Pattern)](单例模式.md)              | -                                                              | -        |
-| [命令模式(Command Pattern)](命令模式.md#Command_Pattern) | -                                                              | -        |
-| [空对象(NULL Object)](命令模式.md#NULL_Object)           | -                                                              | -        |
-| [适配器模式 (Adapter Pattern）](适配器模式.md)           | 改变一个或多个类的接口                                         | -        |
-| [外观模式( Facade Pattern)](外观模式.md)                 | 简化一群类的接口                                               | -        |
-| [单件模式 (Singleton Pattern)](单例模式.md)              | -                                                              | -        |
-| [模版方法模式(Template Method Pattern)](模版方法模式.md) | 由子类决定如何实现算法中的步骤                                 | -        |
-| [迭代器模式)](迭代器模式.md)                             | 提供一个方式来遍历集合，而无需暴露集合的实现                   | 管理集合 |  |
-| [组合模式(Composite Pattern)](组合模式.md)               | 客户可以将对象的集合以及个别的对象一视同仁                     | 管理集合 |  |
-| [状态模式(Status Pattern)](状态模式.md)                  | -                                                              | -        |
-| [代理模式](代理模式.md)                                  | -                                                              | -        |
-| [复合模式](复合模式.md)                                  | -                                                              | -        |
+| 模式                                                     | 描述                                                           |              |
+| -------------------------------------------------------- | -------------------------------------------------------------- | ------------ |
+| [策略模式(Strategy Pattern)](策略模式.md)                | 封装可互换的行为，然后使用委托（对象组合）来决定采用哪一个行为 | 封装算法     |
+| [观察者模式(Observer Pattern)](观察者模式.md)            | 当某个状态改变时，允许一群对象能被通知到                       | -            |
+| [装设者模式（Decorator Pattern）](装饰者模式.md)         | -                                                              | 包装对象     |
+| [工厂模式（Factory Pattern)](工厂模式.md)                | 工厂方法：由子类决定实例化哪个具体类                           | 封装对象创建 |
+| [单件模式 (Singleton Pattern)](单例模式.md)              | -                                                              | -            |
+| [命令模式(Command Pattern)](命令模式.md#Command_Pattern) | -                                                              | 封装调用     |
+| [空对象(NULL Object)](命令模式.md#NULL_Object)           | -                                                              | -            |
+| [适配器模式 (Adapter Pattern）](适配器模式.md)           | 改变一个或多个类的接口                                         | 包装对象     |
+| [外观模式( Facade Pattern)](外观模式.md)                 | 简化一群类的接口                                               | 包装对象            |
+| [单件模式 (Singleton Pattern)](单例模式.md)              | -                                                              | -            |
+| [模版方法模式(Template Method Pattern)](模版方法模式.md) | 由子类决定如何实现算法中的步骤                                 | 封装算法     |
+| [迭代器模式)](迭代器模式.md)                             | 提供一个方式来遍历集合，而无需暴露集合的实现                   | 管理集合     |  |
+| [组合模式(Composite Pattern)](组合模式.md)               | 客户可以将对象的集合以及个别的对象一视同仁                     | 管理集合     |  |
+| [状态模式(Status Pattern)](状态模式.md)                  | -                                                              | -            |
+| [代理模式](代理模式.md)                                  | -                                                              | -            |
+| [复合模式](复合模式.md)                                  | -                                                              | -            |
 
 - [工厂模式（Factory Pattern)](工厂模式.md)  
   [简单工厂(Simple Factory)](工厂模式.md#Simple_Factory) ：不是模式  
