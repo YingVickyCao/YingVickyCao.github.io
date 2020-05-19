@@ -410,7 +410,7 @@ PNG/GIF 格式。
   若背景色只是稍微调整，则可能注意不到任何差别。  
   若背景色有很大变化，则必须使用新的蒙版颜色重新创建 PNG。
 
-- 为什么需要柔化文本边缘
+- 为什么需要柔化文本边缘  
   ![logo_mypod.jpg](https://yingvickycao.github.io/img/logo_mypod.jpg)
 
 第 1 个版本：  
