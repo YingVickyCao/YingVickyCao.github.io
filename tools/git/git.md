@@ -1176,6 +1176,120 @@ $ git stash drop stash@{index}      // Delete index
   Step 2 : Update from `.git/config`  
   Step 3 : `git submodule sync`
 
+# 36 cherry-pick：Copy commit from branch A to B
+
+- atlassian.com/git/tutorials/cherry-pick
+- git-scm.com/docs/cherry-pick
+
+options:
+
+```
+// 编辑提交信息 before applying the cherry-pick operation
+-edit
+-e
+
+// 不自动commit
+--no-commit
+
+// 退出当前的cherry-pick序列
+// e.g, 如果发生冲突，该命令把当前分支中未冲突的内容状态为modified
+--quit
+
+// 取消当前的cherry-pick序列，恢复当前分支
+--abort
+
+
+// 继续当前的cherry-pick序列
+// e.g, 如果发生冲突，首先先解决冲突，通过git add 标记为已解决，然后使用该命令来继续cherry-pick
+--continue
+
+// 允许空提交
+--allow-empty
+```
+
+## `git cherry-pick <commit_id A> <commit_id C>`
+
+其中 A、C 2 个 commit id 被 added.
+
+E.g., copy commit f from branch Feature to branch R1
+
+```
+// current branch = Feature, 1e28011 = f
+$ git cherry-pick 1e28011
+
+$ git checkout R1
+// current branch = R1
+
+// commit 1e28011 is copyied from feature to R1 (commited) .
+$ git cherry-pick 1e28011
+```
+
+```
+a - b - c - d               R1
+         \
+           e - f - g        Feature
+```
+
+```
+a - b - c - d - f           R1
+     \
+       e - f - g            Feature
+```
+
+## `git cherry-pick [commit_id_1...commit_id_100]`
+
+e.g., copy commit e and f from branch Feature to branch R2
+
+```
+// e=5328c8b, 0c3f04c = f
+// Feature -> R2
+// current branch = Feature
+$ git cherry-pick 5328c8b^...0c3f04c
+
+$ git checkout r2
+// current branch = R2
+
+$ git cherry-pick 5328c8b^...0c3f04c
+On branch r2
+Your branch is up to date with 'origin/r2'.
+
+Cherry-pick currently in progress.
+
+nothing to commit, working tree clean
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+and then use:
+
+    git cherry-pick --continue
+
+to resume cherry-picking the remaining commits.
+If you wish to skip this commit, use:
+
+    git cherry-pick --skip
+
+$ git commit --allow-empty
+
+// Feature -> R2, current branch = R2
+$ git cherry-pick --continue
+```
+
+```
+a - b - c - d               r2
+         \
+           e - f - g        feature
+```
+
+```
+a - b - c - d - e- f        r2
+     \
+       e - f - g            feature
+```
+
+## `git cherry-pick (commit_id_1...commit_id_100]`
+
 # Refs
 
 - Gerrit Code Review https://www.gerritcodereview.com/
