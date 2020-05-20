@@ -55,7 +55,7 @@ Canvas.isHardwareAccelerated()
 
 ## Software-based drawing model
 
-- `Steps` when views are drawn :
+- Steps
 
 ```
 1. Invalidate the hierarchy
@@ -65,7 +65,7 @@ Canvas.isHardwareAccelerated()
 - `When` needs to update a part of its UI:  
   invokes `invalidate() (or one of its variants)` on any view that has changed content.
 
-dirty region
+- dirty region
 
 - Drawbacks:  
   (1) Executing the drawing commands immediately  
@@ -79,7 +79,7 @@ dirty region
 
 ## Hardware accelerated drawing model
 
-- `Steps` when views are drawn :
+- `Steps`
 
 ```
 1. Invalidate the hierarchy
@@ -89,7 +89,8 @@ dirty region
 
 Advantages:  
 (1) Android system records them inside display lists, which contain the output of the view hierarchy’s drawing code.  
-(2) Android system only needs to record and update display lists for views marked dirty by an invalidate() call. Views that have not been invalidated can be redrawn simply by re-issuing the previously recorded display list.
+(2) Android system only needs to record and update display lists for views marked dirty by an invalidate() call. Views that have not been invalidated can be redrawn simply by re-issuing the previously recorded display list.  
+The view is not redrawn unless you change the view's properties, which calls invalidate(), or if you call invalidate() manually.
 
 - E.g.
 
@@ -199,6 +200,37 @@ Below table: All drawing operations can scale without issue,correctly handling l
 
 - Performance  
   Use a hardware layer type to render a view into a hardware texture. Once a view is rendered into a layer, its drawing code does not have to be executed until the view calls invalidate(). Some animations, such as alpha animations, can then be applied directly onto the layer, which is very efficient for the GPU to do.
+- Layer
+  Off-screen buffers, or layers, have several uses.  
+  Use them to get better performance when animating complex views or to apply composition effects.  
+  For instance, you can implement fade effects using Canvas.saveLayer() to temporarily render a view into a layer and then composite it back on screen with an opacity factor.
+
+<h2 id="View_layers_and_animations">View layers and animations</h2>
+
+使用硬件加速，来提供更流畅的动画效果。  
+use hardware layers to render the view to a hardware texture.  
+The hardware texture can then be used to animate the view, eliminating the need for the view to constantly redraw itself when it is being animated. The view is not redrawn unless you change the view's properties, which calls invalidate(), or if you call invalidate() manually.
+
+When a view is backed by a hardware layer, some of its properties are handled by the way the layer is composited on screen. Setting these properties will be efficient because they do not require the view to be invalidated and redrawn.
+
+- `alpha`: Changes the layer's opacity
+- `x, y, translationX, translationY`: Changes the layer's position
+- `scaleX, scaleY`: Changes the layer's size
+- `rotation, rotationX, rotationY`: Changes the layer's orientation in 3D space
+- `pivotX, pivotY`: Changes the layer's transformations origin
+
+```java
+view.setLayerType(View.LAYER_TYPE_HARDWARE, null);
+ObjectAnimator animator = ObjectAnimator.ofFloat(view, "rotationY", 180);
+animator.addListener(new AnimatorListenerAdapter() {
+    @Override
+    public void onAnimationEnd(Animator animation) {
+        // Because hardware layers consume video memory,disable them after the animation is done
+        view.setLayerType(View.LAYER_TYPE_NONE, null);
+    }
+});
+animator.start();
+```
 
 # Refs
 
