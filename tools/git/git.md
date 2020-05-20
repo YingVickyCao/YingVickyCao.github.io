@@ -1176,7 +1176,7 @@ $ git stash drop stash@{index}      // Delete index
   Step 2 : Update from `.git/config`  
   Step 3 : `git submodule sync`
 
-# 36 cherry-pick：Copy commit from branch A to B
+# 36 cherry-pick：recommited from branch A to B
 
 - atlassian.com/git/tutorials/cherry-pick
 - git-scm.com/docs/cherry-pick
@@ -1211,17 +1211,22 @@ options:
 
 其中 A、C 2 个 commit id 被 added.
 
-E.g., copy commit f from branch Feature to branch R1
+E.g., recommited from branch Feature to branch R1
 
 ```
-// current branch = Feature, 1e28011 = f
-$ git cherry-pick 1e28011
+// Feature -> R1
+// current branch = R1; 1e28011 = f, in branch Feature
+Step 1: $ git cherry-pick 1e28011
+conflict (go 2), or success(go 3)
 
-$ git checkout R1
-// current branch = R1
+Step 2
+2.1  fix conflict,then repeat Step 1
+  $ git add/rm
+  $ git cherry-pick --continue
+  Then repeat Step 1
 
-// commit 1e28011 is copyied from feature to R1 (commited) .
-$ git cherry-pick 1e28011
+Step 3 : git commit
+Step 4 : git push
 ```
 
 ```
@@ -1241,14 +1246,8 @@ a - b - c - d - f           R1
 e.g., copy commit e and f from branch Feature to branch R2
 
 ```
-// e=5328c8b, 0c3f04c = f
 // Feature -> R2
-// current branch = Feature
-$ git cherry-pick 5328c8b^...0c3f04c
-
-$ git checkout r2
-// current branch = R2
-
+// current branch = R2; e=5328c8b, 0c3f04c = f, in branch Feature
 $ git cherry-pick 5328c8b^...0c3f04c
 On branch r2
 Your branch is up to date with 'origin/r2'.
