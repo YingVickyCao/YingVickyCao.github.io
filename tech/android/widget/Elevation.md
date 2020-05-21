@@ -87,7 +87,16 @@ Upon user input, this button increases its elevation from 2dp to 8dp
 ## How to add shadow for a view
 
 - 1 使用 9 图  
-  随意切阴影图：http://inloop.github.io/shadow4android/
+  随意切阴影图：[Android 9-patch shadow generator](http://inloop.github.io/shadow4android/)
+
+  theme switch Image:
+  round = 0  
+  blur = 4;  
+  color = rgba(0,0,0,0.15)  
+  offset x = 0, y = 2
+
+  实际对应：参数 X 2
+
 - 2 layer-list  
   很不像 shadow，像 border
 
