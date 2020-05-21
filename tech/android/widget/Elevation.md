@@ -72,10 +72,10 @@ Upon user input, this button increases its elevation from 2dp to 8dp
   `Z=elevation+ translationZ`  
    想象有一束斜光投向屏幕，Z 轴值越大，离光就越近，阴影的范围就越大；Z 轴值越小，离光就越远，阴影的范围就越小。
 
-  Z :
-  z = 0,no 阴影  
-   z < 0,在上一个控件下方  
-   z > 0,有阴影
+  Z :  
+  Z = 0,no 阴影  
+  Z < 0,在上一个控件下方  
+  Z > 0,有阴影
 
   `android:elevation` : Resting elevation. default value (2dp)  
    `android:translationZ` : dynamic elevation offsets (6dp)  
@@ -86,7 +86,58 @@ Upon user input, this button increases its elevation from 2dp to 8dp
 
 ## How to add shadow for a view
 
-- 1 使用 9 图
+- 1 使用 9 图  
+  随意切阴影图：http://inloop.github.io/shadow4android/
+- 2 layer-list  
+  很不像 shadow，像 border
+
+- 3 Use shadow layer in 自定义 View
+
+```java
+// draws a shadow layer below the main layer
+Paint.setShadowLayer(float radius, float dx, float dy, int shadowColor)
+参数：radius 阴影的扩散半径
+dx 阴影 X 方向偏移
+dy 阴影 Y 方向偏移
+color 阴影颜色
+```
+
+Use `ShadowedViewGroup.java` to wrapper shadowe view.
+
+优点：  
+能修改 shadow 颜色
+
+缺点：  
+适合包装一个 child。  
+radius 越大，圆角越明显。When radius = 0, no shadow.
+
+- 4 TranslateZ use animation  
+  Z=elevation+ translationZ 中 translateZ 是动态的。点击按钮时有突出的效果。
+
+![shadow_use_translateZ_animation](https://yingvickycao.github.io/img/shadow_use_translateZ_animation.webp)
+
+```xml
+// res/animator/objectAnimator drawable
+android:stateListAnimator="@animator/shadow_3"
+```
+
+缺点：  
+适合可点击的 widget, e.g, Button, ImageButton。  
+不能更改 shadow 颜色
+
+- 4 OutlineProvider  
+  ImageView 没有效果  
+  Button 默认 bg color，有 shadow，但四边多了留白。可移除留白。  
+  Button set bg color，shadow 没有增加，高和宽变大.
+
+  缺点：  
+  不适合所有 widget  
+  移除留白的代码，不一定适合所有机型。
+
+- 5 `android:elevation` TBD
+
+- 6 使用官方 MD 组件 TBD  
+  其实官方组件的 ActionBar、CardView，FloatingActionButton 就自带阴影，应尽量使用他们，这里就不展开讲了。
 
 # Refs
 
