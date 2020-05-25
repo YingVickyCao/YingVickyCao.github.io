@@ -84,23 +84,38 @@ Upon user input, this button increases its elevation from 2dp to 8dp
 - Shadow size  
   ![shadow_size](https://yingvickycao.github.io/img/shadow_size.png)
 
-## How to add shadow for a view
+# 3 How to add shadow for a view
 
-- 1 使用 9 图  
-  随意切阴影图：[Android 9-patch shadow generator](http://inloop.github.io/shadow4android/)
+`TestShadowViewFragment.java`
 
-  theme switch Image:
-  round = 0  
-  blur = 4;  
-  color = rgba(0,0,0,0.15)  
-  offset x = 0, y = 2
+| Add shadow                            | API              | Change Degress | Change Color | Change Offset |
+| ------------------------------------- | ---------------- | -------------- | ------------ | ------------- |
+| .9.png                                |                  | Yes            | Yes          | Yes           |
+| android:elevation                     |                  | Yes            | No           | No            |
+| TranslateZ                            |                  | Yes            | No           | No            |
+| ShadowLayer                           |                  | Yes            | Yes          | Yes           |
+| Material                              |                  | Yes            | No           | No            |
+| ~~layer-list~~                        |                  | -              | -            | -             |
+| ~~android:outlineAmbientShadowColor~~ | Android >=10(29) | No             | No           | No            |
+| MaterialShapeDrawable                 |                  | TBD            | TBD          | TBD           |
 
-  实际对应：参数 X 2
+## 使用 9 图
 
-- 2 layer-list  
-  很不像 shadow，像 border
+[Android 9-patch shadow generator](http://inloop.github.io/shadow4android/)
 
-- 3 Use shadow layer in 自定义 View
+theme switch Image:
+round = 0  
+ blur = 4;  
+ color = rgba(0,0,0,0.15)  
+ offset x = 0, y = 2
+
+实际对应：参数 X 2
+
+## layer-list
+
+很不像 shadow，像 border
+
+## Use ShadowLayer in 自定义 View
 
 ```java
 // draws a shadow layer below the main layer
@@ -120,8 +135,9 @@ Use `ShadowedViewGroup.java` to wrapper shadowe view.
 适合包装一个 child。  
 radius 越大，圆角越明显。When radius = 0, no shadow.
 
-- 4 TranslateZ use animation  
-  Z=elevation+ translationZ 中 translateZ 是动态的。点击按钮时有突出的效果。
+## TranslateZ use animation
+
+Z=elevation+ translationZ 中 translateZ 是动态的。点击按钮时有突出的效果。
 
 ![shadow_use_translateZ_animation](https://yingvickycao.github.io/img/shadow_use_translateZ_animation.webp)
 
@@ -134,21 +150,45 @@ android:stateListAnimator="@animator/shadow_3"
 适合可点击的 widget, e.g, Button, ImageButton。  
 不能更改 shadow 颜色
 
-- 4 OutlineProvider  
-  ImageView 没有效果  
-  Button 默认 bg color，有 shadow，但四边多了留白。可移除留白。  
-  Button set bg color，shadow 没有增加，高和宽变大.
+## OutlineProvider
 
-  缺点：  
-  不适合所有 widget  
-  移除留白的代码，不一定适合所有机型。
+ImageView 没有效果  
+ Button 默认 bg color，有 shadow，但四边多了留白。可移除留白。  
+ Button set bg color，shadow 没有增加，高和宽变大.
 
-- 5 `android:elevation` TBD
+缺点：  
+ 不适合所有 widget  
+ 移除留白的代码，不一定适合所有机型。
 
-- 6 使用官方 MD 组件 TBD  
-  其实官方组件的 ActionBar、CardView，FloatingActionButton 就自带阴影，应尽量使用他们，这里就不展开讲了。
+## `android:elevation`
+
+## Material 组件 TBD
+
+material 组件使用 MaterialShapeDrawable 实现 shadow。
+ActionBar、CardView，FloatingActionButton 带阴影。
+
+缺点：  
+ 不能指定 shaodw color  
+ 不能指定阴影偏移量
+
+## MaterialShapeDrawable TBD
+
+## android:outlineAmbientShadowColor,android:outlineSpotShadowColor
+
+Android >=10(29)  
+基本上看不到颜色
+
+测试中 shadow 没有效果
 
 # Refs
 
 https://material.io/design/environment/elevation.html  
-https://material.io/design/environment/light-shadows.html
+https://material.io/design/environment/light-shadows.html  
+https://github.com/material-components/material-components-android  
+https://www.jianshu.com/p/aea0c4c6ceb6  
+https://www.jianshu.com/p/9b5d111aa306  
+https://blog.octo.com/en/android-materialshapedrawable/  
+https://blog.csdn.net/jakezhang1990/article/details/79425879  
+剪裁轮廓 https://www.cnblogs.com/guanxinjing/p/11151036.html
+https://developer.android.google.cn/reference/android/view/ViewOutlineProvider?hl=zh-cn
+https://developer.android.google.cn/training/material/shadows-clipping
