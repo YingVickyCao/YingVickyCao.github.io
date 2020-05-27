@@ -19,3 +19,8 @@ In `Do not indent children on： remove html、body、head`
 ![idea_html_formart_1](/img/idea_html_formart_1.png)
 
 ![idea_html_formart_2](/img/idea_html_formart_2.png)
+
+# 5 使用 Inspections 自动生成 serialVersionUID
+
+Step 1: Setting -> Inspections -> serialVersionUID -> 勾选"Serializable class without serialVersionUID"  
+Step 2: 类名-> Alt+Enter ，点击"Add serialVersionUID field"，然后自动生成 serialVersionUID。
