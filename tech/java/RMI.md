@@ -93,9 +93,92 @@ grant  {
 `ComputePi`  
  Do policy operation jsut like in Server
 
----
+# 3 Test
 
-# QA
+- Run server, run client
+
+| -      | Compute            | Task            |
+| ------ | ------------------ | --------------- |
+| Server | Compute@1995265320 | Task@2124102451 |
+| Client | Compute@-926240114 | Task@1494279232 |
+
+- Then close client, run client
+
+| -      | Compute            | Task            |
+| ------ | ------------------ | --------------- |
+| Server | Compute@1995265320 | Task@2056428620 |
+| Client | Compute@-926240114 | Task@1494279232 |
+
+# 4 RMI 底层原理
+
+## 远程代理
+
+远程代理：“远程对象的本地代表”
+远程对象：一种对象，活在不同的 Java 虚拟机 .
+本地代表：一种可以在本地方法调用的对象，其行为会转发到远程对象中。
+
+## `远程方法` 调用是如何发生的？
+
+客户端：  
+客户对象调用客户辅助辅助对象，客户辅助对象会联系服务器，传送（序列化）方法调用信息（方法名、参数、返回值等），然后等待服务器返回。  
+看起来像是客户对象调用的是远程服务上的方法，但客户辅助对象并不是真正的远程服务。
+
+服务器端：  
+服务器辅助对象从客户辅助对象中接受请求（透过 Socket 连接），将调用的信息解包（反序列化），然后调用真正服务对象上真正的方法。  
+对于服务对象，调用的是本地，来自服务辅助对象，而不是远程客户。
+
+服务辅助对象从服务中得到返回值，将它打包（序列化），然后返回到客户辅助对象（通过网络 Socket 的输出流），客户辅助对象对信息解包，最后将返回值交给客户对象。
+
+![RMI_1](https://yingvickycao.github.io/img/RMI_1.png)
+
+![RMI_2](https://yingvickycao.github.io/img/RMI_2.png)
+
+![RMI_3](https://yingvickycao.github.io/img/RMI_3.png)
+
+![RMI_7](https://yingvickycao.github.io/img/RMI_7.png)
+
+## 如何利用 RMI 进行远程方法调用
+
+![RMI_4](https://yingvickycao.github.io/img/RMI_4.png)
+
+RMI 提供了客户辅助对象和服务辅助对象，为客户辅助对象创建和服务对象相同的方法。
+RMI 好处：不用些任何网络或 I/O 代码，这些在 Java API 已经实现了。客户程序调用远程方法（即真正）和在运行它自己的本地 JVM 上对对象进行正常方法调用一样。
+
+### Old API （Depressed）
+
+RMI 将客户辅助对象称为 stub（桩），服务辅助对象称为 skeleton（骨架）。
+利用 rmic 产生 stub 和 skeleton
+![RMI_5](https://yingvickycao.github.io/img/RMI_5.png)
+
+![RMI_6](https://yingvickycao.github.io/img/RMI_6.png)
+
+Stub 和 Skeleton：代理。客户段和服务器的名字不同。屏蔽了远程方法调用的细节，e.g, socket 连接等。
+
+RMI Registry：
+提供了服务名到服务的映射。
+服务对象运行时，服务实现类实例化一个服务的对象，并将服务注册到 RMI registry。注册之后，客户使用 RMI Registry 通过 host 、 port 、name 查找该服务，这个服务可以给客户使用了。
+
+### New API
+
+新版 Java API 不需要一个 skeleton 对象 。
+Example 用的也是 New API，在 IDEA 运行起来一点 RUN 就可以了，不用命令。
+
+```
+客户堆							服务器堆
+客户对象		Stub	     ｜		Stub  服务对象
+```
+
+```
+// Server Registry registry
+Proxy[Compute,RemoteObjectInvocationHandler[UnicastRef [liveRef: [endpoint:[192.168.0.103:57580](local),objID:[618a3fc9:1725b38ddd9:-7fff, -2991751866471534858]]]]]
+
+// Client Registry registry
+RegistryImpl_Stub[UnicastRef [liveRef: [endpoint:[localhost:1099](remote),objID:[0:0:0, 0]]]]
+```
+
+# 5 TODO RMI 源码
+
+# 6 QA
 
 ## Q : `IllegalArgumentException: illegal remote method encountered`
 
@@ -149,6 +232,8 @@ Ref to [Compiling and Running the Example](#rmi_compile_and_run)
 
 # Refs
 
-https://docs.oracle.com/javase/tutorial/rmi/overview.html
-https://docs.oracle.com/javase/6/docs/platform/rmi/spec/rmiTOC.html
-https://docs.oracle.com/javase/6/docs/technotes/guides/rmi/hello/hello-world.html
+- https://docs.oracle.com/javase/tutorial/rmi/overview.html
+- https://docs.oracle.com/javase/6/docs/platform/rmi/spec/rmiTOC.html
+- https://docs.oracle.com/javase/6/docs/technotes/guides/rmi/hello/hello-world.html
+- Old RMI 《Head First 设计模式 》- 11 代理模式，P433 - P499
+- https://blog.csdn.net/sinat_34596644/article/details/52599688
