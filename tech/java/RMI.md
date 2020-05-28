@@ -113,8 +113,8 @@ grant  {
 
 ## 远程代理
 
-远程代理：“远程对象的本地代表”
-远程对象：一种对象，活在不同的 Java 虚拟机 .
+远程代理：“远程对象的本地代表”  
+远程对象：一种对象，活在不同的 Java 虚拟机 .  
 本地代表：一种可以在本地方法调用的对象，其行为会转发到远程对象中。
 
 ## `远程方法` 调用是如何发生的？
@@ -141,26 +141,28 @@ grant  {
 
 ![RMI_4](https://yingvickycao.github.io/img/RMI_4.png)
 
-RMI 提供了客户辅助对象和服务辅助对象，为客户辅助对象创建和服务对象相同的方法。
+RMI 提供了客户辅助对象和服务辅助对象，为客户辅助对象创建和服务对象相同的方法。  
 RMI 好处：不用些任何网络或 I/O 代码，这些在 Java API 已经实现了。客户程序调用远程方法（即真正）和在运行它自己的本地 JVM 上对对象进行正常方法调用一样。
 
 ### Old API （Depressed）
 
-RMI 将客户辅助对象称为 stub（桩），服务辅助对象称为 skeleton（骨架）。
-利用 rmic 产生 stub 和 skeleton
+- Stub 和 Skeleton  
+  都是代理。  
+  客户段和服务器的名字不同。屏蔽了远程方法调用的细节，e.g, socket 连接等。  
+  RMI 将客户辅助对象称为 stub（桩），服务辅助对象称为 skeleton（骨架）。
+
+利用 rmic 产生 stub 和 skeleton  
 ![RMI_5](https://yingvickycao.github.io/img/RMI_5.png)
 
 ![RMI_6](https://yingvickycao.github.io/img/RMI_6.png)
 
-Stub 和 Skeleton：代理。客户段和服务器的名字不同。屏蔽了远程方法调用的细节，e.g, socket 连接等。
-
-RMI Registry：
-提供了服务名到服务的映射。
-服务对象运行时，服务实现类实例化一个服务的对象，并将服务注册到 RMI registry。注册之后，客户使用 RMI Registry 通过 host 、 port 、name 查找该服务，这个服务可以给客户使用了。
+- RMI Registry：  
+  提供了服务名到服务的映射。  
+  服务对象运行时，服务实现类实例化一个服务的对象，并将服务注册到 RMI registry。注册之后，客户使用 RMI Registry 通过 host 、 port 、name 查找该服务，这个服务可以给客户使用了。
 
 ### New API
 
-新版 Java API 不需要一个 skeleton 对象 。
+新版 Java API 不需要一个 skeleton 对象 。  
 Example 用的也是 New API，在 IDEA 运行起来一点 RUN 就可以了，不用命令。
 
 ```
