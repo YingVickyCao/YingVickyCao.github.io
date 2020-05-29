@@ -107,25 +107,34 @@ socket 连接，序列化与反序列化
 
 ## Package
 
-| Class                                | Package | Desc   |
-| ------------------------------------ | ------- | ------ |
-| `Compute` interfaces                 | compute | JAR    |
-| `Task` interfaces                    | compute | JAR    |
-| `ComputeEngine` implementation class | engine  | server |
-| `ComputePi` client code              | client  | client |
-| `Pi` task implementation             | client  | client |
+| Example Class                        | Package | Desc   | 对应 Book                                  |
+| ------------------------------------ | ------- | ------ | ------------------------------------------ |
+| `Compute` interfaces                 | compute | JAR    | 远程接口 : MyService.java                  |
+| `Task` interfaces                    | compute | JAR    |                                            |
+| `ComputeEngine` implementation class | engine  | server | 远程实现:MyServiceImol.java,GumballMachine |
+| `ComputePi` client code              | client  | client | -                                          |
+| `Pi` task implementation             | client  | client | -                                          |
 
-## RMI Server
+## 制作远程服务
 
-- Designing a Remote Interface  
-  Remote interfaces is protocol having remote method.  
-   `Compute.java`  
-   `Task.java`
+### Step 1 : Designing a Remote Interface
 
-```
+Remote interfaces is protocol having remote method.  
+远程接口定义了让客户远程调用的方法。  
+客户将它作为服务的类类型。  
+Stub 和实际的服务都实现此接口。
+
+![RMI_9](https://yingvickycao.github.io/img/RMI_9.png)
+
+![rmi-3](https://docs.oracle.com/javase/tutorial/figures/rmi/rmi-3.gif)
+
+`Compute.java`
+
+```java
 public interface Compute extends Remote {
-    //  remote method: 执行在Server，执行代码在Client Pi class
-    //  变量和返回值必须是java.io.Serializable / Primitive Type
+    // 1 remote method: 执行在Server，执行代码在Client Pi class
+    // 2 变量和返回值必须是java.io.Serializable(序列化后让网络传送) / Primitive Type
+    // 3 客户会调用远程接口的Stub上的方法，而Stub低层用到了网络和I/O,因此 must  RemoteException。
     <T> T executeTask(Task<T> t) throws RemoteException;
 
     //  remote method：执行在Server，执行代码在Sever ComputeEngine class
@@ -133,24 +142,83 @@ public interface Compute extends Remote {
 }
 ```
 
-- Implementing a Remote Interface  
-  `ComputeEngine`
+`Task.java`
 
-![rmi-3](https://docs.oracle.com/javase/tutorial/figures/rmi/rmi-3.gif)
+```java
+public interface Task<T> {
+    T execute();
+}
+```
 
-## RMI Client
+### Step 2 : Implementing a Remote Interface
 
-`Task`: non-remote  
-`ComputePi`:main client class  
-`Pi`:class that implements the Task interface
+这是实际工作的类，为远程接口中定义的远程方法提供真正的实现
 
-![rmi-4](https://docs.oracle.com/javase/tutorial/figures/rmi/rmi-4.gif)
+![RMI_10](https://yingvickycao.github.io/img/RMI_10.png)
 
-compute: build the interface JAR file to provide to server and client developers
+```java
+public class ComputeEngine implements Compute {
+}
 
-<h2 id="rmi_compile_and_run">Compiling and Running the Example</h2>
+// Deprssed API
+// public class ComputeEngine extends UnicastRemoteObject implements Compute {
+// }
+```
 
-### First Starting the Server
+- 用 RMI Registry 注册此服务  
+  RMI 注册的是 stub，这是客户需要的：when rebind/bind，RMI 把服务换成 stub，然后把 stub 放到 registry 中。  
+  Default port is 1099
+
+```java
+// Depressed API:
+GumballMachineRemote gumballMachine = new GumballMachine("RemoteURl", count);
+Naming.rebind("localhost", gumballMachine);
+```
+
+```java
+// New API
+Compute engine = new ComputeEngine();
+Compute stub = (Compute) UnicastRemoteObject.exportObject(engine, 0);
+
+Registry registry = LocateRegistry.createRegistry(1099);
+registry.rebind(name, stub);
+```
+
+### Step 3 : 利用 rmic 产生 stub 和 skeleton
+
+stub:客户辅助类  
+skeleton:服务辅助类  
+rmic 是 JDK 工具。运行它，自动创建和处理 stub 和 skeleton。
+
+![RMI_11](https://yingvickycao.github.io/img/RMI_11.png)
+
+**When in New API, iggnore this step.**
+
+### Step 4 : 启动 RMI registry(rmiregistry)
+
+rmiregistry 像电话簿，客户可以从中查到代理服务的位置（客户的 stub helper 对象）
+
+```
+// Terminal
+%rmiregistry
+```
+
+**When in New API, iggnore this step.**
+
+### Step 5 : Start Serve（启动远程服务）
+
+运行服务对象。  
+服务实现类去实例化一个服务的实例，并将该服务注册到 RMI registry。注册后，服务就能让客户调用。
+
+#### Old API
+
+```
+%java MyServiceImpl
+```
+
+#### Java1.2
+
+#### Java>=5 , IDEA
 
 - Step 1: Add server.policy
 
@@ -169,7 +237,33 @@ grant  {
 - Step 3: Run ComputePi  
   Server 缺省运行端口为 1099.
 
-### Then Starting the Client
+### Step 6 : Start Client
+
+Client 使用远程接口调用 Server 提供的远程服务。
+
+#### Old API
+
+```java
+// Old API
+// Naming.lookup("rmi://127.0.0.1/RemoteURl");
+GumballMachineRemote machine = (GumballMachineRemote) Naming.lookup("RemoteURl");
+GumballMonitor monitor = new GumballMonitor(machine);
+monitor.report();
+```
+
+#### Java1.2
+
+#### Java>=5 , IDEA
+
+- RMI Client
+
+`Task`: non-remote  
+`ComputePi`:main client class  
+`Pi`:class that implements the Task interface
+
+![rmi-4](https://docs.oracle.com/javase/tutorial/figures/rmi/rmi-4.gif)
+
+compute: build the interface JAR file to provide to server and client developers
 
 `ComputePi`  
  Do policy operation jsut like in Server
