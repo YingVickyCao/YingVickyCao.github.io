@@ -3,7 +3,7 @@
 - RMI, is short for Remote remothod invocation
 - remote communucation
 - 使用场景：  
-  远程服务器 如何知道 自动饮料贩卖机的剩余数量、位置等信息。
+  公司（client） 如何知道 饮料机（server）的剩余数量、位置等信息。
 
 # 1 RMI system
 
@@ -24,94 +24,7 @@ An object becomes remote by implementing a remote interface, which has the follo
 - Download the definition of an object's class if the class is not defined in the receiver's Java virtual machine
 - his capability enables new types and behaviors to be introduced into a remote Java virtual machine, thus dynamically extending the behavior of an application.
 
-# 2 Build a RMI System Example
-
-## Package
-
-| Class                                | Package | Desc   |
-| ------------------------------------ | ------- | ------ |
-| `Compute` interfaces                 | compute | JAR    |
-| `Task` interfaces                    | compute | JAR    |
-| `ComputeEngine` implementation class | engine  | server |
-| `ComputePi` client code              | client  | client |
-| `Pi` task implementation             | client  | client |
-
-## RMI Server
-
-- Designing a Remote Interface  
-  Remote interfaces is protocol having remote method.  
-   `Compute.java`  
-   `Task.java`
-
-```
-public interface Compute extends Remote {
-    //  remote method: 执行在Server，执行代码在Client Pi class
-    //  变量和返回值必须是java.io.Serializable / Primitive Type
-    <T> T executeTask(Task<T> t) throws RemoteException;
-
-    //  remote method：执行在Server，执行代码在Sever ComputeEngine class
-    int sum(int num1, int num2) throws RemoteException;
-}
-```
-
-- Implementing a Remote Interface  
-  `ComputeEngine`
-
-![rmi-3](https://docs.oracle.com/javase/tutorial/figures/rmi/rmi-3.gif)
-
-## RMI Client
-
-`Task`: non-remote  
-`ComputePi`:main client class  
-`Pi`:class that implements the Task interface
-
-![rmi-4](https://docs.oracle.com/javase/tutorial/figures/rmi/rmi-4.gif)
-
-compute: build the interface JAR file to provide to server and client developers
-
-<h2 id="rmi_compile_and_run">Compiling and Running the Example</h2>
-
-### First Starting the Server
-
-- Step 1: Add server.policy
-
-```
-grant  {
-    permission java.security.AllPermission;
-};
-```
-
-- Step 2: VM Options of ComputePi:
-
-```
--Djava.security.policy=server.policy
-```
-
-- Step 3: Run ComputePi  
-  Server 缺省运行端口为 1099.
-
-### Then Starting the Client
-
-`ComputePi`  
- Do policy operation jsut like in Server
-
-# 3 Test
-
-- Run server, run client
-
-| -      | Compute            | Task            |
-| ------ | ------------------ | --------------- |
-| Server | Compute@1995265320 | Task@2124102451 |
-| Client | Compute@-926240114 | Task@1494279232 |
-
-- Then close client, run client
-
-| -      | Compute            | Task            |
-| ------ | ------------------ | --------------- |
-| Server | Compute@1995265320 | Task@2056428620 |
-| Client | Compute@-926240114 | Task@1494279232 |
-
-# 4 RMI 底层原理
+# 2 Java RMI 概观
 
 ## 远程代理
 
@@ -189,6 +102,93 @@ RegistryImpl_Stub[UnicastRef [liveRef: [endpoint:[localhost:1099](remote),objID:
 ## 概括原理
 
 socket 连接，序列化与反序列化
+
+# 3 Build a RMI System Example
+
+## Package
+
+| Class                                | Package | Desc   |
+| ------------------------------------ | ------- | ------ |
+| `Compute` interfaces                 | compute | JAR    |
+| `Task` interfaces                    | compute | JAR    |
+| `ComputeEngine` implementation class | engine  | server |
+| `ComputePi` client code              | client  | client |
+| `Pi` task implementation             | client  | client |
+
+## RMI Server
+
+- Designing a Remote Interface  
+  Remote interfaces is protocol having remote method.  
+   `Compute.java`  
+   `Task.java`
+
+```
+public interface Compute extends Remote {
+    //  remote method: 执行在Server，执行代码在Client Pi class
+    //  变量和返回值必须是java.io.Serializable / Primitive Type
+    <T> T executeTask(Task<T> t) throws RemoteException;
+
+    //  remote method：执行在Server，执行代码在Sever ComputeEngine class
+    int sum(int num1, int num2) throws RemoteException;
+}
+```
+
+- Implementing a Remote Interface  
+  `ComputeEngine`
+
+![rmi-3](https://docs.oracle.com/javase/tutorial/figures/rmi/rmi-3.gif)
+
+## RMI Client
+
+`Task`: non-remote  
+`ComputePi`:main client class  
+`Pi`:class that implements the Task interface
+
+![rmi-4](https://docs.oracle.com/javase/tutorial/figures/rmi/rmi-4.gif)
+
+compute: build the interface JAR file to provide to server and client developers
+
+<h2 id="rmi_compile_and_run">Compiling and Running the Example</h2>
+
+### First Starting the Server
+
+- Step 1: Add server.policy
+
+```
+grant  {
+    permission java.security.AllPermission;
+};
+```
+
+- Step 2: VM Options of ComputePi:
+
+```
+-Djava.security.policy=server.policy
+```
+
+- Step 3: Run ComputePi  
+  Server 缺省运行端口为 1099.
+
+### Then Starting the Client
+
+`ComputePi`  
+ Do policy operation jsut like in Server
+
+# 4 Test
+
+- Run server, run client
+
+| -      | Compute            | Task            |
+| ------ | ------------------ | --------------- |
+| Server | Compute@1995265320 | Task@2124102451 |
+| Client | Compute@-926240114 | Task@1494279232 |
+
+- Then close client, run client
+
+| -      | Compute            | Task            |
+| ------ | ------------------ | --------------- |
+| Server | Compute@1995265320 | Task@2056428620 |
+| Client | Compute@-926240114 | Task@1494279232 |
 
 # 5 TODO RMI 源码
 
