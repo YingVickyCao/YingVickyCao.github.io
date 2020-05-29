@@ -40,15 +40,17 @@
 
 ## [OO 原则（设计原则）（10）](设计原则.md)
 
-- [原则 1：封装变化](策略模式.md#design_principles_1)
-- [原则 2：多用组合，少用继承](策略模式.md#design_principles_2)
-- [原则 3：针对接口编程，而不是针对实现编程](策略模式.md#design_principles_3)
-- [原则 4：松耦合](观察者模式.md#design_principles_4)
-- [原则 5: 开放-关闭原则 (Open Close Principle)](装饰者模式.md#Open_Close_Principle)
-- [原则 6: 依赖倒置原则 (Depency Inverse Principle)](工厂模式.md#Depency_Inverse_Principle)
-- [原则 7: 最少知识原则 (（Least Knowledge Principle)](外观模式.md#（Least_Knowledge_Principle)
-- [原则 8: 好莱坞原则 (Hollywood Principle)](模版方法模式.md#Hollywood_Principle)
-- [原则 9: 单一责任原则 (Single Responsibility Principle) ](迭代器模式.md#Single_Responsibility_Principle)
+| 原则                                                                                                     | 描述                             |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| [原则 1：封装变化](策略模式.md#design_principles_1)                                                      | -                                |
+| [原则 2：多用组合，少用继承](策略模式.md#design_principles_2)                                            | -                                |
+| [原则 3：针对接口编程，而不是针对实现编程](策略模式.md#design_principles_3)                              | -                                |
+| [原则 4：松耦合](观察者模式.md#design_principles_4)                                                      | 为交互对象之间的松耦合设计而努力 |
+| [原则 5: 开放-关闭原则 (Open Close Principle)](装饰者模式.md#Open_Close_Principle)                       | 类应该对扩展开放，对修改关闭     |
+| [原则 6: 依赖倒置原则 (Depency Inverse Principle)](工厂模式.md#Depency_Inverse_Principle)                | 依赖抽象，不依赖具体类           |
+| [原则 7: 最少知识原则 (（Least Knowledge Principle)：](外观模式.md#（Least_Knowledge_Principle)          | 只和朋友谈                       |
+| [原则 8: 好莱坞原则 (Hollywood Principle)：别找我，我会找你](模版方法模式.md#Hollywood_Principle)        | 别找我，我会找你                 |
+| [原则 9: 单一责任原则 (Single Responsibility Principle) ](迭代器模式.md#Single_Responsibility_Principle) | 类应该只有一个改变的理由         |
 
 ## OO 模式（设计模式）(10+)
 
@@ -68,7 +70,7 @@
 | [迭代器模式)](迭代器模式.md)                             | 提供一个方式来遍历集合，而无需暴露集合的实现                                               | 管理集合             |  |
 | [组合模式(Composite Pattern)](组合模式.md)               | 客户可以将对象的集合以及个别的对象一视同仁                                                 | 管理集合             |  |
 | [状态模式(Status Pattern)](状态模式.md)                  | 封装基于状态的行为，并将行为委托到当前状态：通过改变对象内部的状态来实现对象控制自己的行为 | 事物的状态           |
-| [代理模式](代理模式.md)                                  | -                                                                                          | -                    |
+| [代理模式](代理模式.md)                                  | 包装另一个对象，并控制它的访问                                                             | 控制对象访问         |
 | [复合模式](复合模式.md)                                  | -                                                                                          | -                    |
 
 - [工厂模式（Factory Pattern)](工厂模式.md)  
@@ -80,6 +82,27 @@
   对象适配器模式
 - [模版方法模式(Template Method Pattern)](模版方法模式.md)  
   钩子
+- 代理模式
+  | 代理模式 (9) |
+  | ------------------------------------- |
+  | 远程代理(Remote Proxy) |
+  | 虚拟代理(Virtual Proxy) |
+  | 保护代理(Protection Proxy) |
+  | 防火墙代理(Firewall Proxy) |
+  | 智能引用代理(Smart Reference Proxy) |
+  | 缓存代理（Caching Proxy） |
+  | 同步代理(Synchronization Proxy) |
+  | 复杂隐藏代理(Complexity Hiding Proxy) | |
+  | 写入时复制代理(Copy-On-Write Proxy) |
+
+## 区分模式
+
+| 模式   | 描述                             |
+| ------ | -------------------------------- |
+| 装饰者 | 包装另一个对象，并提供额外的行为 |
+| 外观   | 包装许多对象，以简化它们的接口   |
+| 代理   | 包装另一个对象，并控制对象访问   |
+| 适配器 | 包装另一个对象，并提供不同接口   |
 
 # Refs
 
