@@ -57,19 +57,25 @@ View <———— Model
   原因 1，视图会有 2 个责任：管理用户界面、处理如何控制模型的逻辑。  
   原因 2:模型和视图之间紧耦合，那么视图不能处理其他模型。
 
-## Example ： MP3 播放器
+## Example ： MP3 播放器, DJView
 
 ![MVC_2](https://yingvickycao.github.io/img/MVC_2.png)
 
+---
+
 ![MVC_3](https://yingvickycao.github.io/img/MVC_3.png)
+
+---
 
 ![MVC_4](https://yingvickycao.github.io/img/MVC_4.png)
 
+## MVC 是复合模式，结合了：观察者模式、组合模式、策略模式。
+
 ![MVC_5](https://yingvickycao.github.io/img/MVC_5.png)
 
-![MVC_6](https://yingvickycao.github.io/img/MVC_6.png)
+---
 
-## MVC 是复合模式，结合了：观察者模式、组合模式、策略模式。
+![MVC_6](https://yingvickycao.github.io/img/MVC_6.png)
 
 ### 观察者模式
 
@@ -132,7 +138,9 @@ View <———— Controller <———— Model
 
   ![MVC_7](https://yingvickycao.github.io/img/MVC_7.png)
 
-  ![MVC_8](https://yingvickycao.github.io/img/MVC_8.png)
+---
+
+![MVC_8](https://yingvickycao.github.io/img/MVC_8.png)
 
 - Model 2 的好处：  
   帮助网站避免限于混乱。  
