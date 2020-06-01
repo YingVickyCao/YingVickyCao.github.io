@@ -41,7 +41,7 @@ Step 2 : re-install Android Studio.
 Step 3 : Delete build/.idea/.gradle of project.  
 Step 4 : Open project by Android Studio.
 
-# 3Set proxy
+# 3 Set proxy
 
 Setting dialog -> search "proxy" , HTTP Proxy.  
 Saved on
@@ -150,3 +150,48 @@ Editor -> Code Style -> Window = `\r\n` = CRLF`
 
 A:  
 Method 1 : update material lib version
+
+# 16 Q : Android Studio Gradle downloads `kotlin-compiler-embeddable-1.3.72.jar` failed or too slow.
+
+Step 1 : FInd dir
+
+```
+// When downloading
+// /Users/account/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.3.72/b7250aa71eb53dfcb3bb86c6467cbe747254e1a5/
+
+b7250aa71eb53dfcb3bb86c6467cbe747254e1a5
+kotlin-compiler-embeddable-1.3.72.pom
+```
+
+Step 2: Download jar in Maven.  
+https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-compiler-embeddable
+
+Step 3 : Put jar in Finder dir.
+
+```
+b7250aa71eb53dfcb3bb86c6467cbe747254e1a5
+kotlin-compiler-embeddable-1.3.72.pom
++ kotlin-compiler-embeddable-1.3.72.jar
+```
+
+Close Android Studio, then re-open Andriid Studio,it will auto sync it.
+
+```
+// After Auto sync successfully
+fb72232c8fa977d5e07d33c43381ddbdc5edab6
+kotlin-compiler-embeddable-1.3.72.jar
+b7250aa71eb53dfcb3bb86c6467cbe747254e1a5
+kotlin-compiler-embeddable-1.3.72.pom
+- kotlin-compiler-embeddable-1.3.72.jar
+b0e679271730771848ec0c644028533b381e2e6
+kotlin-compiler-embeddable-1.3.72-sources.jar
+```
+
+```
+fb72232c8fa977d5e07d33c43381ddbdc5edab6
+kotlin-compiler-embeddable-1.3.72.jar
+b7250aa71eb53dfcb3bb86c6467cbe747254e1a5
+kotlin-compiler-embeddable-1.3.72.pom
+b0e679271730771848ec0c644028533b381e2e6
+kotlin-compiler-embeddable-1.3.72-sources.jar
+```

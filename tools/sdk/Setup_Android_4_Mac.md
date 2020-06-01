@@ -103,7 +103,7 @@ Matching Java Virtual Machines (1):
 
 # 2.Gradle
 
-https://gradle.org/releases/
+https://gradle.org/releases/  
 Downloading https://services.gradle.org/distributions/gradle-6.2.1-bin.zip  
 Downloading https://services.gradle.org/distributions/gradle-6.2.1-all.zip
 

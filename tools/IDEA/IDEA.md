@@ -24,3 +24,25 @@ In `Do not indent children on： remove html、body、head`
 
 Step 1: Setting -> Inspections -> serialVersionUID -> 勾选"Serializable class without serialVersionUID"  
 Step 2: 类名-> Alt+Enter ，点击"Add serialVersionUID field"，然后自动生成 serialVersionUID。
+
+# 6 Q : How does IDEA support Android app?
+
+A :  
+Step 1 : File -> New -> Project -> Android -> Click support android, then starting downloads about android.  
+Step 2 : After download finish, re-open IDEA, and try again.
+
+# 7 Q : IDEA 2020.1 does not support android-gradle-plugin 4.0(gralde 6.1.1)
+
+```
+Cannot convert string value 'JETPACK_COMPOSE' to an enum value of type 'com.android.builder.model.AndroidGradlePluginProjectFlags$BooleanFlag' (valid case insensitive values: APPLICATION_R_CLASS_CONSTANT_IDS, TEST_R_CLASS_CONSTANT_IDS, TRANSITIVE_R_CLASS)
+```
+
+A :
+
+> DEA 2020.1 EAP does not support android-gradle-plugin 4.0.  
+> Unfortunately sources for AS 4.0 are not published yet.  
+> We have sent a request to the Google team already. It'll take some time for them to publish the sources.
+
+android-gradle-plugin 3.6.1/3.6.2/3.6.2 + gradle-5.6.4-all work well.
+
+https://youtrack.jetbrains.com/issue/IDEA-233929?_ga=2.94678812.120884178.1590920190-868073811.1590920190
