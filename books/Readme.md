@@ -12,7 +12,15 @@
 | 人性的弱点                                                 | 卡耐基   |
 | [Head First 设计模式](Head_First_Design_Pattern/Readme.md) | O'Reilly |
 
+# Knowledge_Management
+
+| Book Name                      | Author |
+| ------------------------------ | ------ |
+| [高效学习](高效学习/Readme.md) |        |
+| [好好学习](好好学习/Readme.md) | 成甲   |
+
 # Other
 
 - 207 | 亲历疫情之后，如何让生活回归正轨？
 - [ELLE](ELLE/Readme.md)
+- [断舍离](断舍离/Readme.md)
