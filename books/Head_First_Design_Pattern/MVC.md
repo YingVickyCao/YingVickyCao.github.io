@@ -33,6 +33,8 @@ Figure 3. Multiple Views Using the Same Model
 
 ### View
 
+- How does View get model data?
+
 ```
 // push mode
 View <--- Model
@@ -40,6 +42,12 @@ View <--- Model
 // pull mode
 View ————> Model
 View <———— Model
+```
+
+- How does View set model data?
+
+```
+View  ————> Controller ————>  Model
 ```
 
 ### Controller
@@ -112,6 +120,15 @@ View ——————>Controller 1
 
 ![an-mvc-design-placing-the-controller-between-the-model-and-the-view](https://www.oracle.com/a/tech/img/an-mvc-design-placing-the-controller-between-the-model-and-the-view.gif)  
 Figure 4. An MVC Design Placing the Controller Between the Model and the View : Apple Cocoa framework
+
+> Why adopt this design?  
+> Using this modified MVC helps to more completely decouple the model from the view. In this case, the controller can dictate the model properties that it expects to find in one or more models registered with the controller.  
+> In addition, it can also provide the methods that effect the model's property changes for one or more views that are registered with it.
+
+```
+View 1      Controller      Model 1
+View N                      Model N
+```
 
 ## 结构
 
