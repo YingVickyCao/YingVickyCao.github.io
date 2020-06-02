@@ -59,6 +59,10 @@ blue,yellow,red
 gradle assembleBlue : build Blue debug and release 两个版本
 gradle assembleDebug : build Debug blue,yellow,red  三个版本
 gradle assembleBlueDebug : build blueDebug 1个版本
+
+
+// gradle 先clean project，然后build uat release apk, 跑 app 和 lib1 的uat release unit test
+gradle clean :app:assembleUatRelease :app:testUatRelease :lib1:testUatRelease
 ```
 
 # 4 Gradle config files
