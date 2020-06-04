@@ -110,3 +110,5 @@
 # Refs
 
 - [Design Patterns](https://sourcemaking.com/design_patterns)
+- https://refactoring.guru/design-patterns/java
+- https://www.journaldev.com/java/design-patterns

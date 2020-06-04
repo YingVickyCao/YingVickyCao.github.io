@@ -1,4 +1,4 @@
-# Bridge Pattern
+ # Bridge Pattern
 
 #  1 定义
 > Decouple an abstraction from its implementation so that the two can vary independently
@@ -17,7 +17,7 @@ multiple types of DB servers / APIs 			Bridge							cross-platform app
 ![bridge-2-en-2x](https://refactoring.guru/images/patterns/content/bridge/bridge-2-en-2x.png)  
 
 - 类图  
-Before :  
+Before ->  After : 
 ![bridge-3-en-2x](https://refactoring.guru/images/patterns/content/bridge/bridge-3-en-2x.png)
 
 After :  
@@ -36,13 +36,5 @@ Desin using Bridget Pattern:
 
 
 # Refs
-www.refactoring.guru/design-patterns/bridge/java/example
-https://www.journaldev.com/1491/bridge-design-pattern-java
-
-
-
-
----
-
-https://refactoring.guru/design-patterns/java
-https://www.journaldev.com/java/design-patterns
+- www.refactoring.guru/design-patterns/bridge/java/example
+- https://www.journaldev.com/1491/bridge-design-pattern-java
