@@ -43,6 +43,6 @@ A :
 > Unfortunately sources for AS 4.0 are not published yet.  
 > We have sent a request to the Google team already. It'll take some time for them to publish the sources.
 
-android-gradle-plugin 3.6.1/3.6.2/3.6.2 + gradle-5.6.4-all work well.
+android-gradle-plugin 3.6.1/3.6.2/3.6.3 + gradle-5.6.4-all work well.
 
 https://youtrack.jetbrains.com/issue/IDEA-233929?_ga=2.94678812.120884178.1590920190-868073811.1590920190
