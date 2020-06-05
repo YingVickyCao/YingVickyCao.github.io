@@ -1,7 +1,7 @@
 # Gradle
+Build 工具:后端,移动端
 
-# Gradle 知识点
-
+# Gradle 知识点  
 - 支持 lamdar 表达式
 - 自定义代码目录
 - 多渠道打包
@@ -20,38 +20,8 @@
 
 没有关系。
 
-# 2 Where does Android Studio fetch the library from?
 
-- [Define maven respo in build.gradle](template_define_maven_respo_in_build.gradle.md)
-
-- Add a dependencies
-
-```ini
-# module level build.gradle
-dependencies {
-    implementation "io.reactivex.rxjava2:rxjava:2.1.1"
-}
-```
-
-- Android Studio downloads the library from `Maven Repository Server` defined in `build.gradle`.
-- Basically there are just 2 standard servers used for host the libraries for Android such as `jcenter` and `Maven Central`  
-  both jcenter and Maven Central are standard android library repositories but they are hosted at completely different place, provided by different provider and there is nothing related to each other. What that is available in jcenter might not be found in Maven Central and vice versa.
-
-| Compare Item                                                       | jcenter                        | Maven Central                                                               |
-| ------------------------------------------------------------------ | ------------------------------ | --------------------------------------------------------------------------- |
-| Type                                                               | Maven Repository               | same                                                                        |
-| hosted by                                                          | bintray.com                    | sonatype.org                                                                |
-| repository url                                                     | https://jcenter.bintray.com/   | https://repo1.maven.org/maven2/ </br> https://repo.maven.apache.org/maven2/ |
-| Define repository in project's build.gradle                        | jcenter()                      | mavenCentral()                                                              |
-| Have duty                                                          | hosting Java/Android libraries | same                                                                        |
-| Android Studio auto define as a default repository in build.gradle | Yes.                           | No. Not developer-friendly. Hard to upload lib                              |
-
-- [maven 坐标系](../maven/Maven.md#maven_coordinate)
-
-<!-- <h1 id="maven-coordinate">8 Maven 设置</h1> -->
-<!-- ## <h1 id="maven-coordinate">8 Maven 设置</h1> -->
-
-# 3 Gradle assemble ：build a APK
+# 2 Gradle assemble ：build a APK
 
 ```
 blue,yellow,red
@@ -65,15 +35,15 @@ gradle assembleBlueDebug : build blueDebug 1个版本
 gradle clean :app:assembleUatRelease :app:testUatRelease :lib1:testUatRelease
 ```
 
-# 4 Gradle config files
+# 3 Gradle config files
 
 - Project  
   gradle.properties
 - Global `~/.gradle/gradle.properties`
 
-# 5 Gradle Proxy setup
+# 4 Gradle Proxy setup
 
-# 6 Logging
+# 5 Logging
 
 Build -> Sync
 
@@ -90,7 +60,7 @@ logger.trace("logger trace")
 println 'println logger quiet'
 ```
 
-# 7 Gradle maven repo add credentials
+# 6 Gradle maven repo add credentials
 
 ```
 repositories {
@@ -102,9 +72,9 @@ repositories {
     url 'http://maven.coder4.com/nexus/content/groups/public' }
 }
 ```
+OR
 
 ```
-
 $ open ~/.gradle/gradle.properties
 mavenUser=username
 mavenPass=password
@@ -120,43 +90,33 @@ repositories {
 }
 ```
 
-# Gradle Usage
-
-Build 工具:后端,移动端
-
-## build 过程
-
-### project
+# 7 Gradle build 过程
+## project
 
 - `build.gradle`  
   task : action + 依赖逻辑  
-  依赖逻辑:有向无环图(DAG, Directed Acyclick Graph)
-
+  依赖逻辑:有向无环图(DAG, Directed Acyclick Graph)  
 - build.gradle + 依赖逻辑 -> 组成 task graph -> 执行 task
-- 没有被依赖的 task 首先被执行
-- 几乎所有 task 依赖的其他 task 来执行
+- 没有被依赖的 task 首先被执行 
+- 几乎所有 task 依赖的其他 task 来执行  
 
-### 三个阶段
+## 三个阶段
 
 ![Gradle Build 3 steps](https://yingvickycao.github.io/img/tools/gradle/gradle_build_process.png)
 
-#### Load build
-
+Load build ：   
 ![Load build](https://yingvickycao.github.io/img/tools/gradle/gradle_build_process_load_build.png)
 
-#### Configure build
-
-- project 对象: setting.gradle,project level
-- 执行所有 build.gradle 脚本，并创建所有 task，生成 task grash  
+Configure build ：   
+project 对象: setting.gradle,project level  
+执行所有 build.gradle 脚本，并创建所有 task，生成 task grash    
   ![Configure build](https://yingvickycao.github.io/img/tools/gradle/gradle_build_process_load_build.png)
 
-#### Run Tasks
-
+Run Tasks :   
 ![Run Tasks](https://yingvickycao.github.io/img/tools/gradle/gradle_build_process_run_tasks.png)
 
----
 
-# gradle wrapper
+# 8 gradle wrapper
 
 - `gradle/wrapper/gradle-wrapper.jar`
 
@@ -176,9 +136,7 @@ gradlew XXX
 - 不需要手动下载 gradlew，当运行脚本时，若本地没有自动下载对应版本
 - 使用命令和 gradle 相同
 
----
-
-# Update gradle
+# 7 Update gradle
 
 [Update Gradle](https://developer.android.google.cn/studio/releases/gradle-plugin#updating-gradle)
 
@@ -188,16 +146,15 @@ gradlew XXX
 - gradle plugin  
   projecgt-level `build.gradle`
 
----
 
-# [Proguard](https://github.com/YingVickyCao/YingVickyCao.github.io/blob/master/doc/tools/gradle/Proguard.md#proguard)
+# 8 [Proguard](../Proguard.md)
 
-# Signing
+# 9 Signing
 
 - release 版本  
   `app\build\outputs\apk\(google\)release\name.apk`
 
-# Build Variants
+# 10 Build Variants
 
 ## Build Types
 
@@ -271,9 +228,9 @@ googleDebug
 googleRelease
 ```
 
-# Multiple APK Support
+# 11 Multiple APK Support
 
-# Dependencies
+# 12 Dependencies
 
 ## Type 7
 
@@ -380,11 +337,11 @@ configurations.all {
 2. 同一个文件在不同 package 的 lib，是版本依赖冲突，不能共存。例如 Dagger1 和 Dagger2
 3. 特別注意 shaowJar 引起的版本依賴沖突
 
-# [Create Android Library](https://github.com/YingVickyCao/YingVickyCao.github.io/blob/master/doc/android/build/Create_Android_Library.md#create-android-library)
+# [13 Create Android Library](../Create_Android_Library.md)
 
-# [Proguard](https://github.com/YingVickyCao/YingVickyCao.github.io/blob/master/doc/android/build/Proguard.md#proguard)
+# [14 Proguard](../Proguard.md)
 
-# [Speed up build](https://github.com/YingVickyCao/YingVickyCao.github.io/blob/master/doc/android/build/Speed_up_build.md#speed-up-build)
+# [15 Speed up build](../Speed_up_build.md)
 
 ---
 
@@ -396,3 +353,7 @@ configurations.all {
 - [解决 Error:All flavors must now belong to a named flavor dimension](https://blog.csdn.net/syif88/article/details/75009663/)
 - Android 工程 gradle 详解 https://www.jianshu.com/p/3e66d36455f4
 - Gradle 配置代理服务器 https://www.jianshu.com/p/3f3e81c5f597
+# Refs
+- [Configure your build](https://developer.android.google.cn/studio/build)
+- [Build your app from the command line](https://developer.android.google.cn/studio/build/building-cmdline)
+- [Build and run your app](https://developer.android.google.cn/studio/run/index.html)

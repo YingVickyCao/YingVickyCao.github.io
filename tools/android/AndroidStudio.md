@@ -195,3 +195,84 @@ kotlin-compiler-embeddable-1.3.72.pom
 b0e679271730771848ec0c644028533b381e2e6
 kotlin-compiler-embeddable-1.3.72-sources.jar
 ```
+
+# 17 ERROR: Manifest merger failed : uses-sdk:minSdkVersion 21 cannot be smaller than version 22 declared in library
+
+> Manifest merger failed : uses-sdk:minSdkVersion 21 cannot be smaller than version 22 declared in library [:calculator2] /Users/hades/Documents/GitHub/AndroidAboutDemos/soruce/AndroidGradleConfigCode/calculator2/build/intermediates/library_manifest/debug/AndroidManifest.xml as the library might be using APIs not available in 21
+> 	Suggestion: use a compatible library with a minSdk of at most 21,
+> 		or increase this project's minSdk version to at least 22,
+> 		or use tools:overrideLibrary="com.example.hades.calculator2" to force usage (may lead to runtime failures)
+
+```
+app module
+minSdkVersion 21
+
+calculator2 lib
+minSdkVersion 22
+
+=>
+
+calculator2 lib
+minSdkVersion 21
+```
+
+# 18 ERROR:Android resource linking failed
+> Android resource linking failed
+> app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v28/values-v28.xml:7: error: resource android:attr/dialogCornerRadius not found.
+> app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v28/values-v28.xml:11: error: resource android:attr/dialogCornerRadius not found.
+> app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml:2739: error: resource android:attr/fontVariationSettings not found.
+> app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml:2740: error: resource android:attr/ttcIndex not found.
+> error: failed linking references.
+
+```
+set all module appcompat = 28.0.0  
+compileSdkVersion 28
+targetSdkVersion 28
+
+implementation 'com.android.support:appcompat-v7:28.0.0'
+```
+# 19 ERROR:Full Split are not supported in InstantRun mode, please disable InstantRun
+`Full Split are not supported in InstantRun mode, please disable InstantRun`
+```
+  /*
+    // Configure multiple APKs for screen densities
+    splits {
+
+        // Configures multiple APKs based on screen density.
+        density {
+
+            // Configures multiple APKs based on screen density.
+            enable true
+
+            // Specifies a list of screen densities Gradle should not create multiple APKs for.
+            exclude "ldpi", "xxhdpi", "xxxhdpi"
+
+            // Specifies a list of compatible screen size settings for the manifest.
+            compatibleScreens 'small', 'normal', 'large', 'xlarge'
+        }
+    }
+
+    // Configure multiple APKs for ABIs
+    splits {
+
+        // Configures multiple APKs based on ABI.
+        abi {
+
+            // Enables building multiple APKs per ABI.
+            enable true
+
+            // By default all ABIs are included, so use reset() and include to specify that we only
+            // want APKs for x86 and x86_64.
+
+            // Resets the list of ABIs that Gradle should create APKs for to none.
+            reset()
+
+            // Specifies a list of ABIs that Gradle should create APKs for.
+            include "x86", "x86_64"
+
+            // Specifies that we do not want to also generate a universal APK that includes all ABIs.
+            universalApk false
+        }
+    }
+*/
+```
