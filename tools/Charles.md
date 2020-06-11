@@ -35,7 +35,7 @@
 ## 2.1 Config Proxy at Android
 
 Step 1 : 设置 手机 Wifi Proxy => Enabel HTTP
-设置 -> Connections -> Selecte Connected Wifi -> Advanced -> Proxy , Manual->
+Android -> 设置 -> Connections -> Selecte Connected Wifi -> Advanced -> Proxy , Manual->
 
 ```
 # Proxy host name = Mac IP
@@ -58,7 +58,7 @@ Reason :
 
 ### Way 1:
 
-Step1 : Help -- SSL Proxying -- Save Charles Root Certificate, save as `.pem` files, e.g., Charles.pem
+Step1 : Charles -> Help -> SSL Proxying -> Save Charles Root Certificate, save as `.pem` files, e.g., Charles.pem
 
 ![Charles_config_4_android_1](https://yingvickycao.github.io/img/Charles_config_4_android_1.jpg)
 
@@ -72,7 +72,7 @@ Step 3 : Click Charles.pem to install it, and name the Certificate, e.g., Charle
 
 ### Way 2 : 使用手机浏览器 下载 Charles Certificate，并安装
 
-Step1 : Help -- SSL Proxying -- Install Charles Root Certificate on a Mobile Device or Remote Browser
+Step1 : Help -> SSL Proxying -> Install Charles Root Certificate on a Mobile Device or Remote Browser
 
 ![Charles_config_4_android_3](https://yingvickycao.github.io/img/Charles_config_4_android_3.jpg)
 
@@ -92,3 +92,4 @@ Step 3 : samee as `2.2 - Way 1 - Step 3`
 # Refs
 
 - https://www.jianshu.com/p/703998ae4e78
+- https://www.jianshu.com/p/4635aa405568
