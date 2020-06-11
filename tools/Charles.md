@@ -2,7 +2,10 @@
 
 - Charles v4.5.6
 - Mac OS 10.14.6
-- Samsung SM-T830 (Android 9 )
+- Samsung SM-T830 (Android 9 )  
+  与 Mac 连接同一个 Wifi
+- Iphone 6S Plus with Software Version is `12.4.1`  
+  与 Mac 连接同一个 Wifi
 
 # 1 Charles 在 Mac 上抓 http/https 协议的包
 
@@ -21,8 +24,11 @@
 
 或者
 
-点击 2，详细配置 Mac Proxy Setting  
- ![Charles_config_4_mac_4](https://yingvickycao.github.io/img/Charles_config_4_mac_4.png)
+点击 2，详细配置 Mac Proxy Setting.  
+在 Menu 选择 Proxy->SSL Proxying Setting，选,在 Locations 里面添加要使用 SSL 代理的网站.  
+`*`= 拦截 Https 的数据包
+
+![Charles_config_4_mac_4](https://yingvickycao.github.io/img/Charles_config_4_mac_4.png)
 
 ![Charles_config_4_mac_3](https://yingvickycao.github.io/img/Charles_config_4_mac_3.png)
 
@@ -77,14 +83,49 @@ Step1 : Help -> SSL Proxying -> Install Charles Root Certificate on a Mobile Dev
 
 ![Charles_config_4_android_4](https://yingvickycao.github.io/img/Charles_config_4_android_4.jpg)
 
+![Charles_config_4_android_6](https://yingvickycao.github.io/img/Charles_config_4_android_6.jpg)
+
 Step 2 : 手机浏览器 输入`chls.pro/ssl`  
 询问是否下载证书，点击 Downlaod
 
-Step 3 : samee as `2.2 - Way 1 - Step 3`
+Step 3 : same as `2.2 - Way 1 - Step 3`
 
 # 3 Charles 在 Android Emulator 上抓 http/https 协议的包
 
 # 4 Charles 在 iPhone 上抓 http/https 协议的包
+
+## 4.1 设置手机代理
+
+Iphone -> Settings -> Wifi -> Choose selected Wifi -> HTTP PROXY, "Configure Proxy" -> "Manual"
+
+```
+# Server = Mac IP
+192.168.0.102
+
+# Port = Charles Proxy Port
+8888
+```
+
+## 4.2 Install Charles Certificate at IPhone
+
+Step1 : Charles -> Help -> SSL Proxying -> Install Charles Root Certificate on a Mobile Device or Remote Browser
+
+![Charles_config_4_android_3](https://yingvickycao.github.io/img/Charles_config_4_android_3.jpg)
+
+![Charles_config_4_android_4](https://yingvickycao.github.io/img/Charles_config_4_android_4.jpg)
+
+![Charles_config_4_android_6](https://yingvickycao.github.io/img/Charles_config_4_android_6.jpg)
+
+Step 2 : 手机浏览器 输入`chls.pro/ssl`  
+![Charles_config_4_IPhone_1](https://yingvickycao.github.io/img/Charles_config_4_IPhone_1.png)
+
+![Charles_config_4_IPhone_2](https://yingvickycao.github.io/img/Charles_config_4_IPhone_2.jpg)
+
+Step 3 : 信任证书  
+IPhone -> Settings -> General -> About -> Certificate Trust Settings ->  
+PS : 没有出来信任证书，最后也能抓 Htpps 包。但理论上是不能抓 Htpps 包。
+
+![Charles_config_4_IPhone_3](https://yingvickycao.github.io/img/Charles_config_4_IPhone_3.jpg)
 
 # 5 Charles 在 iPhone Emulator 上抓 http/https 协议的包
 
