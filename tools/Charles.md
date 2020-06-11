@@ -32,7 +32,7 @@
 
 # 2 Charles 在 Android Device 上抓 http/https 协议的包
 
-## 2.1 Config Proxy at Android => Enabel HTTP
+## 2.1 Config Proxy at Android ( Enabel HTTP )
 
 Step 1 : 设置 手机 Wifi Proxy
 Android -> 设置 -> Connections -> Selecte Connected Wifi -> Advanced -> Proxy , Manual->
@@ -47,7 +47,7 @@ Android -> 设置 -> Connections -> Selecte Connected Wifi -> Advanced -> Proxy 
 
 ![Charles_config_4_android_5](https://yingvickycao.github.io/img/Charles_config_4_android_5.jpg)
 
-## 2.2 Install Charles Certificate at Android => Enable HTTPS
+## 2.2 Install Charles Certificate at Android ( Enable HTTPS )
 
 If not set 2.2, https of Android in Charles is showed `unknown`
 
