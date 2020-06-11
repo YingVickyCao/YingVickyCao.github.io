@@ -32,9 +32,9 @@
 
 # 2 Charles 在 Android Device 上抓 http/https 协议的包
 
-## 2.1 Config Proxy at Android
+## 2.1 Config Proxy at Android => Enabel HTTP
 
-Step 1 : 设置 手机 Wifi Proxy => Enabel HTTP  
+Step 1 : 设置 手机 Wifi Proxy
 Android -> 设置 -> Connections -> Selecte Connected Wifi -> Advanced -> Proxy , Manual->
 
 ```
