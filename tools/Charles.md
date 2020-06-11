@@ -51,8 +51,7 @@ Android -> 设置 -> Connections -> Selecte Connected Wifi -> Advanced -> Proxy 
 
 If not set 2.2, https of Android in Charles is showed `unknown`
 
-Charles 抓取 手机 Https 包会出现 Unknown
-Reason :  
+Charles 抓取 手机 Https 包出现 Unknown. Reason :  
 (1) 手机在未安装证书  
 (2) 接口响应超时或者响应失败的情况
 
