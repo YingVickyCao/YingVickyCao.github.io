@@ -20,8 +20,7 @@
   ![Charles_config_4_mac_6](https://yingvickycao.github.io/img/Charles_config_4_mac_6.png)
 
 或者  
- 点击 2，详细配置 Mac Proxy Setting
-
+点击 2，详细配置 Mac Proxy Setting  
 ![Charles_config_4_mac_4](https://yingvickycao.github.io/img/Charles_config_4_mac_4.png)
 
 ![Charles_config_4_mac_3](https://yingvickycao.github.io/img/Charles_config_4_mac_3.png)
