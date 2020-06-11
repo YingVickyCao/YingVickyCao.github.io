@@ -3,8 +3,8 @@
 # 1 File Path
 
 https://docs.oracle.com/javase/tutorial/essential/io/pathOps.html  
-https://blog.csdn.net/u011983531/article/details/48443195
-
+https://blog.csdn.net/u011983531/article/details/48443195  
+https://blog.csdn.net/qq_24598601/article/details/86685782  
 File file1 = new File("./file1.txt");
 
 | Print Path               | Value                                                                    | DESC                 |
