@@ -34,7 +34,7 @@
 
 ## 2.1 Config Proxy at Android
 
-Step 1 : 设置 手机 Wifi Proxy => Enabel HTTP
+Step 1 : 设置 手机 Wifi Proxy => Enabel HTTP  
 Android -> 设置 -> Connections -> Selecte Connected Wifi -> Advanced -> Proxy , Manual->
 
 ```
