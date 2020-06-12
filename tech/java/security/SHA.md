@@ -34,7 +34,7 @@ SHA-3 :
   vs SHA-2: provides a different approach to generate a unique one-way hash and more faster .  
   JDK 9 avaiable
 
-- SHA 作为[数字签名](DigitalSignatures.md)的 Hash 算法
+- SHA 作为[数字签名](Certificate.md)的 Hash 算法
 
 # Refs
 

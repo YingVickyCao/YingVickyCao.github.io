@@ -1,89 +1,92 @@
-# 加密和解密
+# Encrypting(加密和解密) and Hashing
 
-- 密码(cipher)  
-  一种用于加密或者解密的算法
-- 密钥(key)  
-  密钥是一种参数，它是在使用密码（cipher）算法过程中输入的参数。  
-  同一个明文在相同的密码算法和不同的密钥计算下会产生不同的密文。  
-  密钥才是决定密文是否安全的重要参数，通常密钥越长，破解的难度越大。  
-  密钥分为对称密钥与非对称密钥。
-- 对称密钥 (Symmetric-key algorithm)  
-  又称为`共享密钥加密`。  
-  对称密钥在加密和解密的过程中使用同一个密钥。
+# 1 Encrypting(加密和解密)
 
-  常见的对称加密算法有 DES、3DES、AES、RC5、RC6。
+## 密码(cipher)
 
-  优点：计算速度快  
-  缺点：  
-  1 安全性差。  
-  2 密钥管理难。  
-  因为密钥需要在通讯的两端共享：  
-  如果所有客户端都共享同一个密钥，那么这个密钥能破解所有人的密文了。
-  如果每个客户端与服务端单独维护一个密钥，那么服务端需要管理的密钥将是成千上万，这会给服务端带来噩梦。
+一种用于加密或者解密的算法
 
-- 非对称密钥（public-key cryptography）  
-  又称为`公开密钥加密`.  
-  服务端会生成一对密钥，一个`私钥`保存在服务端，仅自己知道，另一个是`公钥`，公钥可以自由发布供任何人使用。  
-  公钥加密,私钥解密。  
-  非对称密钥在加密和解密的过程的使用的密钥是不同的密钥，加密和解密是不对称的.  
-  与对称密钥加密相比，非对称加密无需在客户端和服务端之间共享密钥，只要私钥不发给任何用户，即使公钥在网上被截获，也无法被解密，仅有被窃取的公钥是没有任何用处的。
+## 密钥(key)
 
-  优点：安全性强  
-  缺点：计算速度慢。
+密钥是一种参数，它是在使用密码（cipher）算法过程中输入的参数。  
+同一个明文在相同的密码算法和不同的密钥计算下会产生不同的密文。  
+密钥才是决定密文是否安全的重要参数，通常密钥越长，破解的难度越大。  
+密钥分为对称密钥与非对称密钥。
 
-  常见的非对称加密有 RSA，
+### 对称密钥 (Symmetric-key algorithm)
 
-  非对称加解密的过程：  
-  1.服务端生成配对的公钥和私钥  
-  2.私钥保存在服务端，公钥发送给客户端  
-  3.客户端使用公钥加密明文传输给服务端  
-  4.服务端使用私钥解密密文得到明文
+又称为`共享密钥加密`。  
+ 对称密钥在加密和解密的过程中使用同一个密钥。
 
-- 明文（plaintext）, 密文（ciphertext）  
-  明文是加密之前的数据。  
-  密文是通过密码（cipher）运算后得到的结果成为密文（ciphertext）
+常见的对称加密算法有 DES、3DES、AES、RC5、RC6。
 
-- 何为 加密 和 解密 ？  
-  加密：把传入的内容，经过一定的算法，变成内容  
-  解密：传入变后的内容，经过一定的算法，还原成原来的内容
+优点：计算速度快  
+ 缺点：  
+ 1 安全性差。  
+ 2 密钥管理难。  
+ 因为密钥需要在通讯的两端共享：  
+ 如果所有客户端都共享同一个密钥，那么这个密钥能破解所有人的密文了。
+如果每个客户端与服务端单独维护一个密钥，那么服务端需要管理的密钥将是成千上万，这会给服务端带来噩梦。
 
-  <li id="symmetric_encryption">对称加密(Symmetric Cryptography)</li>
+### 非对称密钥（public-key cryptography）
+
+又称为`公开密钥加密`.  
+ 服务端会生成一对密钥，一个`私钥`保存在服务端，仅自己知道，另一个是`公钥`，公钥可以自由发布供任何人使用。  
+ 公钥加密,私钥解密。  
+ 非对称密钥在加密和解密的过程的使用的密钥是不同的密钥，加密和解密是不对称的.  
+ 与对称密钥加密相比，非对称加密无需在客户端和服务端之间共享密钥，只要私钥不发给任何用户，即使公钥在网上被截获，也无法被解密，仅有被窃取的公钥是没有任何用处的。
+
+优点：安全性强  
+ 缺点：计算速度慢。
+
+常见的非对称加密有 RSA，
+
+非对称加解密的过程：  
+ 1.服务端生成配对的公钥和私钥  
+ 2.私钥保存在服务端，公钥发送给客户端  
+ 3.客户端使用公钥加密明文传输给服务端  
+ 4.服务端使用私钥解密密文得到明文
+
+## 明文（plaintext）, 密文（ciphertext）
+
+明文是加密之前的数据。  
+密文是通过密码（cipher）运算后得到的结果成为密文（ciphertext）
+
+## 何为 加密 和 解密 ？
+
+加密：把传入的内容，经过一定的算法，变成内容  
+解密：传入变后的内容，经过一定的算法，还原成原来的内容
+
+<h3 id="symmetric_encryption">对称加密(Symmetric Cryptography)</h3>
   加密与解密用的是对称密钥。
 
-- 非对称加密（Asymmetric Cryptography）  
-   加密时使用非对称密钥。
+### 非对称加密（Asymmetric Cryptography）
 
-  组合使用 对称加密和非对称加密：  
-   利用非对称加密来加密对称加密的密钥，然后用对称加密的密钥加密整个网络交互的数据包  
-  ![Combine_Asymmetric_and_Symmetric_cryptography_4_newwork.png](https://yingvickycao.github.io/img/Combine_Asymmetric_and_Symmetric_cryptography_4_newwork.png)
+加密时使用非对称密钥。  
+组合使用 对称加密和非对称加密：  
+ 利用非对称加密来加密对称加密的密钥，然后用对称加密的密钥加密整个网络交互的数据包  
+ ![Combine_Asymmetric_and_Symmetric_cryptography_4_newwork.png](https://yingvickycao.github.io/img/Combine_Asymmetric_and_Symmetric_cryptography_4_newwork.png)
 
-- 碰撞(collision )攻击  
-  抗碰撞性是相对与碰撞攻击讲，碰撞攻击指两个不同的原数据在算法加密后得到了相同的值。
+# 2 Hash
 
-  > collision: if two different values or files can produce the same hash, you create what we call a collision.
+A hashing algorithm is a mathematical function that condenses data to a fixed size
 
-- Hash vs Encrypting  
-  Hashing is a one way function  
-  Encrypting is a proper (two way) function.
+## 信息摘要（Message Digests）/ 摘要:
 
-- Hash ?  
-  A hashing algorithm is a mathematical function that condenses data to a fixed size
+对信息使用某种 Hash 算法，得到的 Hash 值
 
-- 数字证书(Digital certificate)/数字签名(Digital Signatures) /签名  
-  CA 认证的文档(.cert)。  
-  过程：使用对称加密 产生公钥和私钥。私钥 CA 自己保存。把公钥、包括 host name、签名公司、、加密算法、Hash 算法、到日日期等存入一个.cert 文件（证书）中。这就是签名。
+# 3 碰撞(collision )攻击
 
-- [证书锁定 Certificate Pinning / 验证签名](https://www.cnblogs.com/daxueba-ITdaren/p/6495468.html)  
-  证书锁定 是 SSL/TLS 加密的额外保证手段。它会将服务器的证书公钥预先保存在客户端。
-  在建立安全连接的过程中，客户端会将预置的公钥和接受的证书做比较。如果一致，就建立连接，否则就拒绝连接。
+抗碰撞性是相对与碰撞攻击讲，碰撞攻击指两个不同的原数据在算法加密 / hash 后得到了相同的值。
 
-- 信息摘要（Message Digests）/ 摘要:  
-  对信息使用某种 Hash 算法，得到的 Hash 值
+> collision: if two different values or files can produce the same hash, you create what we call a collision.
 
-- 数字摘要 ：  
-  对签名的信息，使用某种 Hash 算法，得到的 Hash 值。
+# 4 Hash vs Encrypting
 
-# Encrypting
+Hashing is a one way function  
+Encrypting is a proper (two way) function.
+
+## Encrypting
 
 | 对称加密      |
 | ------------- |
@@ -98,7 +101,7 @@
 | ------------- |
 | [RSA](RSA.md) |
 
-# Hashing
+## Hashing
 
 | Hashing              | Encoded bytes |
 | -------------------- | ------------- |
@@ -106,13 +109,11 @@
 | [Base 64](Base64.md) |
 | [SHA](SHA.md)        |               |
 
----
-
 - A cryptographic hash can be used to make a signature for a text or a data file.
 - There are hundreds of hashing algorithms out there and they all have specific purposes – some are optimized for certain types of data, others are for speed, security, etc.
 - cryptographic hash algorithms produce irreversible and unique hashes
 
-## 特点
+### 特点
 
 - 强抗碰撞
 - produces unique hashes  
@@ -125,7 +126,7 @@
 - one-way hash  
   不可逆(irreversible).不能通过 Hash 值反推出原始数据的值
 
-## 使用场景
+### 使用场景
 
 - 一致性验证:监测文件是否被篡改：  
   使用 MD5 checksum 校验下载后的软件包是否被修改
@@ -144,9 +145,10 @@
   若已上传，则共享。  
   目的：服务器文件去重，降低服务器负载，减少服务器存储占用
 
-# 数字签名
+# 5 [签名](Certificate.md)
 
 # Refs
 
 - [Difference between Hashing a Password and Encrypting it](https://stackoverflow.com/questions/326699/difference-between-hashing-a-password-and-encrypting-it)
 - https://www.cnblogs.com/btgyoyo/p/6245618.html
+- https://www.cnblogs.com/JeffreySun/archive/2010/06/24/1627247.html

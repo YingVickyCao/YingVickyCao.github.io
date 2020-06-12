@@ -1,4 +1,35 @@
-# Digital Signatures ( 数字签名)
+# Certificate (证书)
+
+# 数字证书(Digital certificate)/数字签名(Digital Signatures) /签名
+
+CA 认证的文档(.cert)。  
+过程：使用对称加密 产生公钥和私钥。私钥 CA 自己保存。把公钥、包括 host name、签名公司、、加密算法、Hash 算法、到日日期等存入一个.cert 文件（证书）中。这就是签名。
+
+## [证书锁定 Certificate Pinning / 验证签名](https://www.cnblogs.com/daxueba-ITdaren/p/6495468.html)
+
+证书锁定 是 SSL/TLS 加密的额外保证手段。它会将服务器的证书公钥预先保存在客户端。
+在建立安全连接的过程中，客户端会将预置的公钥和接受的证书做比较。如果一致，就建立连接，否则就拒绝连接。
+
+## 数字摘要
+
+对签名的信息，使用某种 Hash 算法，得到的 Hash 值。
+
+## 数字签名
+
+# QA
+
+- Q `error: package javax.xml.bind does not exist import javax.xml.bind.DatatypeConverter;`  
+  A :
+  https://www.cnblogs.com/it-tsz/p/11749651.html
+  When Java > 8, `javax.xml.bind` package is excluded.
+
+  How to Fix?  
+  Way 1 : Change JDK to JDK 8  
+  Way 2 : Add jar dependency
+
+  ```
+  javax.xml.bind:jaxb-api:2.3.0
+  ```
 
 # 1 算法
 
