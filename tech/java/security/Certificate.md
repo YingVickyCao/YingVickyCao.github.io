@@ -2,7 +2,8 @@
 
 # 1 证书/数字证书(Digital certificate)
 
-是一个意思：CA 认证的文档(.cert)。  
+是一个意思  
+CA 认证的文档(.cert)。  
 过程：使用对称加密 产生公钥和私钥。私钥 CA 自己保存。把公钥、包括 host name、签名公司、、加密算法、Hash 算法、到日日期等存入一个.cert 文件（证书）中。这就是签名。
 
 # 2 [数字证书原理 △](数字证书原理.md)
@@ -116,3 +117,4 @@ Step 2 ： 服务器收到后，https 低层实现自动把证书中的带的域
 - https://www.thesslstore.com/blog/difference-sha-1-sha-2-sha-256-hash-algorithms/
 - [Descriptions of SHA-256, SHA-384, and SHA-512](http://iwar.org.uk/comsec/resources/cipher/sha256-384-512.pdf)
 - https://www.runoob.com/w3cnote/https-ssl-intro.html
+- https://baike.so.com/doc/989919-1046498.html
