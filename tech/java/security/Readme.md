@@ -190,6 +190,8 @@ Encrypting is a proper (two way) function.
   javax.xml.bind:jaxb-api:2.3.0
   ```
 
+- Q : `java.net.UnknownServiceException: CLEARTEXT communication to gitee.com not permitted by network security policy`
+
 # Refs
 
 - [Difference between Hashing a Password and Encrypting it](https://stackoverflow.com/questions/326699/difference-between-hashing-a-password-and-encrypting-it)

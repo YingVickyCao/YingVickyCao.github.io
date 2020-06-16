@@ -6,6 +6,14 @@
 CA 认证的文档(.cert)。  
 过程：使用对称加密 产生公钥和私钥。私钥 CA 自己保存。把公钥、包括 host name、签名公司、、加密算法、Hash 算法、到日日期等存入一个.cert 文件（证书）中。这就是签名。
 
+英文缩写 Cert  
+英文全称 certificate
+
+# X.509
+
+X.509 是由国际电信联盟(ITU-T)制定的数字证书标准,First introduced in 1988
+https://baike.so.com/doc/989919-1046498.html
+
 # 2 [数字证书原理 △](数字证书原理.md)
 
 # 3 [证书锁定 Certificate Pinning / 验证签名](https://www.cnblogs.com/daxueba-ITdaren/p/6495468.html)
@@ -13,10 +21,10 @@ CA 认证的文档(.cert)。
 证书锁定 是 SSL/TLS 加密的额外保证手段。它会将服务器的证书公钥预先保存在客户端。
 在建立安全连接的过程中，客户端会将预置的公钥和接受的证书做比较。如果一致，就建立连接，否则就拒绝连接。
 
-# 4 数字摘要 / 数字签名
+# 4 Signature 签名/数字摘要 / 数字签名
 
 一个意思。  
-对签名的信息，使用某种 Hash 算法，得到的 Hash 值。
+对签名的信息，使用某种 加密 和 Hash 算法，得到的 Hash 值。
 
 # 5 算法
 
@@ -110,6 +118,69 @@ Step 2 ： 服务器收到后，https 低层实现自动把证书中的带的域
   证书第 2 代：SHA-2  
   正在使用
 
+# 10
+
+# 10 Check certificate
+
+## HostnameVerifier
+
+```java
+// Way 1 :
+HttpsURLConnection.setHostnameVerifier(new MyHostnameVerifier());
+
+// Way 2 :
+new OkHttpClient.Builder() .hostnameVerifier(new MyHostnameVerifier());
+```
+
+## Pinning / Certificate Pinning
+
+又叫 SSL Pinning/TLS Pinning，中文为证书锁定。  
+最大的作用就是用来抵御针对 CA 的攻击。e.g., man-in-the-middle（中间人攻击）。
+
+### Get Pin of Certificate
+
+Way 1 : value = Base64(SHA-256(PublicKey))  
+ 因为 Base 64 算法的填充值不同，计算结果与 javax Base64 值不同
+
+```java
+// OkHttp:CertificatePinner
+public static String pin(Certificate certificate) {
+if (!(certificate instanceof X509Certificate)) {
+  throw new IllegalArgumentException("Certificate pinning requires X509 certificates");
+}
+return "sha256/" + sha256((X509Certificate) certificate).base64();
+}
+
+static ByteString sha256(X509Certificate x509Certificate) {
+  return ByteString.of(x509Certificate.getPublicKey().getEncoded()).sha256();
+}
+```
+
+Way 2: [SSL Lab](https://www.ssllabs.com/ssltest/analyze.html)
+
+Way 3 : OkHttp  
+先填写一个错的 hash 值，然后根据随后的 exception 的 stack trace message，得到对应的 hash 值。
+
+### Set Pin of Certificate
+
+Way 1:
+
+```xml
+<!-- network_security_config.xml -->
+<pin-set expiration="2020-03-16">
+    <pin digest="SHA-256">i6zSAujxX6KALeLg5tcKnvOIn+PsoUXIgED2TG3QYJg=</pin>
+</pin-set>
+
+<!-- AndroidManifest.xml -->
+  android:networkSecurityConfig="@xml/network_security_config"
+```
+
+Way 2: OkHttp
+
+```java
+new OkHttpClient.Builder().certificatePinner(certificatePinner)
+```
+
 # Refs
 
 - [Hash fucntions](https://cryptii.com/pipes/hash-function)
@@ -118,3 +189,10 @@ Step 2 ： 服务器收到后，https 低层实现自动把证书中的带的域
 - [Descriptions of SHA-256, SHA-384, and SHA-512](http://iwar.org.uk/comsec/resources/cipher/sha256-384-512.pdf)
 - https://www.runoob.com/w3cnote/https-ssl-intro.html
 - https://baike.so.com/doc/989919-1046498.html
+- https://www.ssl.com/faqs/what-is-an-x-509-certificate
+- https://www.codebyamir.com/blog/java-developers-guide-to-ssl-certificates
+- https://zhuanlan.zhihu.com/p/58308036
+- https://www.jianshu.com/p/dcfb61720413
+- [Security with HTTPS and SSL](https://developer.android.google.cn/training/articles/security-ssl?hl=en)
+- [Network security configuration](https://developer.android.google.cn/training/articles/security-config?hl=en)
+- https://blog.csdn.net/pcsxk/article/details/103057491
