@@ -136,27 +136,6 @@ https://repo.maven.apache.org/maven2/
 </settings>
 ```
 
-### Remote Repository List
-
-```
-// MAVEN_CENTRAL, Official Maven 2 repository, Maven Central US repository
-https://repo.maven.apache.org/maven2/
-
-// Google
-https://dl.google.com/dl/android/maven2/
-
-// China
-http://mirror.bit.edu.cn
-http://mirror.bit6.edu.cn
-http://mirrors.tuna.tsinghua.edu.cn/
-http://maven.aliyun.com/nexus/content/groups/public/
-
-// jcenter
-https://jcenter.bintray.com
-https://www-eu.apache.org/dist/
-https://www-us.apache.org/dist/
-```
-
 # 5 Publish library to Maven respository
 
 ## 发布到本地

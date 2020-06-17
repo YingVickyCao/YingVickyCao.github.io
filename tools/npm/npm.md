@@ -98,9 +98,4 @@ npm list				// Mac
 # registry = 'https://registry.npmjs.org/'
 
 # registry = 'https://registry.npm.taobao.org/'
-registry = 'http://mirror.bit.edu.cn'
-# registry = 'http://mirror.bit6.edu.cn'
-# registry = 'http://mirrors.tuna.tsinghua.edu.cn/'
-# registry = 'https://jcenter.bintray.com'
-# registry = 'https://repo.maven.apache.org/maven2/'
 ```
