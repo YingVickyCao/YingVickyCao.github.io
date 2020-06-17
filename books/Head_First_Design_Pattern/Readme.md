@@ -6,8 +6,8 @@
 - 设计即生活。  
   思考：设计 即显化需求
 - 设计模式的经典书籍：  
-   《Design Patterns》（设计模式），经典但难懂。作者是四人组（Gang of Four，GoF）：Gamma, Johnson, Helm, Vlissides。  
-   《设计模式之禅》
+   《Design Patterns: Elements of Reusable Object-Oriented Software》(设计模式：可复用面向对象软件的基础），经典但难懂。作者是`四人组（Gang of Four，GoF）：Gamma, Johnson, Helm, Vlissides`。  
+   《设计模式之禅》  
   http://yuedu.baidu.com/ebook/d7260e63844769eae109ed60?fr=aladdin&key=
 
 - 《Head First 设计模式》，可以看作是《Design Patterns》的注释版/ 白话版/漫画版/搞笑版，涵盖了 24 个设计模式。  
