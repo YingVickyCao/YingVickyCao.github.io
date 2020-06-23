@@ -3,12 +3,16 @@
 中文：Head First 设计模式  
 作者：O'Reilly
 
+![design_patterns2](design_patterns2.jpg)
+
 - 设计即生活。  
   思考：设计 即显化需求
 - 设计模式的经典书籍：  
    《Design Patterns: Elements of Reusable Object-Oriented Software》(设计模式：可复用面向对象软件的基础），经典但难懂。作者是`四人组（Gang of Four，GoF）：Gamma, Johnson, Helm, Vlissides`。  
-   《设计模式之禅》  
-  http://yuedu.baidu.com/ebook/d7260e63844769eae109ed60?fr=aladdin&key=
+  ![design_patterns](design_patterns.png)
+
+  《设计模式之禅》  
+   http://yuedu.baidu.com/ebook/d7260e63844769eae109ed60?fr=aladdin&key=
 
 - 《Head First 设计模式》，可以看作是《Design Patterns》的注释版/ 白话版/漫画版/搞笑版，涵盖了 24 个设计模式。  
   特点：易懂、简单、有趣。  
@@ -70,7 +74,7 @@
 | [模版方法模式(Template Method Pattern)](模版方法模式.md) | 由子类决定如何实现算法中的步骤                                                             | 封装算法             |
 | [迭代器模式)](迭代器模式.md)                             | 提供一个方式来遍历集合，而无需暴露集合的实现                                               | 管理集合             |  |
 | [组合模式(Composite Pattern)](组合模式.md)               | 客户可以将对象的集合以及个别的对象一视同仁                                                 | 管理集合             |  |
-| [状态模式(Status Pattern)](状态模式.md)                  | 封装基于状态的行为，并将行为委托到当前状态：通过改变对象内部的状态来实现对象控制自己的行为 | 事物的状态           |
+| [状态模式(State Pattern)](状态模式.md)                   | 封装基于状态的行为，并将行为委托到当前状态：通过改变对象内部的状态来实现对象控制自己的行为 | 事物的状态           |
 | [代理模式 (Proxy Pattern)](代理模式.md)                  | 包装另一个对象，并控制它的访问                                                             | 控制对象访问         |
 | [复合模式 (Compound Pattern)](复合模式.md)               | -                                                                                          | 模式中的模式         |
 
@@ -113,3 +117,6 @@
 - [Design Patterns](https://sourcemaking.com/design_patterns)
 - https://refactoring.guru/design-patterns/java
 - https://www.journaldev.com/java/design-patterns
+- https://blog.csdn.net/annaload/article/details/51172013
+- http://c.biancheng.net/design_pattern/
+- https://blog.csdn.net/sinat_36053757/article/details/71018156
