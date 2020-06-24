@@ -101,7 +101,7 @@
   | 写入时复制代理(Copy-On-Write Proxy) |
 
 - 复合模式  
-  MVC
+  MVC(Model View Controller)
 
 ## VS
 
