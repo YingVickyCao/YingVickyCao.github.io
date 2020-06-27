@@ -15,3 +15,6 @@
 | WeChat                         | Yes            | No                 |
 | Chrome                         | Yes            | No                 |
 | [jietu](https://jietu.qq.com/) | Yes            | No                 |
+| XShell（Remote）               | -              | -                  |
+| XManager（Remote）             | -              | -                  |
+| Xfttp（FTP）                   | -              | -                  |
