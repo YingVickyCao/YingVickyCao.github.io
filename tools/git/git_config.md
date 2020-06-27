@@ -107,6 +107,8 @@ Finally:
 
 # 3 GitHub 添加 SSH Key
 
+https://support.atlassian.com/bitbucket-cloud/docs/set-up-an-ssh-key/
+
 SSH key 让你在电脑和 Code 服务器之间建立安全的加密连接。  
 使用 SSH 协议，可以连接和验证远程服务器和服务。  
 使用 SSH 密钥，可以连接到 GitHub，而无需在每次访问时提供您的用户名或密码。
@@ -115,6 +117,10 @@ SSH key 让你在电脑和 Code 服务器之间建立安全的加密连接。
 
 ```
 $ cat ~/.ssh/id_rsa.pub
+
+OR
+$ ls ~/.ssh
+id_rsa id_rsa.pub
 ```
 
 没有要生成公钥
@@ -122,6 +128,8 @@ $ cat ~/.ssh/id_rsa.pub
 ## 生成公钥
 
 ```
+$ ssh-keygen
+/
 $ ssh-keygen -t rsa -C "youremail" // 执行后创建`~/.ssh` 文件夹
 
 $ ls ~/.ssh
@@ -130,18 +138,42 @@ id_rsa				id_rsa.pub			known_hosts
 
 ## 将 SSH Key 添加到 ssh-agent
 
+- To start the agent
+
 ```
+// To start the agent
 $ eval $(ssh-agent -s)
 Agent pid 81996
 
+OR
+
+$ eval `ssh-agent`
+Agent pid 81996
+```
+
+- Enter ssh-add
+
+```
+Linux
 $ ssh-add ~/.ssh/id_rsa
-Identity added: /Users/hades/.ssh/id_rsa (/Users/hades/.ssh/id_rsa)
+Identity added: /Users/account/.ssh/id_rsa (/Users/account/.ssh/id_rsa)
+
+MacOS
+ssh-add -K ~/.ssh/id_rsa
+```
+
+- MacOS So that your computer remembers your password each time it restarts, open (or create) the ~/.ssh/config file and add these lines to the file:
+
+```
+Host *
+  UseKeychain yes
 ```
 
 ## 复制公钥
 
 ```
 clip < ~/.ssh/id_rsa.pub    // 复制到剪贴板 Win7
+cat ~/.ssh/id_rsa.pub	    // 复制到剪贴板 Linux
 pbcopy < ~/.ssh/id_rsa.pub  // 复制到剪贴板 Mac
 /
 ~/id_rsa.pub                // 打开，then Copy
@@ -155,7 +187,15 @@ https://github.com/settings/keys
 github -> setings--> Security Settings -> SSH Key -> Add key  
 https://gitee.com/profile/sshkeys
 
-## Config config
+## Verify configuration and username
+
+```
+$ ssh -T git@bitbucket.org
+$ ssh -T git@github.com
+$ ssh -T git@gitee.com
+```
+
+- Config config
 
 ```
 # ~/.ssh/config
@@ -172,8 +212,6 @@ HostName github.com
 PreferredAuthentications publickey
 IdentityFile ~/.ssh/id_rsa
 ```
-
-## 验证 ssh 连接
 
 - Before Adding SSH Key to GitHub/Gitee
 
