@@ -1,22 +1,12 @@
 # Head First Design Parttern
 
 中文：Head First 设计模式  
-作者：O'Reilly
-
+作者：O'Reilly  
 ![design_patterns2](design_patterns2.jpg)
 
 - 设计即生活。  
   思考：设计 即显化需求
-- 设计模式的经典书籍：  
-   《Design Patterns: Elements of Reusable Object-Oriented Software》(设计模式：可复用面向对象软件的基础），经典但难懂。作者是`四人组（Gang of Four，GoF）：Gamma, Johnson, Helm, Vlissides`。  
-  ![design_patterns](design_patterns.png)
 
-  《设计模式之禅》  
-   http://yuedu.baidu.com/ebook/d7260e63844769eae109ed60?fr=aladdin&key=
-
-- 《Head First 设计模式》，可以看作是《Design Patterns》的注释版/ 白话版/漫画版/搞笑版，涵盖了 24 个设计模式。  
-  特点：易懂、简单、有趣。  
-  可以作为设计模式的入门。
 - 设计模式适合任何 OO 语言
 - 采用“类” UML 图，而非 UML 类图。
 - 没有包含所有的设计模式  
