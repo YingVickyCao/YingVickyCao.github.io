@@ -53,7 +53,7 @@
 | Visitor                                |              |                                                                |
 | Mediator                               |              |                                                                |
 | Interpreter                            |              |                                                                |
-| Chain of Responsibility                |              |                                                                |
+| Chain of Responsibility                | 责任链模式   |                                                                |
 | Memento                                |              |                                                                |
 
 - 模版方法模式  
