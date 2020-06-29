@@ -64,3 +64,5 @@ After :
 
 - www.refactoring.guru/design-patterns/bridge/java/example
 - https://www.journaldev.com/1491/bridge-design-pattern-java
+
+
