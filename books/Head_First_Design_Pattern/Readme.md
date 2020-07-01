@@ -34,7 +34,7 @@
 | [Factory method ](工厂模式.md#Factory_Method_Pattern)   | 工厂模式 - 工厂方法模式         | 由子类决定要创建的具体类是哪一个               | 封装对象创建           |
 | [Simple Factory](工厂模式.md#Simple_Factory)            | 工厂模式 - 不是模式，但经常使用 |                                                | 封装对象创建           |
 | [Builder](Build_Pattern.md)                             | 生成器模式                      | 按步骤构造一个产品                             | 封装一个产品的构造过程 |
-| Prototype                                               |
+| [Prototype](Prototype_Pattern.md)                       | 原型模式                        | 根据给定实例快速创建一个对象                   | 封装一个产品的构造过程 |
 
 ## 行为模式 (12)
 
