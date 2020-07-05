@@ -51,10 +51,10 @@
 | [Template Method△](模版方法模式.md)      | 模版方法模式 | 由子类决定如何实现算法中的步骤                                 | 封装算法       |
 | [Iterator](迭代器模式.md)                | 迭代器模式   | 提供一个方式来遍历集合，而无需暴露集合的实现                   | 管理集合       |
 | [Chain of Responsibility](责任链模式.md) | 责任链模式   | 按次序处理某件事                                               | 封装调用       |
-| [Visitor](Visitor_Pattern.md)            |              |                                                                |
+| [Visitor](Visitor_Pattern.md)            | 访问者模式   | 不破坏现有结构时，提供访问信息                                 |
 | Mediator                                 |              |                                                                |
 | Interpreter                              |              |                                                                |
-| [Memento](Mementor_Pattern.md)           |              |                                                                |
+| [Memento](Mementor_Pattern.md)           | 备忘录模式   | 撤销与读档                                                     |
 
 - 模版方法模式  
   钩子
