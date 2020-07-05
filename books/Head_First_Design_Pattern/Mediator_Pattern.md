@@ -4,6 +4,13 @@
 
 > 使用该模式来集中相关对象之间复杂的沟通和控制方式
 
+| 角色              | Name       | DESC                                               |
+| ----------------- | ---------- | -------------------------------------------------- |
+| Mediator          | 抽象中介者 | 定义一个接口用于与各同事对象之间进行通信           |
+| ConcreteMediator  | 具体中介者 | 持有各个同事的引用，协调各个同事来实现协作行为     |
+| Colleague         | 抽象同事类 | 持有对 Mediator 的引用，子类可以通过该引用进行通讯 |
+| ConcreteColleague | 具体同事类 | -                                                  |
+
 ![Mediator_Pattern_1](https://yingvickycao.github.io/img/Mediator_Pattern_1.png)
 
 ![Mediator_Pattern_2](https://yingvickycao.github.io/img/Mediator_Pattern_2.png)
