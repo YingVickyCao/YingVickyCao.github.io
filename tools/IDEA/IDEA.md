@@ -12,6 +12,9 @@ Excel at enterprise, mobile and web development with Java, Scala and Groovy, wit
 
 - idea jrebel 热部署
 
+- UML  
+  https://blog.csdn.net/zj420964597/article/details/87856758
+
 # 4 When formatting HTML, `<html>` and `<body>` are not intent（缩进）
 
 In `Do not indent children on： remove html、body、head`
