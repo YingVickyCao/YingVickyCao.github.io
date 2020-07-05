@@ -52,7 +52,7 @@
 | [Iterator](迭代器模式.md)                | 迭代器模式   | 提供一个方式来遍历集合，而无需暴露集合的实现                   | 管理集合       |
 | [Chain of Responsibility](责任链模式.md) | 责任链模式   | 按次序处理某件事                                               | 封装调用       |
 | [Visitor](Visitor_Pattern.md)            | 访问者模式   | 不破坏现有结构时，提供访问信息                                 |
-| Mediator                                 |              |                                                                |
+| [Mediator](Mediator_Pattern.md)          | 中介者模式   | 把 控制逻辑 集中                                               |
 | Interpreter                              |              |                                                                |
 | [Memento](Mementor_Pattern.md)           | 备忘录模式   | 撤销与读档                                                     |
 
