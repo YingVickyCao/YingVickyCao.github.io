@@ -53,7 +53,7 @@
 | [Chain of Responsibility](责任链模式.md) | 责任链模式   | 按次序处理某件事                                               | 封装调用       |
 | [Visitor](Visitor_Pattern.md)            | 访问者模式   | 不破坏现有结构时，提供访问信息                                 |
 | [Mediator](Mediator_Pattern.md)          | 中介者模式   | 中间人集中控制和沟通逻辑                                       |
-| Interpreter                              |              |                                                                |
+| [Interpreter](Interpreter_Pattern.md)    | 解释器模式   | 为语言创建解释器                                               |
 | [Memento](Mementor_Pattern.md)           | 备忘录模式   | 撤销与读档                                                     |
 
 - 模版方法模式  
