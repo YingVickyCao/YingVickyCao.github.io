@@ -533,3 +533,17 @@ render(){
   onChangeText={this._onChangeText_4_pwd.bind(this)}
 }
 ```
+
+# 35 RN bundle 升级
+
+1）assert version  
+2）remote version  
+3）cached downloaded version  
+3）min support version  
+4）ON version
+
+download ？  
+1）remote version > cached downloaded version  
+2）remote version > min support version  
+2）remote version > ON version  
+3）RN library version == RN library support version

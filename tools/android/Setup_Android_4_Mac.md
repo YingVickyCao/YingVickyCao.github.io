@@ -1,14 +1,4 @@
-# Build Android Native Development
-
----
-
-# Reference
-
-- [Installing the Android Development Environment](https://spring.io/guides/gs/android/#android-dev-env)
-- [androiddevtools](http://www.androiddevtools.cn)
-- [Android China](https://developer.android.google.cn/index.html)
-
----
+# Setup Android
 
 # Command Tips
 
@@ -61,13 +51,13 @@ java -version
 ## MAC JDK 版本切换
 
 - Download  
-  https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html    
+  https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html  
   https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html // Current use  
-  https://repo.huaweicloud.com/java/jdk/ (Recommend)     
+  https://repo.huaweicloud.com/java/jdk/ (Recommend)  
   http://openjdk.java.net/install/index.html
-   
 - MAC JDK 版本切换  
-https://www.mkyong.com/java/how-to-set-java_home-environment-variable-on-mac-os-x/
+  https://www.mkyong.com/java/how-to-set-java_home-environment-variable-on-mac-os-x/
+
 ```
 # JDK
 #  Mac自带JDK6,JDK7，JDK8则要自己下载安装
@@ -98,14 +88,17 @@ $ /usr/libexec/java_home -V
 Matching Java Virtual Machines (1):
     1.8.0_161, x86_64:	"Java SE 8"	/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home
 ```
+
 - Uninstall JDK and JRE
-https://docs.oracle.com/javase/10/install/installation-jdk-and-jre-macos.htm#JSJIG-GUID-2FE451B0-9572-4E38-A1A5-568B77B146DE
+  https://docs.oracle.com/javase/10/install/installation-jdk-and-jre-macos.htm#JSJIG-GUID-2FE451B0-9572-4E38-A1A5-568B77B146DE
+
 # 2.Gradle
 
 https://gradle.org/releases/  
 Downloading https://services.gradle.org/distributions/gradle-6.2.1-bin.zip  
 Downloading https://services.gradle.org/distributions/gradle-6.2.1-all.zip  
-https://repo.huaweicloud.com/gradle/ 
+https://repo.huaweicloud.com/gradle/
+
 ```
 # Gradle
 # 配置Gradle 环境变量
@@ -182,3 +175,9 @@ export PATH=$PATH:$NDK_HOME/
 $cmake -version
 cmake version 3.6.0-rc2
 ```
+
+# Reference
+
+- [Installing the Android Development Environment](https://spring.io/guides/gs/android/#android-dev-env)
+- [androiddevtools](http://www.androiddevtools.cn)
+- [Android China](https://developer.android.google.cn/index.html)
