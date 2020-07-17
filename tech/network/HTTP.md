@@ -1,4 +1,4 @@
-# HTTP / HTTPs
+# HTTP
 
 - Method
 
@@ -20,3 +20,9 @@ CONNECT
   | 安全性 | 加密 | 明文传输 |
   | 连接 | 有状态 | 无状态 |
   | 端口 | 443 | 80 |
+
+- HTTP response status codes
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+
+- h2 = "HTTP/2 over TLS", not "HTTP/2"

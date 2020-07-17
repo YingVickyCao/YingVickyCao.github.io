@@ -1,3 +1,6 @@
 # Tech
 
-Flutter
+- Flutter
+- Kotlin
+- FCM
+- JObServce
