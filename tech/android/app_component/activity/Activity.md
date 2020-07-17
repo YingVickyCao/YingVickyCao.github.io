@@ -1180,6 +1180,13 @@ OR
 <item name="android:windowBackground">@drawable/wallpaper</item>
 ```
 
+# 10 Reload current activity
+
+```java
+finish()
+startActivity(getIntent())
+```
+
 # TBD:
 
 ## TBD:Recents Scrreen
