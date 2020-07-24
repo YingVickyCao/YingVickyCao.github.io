@@ -1,9 +1,10 @@
 # Web -> App(Uri)
 
 # In Chrome html page,Click `openApp` button to open android app.
-Mock OpenApp: Open link url from Chrome App to open Other App Activity.  
 
-- A1 app:`TestAccessRemoteActivity.java`,  `web_open_app.html`
+Mock OpenApp: Open link url from Chrome App to open Other App Activity.
+
+- A1 app:`TestAccessRemoteActivity.java`, `web_open_app.html`
 - B1 app:`TestReceiveImplicitIntentActivity.java`
 
 only mock Case1
@@ -16,33 +17,42 @@ Then Case2:
  window.location=url
 ```
 
-## 1. Open by Chrome 
-Put `web_open_app.html` to `/sdard/`,  and open in Chrome,   
-### Way1: Click button "Open App" 
+## 1. Open by Chrome
 
-=> ***Can jump***  
-=> ***web_open_app2.html can jump***
+Put `web_open_app.html` to `/sdard/`, and open in Chrome,
+
+### Way1: Click button "Open App"
+
+=> **_Can jump_**  
+=> **_web_open_app2.html can jump_**
 
 ### Way2: chrome://inspect/#devices
-Console:  
-```
-window.location="intent://jump?anything#Intent;scheme=android_about_demos_b;package=com.hades.example.android.b;end"  
-```
-=> ***Can jump***
 
-Tip:  
+Console:
+
+```
+window.location="intent://jump?anything#Intent;scheme=android_about_demos_b;package=com.hades.example.android.b;end"
+```
+
+=> **_Can jump_**
+
+Tip:
+
 - When Inspect, Google must be accessed in Chrome. Because first time, must download some required 组件 from Google.
 
-### Way3: Put below url to 搜索框 :   
+### Way3: Put below url to 搜索框 :
+
 ```
 intent://jump?anything#Intent;scheme=android_about_demos_b;package=com.hades.example.android.b;end
 ```
-***Can not jump***
- 
- 
-## 2. Open by android WebView Widget 
-Put `web_open_app.html`  to android `asserts dir`, then Show it in WebView Widget.  
-Click button "Open App" 
+
+**_Can not jump_**
+
+## 2. Open by android WebView Widget
+
+Put `web_open_app.html` to android `asserts dir`, then Show it in WebView Widget.  
+Click button "Open App"
+
 ```
 <!Doctype html>
 <html>
@@ -63,4 +73,4 @@ Click button "Open App"
 </html>
 ```
 
-=> ***Can not jump***
+=> **_Can not jump_**
