@@ -1,8 +1,13 @@
 # Debug APK webview page
 
-# 1 Chekc android debug apk web request
+# 1 Chekc android apk web request
 
-方法 1：`chrome://inspect`(Recommended)  
+方法 1：Debug app web page in Chrome (Recommended)
+
+```
+chrome://inspect
+```
+
 方法 2： android studio logcat  
 方法 3：Charles
 
