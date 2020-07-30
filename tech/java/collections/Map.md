@@ -1,6 +1,6 @@
 # Map
 
-# PO
+# 1 PO
 
 <h2 id="po_loop_HashMap">Loop HashMap</h2>
 
@@ -64,19 +64,19 @@ private void java8Lambda() {
 - Test Data
   | Map Size | 10,000 | 100,000 | 1,000,000 | 2,000,000 |
   | -------- | ------ | ------- | --------- | --------- |
-  | Way 1 | 1 ms | 6 ms | 14 ms | 25 ms |
-  | Way 2 | 4 ms | 5 ms | 12 ms | 24 ms |
-  | Way 3 | 1 ms | 4 ms | 11 ms | 22 ms |
-  | Way 4 | 1 ms | 3 ms | 11 ms | 21 ms |
-  | Way 5 | 41 ms | 44 ms | 56 ms | 62 ms |
+  | Way 1 - key + value | 1 ms | 6 ms | 14 ms | 25 ms |
+  | Way 2 - key| 4 ms | 5 ms | 12 ms | 24 ms |
+  | Way 3 - value | 1 ms | 4 ms | 11 ms | 22 ms |
+  | Way 4 - key + value | 1 ms | 3 ms | 11 ms | 21 ms |
+  | Way 5 - key + value| 41 ms | 44 ms | 56 ms | 62 ms |
 
 - How to choose ？
 
-  | Usage       | Choose |
-  | ----------- | ------ |
-  | Key + Value | Way 1  |
-  | Key         | Way 2  |
-  | Value       | Way 3  |
+  | Usage       | Choose                      |
+  | ----------- | --------------------------- |
+  | Key + Value | Way 1: 可读性 / Way 4：性能 |
+  | Key         | Way 2: 可读性 / Way 4：性能 |
+  | Value       | Way 3: 可读性 / Way 4：性能 |
 
 # Refs
 
