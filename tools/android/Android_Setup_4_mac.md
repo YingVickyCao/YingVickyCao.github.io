@@ -89,6 +89,15 @@ Matching Java Virtual Machines (1):
     1.8.0_161, x86_64:	"Java SE 8"	/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home
 ```
 
+- 如何在 Mac 上卸载 Java？
+  https://www.java.com/zh_CN/download/help/mac_uninstall_java.xml
+
+```
+sudo rm -fr /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin
+sudo rm -fr /Library/PreferencePanes/JavaControlPanel.prefPane
+sudo rm -fr ~/Library/Application\ Support/Oracle/Java
+```
+
 - Uninstall JDK and JRE
   https://docs.oracle.com/javase/10/install/installation-jdk-and-jre-macos.htm#JSJIG-GUID-2FE451B0-9572-4E38-A1A5-568B77B146DE
 
