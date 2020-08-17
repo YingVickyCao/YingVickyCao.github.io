@@ -20,3 +20,5 @@
 | Xfttp（FTP）                   | -              | -                  |
 
 - DevOps
+- [Android-Debug-Database](https://github.com/amitshekhariitbhu/Android-Debug-Database)  
+  [Refs](../tools/android/Tool_Android_Debug_Database.md)
