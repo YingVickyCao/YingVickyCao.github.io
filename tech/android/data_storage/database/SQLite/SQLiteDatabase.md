@@ -198,22 +198,3 @@ SQLiteDatabase.querry/rawQuery() -> .SQLiteCursorDriver.query()
 SQLiteDatabase.update() -> SQLiteStatement.executeUpdateDelete()
 SQLiteDatabase.delete() -> SQLiteStatement.executeUpdateDelete()
 ```
-
-# Refs
-
-- [Room](https://developer.android.google.cn/training/data-storage/room)
-- [Save data using SQLite](https://developer.android.google.cn/training/data-storage/sqlite.html)
-- [Data and file storage overview-Database](https://developer.android.google.cn/guide/topics/data/data-storage#db)
-- [android.database](https://developer.android.google.cn/reference/android/database/package-summary)
-- [android.database.sqlite](https://developer.android.google.cn/reference/android/database/sqlite/package-summary)
-- [Datatypes In SQLite Version 3](https://www.sqlite.org/datatype3.html)
-- [Command Line Shell For SQLite](https://www.sqlite.org/cli.html)
-- https://blog.csdn.net/justwanttofly/article/details/78912701
-- https://blog.csdn.net/fantianheyey/article/details/9199235
-- https://blog.csdn.net/qq_42672839/article/details/81584172
-- https://blog.csdn.net/adayabetter/article/details/44516217
-- [SQLite 事务、升级数据库](https://www.cnblogs.com/orlion/p/5350683.html)
-- [SQLite 数据库的增删改查和事务(transaction)调用](https://www.cnblogs.com/amosli/p/3784998.html)
-- [Andrioid SQLite 操作与 SQLiteStatement 关系](https://blog.csdn.net/wangbole/article/details/43196067)
-- [SQLite 之 SQLiteStatement](https://blog.csdn.net/u012643122/article/details/45932157)
-- [Android 入门(十二)SQLite 事务、升级数据库](https://www.cnblogs.com/orlion/p/5350683.html)

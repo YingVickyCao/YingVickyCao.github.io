@@ -110,6 +110,8 @@ manage private databases With / Not with Content Providers
 
 # [6 SQLiteOpenHelper](SQLiteOpenHelper.md)
 
+# [7 ERROR](ERROR.md)
+
 # Refs
 
 - [Room](https://developer.android.google.cn/training/data-storage/room)
