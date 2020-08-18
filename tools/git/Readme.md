@@ -31,8 +31,7 @@ $ git remote add origin git@github.com:YingVickyCao/TestAndroidAppBundle.git
 $ git remote add origin https://github.com/YingVickyCao/TestAndroidAppBundle.git
 ```
 
-e.g.
-Push the local repository to GitHub?
+## Push the local repository to GitHub?
 
 ```
 …or create a new repository on the command line
