@@ -1,5 +1,7 @@
 # SQLiteOpenHelper
 
+# 1 DB OP
+
 ## `void onCreate(SQLiteDatabase db)`
 
 - Thread = = Thread runing `getWritableDatabase()`/`getReadableDatabase()`
@@ -74,7 +76,7 @@ SQLiteDatabase getDatabaseLocked(boolean writable){
 
 - called in onDestroy() of Activity/Fragment/Application subclass
 
-# `Cursor.java`
+# 2 `Cursor.java`
 
 ## cursor.getColumnIndexOrThrow
 

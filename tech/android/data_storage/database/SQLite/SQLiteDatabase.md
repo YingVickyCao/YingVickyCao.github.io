@@ -198,3 +198,20 @@ SQLiteDatabase.querry/rawQuery() -> .SQLiteCursorDriver.query()
 SQLiteDatabase.update() -> SQLiteStatement.executeUpdateDelete()
 SQLiteDatabase.delete() -> SQLiteStatement.executeUpdateDelete()
 ```
+
+# 5 db.update 多条件参数
+
+```java
+private void delete_multiple_condition() {
+    SQLiteDatabase db = dbHelper.getWritableDatabase();
+    String whereClause = Table1ReaderContract.TableEntry._ID + "=? OR " + Table1ReaderContract.TableEntry.COL3 + ">?";
+    String[] whereArgs = new String[]{"5", "10"};
+    db.delete(Table1ReaderContract.TableEntry.TABLE_NAME, whereClause, whereArgs);
+}
+```
+
+```
+// String[] whereArgs
+int delete(String table, String whereClause, String[] whereArgs)
+int update(String table, ContentValues values, String whereClause, String[] whereArgs)
+```
