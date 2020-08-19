@@ -1,5 +1,12 @@
 # Setup Android
 
+| Androis Studio Version | Gradle Version | Gradle plugin Version |
+| ---------------------- | -------------- | --------------------- |
+| 3.6                    | 5.4.1          | 3.5.0                 |
+| 4.0                    | 5.6.4          | 3.6.3                 |
+
+https://developer.android.google.cn/studio/releases/gradle-plugin#updating-gradle
+
 # Command Tips
 
 ## Unix-based Operating System (Linux, Solaris and Mac OS X) Tips
