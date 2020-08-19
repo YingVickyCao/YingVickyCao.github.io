@@ -22,10 +22,6 @@ CONNECT
 | 连接   | 有状态                                                         | 无状态 |
 | 端口   | 443                                                            | 80 |
 
-# 3 HTTP response status codes
-
-https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
-
-# 4   h2
+# 4 h2
 
 h2 = "HTTP/2 over TLS", not "HTTP/2"
