@@ -40,6 +40,8 @@ file1.getParentFile() = {File@1923} "."
 
 `TestJson.java`
 
+Below summary also works in Android Project
+
 | java dir can access resource dir? | src/main/resources    | src/test/resources   |
 | --------------------------------- | --------------------- | -------------------- |
 | src/main/java                     | ✔                     | ✗                    |
