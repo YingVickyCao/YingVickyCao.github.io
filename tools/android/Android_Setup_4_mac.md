@@ -1,9 +1,10 @@
 # Setup Android
 
-| Androis Studio Version | Gradle Version | Gradle plugin Version |
-| ---------------------- | -------------- | --------------------- |
-| 3.6                    | 5.4.1          | 3.5.0                 |
-| 4.0                    | 5.6.4          | 3.6.3                 |
+| Androis Studio Version | Gradle plugin Version | Gradle Version |
+| ---------------------- | --------------------- | -------------- |
+| 3.6                    | 3.5.0                 | 5.4.1          |
+| 4.0                    | 3.6.3                 | 5.6.4          |
+| TODO: 4.0.1            | 4.0.0                 | 6.1.1          |
 
 https://developer.android.google.cn/studio/releases/gradle-plugin#updating-gradle
 
