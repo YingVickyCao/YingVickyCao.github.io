@@ -2,6 +2,7 @@
 
 # 1 File Path
 
+`TestPath.java`
 https://docs.oracle.com/javase/tutorial/essential/io/pathOps.html  
 https://blog.csdn.net/u011983531/article/details/48443195  
 https://blog.csdn.net/qq_24598601/article/details/86685782  
@@ -34,3 +35,25 @@ file1.getParentFile() = {File@1923} "."
 
 - 相对路径: 相对于 project JVM 的启动路径
 - 绝对路径：相对于 OS 的路径
+
+# 2 Resources Dir
+
+`TestJson.java`
+
+| java dir can access resource dir? | src/main/resources    | src/test/resources   |
+| --------------------------------- | --------------------- | -------------------- |
+| src/main/java                     | ✔                     | ✗                    |
+| src/test/jva                      | ✔<br/>(Second Choose) | ✔<br/>(First Choose) |
+
+# 3 How to access file in same package?
+
+`TestJson.java`
+
+```java
+// src/main/resources/
+// src/test/resources
+private InputStream getResourceAsStream(String jsonFileName) {
+//  return getClass().getClassLoader().getResourceAsStream(fileName);
+    return TestJson.class.getClassLoader().getResourceAsStream(jsonFileName);
+}
+```
