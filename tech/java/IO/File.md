@@ -38,7 +38,7 @@ file1.getParentFile() = {File@1923} "."
 
 # 2 Resources Dir
 
-`TestJson.java`
+`FileUtils.java`
 
 Below summary also works in Android Project
 
@@ -49,7 +49,7 @@ Below summary also works in Android Project
 
 # 3 How to access file in same package?
 
-`TestJson.java`
+`FileUtils.java`
 
 ```java
 // src/main/resources/
