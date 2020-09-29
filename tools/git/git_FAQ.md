@@ -107,3 +107,21 @@ and the repository exists.
 
 Solution:
 Check remote repository = .git/config
+
+# ERROR:`Bitbucket: Unauthorized`
+
+```
+git push
+Unauthorized
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+```
+
+Step 1 : Delete 公钥 from REPO.  
+REPO -> Repository Settings -> Access keys  
+**Use access keys to gain read-only access to this repository.**
+
+Step 2 : Add 公钥 to profile  
+Your profile -> Personal Settings -> SSH-Keys
