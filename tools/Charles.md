@@ -6,6 +6,7 @@
   与 Mac 连接同一个 Wifi
 - Iphone 6S Plus with Software Version is `12.4.1`  
   与 Mac 连接同一个 Wifi
+- Wifi 重连，Charles 重新打开，都需要重新设置。
 
 # 1 Charles 在 Mac 上抓 http/https 协议的包
 
@@ -93,6 +94,10 @@ Step 2 : 手机浏览器 输入`chls.pro/ssl`
 Step 3 : same as `2.2 - Way 1 - Step 3`
 
 # 3 Charles 在 Android Emulator 上抓 http/https 协议的包
+
+```
+emulator -avd <device name> -http-proxy http://本地地址:8888
+```
 
 # 4 Charles 在 iPhone 上抓 http/https 协议的包
 

@@ -100,6 +100,12 @@ CONNECT
 
 ![vs 2](https://upload-images.jianshu.io/upload_images/2537311-b22ceca55652e141.png)
 
+软件通信有七层结构:
+下三层结构偏向与数据通信，  
+上三层更偏向于数据处理，  
+中间的传输层则是连接上三层与下三层之间的桥梁.  
+每一层都做不同的工作，上层协议依赖与下层协议。基于这个通信结构的概念。
+
 # Refs
 
 - HTTPS https://www.jianshu.com/p/2fa5ffd889ce

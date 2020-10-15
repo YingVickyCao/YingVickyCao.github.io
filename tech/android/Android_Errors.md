@@ -33,3 +33,62 @@ androidx.test.ext.junit.runners.AndroidJUnit4
 Reason: In Activity onCreate(), one Dialog is showd in RxJava2 thread ,causing code RxJava2-onError, so UI is not inited.
 
 [TestCase1.java](https://gitee.com/YingVickyCao/AndroidAboutDemos/blob/master/soruce/AndroidLibs/RxJava2/app/src/main/java/com/hades/android/example/rxjava2/_subscribeOn_vs_observeOn/TestCase1.java)
+
+# 4 ERROR: `CLEARTEXT communication to "XXX domain" not permitted by network`
+
+Reason : Android >=28(9.0) 网络访问安全策略升级，限制了非加密的流量请求。
+
+Fix:
+
+Way 1 : targetSdkVersion 27
+
+Way 2 :Explicitly saying that accept clear text for some host
+
+```xml
+<application
+    android:networkSecurityConfig="@xml/network_security_config">
+</application>
+```
+
+```xml
+<!-- res/xml/network_security_config.xml  -->
+<?xml version="1.0" encoding="utf-8"?>
+    <network-security-config>
+        <domain-config cleartextTrafficPermitted="true">
+            <domain includeSubdomains="true">localhost</domain>
+        </domain-config>
+    </network-security-config>
+</xml>
+```
+
+OR
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>
+```
+
+Way 3 : app and server : http -> https (TBD)
+
+Way 4 : Accept certificates from given Certificate Authority
+
+```xml
+<!-- res/xml/network_security_config.xml -->
+
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <debug-overrides>
+        <trust-anchors>
+        <!-- /raw/debug_cert.dem -->
+            <certificates src="@raw/debug_cert"/>
+        </trust-anchors>
+    </debug-overrides>
+</network-security-config>
+```
+
+Refs:  
+http://www.douevencode.com/articles/2018-07/cleartext-communication-not-permitted/
+
+https://blog.csdn.net/cpcpcp123/article/details/108063189
