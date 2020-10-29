@@ -11,3 +11,6 @@ implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: 
 ```
 
 Way 3 : OkHttp
+
+Code :
+https://gitee.com/YingVickyCao/Retrofit2/tree/master/src/main/java/com/hades/example/retrofit2/_6_302/v2_get_location
