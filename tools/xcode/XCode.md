@@ -33,10 +33,12 @@ Package "Xcode_10.1.xip":
 
 # 2. XCode Version - IOS SDK Version - Mac OS version
 
-| XCode Version | IOS SDK Version | Mac OS version |
-| ------------- | --------------- | -------------- |
-| XCode 11      | 13              |
-| XCode 10      | 12              |
-| XCode 9       | 11              |
-| XCode 8       | 10              |
-| XCode 7       | 9               |
+| XCode Version | IOS Version | Ipad OS | tvOS | watchOS | Mac OS version | Swift | DESC |
+| ------------- | ----------- | ------- | ---- | ------- | -------------- | ----- | ---- |
+| XCode 12.1    | 11          |         | 14   | 7       | 10.15.6        | 5.3   |      |
+| XCode 12.0    | 14          |         | 14   | 7       | 10.15.6        | 5.3   |      |
+| XCode 11.7    | 13.7        |         | 13.4 | 6.2     | 10.15.6        |       |      |
+| XCode 11.6    | 13.6        |         | 13.4 | 6.2     | 10.15.6        |       |      |
+| XCode 11.5    | 13.5        |         | 13.4 | 6.2     | 10.15.4        |       |      |
+| XCode 11      | 13          |         |      |         |                |       |      |
+| XCode 10.3    | 12.4        |         | 12.4 | 5.3     | 10.14.6        |       |      |
