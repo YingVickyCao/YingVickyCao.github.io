@@ -1,9 +1,31 @@
 # XCode
 
-# 1 The archive "XCode_10.1.xip" does not come from apple.
+# 1 Install XCode
+
+- XCode Version - IOS SDK Version - Mac OS version
+
+| XCode Version | IOS Version | Ipad OS | tvOS | watchOS | Mac OS version | Swift | DESC |
+| ------------- | ----------- | ------- | ---- | ------- | -------------- | ----- | ---- |
+| XCode 12.1    | 14          |         | 14   | 7       | 10.15.6        | 5.3   |      |
+| XCode 12.0    | 14          |         | 14   | 7       | 10.15.6        | 5.3   |      |
+| XCode 11.7    | 13.7        |         | 13.4 | 6.2     | 10.15.6        |       |      |
+| XCode 11.6    | 13.6        |         | 13.4 | 6.2     | 10.15.6        |       |      |
+| XCode 11.5    | 13.5        |         | 13.4 | 6.2     | 10.15.4        |       |      |
+| XCode 11      | 13          |         |      |         |                |       |      |
+| XCode 10.3    | 12.4        |         | 12.4 | 5.3     | 10.14.6        |       |      |
+
+- 开发者账号
+- Download Version  
+   Search "xcode 10.3"  
+   "Xcode 10.3"  
+  https://download.developer.apple.com/Developer_Tools/Xcode_10.3/Xcode_10.3.xip
+
+# FAQ
+
+## 1 The archive "XCode_10.1.xip" does not come from apple.
 
 - Reason:  
-  Certification is expired.
+  The zip is downloade long long ago, so certification is expired .
 
 ```
 s$ xip -x Xcode_10.1.xip
@@ -30,15 +52,3 @@ Package "Xcode_10.1.xip":
   https://developer.apple.com/downloads/  
   https://developer.apple.com/download/more/  
   https://download.developer.apple.com/Developer_Tools/Xcode_10.1/Xcode_10.1.xip
-
-# 2. XCode Version - IOS SDK Version - Mac OS version
-
-| XCode Version | IOS Version | Ipad OS | tvOS | watchOS | Mac OS version | Swift | DESC |
-| ------------- | ----------- | ------- | ---- | ------- | -------------- | ----- | ---- |
-| XCode 12.1    | 11          |         | 14   | 7       | 10.15.6        | 5.3   |      |
-| XCode 12.0    | 14          |         | 14   | 7       | 10.15.6        | 5.3   |      |
-| XCode 11.7    | 13.7        |         | 13.4 | 6.2     | 10.15.6        |       |      |
-| XCode 11.6    | 13.6        |         | 13.4 | 6.2     | 10.15.6        |       |      |
-| XCode 11.5    | 13.5        |         | 13.4 | 6.2     | 10.15.4        |       |      |
-| XCode 11      | 13          |         |      |         |                |       |      |
-| XCode 10.3    | 12.4        |         | 12.4 | 5.3     | 10.14.6        |       |      |

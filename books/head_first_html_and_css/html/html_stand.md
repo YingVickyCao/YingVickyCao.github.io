@@ -112,6 +112,25 @@ http://validator.w3.org/
 
 ![meta_4.01.jpg](https://yingvickycao.github.io/img/html/meta_4.01.jpeg)
 
+```xml
+<!--
+  width=device-width ：表示宽度是设备屏幕的宽度
+  initial-scale=1.0：表示初始的缩放比例
+  minimum-scale=0.5：表示最小的缩放比例
+  maximum-scale=2.0：表示最大的缩放比例
+  user-scalable=yes：表示用户是否可以调整缩放比例
+-->
+<!-- 想要一打开网页，则自动以原始比例显示，并且不允许用户修改  -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+```
+
+```xml
+<!-- 让网页的宽度自动适应手机屏幕的宽度 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+```
+
+https://blog.csdn.net/nvzizhou/article/details/46360607
+
 - 字母编码  
   字符编码告诉浏览器页面使用了哪一种字符。英文？中文？  
   浏览器不能区分使用哪一种字符。 浏览器只能读取数据，猜测使用哪种字符。猜错可能导致页面显示错误，甚至带来潜在漏洞，让黑客有机可乘。有了字符编码就不需要浏览器区猜测。  
