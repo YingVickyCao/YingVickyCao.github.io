@@ -63,3 +63,78 @@ Swift：
 - IOS app 中什么时候使用 C++？  
   (1)app 中调用 C++ 写的库  
   (2)将 app 中的一部分代码用 C++ 来写，这样便于跨平台。
+
+# 5 Playgrpound
+
+- Playgrpound 作用：  
+  优点：可视化，方便，所见即所得  
+  缺点：不够成熟，不能用于实际开发  
+  Mind，Debug，Test，编码实现一些设计猜想
+
+- SwiftExamnple.playground is a zip containing 3 files.  
+  Way 1 : Open in Editor  
+  Way 2 : +".zip"/".rar"
+
+  Contents.swift  
+  contents.xcplayground
+
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='5.0' target-platform='macos'>
+    <timeline fileName='timeline.xctimeline'/>
+</playground>
+```
+
+timeline.xctimeline
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Timeline
+   version = "3.0">
+   <TimelineItems>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/hades/Desktop/SwiftExamnple.playground#CharacterRangeLen=12&amp;CharacterRangeLoc=160&amp;EndingColumnNumber=0&amp;EndingLineNumber=19&amp;StartingColumnNumber=5&amp;StartingLineNumber=18&amp;Timestamp=626517426.123819"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+   </TimelineItems>
+</Timeline>
+```
+
+- 如何建立 Playgrpound 文件？  
+  Way 1 ：XCode -> Create a Playgrpound.  
+  Way 2 ： add new Playgrpound file in current project
+
+# 1 var
+
+# 2 let
+
+# 3 loop
+
+# 4 Comment
+
+# 5 分号
+
+# 6 基本数据类型
+
+## TODO: 类型转换
+
+# 7 Tuples（元组）
+
+Object 没有这种类型  
+When use：函数返回多个数据，又不想定义类、结构等。
+
+# 8 字符
+
+# 9 字符串
+
+string 是值类型
+
+- 初始化
+- 拼接
+- Char -> String
+- loop item
+
+# 8 optional types
+
+Optionals say either “there is a value, and it equals x” or “there isn’t a value at all”.
