@@ -105,36 +105,4 @@ timeline.xctimeline
   Way 1 ：XCode -> Create a Playgrpound.  
   Way 2 ： add new Playgrpound file in current project
 
-# 1 var
-
-# 2 let
-
-# 3 loop
-
-# 4 Comment
-
-# 5 分号
-
-# 6 基本数据类型
-
-## TODO: 类型转换
-
-# 7 Tuples（元组）
-
-Object 没有这种类型  
-When use：函数返回多个数据，又不想定义类、结构等。
-
-# 8 字符
-
-# 9 字符串
-
-string 是值类型
-
-- 初始化
-- 拼接
-- Char -> String
-- loop item
-
-# 8 optional types
-
-Optionals say either “there is a value, and it equals x” or “there isn’t a value at all”.
+# [6 Contents](Swift_Contents.md)
