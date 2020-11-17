@@ -12,13 +12,33 @@
 | XCode 11.6    | 13.6        |         | 13.4 | 6.2     | 10.15.6        |       |      |
 | XCode 11.5    | 13.5        |         | 13.4 | 6.2     | 10.15.4        |       |      |
 | XCode 11      | 13          |         |      |         |                |       |      |
-| XCode 10.3    | 12.4        |         | 12.4 | 5.3     | 10.14.6        |       |      |
+| XCode 10.3    | 12.4        |         | 12.4 | 5.3     | 10.14.6        | 5.0.1 |      |
 
 - 开发者账号
 - Download Version  
    Search "xcode 10.3"  
    "Xcode 10.3"  
   https://download.developer.apple.com/Developer_Tools/Xcode_10.3/Xcode_10.3.xip
+
+## Swift
+
+- check swift version
+
+```
+$ xcrun swift -version
+Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)
+Target: x86_64-apple-darwin18.7.0
+```
+
+- check swift postion
+
+```
+$ xcrun --find swift
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift
+```
+
+- List swift versions in project
+  Project -> Build Settings -> search "switch"
 
 # FAQ
 
