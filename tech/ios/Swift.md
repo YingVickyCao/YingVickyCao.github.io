@@ -43,11 +43,13 @@ https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html
 
 为什么会有 Swift？  
  (1) Apple 重写了 Runtime 运行时，特别是编译器，提高运行速度  
- (2) 编写代码更有效率，语言更简单。
+ (2) 编写代码更有效率，语言更简单。  
+ (3) Swift 学习起来相对简单一些，有面向对象语言基础的，学 Swift 挺快。
 
 Object C：  
  编写太麻烦，编写速度慢；  
- 效率不够高，有时会出现卡顿。
+ 效率不够高，有时会出现卡顿。  
+ OC 学习门槛比较高一点.~~
 
 Swift：  
  速度、性能很高；  

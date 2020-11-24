@@ -20,6 +20,10 @@
    "Xcode 10.3"  
   https://download.developer.apple.com/Developer_Tools/Xcode_10.3/Xcode_10.3.xip
 
+- 真机调试 不需要开发者账号  
+  果你学习之后是要作为一个独立开发者发布 app ，那么这 $99/y 的入场费是必须的，如果没有这方面的需求而是加入某一公司之类的，就没啥必要  
+  淘宝可以买 关键字：“ ios 真机调试证书”
+
 ## Swift
 
 - check swift version
