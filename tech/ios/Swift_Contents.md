@@ -222,6 +222,11 @@ java 接口
 - 协议合并：  
   传递的参数必须同时实现了指定的多个接口
 
+# 21 泛型
+
+- 函数泛型
+- 类泛型
+
 # optional types
 
 Optionals say either “there is a value, and it equals x” or “there isn’t a value at all”.
