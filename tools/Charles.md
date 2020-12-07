@@ -86,12 +86,12 @@ Step1 : Help -> SSL Proxying -> Install Charles Root Certificate on a Mobile Dev
 
 ![Charles_config_4_android_4](https://yingvickycao.github.io/img/Charles_config_4_android_4.jpg)
 
-![Charles_config_4_android_6](https://yingvickycao.github.io/img/Charles_config_4_android_6.jpg)
-
 Step 2 : 手机浏览器 输入`chls.pro/ssl`  
 询问是否下载证书，点击 Downlaod
 
 Step 3 : same as `2.2 - Way 1 - Step 3`
+
+![Charles_config_4_android_6](https://yingvickycao.github.io/img/Charles_config_4_android_6.jpg)
 
 # 3 Charles 在 Android Emulator 上抓 http/https 协议的包
 
