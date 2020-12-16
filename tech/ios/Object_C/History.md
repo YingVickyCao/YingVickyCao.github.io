@@ -3,7 +3,8 @@
 # 1 Object-C 的历史
 
 Oject-C 扩展了 C 语言，变成一个面向对象的语言。所以很多地方，与 C 很相似。  
-NsString 命名以 NS 开头 是为了区别于 C 的 String。
+NsString 命名以 NS 开头 是为了区别于 C 的 String。  
+Oject-C 完全兼容 C 语言。
 
 # 2 Object-C 能干什么？
 
