@@ -19,5 +19,5 @@ https://www.cnblogs.com/zuobaiquan01/p/8477322.html
 
 - 事件监听
 - 发布/订阅模式
-- Promise 模式
+- [Promise 模式](Promise.md)
 - Async/Await
