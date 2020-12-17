@@ -1,5 +1,9 @@
 # NSString
 
+```
+NSString *s2 = “abc”:指向一个不可变的地址.
+```
+
 # 1 创建 NSString
 
 # 2 常见操作
