@@ -2,6 +2,6 @@
 
 - [History](History.md)
 - [1 Class](Class.md)
-- [2 NSString](NSString.md)
-- [3 NSMutableString](NSMutableString.md)
-- [4 NSArray](NSArray.md)
+- [2 NSString, NSMutableString](NSString.md)
+- [3 NSArray](NSArray.md)
+- [4 NSDictionary](NSDictionary.md)

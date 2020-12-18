@@ -1,12 +1,8 @@
-# NSString
+# 1 NSString
 
 ```
 NSString *s2 = “abc”:指向一个不可变的地址.
 ```
-
-# 1 创建 NSString
-
-# 2 常见操作
 
 ## 查
 
@@ -19,3 +15,12 @@ NSString *s2 = “abc”:指向一个不可变的地址.
   substringWithRange:[index, index + len -1 ]
 - 是否包含 string  
   rangeOfString
+
+# 2 NSMutableString
+
+- 可变
+- 常见操作  
+  增  
+  删  
+  改  
+  查:同 NString
