@@ -1,0 +1,9 @@
+# 代理
+
+- 相当于 Java 中的 Interface
+
+```obj-c
+@protocol IBuyTicket <NSObject>
+- (void) buyTicket: (NSString *) filmName;
+@end
+```
