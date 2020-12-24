@@ -1,9 +1,8 @@
 # 内存管理机制
 
 分为 MAC 和 ARC。  
-MAC:
-手动管理内存  
-ARC: 自动管理内存
+MAC: 手动回收内存
+ARC: 自动回收内存。
 
 # 1 MAC
 
@@ -35,6 +34,33 @@ ARC: 自动管理内存
 
 # 2 ARC
 
+```obj-c
+// XCode < 5.0
+int main(int argc, const char * argv[]){
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc]init];
+    // code
+    [pool release];
+    pool = nil;
+
+    NSAutoreleasePool *pool2 = [[NSAutoreleasePool alloc]init];
+    // code
+    [pool2 release];
+    pool2 = nil;
+}
 ```
-@autoreleasepool
+
+- NSAutoreleasePool 可以有多个。
+
+## @autoreleasepool
+
+```obj-c
+// XCode > 5.0
+int main(int argc, const char * argv[]){
+    @autoreleasepool {
+      // code
+    }
+}
 ```
+
+- 当对象没有用时，才会自动释放该对象。  
+  因此。它的缺点是：释放比较晚，当短时间内申请大量对象时，内存可能爆掉。
