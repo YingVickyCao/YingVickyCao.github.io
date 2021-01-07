@@ -1,27 +1,31 @@
 # Index
 
-| Capther | header 1                                   | header 2                     |
-| ------- | ------------------------------------------ | ---------------------------- |
-| 8.1     | Self Encapsulate Field                     | 自封装值域                   |
-|         | row 2 col 1                                | row 2 col 2                  |
-|         | row 2 col 1                                | row 2 col 2                  |
-| 8.13    | Replace Type Code with Class(218)          | 以类取代型别码               |
-| 8.14    | Replace Type Code with Subclasses(223)     | 以子类取代型别码             |
-| 8.15    | Replace Type Code with State/Strategy(227) | 以 State/Strategy 取代型别码 |
-| 8.16    | Replace Subclass with Fields               | 以值域取代子类               |
-
-8.1 Self Encapsulate Field（自封装值域）  
- 8.2 Replace Data Value with Object（以对象取代数据值）  
- 8.3 Change Value to Reference（将实值对象改为引用对象）  
- 8.4 Change Reference to Value（将引用对象改为实值对象）  
- 8.5 Replace Array with Object（以对象取代数组）  
- 8.6 Duplicate Observed Data（复制「被监视数据」）  
- 8.7 Change Unidirectional Association to Bidirectional（将单向关联改为双向）  
- 8.8 Change Bidirectional Association to Unidirectional（将双向关联改为单向）  
- 8.9 Replace Magic Number with Symbolic Co tant （以符号常量/字面常量 取代魔法数）  
- 8.10 Encapsulate Field（封装值域）  
- 8.11 Encapsulate Collection（封装群集）  
- 8.12 Replace Record with Data Class（以数据类取代记录）
+| Chapter | Item                                               | Chinese                        |
+| ------- | -------------------------------------------------- | ------------------------------ |
+| 8.1     | Self Encapsulate Field (171)                       | 自封装值域                     |
+| 8.2     | Replace Data Value with Object                     | 以对象取代数据值               |
+| 8.3     |  Change Value to Reference                         | 将实值对象改为引用对象         |
+| 8.4     | Change Reference to Value                          | 将引用对象改为实值对象         |
+| 8.5     | Replace Array with Object                          | 以对象取代数组                 |
+| 8.6     | Duplicate Observed Data                            | 复制「被监视数据」             |
+| 8.7     | Change Unidirectional Association to Bidirectional | 将单向关联改为双向             |
+| 8.8     | Change Bidirectional Association to Unidirectional | 将双向关联改为单向             |
+| 8.9     | Replace Magic Number with Symbolic Co tant         | 以符号常量/字面常量 取代魔法数 |
+| 8.10    | Encapsulate Field                                  | 封装值域                       |
+| 8.11    | Encapsulate Collection                             | 封装群集                       |
+| 8.12    | Replace Record with Data Class                     | 以数据类取代记录               |
+| 8.13    | Replace Type Code with Class(218)                  | 以类取代型别码                 |
+| 8.14    | Replace Type Code with Subclasses(223)             | 以子类取代型别码               |
+| 8.15    | Replace Type Code with State/Strategy(227)         | 以 State/Strategy 取代型别码   |
+| 8.16    | Replace Subclass with Fields (232)                 | 以值域取代子类                 |
+| 9.1     | Decompose Conditional （238）                      | 分解条件式                     |
+| 9.2     | Consolidate Conditional Expression (240)           | 合并条件式                     |
+| 9.3     | Consolidate Duplicate Conditional Fragments (243)  | 合并重复的条件片段             |
+| 9.4     | Remove Control Flag （245）                        | 移除控制标记                   |
+| 9.5     | Replace Nested Conditional with Guard Clauses      | 以卫语句取代嵌套条件式         |
+| 9.6     | Replace Conditional with Polymorphism              | 以多态取代条件式               |
+| 9.7     | Introduce Null Object                              | 引入 Null 对象                 |
+| 9.8     | Introduce Assertion                                | 引入断言                       |
 
 - [第 3 章 代码的坏味道](C3.md)  
   3.1 Duplicated Code（重复的代码）  
@@ -77,16 +81,6 @@
   7.6 Remove Middle Man（移除中间人）  
   7.7 Introduce Foreign Method（引入外加函数）  
   7.8 Introduce Local Exte ion（引入本地扩展）
-
-  [第 9 章 简化条件表达式](C9.md)  
-  9.1 Decompose Conditional（分解条件式）  
-  9.2 Co olidate Conditional Expression（合并条件式）  
-  9.3 Co olidate Duplicate Conditional Fragments （合并重复的条件片段）  
-  9.4 Remove Control Flag（移除控制标记）  
-  9.5 Replace Nested Conditional with Guard Clauses （以卫语句取代嵌套条件式）  
-  9.6 Replace Conditional with Polymorphism（以多态取代条件式）  
-  9.7 Introduce Null Object（引入 Null 对象）  
-  9.8 Introduce Assertion（引入断言）
 
   [第 10 章 简化函数呼叫](C10.md)  
   10.1 Rename Method（重新命名函数 ）  
