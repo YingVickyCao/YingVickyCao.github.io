@@ -88,6 +88,18 @@ Way 4 : Accept certificates from given Certificate Authority
 </network-security-config>
 ```
 
+# 5 java.net.ConnectException: Failed to connect to localhost/127.0.0.1:7777
+
+Reason:
+Way 1 ：  
+模拟器默认把 127.0.0.1 和 localhost 当做本身了。  
+在模拟器上用 10.0.2.2 代替 127.0.0.1 和 localhost。
+
+Way 2 ： 在局域网环境可以用 192.168.0.x 或者 192.168.1.x 连接本机。
+
+Fix：  
+10.0.2.2
+
 Refs:  
 http://www.douevencode.com/articles/2018-07/cleartext-communication-not-permitted/
 
