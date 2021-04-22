@@ -2,7 +2,7 @@
 
 # 1 General Settings
 
-![TeamCity_GeneralSettings](/img/TeamCity_GeneralSettings.jpg)
+![TeamCity_GeneralSettings](https://yingvickycao.github.io/img/TeamCity_GeneralSettings.jpg)
 
 - Build number format:  
   `%VersionNumber%`
@@ -11,18 +11,18 @@
 
 # 2 Version Control Settings
 
-![TeamCity_Version_Control_Settings.jpg](/img/TeamCity_Version_Control_Settings.jpg)
+![TeamCity_Version_Control_Settings.jpg](https://yingvickycao.github.io/img/TeamCity_Version_Control_Settings.jpg)
 
 - Branch Filter
   `+:*`
 
 ## VCS Roots - Edit VCS Root
 
-![TeamCity_Version_Control_Settings_Edit_VCS_Root_1.jpg](/img/TeamCity_Version_Control_Settings_Edit_VCS_Root_1.jpg)
+![TeamCity_Version_Control_Settings_Edit_VCS_Root_1.jpg](https://yingvickycao.github.io/img/TeamCity_Version_Control_Settings_Edit_VCS_Root_1.jpg)
 
-![TeamCity_Version_Control_Settings_Edit_VCS_Root_2.jpg](/img/TeamCity_Version_Control_Settings_Edit_VCS_Root_2.jpg)
+![TeamCity_Version_Control_Settings_Edit_VCS_Root_2.jpg](https://yingvickycao.github.io/img/TeamCity_Version_Control_Settings_Edit_VCS_Root_2.jpg)
 
-![TeamCity_Version_Control_Settings_Edit_VCS_Root.jpg](/img/TeamCity_Version_Control_Settings_Edit_VCS_Root_3.jpg)
+![TeamCity_Version_Control_Settings_Edit_VCS_Root.jpg](https://yingvickycao.github.io/img/TeamCity_Version_Control_Settings_Edit_VCS_Root_3.jpg)
 
 - Fetch URL:  
   `https://github.com/YingVickyCao/EnableCodeCoverage.git`
@@ -35,11 +35,11 @@
 
 # 3 Build Steps
 
-![TeamCity_Build_Steps.jpg](/img/TeamCity_Build_Steps.jpg)
+![TeamCity_Build_Steps.jpg](https://yingvickycao.github.io/img/TeamCity_Build_Steps.jpg)
 
 ## Build Step (1 of 4): Android SDK update
 
-![img/TeamCity_Build_Steps_4_1_android_sdk_update.jpg.jpg](/img/TeamCity_Build_Steps_4_1_android_sdk_update.jpg)
+![img/TeamCity_Build_Steps_4_1_android_sdk_update.jpg.jpg](https://yingvickycao.github.io/img/TeamCity_Build_Steps_4_1_android_sdk_update.jpg)
 
 ```
 # android update sdk --use-sdk-wrapper --no-ui --all --force  --proxy-host mirrors.neusoft.edu.cn --proxy-port 80
@@ -65,7 +65,7 @@ npm config list
 
 ## Build Step (2 of 4): Gradle
 
-![TeamCity_Build_Steps_Step_Gradle.jpg](/img/TeamCity_Build_Steps_Step_Gradle.jpg)
+![TeamCity_Build_Steps_Step_Gradle.jpg](https://yingvickycao.github.io/img/TeamCity_Build_Steps_Step_Gradle.jpg)
 
 - `%gradleTasks%`
 
@@ -74,7 +74,7 @@ npm config list
 
 # Build Step (4 of 4): SonarQube Analysis
 
-![TeamCity_Build_Steps_Step_Sonar_QubeAnalysis.jpg](/img/TeamCity_Build_Steps_Step_Sonar_QubeAnalysis.jpg)
+![TeamCity_Build_Steps_Step_Sonar_QubeAnalysis.jpg](https://yingvickycao.github.io/img/TeamCity_Build_Steps_Step_Sonar_QubeAnalysis.jpg)
 
 - Project name:  
   `%env.sonarProjectName%`
@@ -204,9 +204,9 @@ https://docs.sonarqube.org/7.9/project-administration/narrowing-the-focus/
 **/*Module.*,**/*Module4Dagger2.*
 ```
 
-![TeamCity_Build_Steps_Step_Sonar_QubeAnalysis_filter_code_coverage_4_dagger_before](/img/TeamCity_Build_Steps_Step_Sonar_QubeAnalysis_filter_code_coverage_4_dagger_before.jpg)
+![TeamCity_Build_Steps_Step_Sonar_QubeAnalysis_filter_code_coverage_4_dagger_before](https://yingvickycao.github.io/img/TeamCity_Build_Steps_Step_Sonar_QubeAnalysis_filter_code_coverage_4_dagger_before.jpg)
 
-![TeamCity_Build_Steps_Step_Sonar_QubeAnalysis_filter_code_coverage_4_dagger_after](/img/TeamCity_Build_Steps_Step_Sonar_QubeAnalysis_filter_code_coverage_4_dagger_after.jpg)
+![TeamCity_Build_Steps_Step_Sonar_QubeAnalysis_filter_code_coverage_4_dagger_after](https://yingvickycao.github.io/img/TeamCity_Build_Steps_Step_Sonar_QubeAnalysis_filter_code_coverage_4_dagger_after.jpg)
 
 - `sonar.scm.*` is optional
 
@@ -225,9 +225,9 @@ https://docs.sonarqube.org/7.9/project-administration/narrowing-the-focus/
 
 ## Schedule Trigger：定时构建
 
-![TeamCity_Triggers_Add_New_Triger.jpg](/img/TeamCity_Triggers_Add_New_Triger.jpg)
+![TeamCity_Triggers_Add_New_Triger.jpg](https://yingvickycao.github.io/img/TeamCity_Triggers_Add_New_Triger.jpg)
 
-![TeamCity_Triggers.jpg](/img/TeamCity_Triggers.jpg)
+![TeamCity_Triggers.jpg](https://yingvickycao.github.io/img/TeamCity_Triggers.jpg)
 
 # 5 Parameters
 
@@ -266,11 +266,11 @@ https://docs.sonarqube.org/7.9/project-administration/narrowing-the-focus/
 
 ## ERROR : `Please supply original non-instrumented`
 
-![TeamCity_Build_Steps_Step_Gradle_Code_Coverage_1.jpg](/img/TeamCity_Build_Steps_Step_Gradle_Code_Coverage_2.jpg)
+![TeamCity_Build_Steps_Step_Gradle_Code_Coverage_1.jpg](https://yingvickycao.github.io/img/TeamCity_Build_Steps_Step_Gradle_Code_Coverage_2.jpg)
 
 Fix:  
 去掉 Coverage 设置  
-![TeamCity_Build_Steps_Step_Gradle_Code_Coverage_1.jpg](/img/TeamCity_Build_Steps_Step_Gradle_Code_Coverage_1.jpg)
+![TeamCity_Build_Steps_Step_Gradle_Code_Coverage_1.jpg](https://yingvickycao.github.io/img/TeamCity_Build_Steps_Step_Gradle_Code_Coverage_1.jpg)
 
 ## ERROR ： `It is not located in module basedir`
 

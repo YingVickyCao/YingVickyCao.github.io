@@ -10,7 +10,7 @@
 
 ## Download Sonarqube
 
-![SonarQube_download_type](/img/SonarQube_download_type.jpg)
+![SonarQube_download_type](https://yingvickycao.github.io/img/SonarQube_download_type.jpg)
 
 - Download Community Edition
 - Show all versions
