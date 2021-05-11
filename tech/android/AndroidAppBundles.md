@@ -33,8 +33,11 @@ Use bundletool locally recreate to mockup how Google Play generates APKs and des
 
 Android Studio >=3.2
 
-Build and then Deploy app bundle using Android Studio to a connected device.  
+Way 1 : Build and then Deploy app bundle using Android Studio to a connected device.  
 edit : APK from app bundle
+
+Way 2 : Build -> Bundle Bundles
+Build -> Generate Signed Bundle
 
 ### Use Gradle
 
