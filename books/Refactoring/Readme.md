@@ -13,3 +13,4 @@
 - https://www.bbsmax.com/A/A7zgZvQKd4/
 - https://refactoring.guru/smells/parallel-inheritance-hierarchies
 - [Sheh 伟伟 - 《重构：改善代码的既有设计》读书笔记](https://www.cnblogs.com/davidsheh/p/5239745.html)
+- https://www.kancloud.cn/sstd521/refactor/194288
