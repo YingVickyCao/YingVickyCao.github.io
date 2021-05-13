@@ -15,3 +15,19 @@ Class
 4 Run lint beore change code
 
 5 Refactor code
+
+6 统计 bug 类型，找出方案
+
+7 给出解决方案 > 直接指出 bug
+
+8 Report bug  
+branch  
+which versins  
+log
+request id
+dev contact > QA > Support
+how to reproduce
+
+9 Email
+Response quickly, and give the deadline time.  
+CC manager and DH
