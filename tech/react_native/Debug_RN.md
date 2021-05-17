@@ -85,7 +85,6 @@ Dev Settings -> Debug server host for device -> 输入电脑的IP地址和端口
 
 ```
 # Start JS Server + install apk
-
 # react native run-android 中封装了 adb reverse，默认 8081。
 react-native run-android
 
@@ -98,9 +97,9 @@ react-native run-ios --port 8092
 ```
 # Start JS Server + opened apk
 
-// ios + android
-react-native start
+// ios / android
 npm start
+react-native start
 react-native start --port 8092
 
 // Rest Metro Bundler cache
@@ -116,22 +115,13 @@ react native run-android
 
 再次Android运行RN项目
 adb reverse tcp:8081 tcp:8081 + localhost:8081
-run-native start
+npm start
+Shrink Device, "Reload" ok, then click "Debug JS Remotely".
 ```
 
 react-native start  
 运行 React Packager（JS websocket server）  
 已经安装 RN 应用，直接打开即可。
-
-- Run and Debug RN IOS app
-
-```
-首次IOS运行RN项目
-XCode
-
-再次IOS运行RN项目
-run-native start
-```
 
 - Android / IOS：  
   修改 RN 后，不需要编译，直接在手机上运行原来编译安装的项目。然后马上更新代码。=> 减少等待时间，提高开发调试效率  
