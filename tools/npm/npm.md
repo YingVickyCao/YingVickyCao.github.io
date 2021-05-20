@@ -92,10 +92,20 @@ npm list				// Mac
 # 6 Switch responsity
 
 ```ini
+// Set registry and dist
+npm config set registry http://registry.npmjs.org --global
+npm config set disturl https://npm.taobao.org/dist --global
+
+npm config set registry http://registry.npmjs.org
+npm config set disturl https://npm.taobao.org/dist
+
+// Remove registry and dist
+npm config delete registry --global
+npm config delete disturl --global
+
 # .npmrc (current account dir)
 
 # Default
 # registry = 'https://registry.npmjs.org/'
-
 # registry = 'https://registry.npm.taobao.org/'
 ```

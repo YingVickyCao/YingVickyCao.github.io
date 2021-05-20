@@ -2,6 +2,22 @@
 
 关键字：原则，规则，设计，性能
 
+# 要学的东西
+
+- ES6
+- HTML
+- CSS
+- JS
+- JSX
+- Redux or flux  
+  Redux + React Native
+- native
+
+## 学习网站
+
+- https://egghead.io
+- https://github.com/crazycodeboy/RNStudyNotes
+
 # 1. ES2015 =ES6， 对 JavaScript 语法改进的官方标准。
 
 - 语法：import、from、class、extends、以及() =>箭头函数
