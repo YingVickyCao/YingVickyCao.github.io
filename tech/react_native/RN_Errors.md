@@ -184,3 +184,11 @@ Fix:
 + react-native-0.64.1.aar having "libjscexecutor.so"
 + android-jsc.aar having "libjsc.so"
 ```
+
+- 14 Failed to resolve: com.facebook.fbjni:fbjni-java-only:0.0.3  
+   Failed to resolve: com.facebook.yoga:proguard-annotations:1.14.1
+
+```
+// Althoug is depressed, but these libs have not migreated to mavenCenter yet.
++ jcenter()
+```

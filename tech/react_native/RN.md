@@ -563,3 +563,30 @@ download ？
 2）remote version > min support version  
 2）remote version > ON version  
 3）RN library version == RN library support version
+
+## 36 JavaScript engine
+
+- New : Hermes, since 0.60.2, is a JavaScript engine optimized for running React Native on Android
+
+```
+// node_modules/hermes-engine/android/
+hermes-debug.aar
+hermes-release.aar
+```
+
+TBD: https://www.jianshu.com/p/17d6f6c57a5c
+
+- Old : jsc(JavaScriptCore)
+
+```
+// node_modules/jsc-android/
+include (cpp and C++ files)
+->
+android-jsc-cppruntime
+android-jsc-intl
+android-jsc
+README.md
+https://github.com/react-native-community/jsc-android-buildscripts
+```
+
+# 37 Hooks

@@ -177,6 +177,7 @@ module.exports = {
 # 6. vscode mac 下无法跳转到引用,不同自动提示输入
 
 Code 自带功能：带输入提示功能；点击跳转到引用。不需要安装插件。
+vs code 1.42.1  
 Fix:
 Fully uninstall code, then start
 
