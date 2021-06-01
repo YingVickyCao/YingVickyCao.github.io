@@ -129,3 +129,16 @@ Solution:
 Step 1 : Delete package-lock.json  
 Step 2 : Delete node_modules  
 Step 3 : npm install
+
+# 8 npm start :  Something is already running on port*  
+Q : 
+```
+$ npm start
+✔ Something is already running on port 3000. Probably:
+  /usr/local/bin/node /Users/hades/Documents/project/testReact/node_modules/react-scripts/scripts/start.js (pid 42405)
+  in /Users/hades/Documents/project/testReact
+
+Would you like to run the app on another port instead?
+```
+A : Force exit the node in "Activity Monitor"    
+When exit the npm, use "Ctrl + C" to ignore this problem.

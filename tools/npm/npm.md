@@ -108,4 +108,4 @@ npm config delete disturl --global
 # Default
 # registry = 'https://registry.npmjs.org/'
 # registry = 'https://registry.npm.taobao.org/'
-```
+``` 

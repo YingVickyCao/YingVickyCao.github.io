@@ -4,27 +4,20 @@
 
 # 要学的东西
 
-- ES6
-- HTML
-- CSS
-- JS
-- JSX
-- Redux or flux  
-  Redux + React Native
+- ES5,ES6
+- HTML,CSS,JS
+- DOM
+- Redux or flux
+- React : Babel, Webpack,JSX,components, props,state, lifecycle
+- React Native
 - native
+- instal Node.js,npm
+- ESLint
 
 ## 学习网站
 
 - https://egghead.io
 - https://github.com/crazycodeboy/RNStudyNotes
-
-# 1. ES2015 =ES6， 对 JavaScript 语法改进的官方标准。
-
-- 语法：import、from、class、extends、以及() =>箭头函数
-- http://es6.ruanyifeng.com/
-- http://bbs.reactnative.cn/topic/15/react-react-native-%E7%9A%84es5-es6%E5%86%99%E6%B3%95%E5%AF%B9%E7%85%A7%E8%A1%A8
-- JSX：在 JavaScript 中嵌入 XML 结构的语法  
-  <View><Text>Hello world!</Text></View>
 
 # 2. 组件（ Component）
 
@@ -51,20 +44,6 @@
 
 - https://segmentfault.com/a/1190000002933776
 - https://blog.csdn.net/qq_40347548/article/details/86766932
-
-# 5. State（状态）
-
-- 动态修改组件
-- 使用两种数据来控制一个组件：props 和 state。
-- props vs state  
-  props：不变的数据。是在父组件中指定，而且一经指定，在被指定的组件的生命周期中则不再改变。  
-  state：改变的数据
-- State 的工作原理和 React.js 完全一致，所以对于处理 state 的一些更深入的细节，可以参阅 React.Component API。
-  一切界面变化都是状态 state 变化。  
-  state 的修改必须通过 setState()方法。
-  this.state.likes = 100; // 这样的直接赋值修改无效！  
-  setState 是一个 merge 合并操作，只修改指定属性，不影响其他属性  
-  setState 是异步操作，修改不会马上生效
 
 # 6. componentDidMount ?
 
@@ -256,11 +235,6 @@ RN logger -> NativeModules.Logger -> app scope native logger(Listener => 1) file
 # 27 `Text` text center
 
 `textAlign: "center"`
-
-# 28 JSX
-
-JSX 是 JS 和 XML 组合的一种格式。  
-React 框架发明了 JSX，利用 HTML 语法来创建虚拟 DOM。render()返回值是一个 JSX 元素。
 
 # 28 注释
 
