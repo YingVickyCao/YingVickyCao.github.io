@@ -227,3 +227,27 @@ Fix:
 ```
 
 ## [异步处理方式](Async.md)
+
+
+# 5 Connect to an API with JavaScript
+
+## CRUD
+  Web API uses HTTP requests that correspond to the CRUD verbs
+
+  | Action | HTTP Method | Description |
+  | ------ | ----------- | ---------------------------- |
+  | Create | POST | Creates a new resource |
+  | Read | GET | Retrieves a resource |
+  | Update | PUT/PATCH | Updates an existing resource |
+  | Delete | DELETE | Deletes a resource |
+
+  TBD : REST and RESTful APIs
+
+
+## XMLHttpRequest
+
+## Fetch   
+JavaScript Fetch API  
+Note that with Fetch, even a 404 or 500 error will not return an error.     
+Only a network error or a request not completing will throw an error.  
+fetch() resturns Promise.  
