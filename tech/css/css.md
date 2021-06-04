@@ -14,10 +14,14 @@
 # 1 选择器(selector)
 
 种类：  
-① 元素选择器(element selector)  
-② 类选择器 (class selector)
+(1) 元素选择器(element selector)  
+(2) 类选择器 (class selector)  
+(3) id 选择器 (id selector)  
+(4) 子选择器(child selector)  
+(5) 子孙选择器 (descendant selectors)  
+(6) Pseudo-class 伪类
 
-## 元素选择器
+## (1) 元素选择器
 
 - 一个元素可以有多个规则。  
   先把所有元素的共同样式归结在一组，再把一个元素的特定样式写在另一个规则中。
@@ -85,7 +89,25 @@
   </body>
 ```
 
-## 类选择器
+## (2) 类选择器
+
+```css
+p {
+  color: green;
+}
+
+/* red is a class */
+/* Apply for only p and h2 with red class */
+p.red,
+h2.red {
+  color: red;
+}
+
+/* Apply for all element with red class */
+.red {
+  color: red;
+}
+```
 
 - 哪些样式会被应用到某个元素？
 
@@ -99,7 +121,7 @@
 
 - 元素可以加入多个 class
 
-## id
+## (3) id 选择器
 
 - 元素的唯一标识符
 - 页面上只有一个元素
@@ -129,15 +151,82 @@ p#footer {
 | 以数字/字母开头，包含字母/数字/\_ | 以数字/字母开头，以数字/字母开头，包含字母/数字/\_ |
 | #                                 | .                                                  |
 
-## 子孙选择器
-
-所有的：子子孙孙
-
-## 子选择器
+## (4) 子选择器
 
 直接的孩子
 
-## Pseudo-class 伪类
+```css
+/* h1 中 所有 直接孩子strong元素（所有的子） */
+h1 > strong {
+  color: green;
+}
+
+/* id 为 blue_h1  的 h1 中 所有 直接孩子 strong元素 （所有的子）  */
+#blue_h1 > strong {
+  color: blue;
+}
+```
+
+## (5) 子孙选择器
+
+所有的：子子孙孙
+
+```css
+/* h1 中 所有strong元素（子子孙孙） */
+h1 strong {
+  color: #c6f5c6;
+}
+
+/* id 为 blue_h1  的 h1 中 所有strong元素 （子子孙孙）  */
+#blue_h1 strong {
+  color: blue;
+}
+```
+
+## (5) Pseudo-class 伪类
+
+```css
+/* 未访问 */
+#div_test a:link {
+  color: red;
+}
+
+/* 已访问 */
+#div_test a:visited {
+  color: green;
+}
+
+/* 鼠标悬停 */
+#div_test a:hover {
+  background: #007e7e;
+  color: blue;
+}
+
+#div_test a:focus {
+  color: #00ff00;
+}
+
+#div_test a:active {
+  color: #ff00ff;
+}
+
+/* p 且 p是其父元素的第一个元素 */
+p:first-child {
+  background: aqua;
+}
+
+/* 属于h1，且 em 且 em是其父元素的第一个元素*/
+h1 > em:first-child {
+  background: red;
+}
+
+/* div 且 div是是其父元素的最后一个元素 */
+div:last-child {
+  border-color: orange;
+  border-width: 5px;
+  border-style: solid;
+}
+```
 
 - How to set element's style according to it's status
   | `<a>` status(按顺序) | 默认 |
