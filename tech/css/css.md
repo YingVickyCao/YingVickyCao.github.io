@@ -885,11 +885,11 @@ vertical-aligin:top
 }
 ```
 
-| 属性              | 是否从页面的正常流中删除 | 如何放置？                         | 相对谁                                                                           |
+| 属性              | 是否从页面的正常流中删除 | 如何放置？                         | the element is positioned reative to what                                                                           |
 | ----------------- | ------------------------ | ---------------------------------- | -------------------------------------------------------------------------------- |
 | position:static   | 不删除                   | 由浏览器来确定它放在哪里           |
 | position:relative | 不删除                   | 按你指定的量来偏移元素             | 相对于其外围包含的元素来定位。即它还在它原本的位置上，相对 it's normal position. |
-| position:absolute | 删除                     | 自己告诉浏览器应该把元素放在哪里。 | 相对它的最近的父元素指定。精确位置                                               |
+| position:absolute | 删除                     | 自己告诉浏览器应该把元素放在哪里。 | its first positioned (not static, if no have, use body)ancestor element.精确位置                                               |
 | position:fixed    | 删除                     | 自己告诉浏览器应该把元素放在哪里。                                 | 相对于浏览器窗口的边界(viewport)                                                 |
 | float:right/left  | 删除                     | 最终浏览器来确定它放在哪里         |
 
