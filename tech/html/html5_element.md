@@ -156,9 +156,9 @@ https://en.wikipedia.org/wiki/HTML5_video
 
   要由浏览器决定可以对哪种格式的视频解码，不过并不是所有浏览器制造商都达成了一致，所以若想要支持所有视频，就需要多种编码。
 
-  ![video_format_1.jpg](https://yingvickycao.github.io/img/video_format_1.jpg)
+  ![video_format_1.jpg](https://yingvickycao.github.io/img/html/video_format_1.jpg)
 
-  ![video_format_2.jpg](https://yingvickycao.github.io/img/video_format_2.jpg)
+  ![video_format_2.jpg](https://yingvickycao.github.io/img/html/video_format_2.jpg)
 
 
 - 对于 HTML 视频，每个浏览器中提供的控件都不同。在不同的浏览器和操作系统上，外观和表现不同，因为工作方式不同。  

@@ -158,6 +158,9 @@ page2.html
 
 - `<ol>`与`<li>`一起使用，不能嵌套其他标签
 - 嵌套列表
+- ul/ol  
+list-style-image 指定列表标记图像。  
+list-style-type 改变列表中使用的列表标记类型。  
 
 # 11. `<h1<> ~ <h6>`
 
@@ -682,3 +685,53 @@ allow a textarea inside a textarea.
 # 50 address 地址
 
 - 强调标记内容是地址，但是不是所有的地址都可以用它，比如 Email 地址
+
+# 51 table
+
+  HTML 表格。
+  表格用于表示表格数据，不是建立页面布局。
+
+  ```
+  table
+  tr:table row  ： 表行
+  th:table header ： 表头
+  td:table data cell : 表格数据
+  ```
+
+  ```css
+  table {
+    margin-left: 20px;
+    margin-right: 20px;
+    border: thin solid black;
+    /* 不支持caption 属性的浏览器中，标题仍然显示在表格上方 */
+    caption-side: bottom;
+    /* border-spacing: 10px 30px; */
+  }
+```
+
+- 折叠边框
+  表格的盒模型有外边距、边框、内边距。但外边距有点不同：  
+  不同单独地为某个单元格设置外边距，要为所有单元格设置一个共同的间距。  
+  border-spacing：边框间距，指单元格之间的空间。  
+  ![table_border_spacing.jpg](https://yingvickycao.github.io/img/html/table_border_spacing.jpg)
+
+  ```css
+  /* 如何折叠边框？
+    Way 1 : border-spacing: 0px;
+    Way 2 : border-collapse: collapse;
+    */
+  ```
+
+  ![table_border_spacing2.jpg](https://yingvickycao.github.io/img/html/table_border_spacing2.jpg)
+
+- 跨行/跨列
+
+  ```html
+  <!-- 占据2列 -->
+  <td colspan="2" style="text-align: center;">2020/10/8</td>
+
+  <!-- 占据2行 -->
+  <td rowspan="2">5000</td>
+  ```
+
+- 嵌套表格
