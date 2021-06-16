@@ -159,8 +159,8 @@ page2.html
 - `<ol>`与`<li>`一起使用，不能嵌套其他标签
 - 嵌套列表
 - ul/ol  
-list-style-image 指定列表标记图像。  
-list-style-type 改变列表中使用的列表标记类型。  
+  list-style-image 指定列表标记图像。  
+  list-style-type 改变列表中使用的列表标记类型。
 
 # 11. `<h1<> ~ <h6>`
 
@@ -688,25 +688,25 @@ allow a textarea inside a textarea.
 
 # 51 table
 
-  HTML 表格。
-  表格用于表示表格数据，不是建立页面布局。
+HTML 表格。
+表格用于表示表格数据，不是建立页面布局。
 
-  ```
-  table
-  tr:table row  ： 表行
-  th:table header ： 表头
-  td:table data cell : 表格数据
-  ```
+```
+table
+tr:table row  ： 表行
+th:table header ： 表头
+td:table data cell : 表格数据
+```
 
-  ```css
-  table {
-    margin-left: 20px;
-    margin-right: 20px;
-    border: thin solid black;
-    /* 不支持caption 属性的浏览器中，标题仍然显示在表格上方 */
-    caption-side: bottom;
-    /* border-spacing: 10px 30px; */
-  }
+```css
+table {
+  margin-left: 20px;
+  margin-right: 20px;
+  border: thin solid black;
+  /* 不支持caption 属性的浏览器中，标题仍然显示在表格上方 */
+  caption-side: bottom;
+  /* border-spacing: 10px 30px; */
+}
 ```
 
 - 折叠边框
