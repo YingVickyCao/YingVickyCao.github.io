@@ -428,121 +428,338 @@ PNG/GIF 格式。
   Photoshop Elements 中 Matte 允许指定文本背景的颜色。所以，柔化文本，会根据这个颜色来完成柔化。  
   这种技术不仅仅适用于文本，还适应于图形可能导致“锯齿”的所有线条。myPod logo 中圆也使用了蒙版。
 
-# 19. `<map>` 图片地图
+# 19 `<map>` 图片地图
 
-- 通过 usemap 属性绑定 map 标记元素
+通过 usemap 属性绑定 map 标记元素
 
-# 20. `<form>` 表单
+# 20 `<form>` 表单
 
-- form 是一个 block 标记元素
-- form 中不能再嵌套
+form 是一个 block 标记元素.
 
-## method
+表单在浏览器中如何工作？  
+Step 1 ： 浏览器加载页面  
+浏览器加载页面的 HTML，遇到表单元素时，它会页面上创建控件。  
+Step 2 ： 用户输入数据  
+Step 3 ： 用户提交表单  
+按钮提交按钮，提交这个表单。浏览器打包这些信息会打包并发送到一个 Web 服务器。  
+Step 4 ： 服务器响应  
+提交表单，这些信息会打包并发送到一个 Web 服务器，由一个服务器脚本处理。处理的结果是一个全新的 HTML 页面，它将返回给浏览器，浏览器会显示这个页面。  
+![how_does_form_work](https://yingvickycao.github.io/img/html/how_does_form_work.jpg)
 
-- name 组件名，对应 接受方的变量。
+form 元素如何工作？  
+![table_border_spacing.jpg](https://yingvickycao.github.io/img/html/table_border_spacing.jpg)
 
-- method=get  
-  传递的数据量被限制为 URL 的长度 2048KB，而且这种方法很不安全
+提交一个Web表单时，表单数据值与相应的数据名配对，所有的名和值会发送到服务器。
+## `<input type="text"/>` 单行文本输入
 
-- method=post  
-  POST 将数据通过 HTTP 协议传递给处理信息网址，这种方法安全且无数据大小限制，使用广泛
+=> android EditText, maxLine = 1  
+定义单行的输入字段，用户可在其中输入文本。默认宽度为 20 个字符。
 
-# 21. `input`
+```html
+First name: <input type="text" name="firstname" value="" /> <br />
 
-## `<input type="text"/>` 用户可输入文本的单行输入字段 => android EditText, maxLine = 1
+<!-- Placeholder 属性，表单中大多数不同类型的input 元素都可以使用placehold属性。 -->
+<input
+  type="text"
+  name="firstname"
+  value=""
+  placeholder="Please input first ame"
+/>
 
-- 定义单行的输入字段，用户可在其中输入文本。默认宽度为 20 个字符。
-- http://www.w3school.com.cn/tags/tag_form.asp
-- http://www.w3school.com.cn/tags/att_input_type.asp
+<!-- Required属性，可以用于任何表单控件
+            若浏览器支持该属性，如果没有为这个控件指定指，点击提交，会得到一个错误信息，表单不会提交服务器。
+            若浏览器不支持该属性，表单可以提交。
+        -->
+<input type="text" placeholder="Please input first name" required />
+<br />
+```
 
-## `<input type="submit"/>` and `<button type="submit"</button>` 提交按钮 => android button + request + jump page click event
+http://www.w3school.com.cn/tags/tag_form.asp  
+http://www.w3school.com.cn/tags/att_input_type.asp
 
-- 提交按钮用于向服务器发送表单数据。数据会发送到表单的 action 属性中指定的页面。
-- http://www.w3school.com.cn/tags/att_input_type.asp
-- http://www.w3school.com.cn/tags/tag_form.asp
+## `<input type="submit"/>` and `<button type="submit"/>` 提交按钮
 
-## `<input type="reset"/>` and `<button type="reset"</button>` 重置按钮 => android button + clear input
+=> android button + request + jump page click event
 
-- 置按钮会清除表单中的所有数据
-- http://www.w3school.com.cn/tags/att_input_type.asp
+```html
+<!-- 提交输入 -->
+<input type="submit" />
+
+<!-- 提交输入 -->
+<button type="submit" />
+```
+
+淡季提交按钮，数据会发送到表单的 action 属性中指定的服务器脚本进行处理。  
+http://www.w3school.com.cn/tags/att_input_type.asp  
+http://www.w3school.com.cn/tags/tag_form.asp
+
+## `<button>` Button => android Button
+
+`<button>`控件 与 `<input type="button">`  
+请始终为按钮规定 type 属性。Internet Explorer 的默认类型是 "button"，而其他浏览器中（包括 W3C 规范）的默认值是 "submit"。  
+注释：如果在 HTML 表单中使用 button 元素，不同的浏览器会提交不同的按钮值。请使用 input 元素在 HTML 表单中创建按钮。  
+重要事项：如果在 HTML 表单中使用 button 元素，不同的浏览器会提交不同的值。Internet Explorer 将提交`<button>` 与 `<button/>` 之间的文本，而其他浏览器将提交 value 属性的内容。请在 HTML 表单中使用 input 元素来创建按钮。
+
+## `<input type="reset"/>` and `<button type="reset"</button>` 重置按钮
+
+=> android button + clear input  
+置按钮会清除表单中的所有数据。  
+http://www.w3school.com.cn/tags/att_input_type.asp
 
 ## `<input type="hidden"/>` 隐藏字段 => android visible="gone"
 
-- 隐藏字段对于用户是不可见的。隐藏字段通常会存储一个默认值，它们的值也可以由 JavaScript 进行修改。
+隐藏字段对于用户是不可见的。隐藏字段通常会存储一个默认值，它们的值也可以由 JavaScript 进行修改。
 
 ## `<input type="password"` 密码 => android EditTxt inputType="password"
 
 ## `<input type="image">` 嵌入的图像 => android ImageButton/ImageView
 
-- 每出现一次，一个 Image 对象就会被创建。
-
-- http://www.w3school.com.cn/tags/att_input_type.asp
-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/image
+每出现一次，一个 Image 对象就会被创建。  
+http://www.w3school.com.cn/tags/att_input_type.asp  
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/image
 
 ## `<input type="file">`
 
 在 HTML 文档中 `<input type="file">` 标签每出现一次，一个 FileUpload 对象就会被创建。
 
-## `<input type="checkbox">` 多选框 => android CheckBox
-
-### `<input type="radio">` 单选框 => android radioButton
-
-When inout type = radio, name == android group name
-
-```
-<input type="radio" id="male" name="sex">
+```html
+<!-- 文件输入 -->
+<input type="file" name="doc" />
 ```
 
-# 22. `<button>` Button => android Button
+## 复选框输入
 
-- `<button>`控件 与 `<input type="button">`
-- 请始终为按钮规定 type 属性。Internet Explorer 的默认类型是 "button"，而其他浏览器中（包括 W3C 规范）的默认值是 "submit"。
-- 注释：如果在 HTML 表单中使用 button 元素，不同的浏览器会提交不同的按钮值。请使用 input 元素在 HTML 表单中创建按钮。
-- 重要事项：如果在 HTML 表单中使用 button 元素，不同的浏览器会提交不同的值。Internet Explorer 将提交`<button>` 与 `<button/>` 之间的文本，而其他浏览器将提交 value 属性的内容。请在 HTML 表单中使用 input 元素来创建按钮。
+=> android CheckBox
 
-# 23. `<label>` => android TextView
+```html
+<!-- 复选框输入 -->
+<input type="checkbox" name="spice" value="Salt" /> Salt
+<br />
+
+<input type="checkbox" name="spice" value="Peper" />Peper
+<br />
+
+<input type="checkbox" name="spice" value="Garlic" />Garlic <br />
+```
+
+## 单选钮输入
+
+=> android radioButton
+
+```html
+<!-- 单选钮输入 -->
+<input type="radio" name="hotornot" value="hot" /> Hot
+<br />
+
+<input type="radio" name="hotornot" value="not" /> Not
+<br />
+<br />
+```
+
+## 数字输入
+
+```html
+<!-- 数字输入 -->
+<input type="number" min="0" max="20" />
+```
+
+## 范围输入
+
+```html
+<!-- 范围输入 -->
+<input type="range" min="0" max="100" step="5" />
+```
+
+## 颜色输入
+
+```html
+<!-- 颜色输入
+如果浏览器不支持颜色输入元素，该控件会创建一个常规的文本输入控件。
+-->
+<input type="color" />
+```
+
+## 日期输入
+
+```html
+<!-- 日期输入
+如果浏览器不支持日期选择控件格式指定日期，该控件会创建一个合法的日期格式串，发送给服务器脚本。
+-->
+<input type="date" />
+```
+
+## Email 输入
+
+```html
+<!-- Email输入
+email <input> 是一个文本输入元素。但在一些移动浏览器上，开入输入时用户会得到一个方便输入email的定制键盘。
+-->
+<input type="email" />
+```
+
+## url 输入
+
+```html
+<!-- url输入
+url <input> 是一个文本输入元素。但在一些移动浏览器上，开入输入时用户会得到一个定制键盘。
+-->
+<input type="url" />
+```
+
+## tel 输入
+
+```html
+<!-- tel输入
+tel <input> 是一个文本输入元素。但在一些移动浏览器上，开入输入时用户会得到一个定制键盘。
+-->
+<input type="tel" />
+```
+
+## `<label>` => android TextView
 
 ```
 <label for="male">Male &nbsp;&nbsp;</label>
 ```
 
-# 24. `<textarea>` 文本域(Textarea)
+## `<textarea>` 文本域(Textarea)
 
-```
- <textarea rows="10" cols="30">
+```html
+<textarea rows="10" cols="30">
 This example cannot be edited,because our editor uses a textarea for input,
             and your browser does not
 allow a textarea inside a textarea.
 </textarea>
 ```
 
-# 25. `<fieldset>` 分组 => android ViewGroup + 边框
+text input vs textarea?  
+text input:  
+(1) 1 行 。  
+(2) 浏览器有很大的限制范围，通常不会超出这个范围。可以使用 maxlength 属性设定最大长度。
 
-- 围绕数据的 Fieldset
-- 对组件进行分组。外面加一个边框，把 form 一堆标签框起来。
+textarea：  
+（1）更长的多行文本  
+（2）HTML 中没有办法限制用户渐入多少文本。
 
-# 26. `<legend>` 分组的标题 => android ViewGroup 的 tag
+## `<fieldset>` 分组 => android ViewGroup + 边框
+
+围绕数据的 Fieldset。  
+对组件进行分组。外面加一个边框，把 form 一堆标签框起来。
+
+```html
+<!-- 组织元素 -->
+<p>组织元素</p>
+<fieldset>
+  <legend>Condiments</legend>
+  <input type="checkbox" name="spice" value="salt" /> Salt<br />
+  <input type="checkbox" name="spice" value="peper" />Pepper<br />
+  <input type="checkbox" name="spice" value="garlic" />Garlic<br />
+</fieldset>
+<br />
+<fieldset>
+  <input type="checkbox" name="spice" value="salt" /> Salt<br />
+  <input type="checkbox" name="spice" value="peper" />Pepper<br />
+  <input type="checkbox" name="spice" value="garlic" />Garlic<br />
+</fieldset>
+```
+
+## `<legend>` 分组的标题 => android ViewGroup 的 tag
 
 - legend 元素为 fieldset 元素定义标题（caption）。
 
-# 27. `<select>` 单选或多选列表 => android spinner / 类似 android radiogroup，但方向不同
+## `<select>` 单选或多选列表 => android spinner / 类似 android radiogroup，但方向不同
 
-- 下拉列表框是一个可选列表.
-- 默认选中第一行。
-
-# 28. `<option>` 单选或多选列表的选项
-
-- => android spinner item / 类似 android radioButton，但方向不同
-- `selected`设置默认选中的行。即预选值。  
-  预选值指预先指定的首选项。
-
+```html
+<!--  用于创建一个菜单，以供做出选择
+      select：菜单
+      option：菜单项
+-->
+<p>菜单</p>
+<select name="characters">
+  <option value="Buckaroo" selected>Buckaroo Banzai</option>
+  <option value="Tommy">Perfect Tommy</option>
+  <option value="Penny">Penny Priddy</option>
+  <option value="Jersey">New Jersey</option>
+  <option value="John">John Parker</option>
+</select>
 ```
-<option value="ok" selected="selected">70 ~ 60</option>
+
+下拉列表框是一个可选列表.
+默认选中第一行。
+`<option>` 单选或多选列表的选项 => android spinner item / 类似 android radioButton，但方向不同  
+`selected`设置默认选中的行。即预选值。  
+预选值指预先指定的首选项。
+
+## `<optgroup>` ,=> 类似 android radiogroup，但方向不同。
+
+`<optgroup>` 标签定义选项组 , 用来组合选项.
+
+## method:POST 和 GET
+
+- 浏览器发送数据时，使用的主要方法有两种：POST 和 GET。  
+  GET :  
+  (1) GET 和 POST 请求对发送的数据都有一个限制，POST 请求的限制通常宽松一些。  
+  (2) 直接显示在 URL 中，很不安全。  
+  GET 会打包表单变量，会把这些数据追加到 URL 的最后，然后服务器发送一个请求。  
+  使用 GET 时，浏览器像以往那样用正常的 Web 页面。追加后的 URL，浏览器会把它当做一个普通请求来处理。
+
+  POST :  
+   (1) 同 GET，略。  
+   (2) 不会显示在 URL 中，较安全。  
+   POST 同样会打包数据，在后台把它们发送到服务器。  
+   使用 POST，浏览器实际上会创建一个小数据包，并把它发送到服务器。
+![post_get.jpg](https://yingvickycao.github.io/img/html/post_get.jpg)
+
+- 如何选择？  
+  GET :  
+  (1) 希望用户能够对提交表单后的结果页面加书签。  
+  服务器返回一个搜索结果列表，用户把结果添加书签，下次可以直接看，而不用再填写表单。
+
+  POST :  
+   (1) 返回的结果页面不希望用户加书签。  
+   有一个处理订单的服务器脚本，不希望用户书签这个页面。否则，每次他们返回到这个书签时，都会重新提交这个订单。  
+   (2) 数据是私有的。例如，信用卡或一个口令。  
+   (3) 使用了一个 textarea，因为可能发送大量数据。
+
+- GET 和 POST 提交的最大数据？  
+  GET：  
+  url 不存在参数上限的问题，HTTP 协议规范没有对 url 长度进行限制。  
+  get 方式提交的数据的大小，http 协议并没有硬性限制；而是浏览器及服务器，操作系统有关。
+
+  POST：  
+   理论上讲，post 是没有大小限制的，http 协议也没有进行大小限制。  
+   传输数据最大理论上没有限制，取决于服务器器设置和内存大小。
+
+  https://blog.csdn.net/qq_37458496/article/details/84889516
+
+## 关于可访问性
+
+应该 label 元素 代替简单文本为表单元素增加标签。   
+好处：  
+(1) 可以提供页面结构的更多信息。  
+(2) 更容易使用 CSS 对标签设置样式。  
+(3) 对于视力障碍的人，有助于使用屏幕阅读器更准确地标识别表单元素。  
+
+```html
+<!--  选择咖啡为全豆咖啡，还是 研磨咖啡? -->
+<!-- <input type="radio" name="beantype" value="whole" /> Whole Bean<br />
+            <input type="radio" name="beantype" value="ground" checked /> Ground -->
+<input type="radio" name="beantype" value="whole" id="whole_beantype" />
+
+<label for="whole_beantype"> Whole Bean </label><br />
+<input
+  type="radio"
+  name="beantype"
+  value="ground"
+  id="ground_beantype"
+  checked
+/>
+<label for="ground_beantype">Ground</label>
+
+<!-- Numbers of bag:<input type="number" name="bags" min="1" max="10" /><br /> -->
+
+<label for="bags">Numbers of bag:</label>
+<input id="bags" type="number" name="bags" min="1" max="10" /><br />
 ```
-
-# 29. `<optgroup>` ,=> 类似 android radiogroup，但方向不同。
-
-- `<optgroup>` 标签定义选项组 , 用来组合选项.
 
 # 30. `<span>` 被用来组合文档中的行内元素。
 

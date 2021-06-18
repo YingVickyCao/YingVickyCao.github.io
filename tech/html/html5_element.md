@@ -4,7 +4,7 @@ http://www.w3school.com.cn/tags/tag_input.asp
 http://www.w3school.com.cn/jsref/dom_obj_email.asp
 
 - 为什么会有 html5 元素？  
-  （1）明确表示用途和语义含义。  
+  （1）明确表示用途和语义。  
   （2）在工具上，e.g., 浏览器、屏幕器阅读器，更明智地确定如何处理页面的不同部分。
 
 - 较早的浏览器不支持新的 HTML5 元素，所以一定知道主要用户使用哪些浏览器访问你的 Web 页面，除非确保新元素对你的用户适用，否则不要贸然使用这些新元素。
