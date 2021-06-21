@@ -19,7 +19,9 @@
 (3) id 选择器 (id selector)  
 (4) 子选择器(child selector)  
 (5) 子孙选择器 (descendant selectors)  
-(6) Pseudo-class 伪类
+(6) 伪类 (Pseudo-class)
+(7) 伪元素 (Pseudo-class)
+(8) 属性选择器
 
 ## (1) 元素选择器
 
@@ -183,7 +185,7 @@ h1 strong {
 }
 ```
 
-## (5) Pseudo-class 伪类
+## (6) Pseudo-class 伪类
 
 ```css
 /* 未访问 */
@@ -246,6 +248,22 @@ div:last-child {
   e.g., 浏览器检查所有*<a>*元素，把他们增加到正确的伪类中。  
   For example:
   若一个链接已访问过，把它从其他伪类中拽出，扔进`:visited`伪类中。当用户鼠标悬停，把链接扔进`:hover`伪类中，当用户不再悬停，从`:hover`伪类中拽出。
+
+## 伪元素 (Pseudo-class)
+用来选择元素的某些部分
+## (8) 属性选择器
+
+根据属性值来选择元素
+
+```css
+img[width] {
+  border: green 5px solid;
+}
+
+img[width="100px"] {
+  border: red 5px solid;
+}
+```
 
 # 3 CSS 验证工具
 
@@ -885,12 +903,12 @@ vertical-aligin:top
 }
 ```
 
-| 属性              | 是否从页面的正常流中删除 | 如何放置？                         | the element is positioned reative to what                                                                           |
+| 属性              | 是否从页面的正常流中删除 | 如何放置？                         | the element is positioned reative to what                                        |
 | ----------------- | ------------------------ | ---------------------------------- | -------------------------------------------------------------------------------- |
 | position:static   | 不删除                   | 由浏览器来确定它放在哪里           |
 | position:relative | 不删除                   | 按你指定的量来偏移元素             | 相对于其外围包含的元素来定位。即它还在它原本的位置上，相对 it's normal position. |
-| position:absolute | 删除                     | 自己告诉浏览器应该把元素放在哪里。 | its first positioned (not static, if no have, use body)ancestor element.精确位置                                               |
-| position:fixed    | 删除                     | 自己告诉浏览器应该把元素放在哪里。                                 | 相对于浏览器窗口的边界(viewport)                                                 |
+| position:absolute | 删除                     | 自己告诉浏览器应该把元素放在哪里。 | its first positioned (not static, if no have, use body)ancestor element.精确位置 |
+| position:fixed    | 删除                     | 自己告诉浏览器应该把元素放在哪里。 | 相对于浏览器窗口的边界(viewport)                                                 |
 | float:right/left  | 删除                     | 最终浏览器来确定它放在哪里         |
 
 # 14 混合样式表

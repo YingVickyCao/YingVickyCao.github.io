@@ -3,7 +3,7 @@
 # Command Tips
 
 ## Unix-based Operating System (Linux, Solaris and Mac OS X) Tips
-
+### bash
 - 启动 Terminal 终端工具,在/Users/你的用户名 中创建`.bash_profile` File  
   `touch ~/.bash_profile`
 
@@ -15,13 +15,21 @@
 - 执行`source`命令,把 `.bash_profile` File 中配置的命令写入系统。  
   `source ~/.bash_profile`
 
-- ~?
-
 ```
 $ cat ~
 cat: /Users/user_name: Is a directory
 ```
+### zsh
+没有下面的步骤？  
+关掉terminal 窗口，重新打开一个，“adb not found”。
 
+
+++  
+Step 1 : .zshrc
+```
+source ~/.bash_profile
+```
+Step 2 : source .zshrc
 ## Mac Mojave Version 10.14.4 (18E226)
 
 - terminal 中使用`export`设置，仅仅在当前 terminal session 有效。查看`echo $PATH`
