@@ -366,6 +366,14 @@ http://www.abc.com    // 根目录  ===输入地址 http://www.abc.com/index.htm
   2）要使用 SFTP，必需确保支持 SFTP（Safe File Transfer Protocol）安全文件传输协议
 - 不要在 Web 服务器直接修改文件：访问的人会直接看到修改时的错误。
 
+# 17 交互性
+
+HTML 页面可以提供被动的文档和有可执行的内容。  
+`interactive.html`
+
+# 18 服务器端脚本语言
+PHP、Python、Perl、Node.JS、Ruby on Rails、Java Server Pages（JSP）、VB.NET、ASP.NET、JavaScript、React、Vue
+
 # Reference:
 
 - W3School HTML http://www.w3school.com.cn/html/html_lists.asp

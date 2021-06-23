@@ -38,7 +38,7 @@ http://www.w3school.com.cn/jsref/dom_obj_email.asp
    http://www.w3school.com.cn/tags/index.asp  
    http://www.w3school.com.cn/jsref/dom_obj_number.asp
 
-# 2 `<video>` 播放音频
+# 2 `<video>` 播放视频
 
 ```html
 <!--
@@ -143,8 +143,9 @@ https://en.wikipedia.org/wiki/HTML5_video
   视频部分 - 视频编码；
   音频部分 - 音频编码。
 
-  包含视频和音频编码的文件，称为容器（container）。它有自己的格式和格式名。
-  容器是用来包含视频、音频和元数据信息的文件格式。常用的容器格式，包括：MP4、WebM、Ogg 和 Flash Video。
+  包含视频和音频编码的文件，称为容器（container）。它有自己的格式和格式名。  
+  容器是用来包含视频、音频和元数据信息的文件格式。  
+  视频没有标准编码。常用的容器格式，包括：MP4、WebM、Ogg 和 Flash Video。
 
   | 浏览器        | 欢迎哪种视频容器格式 |
   | ------------- | -------------------- |
@@ -160,16 +161,19 @@ https://en.wikipedia.org/wiki/HTML5_video
 
   ![video_format_2.jpg](https://yingvickycao.github.io/img/html/video_format_2.jpg)
 
-
 - 对于 HTML 视频，每个浏览器中提供的控件都不同。在不同的浏览器和操作系统上，外观和表现不同，因为工作方式不同。  
   HTML 视频规范允许采用任何视频格式。具体支持哪些格式由浏览器实现来确定。
 
   http://www.w3school.com.cn/html5/html_5_audio.asp  
-  http://www.w3school.com.cn/jsref/dom_obj_audio.asp  
-  http://www.w3school.com.cn/tags/tag_audio.asp  
-  http://www.w3school.com.cn/tags/att_audio_preload.asp
+   http://www.w3school.com.cn/jsref/dom_obj_audio.asp  
+   http://www.w3school.com.cn/tags/tag_audio.asp  
+   http://www.w3school.com.cn/tags/att_audio_preload.asp
 
 # 3 `<audio>` 播放音频
+
+音频也没有标准编码。流行的 3 格式格式：MP3、WAV 和 Ogg Vorbis。  
+每个浏览器的控件外观各自不同。  
+不同的浏览器上对这些格式的支持会有所不同。
 
 # 4 <ruby> 标注读音 => 汉语
 
@@ -260,3 +264,16 @@ HTML5 提供了两种在客户端存储数据的新方法：
 ## sessionStorage
 
 - sessionStorage 方法针对一个 session 进行数据存储。当用户关闭浏览器窗口后，数据会被删除。
+
+# 20 变换和过渡。
+
+animation.html
+
+# 21 定位
+将页面与Google Maps集成，允许用户实时地跟踪他们的移动轨迹。
+
+# 22 Web工作线程
+使用Web工作线程来完成复杂的计算，可以提高JS代码的效率，并充分利用多核处理器。
+
+# 23 使用JS完成视频处理。
+创建特效，甚至可以直接处理视频元素。

@@ -19,9 +19,11 @@
 (3) id 选择器 (id selector)  
 (4) 子选择器(child selector)  
 (5) 子孙选择器 (descendant selectors)  
-(6) 伪类 (Pseudo-class)
-(7) 伪元素 (Pseudo-class)
-(8) 属性选择器
+(6) 伪类 (Pseudo-class)  
+(7) 更多 CSS 选择器
+
+- 伪元素 (Pseudo-class)
+- 属性选择器
 
 ## (1) 元素选择器
 
@@ -249,9 +251,13 @@ div:last-child {
   For example:
   若一个链接已访问过，把它从其他伪类中拽出，扔进`:visited`伪类中。当用户鼠标悬停，把链接扔进`:hover`伪类中，当用户不再悬停，从`:hover`伪类中拽出。
 
-## 伪元素 (Pseudo-class)
+## (7) 更多 CSS 选择器
+
+### 伪元素 (Pseudo-class)
+
 用来选择元素的某些部分
-## (8) 属性选择器
+
+### 属性选择器
 
 根据属性值来选择元素
 
@@ -264,6 +270,12 @@ img[width="100px"] {
   border: red 5px solid;
 }
 ```
+
+### 按兄弟选择(brother selector)
+
+### 结合选择器
+
+![combine_selector](https://yingvickycao.github.io/img/combine_selector.jpg)
 
 # 3 CSS 验证工具
 
@@ -1001,3 +1013,15 @@ line-height is based on who's font-size
 | div style="line-height: 1" | small | small | 120% of small,based on itself h2 |
 
 # 18 TODO:层叠样式表中的层叠
+
+# 19 开发商特定的 CSS 属性
+
+浏览器开发商通常为他们的增加新的功能来测试新特性，或 实现一直在考虑但没有得到标准组织批准的 CSS 扩展。在这些情况下，开发商会创建类似这样的 CSS 属性。
+
+![browser_dev_css_attribute_1](https://yingvickycao.github.io/img/browser_dev_css_attribute_1.jpg)
+
+![browser_dev_css_attribute_2](https://yingvickycao.github.io/img/browser_dev_css_attribute_2.jpg)
+
+# 20 CSS 变换和过渡。
+
+animation.html
