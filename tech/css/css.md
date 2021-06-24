@@ -1021,7 +1021,3 @@ line-height is based on who's font-size
 ![browser_dev_css_attribute_1](https://yingvickycao.github.io/img/browser_dev_css_attribute_1.jpg)
 
 ![browser_dev_css_attribute_2](https://yingvickycao.github.io/img/browser_dev_css_attribute_2.jpg)
-
-# 20 CSS 变换和过渡。
-
-animation.html

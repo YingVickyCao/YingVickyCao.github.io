@@ -7,13 +7,6 @@
  算法：描述一个过程  
  面向对象语言：C++/C#/Java/Swift
 
-# 2 Swift Refs
-
-https://developer.apple.com/swift/  
-https://developer.apple.com/swift/resources/  
-The Swift Programming Language https://docs.swift.org/swift-book/index.html  
-https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html
-
 # 3 为什么学习 Swift 语言？
 
 说说 WWDC2014 开发者大会  

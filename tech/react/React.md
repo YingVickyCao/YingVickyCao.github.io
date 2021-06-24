@@ -76,6 +76,202 @@ Child -> Child = Child -> Parent + Parent -> Child
   Detecting changes: object is being referenced different is same or different;
   Determining when to re-render in React.
 
+## props
+
+## State
+
+(1) Do Not Modify State Directly  
+`Lifecycle_4.html`
+
+- setState 接受的是一个对象。
+
+```js
+constructor(props) {
+    super(props);
+    // The only place to assign this.state.
+    this.state = { date: new Date() };
+}
+
+// Don't modify State directly.
+// Wrong : not re-render a component
+// this.state.date = new Date();
+
+// Right
+this.setState({
+    date: new Date()
+});
+```
+
+- setState 接受的是一个函数。
+
+```js
+  /*
+  render:this.state.num=1
+
+  onClickBtn,this.state.num[1]=1
+  onClickBtn,this.state.num[2]=1
+  render:this.state.num=2
+  */
+  onClickBtn() {
+      console.log("onClickBtn,this.state.num[1]=" + this.state.num);
+      // Wrong
+      this.setState({
+          num: this.state.num + this.props.increment,
+      });
+      console.log("onClickBtn,this.state.num[2]=" + this.state.num);
+  }
+
+  /*
+  render:this.state.num=1
+
+  onClickBtn,this.state.num[1]=1
+  render:this.state.num=2
+  onClickBtn,this.state.num[2]=2
+    */
+  onClickBtn2() {
+      console.log("onClickBtn,this.state.num[1]=" + this.state.num);
+
+      // Correct：常规函数
+      // this.setState(function (state, props) {
+      //     return {
+      //         num: state.num + props.increment,
+      //     }
+      // }, () => {
+      //     console.log("onClickBtn,this.state.num[2]=" + this.state.num);
+      // });
+
+      // Correct: 箭头函数
+      this.setState((state, props) => {
+          return { num: state.num + props.increment, }
+      }, () => {
+          console.log("onClickBtn,this.state.num[2]=" + this.state.num);
+      });
+  }
+```
+
+(2) State Updates May Be Asynchronous
+
+`State_2_1.html`,`State_2_2.html`,`State_2_3.html`,`State_2_4.html`,`State_2_5.html`
+
+- 如何证明 State 的更新是异步和延迟的？
+
+```js
+// React State Updates may be Asynchronous;
+// 证明React State的更新是异步。
+// 原因：因为每次setState都会触发更新。异步是为了提高性能，将多个状态合并一起更新，较少re-render调用。
+/*
+    render:this.state.name=Tom
+    onClickBtn，this.state.name=Tom
+    onClickBtn，this.state.name=Tom
+    render:this.state.name=Jerry
+    */
+onClickBtn() {
+  console.log("onClickBtn，this.state.name=" + this.state.name);   // Tom
+  this.setState({
+      name: "Jerry"
+  });
+  console.log("onClickBtn，this.state.name=" + this.state.name);   // Tom
+}
+```
+
+- 如何解决 setState 的异步问题 ？
+
+```js
+// 如何解决setState的异步问题？后面跟一个回调方法：先保存，后调用
+/*
+    render:this.state.name=Tom
+    onClickBtn，this.state.name=Tom
+    render:this.state.name=Jerry
+    onClickBtn，this.state.name=Jerry
+*/
+onClickBtn2() {
+  console.log("onClickBtn，this.state.name=" + this.state.name);   // Tom
+  this.setState({
+      name: "Jerry"
+  }, () => {
+      // 在回调函数中，实时获取到更新之后的数据
+      console.log("onClickBtn，this.state.name=" + this.state.name);   // Jerry
+  });
+}
+```
+
+- 如何越过 React 的机制，令 setState 以同步形式出现？
+
+```js
+// 使用SetTimeout，越过React的机制，令setState以同步形式出现
+/*
+render:this.state.num=1
+onClickBtn,this.state.num[1]=1
+onClickBtn,this.state.num[2]=2
+render:this.state.num=2
+*/
+onClickBtn2() {
+  setTimeout(() => {
+      console.log("onClickBtn,this.state.num[1]=" + this.state.num);
+      this.setState({
+          num: this.state.num + 1,
+      });
+      console.log("onClickBtn,this.state.num[2]=" + this.state.num);
+  }, 0);
+}
+```
+
+(3) State Updates are Merged
+`State_3.html`
+
+```js
+constructor(props) {
+    super(props);
+    this.state = {
+        postId: 1,
+        comment: "XYZ",
+    };
+}
+
+/*
+onClickPostId,[1] postId=1,comment=XYZ
+onClickPostId,[2] postId=1,comment=XYZ
+render,postId=2,comment=XYZ
+
+onClickComment,[1] postId=2,comment=XYZ
+onClickComment,[2] postId=2,comment=XYZ
+render,postId=2,comment=XYZ + ABC
+*/
+onClickPostId() {
+    console.log("onClickPostId,[1] postId=" + this.state.postId + ",comment=" + this.state.comment);
+    this.setState({
+        postId: this.state.postId + 1,
+    });
+    console.log("onClickPostId,[2] postId=" + this.state.postId + ",comment=" + this.state.comment);
+}
+
+onClickComment() {
+    console.log("onClickComment,[1] postId=" + this.state.postId + ",comment=" + this.state.comment);
+    this.setState({
+        comment: this.state.comment + " + ABC",
+    });
+    console.log("onClickComment,[2] postId=" + this.state.postId + ",comment=" + this.state.comment);
+}
+```
+
+(4) The Data Flows Down
+`State_4.html`  
+A component can pass its state down as props to its child components:
+
+```js
+render() {
+  return (<MyButton data={this.state.data} />);
+}
+
+render() {
+    // render,num1=2,num2=2
+    console.log("render,num1=" + this.props.data.num1 + ",num2=" + this.props.data.num1);
+    return (
+        <p> This is a example of Data Flows Down</p >
+    );
+}
+```
+
 # 6 ES2015 =ES6， 对 JavaScript 语法改进的官方标准。
 
 - 语法：import、from、class、extends、以及() =>箭头函数
