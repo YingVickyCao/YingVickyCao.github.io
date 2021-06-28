@@ -4,6 +4,17 @@
 MAC: 手动回收内存
 ARC: 自动回收内存。
 
+## MRC
+
+MRC(手工引用计数, Manual Reference Counting,简称 MRC )的机制
+程序员给对象发送 release 消息，通知系统释放对象。
+
+## ARC
+
+ARC(自动引用计数，Automatic Reference Counting,简称 ARC)的机制。  
+XCode 4.2 后，默认开启。  
+程序员不用担心内存释放问题，并且可以依靠系统来释放内存。
+
 # 浅拷贝 和深拷贝
 # 1 MAC
 

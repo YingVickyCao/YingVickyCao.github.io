@@ -1,5 +1,128 @@
 # Class
 
+类、对象、创建、初始化、方法、局部变量、继承、子类、多态、动态类型、动态绑定
+
+`2_class_object_method`  
+(1) XCode 中的文件没有包名之分，所以一个项目中文件名加前缀避免与系统文件重复，同时一个项目中自己写的文件不能同名，否则编译错误。
+
+(2) import 系统和自己写的头文件使用不同方式
+
+```c
+// System head file
+# import <Foundation/Foundation.h>
+
+// Our app head file
+#import "Fraction.h"
+```
+
+(3) 一个工程里面只有一个 main 方法，否则报错。
+
+```
+duplicate symbol _main in:
+...
+ld: 1 duplicate symbol for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+```
+
+(4) OC 中也有类、实例（对象）、方法的概念。  
+OC 中的私有信息（数据） = java 中 成员变量。
+
+(5) 如何调用方法
+
+```c
+// 类或实例              它的方法
+[classOrInstance        method]，
+即
+// 接收者：信息的接收者     请求一个类或实例来执行某个操作，等于 在向它发送一条信息。
+[receiver                message ];
+```
+
+## 程序在逻辑上分为 3 个部分
+
+### @interface 部分：
+
+声明类和类的方法，有时会列出一些元素，称为属性（TODO） 。
+
+![oc_init_a_method](https://yingvickycao.github.io/img/ios/oc_init_a_method.jpg)
+
+`-`开头：该方法是一个实例方法  
+`+`开头：该方法是一个类方法
+
+```c
+// TODO:
+#ifndef Fraction_h
+#define Fraction_h
+
+# import <Foundation/Foundation.h>
+
+// @interface部分：声明类和类的方法
+@interface Fraction : NSObject
+-(void) print;
+-(void) setNumerator:(int) n;
+-(void) setDenominator:(int)d;
+
+@end
+
+#endif /* Fraction_h */
+```
+
+如何命名？  
+约定俗成：类名大写。类名必须以字母或下划线开头。  
+实例变量、对象、以及方法的名称，一般以小写字母开头。
+
+确定名字时，要遵循同样的标准。要找到反应变量或对象使用意图的名字。  
+好处：可以增强程序的可读性，调试更方便。因为程序具有更强的自解释性（self-explanatory），可减少文档注释。
+
+### @implementation 部分： 实现类（数据+方法）
+
+![oc_implementation](https://yingvickycao.github.io/img/ios/oc_implementation.jpg)
+
+### program 部分:调用。包含解决特定问题的代码。
+
+```c
+// alloc是allocate的缩写。
+// alloc : 创建对象 —— 分配内存存储空间，获得该类的实例。
+Fraction *myFraction = [Fraction alloc];
+ // init : 初始化对象 —— 初始化该类的实例的变量。
+myFraction = [myFraction init];
+
+等价于
+
+// 创建对象，并初始化。
+// myFraction = [[Fraction alloc]init];
+```
+
+`*`表明 myFraction 是 Fraction 对象的引用或指针。  
+myFraction 存储的是一个引用，即内存地址，表明对象数据在内存中的位置。同 Java。
+
+发生了什么？  
+Step 1 : 声明一个变量。  
+它的值是未定义的，没有被设定为任何值，也没有默认值。
+![oc_declare_a_ref_on_object](https://yingvickycao.github.io/img/ios/oc_declare_a_ref_on_object.jpg)
+
+Step 2 : 创建一个新对象。  
+在内存中为它保留足够的空间用于存储对象数据，包括它的实例变量的空间，再另外预留一些。  
+通常 alloc 会返回存储数据的位置（对数据的引用），并赋给变量。
+
+```c
+*myFraction = [Fraction alloc];
+```
+
+![oc_create_a_object](https://yingvickycao.github.io/img/ios/oc_create_a_object.jpg)
+
+图中所示实例变量被指定为 0，这是 alloc 方法做到到。然而对象始终没有被正确地初始化，你仍需要使用 init 方法初始化新创建的对象。=> TODO:可能是因为需要通知计数
+
+```c
+// init : 初始化该类的实例的变量。
+myFraction = [myFraction init];
+```
+
+Step 3 : set 实例的变量值
+![oc_object_set_value](https://yingvickycao.github.io/img/ios/oc_object_set_value.jpg)
+
+(9) 设置方法（setter） 和 取值方法（getter），通常被称为访问器(accessor)方法。
+
+
 - 字符串前面有一个@符号
 - 所有对象必须继承基类 NSObject
 - 单继承
