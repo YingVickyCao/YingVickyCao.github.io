@@ -11,3 +11,16 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 
 https://developer.android.google.cn/studio/releases/gradle-plugin#updating-gradle
 gradle-6.5-bin.zip
+
+
+# 3 Reading_Progress_Record
+
+## Book
+
+| Book                                               | Current Page | Total page |
+| -------------------------------------------------- | -------------------- | ------------------ 
+| Programming in Objective-C 6th Edition(中文版).pdf | 55                   | 505           
+
+## 2 Web Resource
+React  
+https://reactjs.org/docs/handling-events.html
