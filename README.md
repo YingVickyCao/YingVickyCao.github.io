@@ -12,15 +12,21 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 https://developer.android.google.cn/studio/releases/gradle-plugin#updating-gradle
 gradle-6.5-bin.zip
 
-
 # 3 Reading_Progress_Record
 
 ## Book
 
-| Book                                               | Current Page | Total page |
-| -------------------------------------------------- | -------------------- | ------------------ 
-| Programming in Objective-C 6th Edition(中文版).pdf | 55                   | 505           
+| Book                                               | Current Page | Total page | TO DO       |
+| -------------------------------------------------- | ------------ | ---------- | ----------- |
+| Programming in Objective-C 6th Edition(中文版).pdf | 55           | 505        | 55 +30 = 88 |
 
 ## 2 Web Resource
-React  
-https://reactjs.org/docs/handling-events.html
+
+## React
+
+Current:  
+https://reactjs.org/docs/lists-and-keys.html
+
+TO DO :  
+https://reactjs.org/docs/forms.html  
+https://reactjs.org/docs/lifting-state-up.html
