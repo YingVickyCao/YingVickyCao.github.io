@@ -114,6 +114,7 @@ IPhone -> Settings -> General -> Profile & Device Management -> Install 证书
 - Step 3 : 若抓包 Iphone Safari，还要继续下面的步骤。
 
 (1) Maybe need setup Iphone Safari     
+
 ![charles_safari_setup](https://yingvickycao.github.io/img/charles/charles_safari_setup.jpg)
 
 (2) Charles -> Proxy -> SSL Proxying Settings -> Enable SSL Proxying , 添加要抓的 host 和 port。
