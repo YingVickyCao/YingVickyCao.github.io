@@ -12,7 +12,7 @@
 
 # 1 Charles 在 Mac 上抓 http/https 协议的包
 
-Step 1 : Help -> SSL Proxying -> Install Charles Root Certificate
+- Step 1 : Help -> SSL Proxying -> Install Charles Root Certificate
 
 ![Charles_config_4_mac_1](https://yingvickycao.github.io/img/charles/Charles_config_4_mac_1.jpg)
 
@@ -20,7 +20,7 @@ Step 1 : Help -> SSL Proxying -> Install Charles Root Certificate
 
 ![Charles_config_4_mac_2](https://yingvickycao.github.io/img/charles/Charles_config_4_mac_2.png)
 
-Step 2 : Proxy Setting
+- Step 2 : Proxy Setting
 
 点击 1，直接开启抓包。
 ![Charles_config_4_mac_6](https://yingvickycao.github.io/img/charles/Charles_config_4_mac_6.png)
@@ -40,7 +40,7 @@ Step 2 : Proxy Setting
 # 2 Charles 在 Android Device 上抓 http/https 协议的包
 
 - Step 1 : Config Proxy at Android ( Enabel HTTP )  
-  Android -> 设置 -> Connections -> Selecte Connected Wifi -> Advanced -> Proxy , Manual->
+ Android -> 设置 -> Connections -> Selecte Connected Wifi -> Advanced -> Proxy , Manual->
 
 ```
 # Proxy host name = Mac IP
@@ -52,7 +52,7 @@ Step 2 : Proxy Setting
 
 ![Charles_config_4_android_5](https://yingvickycao.github.io/img/charles/Charles_config_4_android_5.jpg)
 
-Step 2 : Install Charles Certificate at Android ( Enable HTTPS )
+- Step 2 : Install Charles Certificate at Android ( Enable HTTPS )
 
 If 设置此步骤, https of Android in Charles is showed `unknown`
 
@@ -100,7 +100,7 @@ Iphone -> Settings -> Wifi -> Choose selected Wifi -> HTTP PROXY, "Configure Pro
 8888
 ```
 
-Step 2 : Install Charles Certificate at IPhone  
+- Step 2 : Install Charles Certificate at IPhone  
 (1) : Charles -> Help -> SSL Proxying -> Install Charles Root Certificate on a Mobile Device or Remote Browser  
 (2): 手机浏览器 输入`chls.pro/ssl`  
 (3): 安装证书  
@@ -111,7 +111,7 @@ IPhone -> Settings -> General -> Profile & Device Management -> Install 证书
 
 经常以上步骤，可以抓包 app 了。
 
-Step 3 : 若抓包 Iphone Safari，还要继续下面的步骤。
+- Step 3 : 若抓包 Iphone Safari，还要继续下面的步骤。
 
 (1) Maybe need setup Iphone Safari
 ![charles_safari_setup](https://yingvickycao.github.io/img/charles/charles_safari_setup.jpg)
