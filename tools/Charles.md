@@ -66,8 +66,8 @@ Setting ->Search "查看安全证书"
 
 Way 1: 使用 adb push Charles Certificate 到手机，并安装  
 (1) : Charles -> Help -> SSL Proxying -> Save Charles Root Certificate, save as `.pem` files, e.g., Charles.pem  
-(2) : Push Charles.pem to android Device
-(3) : 安装证书
+(2) : Push Charles.pem to android Device    
+(3) : 安装证书  
 
 ![Charles_config_4_android_2](https://yingvickycao.github.io/img/charles/Charles_config_4_android_2.jpg)  
 若安装成功，提示 “Charles installed”, 说明证书已经装好
@@ -76,8 +76,8 @@ Way 2 : 使用手机浏览器 下载 Charles Certificate，并安装
 (1) : Help -> SSL Proxying -> Install Charles Root Certificate on a Mobile Device or Remote Browser  
 (2) : 下载证书
 手机浏览器 输入`chls.pro/ssl`  
-(3) : 安装证书
-![Charles_config_4_android_2](https://yingvickycao.github.io/img/charles/Charles_config_4_android_2.jpg)  
+(3) : 安装证书    
+![Charles_config_4_android_2](https://yingvickycao.github.io/img/charles/Charles_config_4_android_2.jpg)   
 若安装成功，提示 “Charles installed”, 说明证书已经装好
 
 # 3 Charles 在 Android Emulator 上抓 http/https 协议的包
@@ -102,7 +102,7 @@ Iphone -> Settings -> Wifi -> Choose selected Wifi -> HTTP PROXY, "Configure Pro
 
 - Step 2 : Install Charles Certificate at IPhone  
 (1) : Charles -> Help -> SSL Proxying -> Install Charles Root Certificate on a Mobile Device or Remote Browser  
-(2): 手机浏览器 输入`chls.pro/ssl`  
+(2): 手机浏览器 输入`chls.pro/ssl`    
 (3): 安装证书  
 IPhone -> Settings -> General -> Profile & Device Management -> Install 证书  
 (4): 信任证书  
