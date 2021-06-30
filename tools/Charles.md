@@ -9,20 +9,21 @@
 - Wifi 重连，Charles 重新打开，都需要重新设置。
 
 `Retrofit2-android` Demo project
+
 # 1 Charles 在 Mac 上抓 http/https 协议的包
 
-## 1.1 Help -> SSL Proxying -> Install Charles Root Certificate
+- Help -> SSL Proxying -> Install Charles Root Certificate
 
-![Charles_config_4_mac_1](https://yingvickycao.github.io/img/Charles_config_4_mac_1.jpg)
+![Charles_config_4_mac_1](https://yingvickycao.github.io/img/charles/Charles_config_4_mac_1.jpg)
 
 如果装完后提示证书不信任，则点击 CA 证书那一项，更改为都信任
 
-![Charles_config_4_mac_2](https://yingvickycao.github.io/img/Charles_config_4_mac_2.png)
+![Charles_config_4_mac_2](https://yingvickycao.github.io/img/charles/Charles_config_4_mac_2.png)
 
-## 1.2 Proxy Setting
+- Proxy Setting
 
 点击 1，直接开启抓包。
-![Charles_config_4_mac_6](https://yingvickycao.github.io/img/Charles_config_4_mac_6.png)
+![Charles_config_4_mac_6](https://yingvickycao.github.io/img/charles/Charles_config_4_mac_6.png)
 
 或者
 
@@ -30,15 +31,15 @@
 在 Menu 选择 Proxy->SSL Proxying Setting，选,在 Locations 里面添加要使用 SSL 代理的网站.  
 `*`= 拦截 Https 的数据包
 
-![Charles_config_4_mac_4](https://yingvickycao.github.io/img/Charles_config_4_mac_4.png)
+![Charles_config_4_mac_4](https://yingvickycao.github.io/img/charles/Charles_config_4_mac_4.png)
 
-![Charles_config_4_mac_3](https://yingvickycao.github.io/img/Charles_config_4_mac_3.png)
+![Charles_config_4_mac_3](https://yingvickycao.github.io/img/charles/Charles_config_4_mac_3.png)
 
 经过以上步骤，可以正常抓取 Mac 的 http/https 协议的包。
 
 # 2 Charles 在 Android Device 上抓 http/https 协议的包
 
-## 2.1 Config Proxy at Android ( Enabel HTTP )
+- Config Proxy at Android ( Enabel HTTP )
 
 Step 1 : 设置 手机 Wifi Proxy
 Android -> 设置 -> Connections -> Selecte Connected Wifi -> Advanced -> Proxy , Manual->
@@ -51,9 +52,9 @@ Android -> 设置 -> Connections -> Selecte Connected Wifi -> Advanced -> Proxy 
 8888
 ```
 
-![Charles_config_4_android_5](https://yingvickycao.github.io/img/Charles_config_4_android_5.jpg)
+![Charles_config_4_android_5](https://yingvickycao.github.io/img/charles/Charles_config_4_android_5.jpg)
 
-## 2.2 Install Charles Certificate at Android ( Enable HTTPS )
+- Install Charles Certificate at Android ( Enable HTTPS )
 
 If not set 2.2, https of Android in Charles is showed `unknown`
 
@@ -65,34 +66,21 @@ Charles 抓取 手机 Https 包出现 Unknown. Reason :
 Setting ->Search "查看安全证书"  
 安装一次就可以。
 
-### Way 1:
-
-Step1 : Charles -> Help -> SSL Proxying -> Save Charles Root Certificate, save as `.pem` files, e.g., Charles.pem
-
-![Charles_config_4_android_1](https://yingvickycao.github.io/img/Charles_config_4_android_1.jpg)
-
-Step2 : Push Charles.pem to android Device
-
-Step 3 : Click Charles.pem to install it, and name the Certificate, e.g., Charles.
-
-![Charles_config_4_android_2](https://yingvickycao.github.io/img/Charles_config_4_android_2.jpg)
-
+Way 1: 使用 adb push Charles Certificate 到手机，并安装  
+Step 1 : Charles -> Help -> SSL Proxying -> Save Charles Root Certificate, save as `.pem` files, e.g., Charles.pem
+Step 2 : Push Charles.pem to android Device
+Step 3 : 安装证书
+![Charles_config_4_android_2](https://yingvickycao.github.io/img/charles/Charles_config_4_android_2.jpg)
 若安装成功，提示 “Charles installed”, 说明证书已经装好
 
-### Way 2 : 使用手机浏览器 下载 Charles Certificate，并安装
+Way 2 : 使用手机浏览器 下载 Charles Certificate，并安装  
+Step1 : Help -> SSL Proxying -> Install Charles Root Certificate on a Mobile Device or Remote Browser  
+Step 2 : 下载证书
+手机浏览器 输入`chls.pro/ssl`  
+Step 3 : 安装证书
+![Charles_config_4_android_2](https://yingvickycao.github.io/img/charles/Charles_config_4_android_2.jpg)
+若安装成功，提示 “Charles installed”, 说明证书已经装好
 
-Step1 : Help -> SSL Proxying -> Install Charles Root Certificate on a Mobile Device or Remote Browser
-
-![Charles_config_4_android_3](https://yingvickycao.github.io/img/Charles_config_4_android_3.jpg)
-
-![Charles_config_4_android_4](https://yingvickycao.github.io/img/Charles_config_4_android_4.jpg)
-
-Step 2 : 手机浏览器 输入`chls.pro/ssl`  
-询问是否下载证书，点击 Downlaod
-
-Step 3 : same as `2.2 - Way 1 - Step 3`
-
-![Charles_config_4_android_6](https://yingvickycao.github.io/img/Charles_config_4_android_6.jpg)
 
 # 3 Charles 在 Android Emulator 上抓 http/https 协议的包
 
@@ -101,8 +89,7 @@ emulator -avd <device name> -http-proxy http://本地地址:8888
 ```
 
 # 4 Charles 在 iPhone 上抓 http/https 协议的包
-
-## 4.1 设置手机代理
+- 设置手机代理
 
 Iphone -> Settings -> Wifi -> Choose selected Wifi -> HTTP PROXY, "Configure Proxy" -> "Manual"
 
@@ -114,29 +101,29 @@ Iphone -> Settings -> Wifi -> Choose selected Wifi -> HTTP PROXY, "Configure Pro
 8888
 ```
 
-## 4.2 Install Charles Certificate at IPhone
+- Install Charles Certificate at IPhone  
+  Step 1 : Charles -> Help -> SSL Proxying -> Install Charles Root Certificate on a Mobile Device or Remote Browser  
+  Step 2 : 手机浏览器 输入`chls.pro/ssl`  
+  Step 3 : 安装证书
+  IPhone -> Settings -> General -> Profile & Device Management -> Install 证书
+  Step 4 : 信任证书  
+  IPhone -> Settings -> General -> About -> Certificate Trust Settings  
+  PS : 没有出来信任证书，最后也能抓 Htpps 包。但理论上是不能抓 Htpps 包。
 
-Step1 : Charles -> Help -> SSL Proxying -> Install Charles Root Certificate on a Mobile Device or Remote Browser
+经常以上步骤，可以抓包app了。
 
-![Charles_config_4_android_3](https://yingvickycao.github.io/img/Charles_config_4_android_3.jpg)
+- 若抓包 Iphone Safari，还要继续下面的步骤。
 
-![Charles_config_4_android_4](https://yingvickycao.github.io/img/Charles_config_4_android_4.jpg)
+- Maybe need setup Iphone Safari
+![charles_safari_setup](https://yingvickycao.github.io/img/charles/charles_safari_setup.jpg)
 
-![Charles_config_4_android_6](https://yingvickycao.github.io/img/Charles_config_4_android_6.jpg)
+- Charles -> Proxy -> SSL Proxying Settings -> Enable SSL Proxying , 添加要抓的host和port。
 
-Step 2 : 手机浏览器 输入`chls.pro/ssl`  
-![Charles_config_4_IPhone_1](https://yingvickycao.github.io/img/Charles_config_4_IPhone_1.png)
+![charles_proxy_setup_1](https://yingvickycao.github.io/img/charles/charles_proxy_setup_1.webp)
 
-![Charles_config_4_IPhone_2](https://yingvickycao.github.io/img/Charles_config_4_IPhone_2.jpg)
+![charles_proxy_setup_2](https://yingvickycao.github.io/img/charles/charles_proxy_setup_2.webp)
 
-Step 4 :  安装 证书
-IPhone -> Settings -> General -> Profile & Device Management -> Install
-
-Step 3 : 信任证书  
-IPhone -> Settings -> General -> About -> Certificate Trust Settings ->  
-PS : 没有出来信任证书，最后也能抓 Htpps 包。但理论上是不能抓 Htpps 包。
-
-![Charles_config_4_IPhone_3](https://yingvickycao.github.io/img/Charles_config_4_IPhone_3.png)
+![charles_proxy_setup_3](https://yingvickycao.github.io/img/charles/charles_proxy_setup_3.webp)
 
 # 5 Charles 在 iPhone Emulator 上抓 http/https 协议的包
 
@@ -284,14 +271,14 @@ APP -> Charles （中间人） -> 真正服务器
 - Android >=7.0 (API 24)之后默认不信任用户添加到系统的 CA 证书，因此，即使在手机上安装了抓包工具的证书，也无法抓取 https 请求。
 
 **A** ：  
- Way 1 : 用低版本的测试机
+Way 1 : 用低版本的测试机
 
 Way 2 : 强制使用 Charles 的证书 替代 真正的证书信息与真正服务器进行 SSL 认证。
 
-- res/raw/charles_ssl_proxying_certificate.pem  
+(1) res/raw/charles_ssl_proxying_certificate.pem  
   Charles -> Help -> SSL Proxing -> Save Charles Root Certificate
 
-- HostnameVerifier verify always return true
+(2) HostnameVerifier verify always return true
 
 ```java
 public class MyHostnameVerifier implements HostnameVerifier {
@@ -302,16 +289,15 @@ public class MyHostnameVerifier implements HostnameVerifier {
 }
 ```
 
-- AndroidManifest.xml
+(3) AndroidManifest.xml
 
 ```xml
 android:networkSecurityConfig="@xml/network_security_config_4_charles"
 ```
-
 log:  
 NetworkSecurityConfig: Using Network Security Config from resource network_security_config debugBuild: true
 
-- res/xml/network_security_config_4_charles.xml
+(4) res/xml/network_security_config_4_charles.xml
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
