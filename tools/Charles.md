@@ -8,6 +8,7 @@
   与 Mac 连接同一个 Wifi
 - Wifi 重连，Charles 重新打开，都需要重新设置。
 
+`Retrofit2-android` Demo project
 # 1 Charles 在 Mac 上抓 http/https 协议的包
 
 ## 1.1 Help -> SSL Proxying -> Install Charles Root Certificate
@@ -128,11 +129,14 @@ Step 2 : 手机浏览器 输入`chls.pro/ssl`
 
 ![Charles_config_4_IPhone_2](https://yingvickycao.github.io/img/Charles_config_4_IPhone_2.jpg)
 
+Step 4 :  安装 证书
+IPhone -> Settings -> General -> Profile & Device Management -> Install
+
 Step 3 : 信任证书  
 IPhone -> Settings -> General -> About -> Certificate Trust Settings ->  
 PS : 没有出来信任证书，最后也能抓 Htpps 包。但理论上是不能抓 Htpps 包。
 
-![Charles_config_4_IPhone_3](https://yingvickycao.github.io/img/Charles_config_4_IPhone_3.jpg)
+![Charles_config_4_IPhone_3](https://yingvickycao.github.io/img/Charles_config_4_IPhone_3.png)
 
 # 5 Charles 在 iPhone Emulator 上抓 http/https 协议的包
 
@@ -307,7 +311,7 @@ android:networkSecurityConfig="@xml/network_security_config_4_charles"
 log:  
 NetworkSecurityConfig: Using Network Security Config from resource network_security_config debugBuild: true
 
-- network_security_config_4_charles.xml
+- res/xml/network_security_config_4_charles.xml
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
