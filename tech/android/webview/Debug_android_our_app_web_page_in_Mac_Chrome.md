@@ -1,4 +1,4 @@
-# Debug APK webview page
+# How to debug Android App web page in Mac Chrome
 
 # 1 Chekc android apk web request
 
