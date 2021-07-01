@@ -26,6 +26,11 @@
 
 - 格式化
 Ctrl + i
+
+- 如何建立文件夹？
+New group  
+New group without folder.  
+
 ## Swift
 
 - check swift version
