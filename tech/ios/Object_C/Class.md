@@ -4,7 +4,9 @@
 
 OC 中也有类、实例（对象）、方法的概念。
 
-# 1 分离接口和实现文件
+# 1 类、对象、和方法
+
+分离接口和实现文件
 
 ## 类的定义
 
@@ -118,14 +120,14 @@ myFraction = [myFraction init];
 Step 3 : set 实例的变量值
 ![oc_object_set_value](https://yingvickycao.github.io/img/ios/oc_object_set_value.jpg)
 
-# 2 数据
+## 数据
 
 OC 中的私有信息（数据） = java 中 成员变量。
 
 调用  
  `p->age`/`p.age`
 
-# 3 如何调用方法
+## 如何调用方法
 
 ```c
 // 类或实例              它的方法
@@ -135,12 +137,14 @@ OC 中的私有信息（数据） = java 中 成员变量。
 [receiver                message ];
 ```
 
-# 4 Accessor method
+# 2 Synthesis,access, method
+
+## Accessor method
 
 设置方法（setter） 和 取值方法（getter），通常被称为访问器(accessor)方法。
 `Fraction.h`
 
-# 5 合成存取方法
+## 合成存取方法
 
 `_2_2_synthesis_access_method`
 
@@ -166,7 +170,7 @@ instance.property
 instance.property = value //  等价于 [instance setProperty:value]
 ```
 
-# 7 具有多个参数点的方法
+## 具有多个参数点的方法
 
 `_2_2_synthesis_access_method`
 
@@ -177,7 +181,7 @@ instance.property = value //  等价于 [instance setProperty:value]
 -(void)setNumerator:(int)n andDenominator:(int)d;
 ```
 
-# 8 不带参数名的方法
+## 不带参数名的方法
 
 `_2_2_synthesis_access_method`
 不推荐。
@@ -191,15 +195,15 @@ instance.property = value //  等价于 [instance setProperty:value]
 [myFraction set:1 :3];
 ```
 
-# 9 方法的参数
+## 方法的参数
 
 方法的参数是局部变量。
 参数是普通值，改变形参，则不改变实参。
 参数是对象，改变形参，则可改变实参。因为传递的是一个数据存储位置的引用，因此才能修改这些数据。
 
-# 10 static 关键字
+## static 关键字
 
-# 11 self 关键字
+## self 关键字
 
 `_2_2_synthesis_access_method\Fraction_2.m`
 
@@ -208,7 +212,7 @@ instance.property = value //  等价于 [instance setProperty:value]
 [self method];
 ```
 
-# 12 在方法中分配和返回对象
+## 在方法中分配和返回对象
 
 在方法中创建一个对象并返回它。
 `_2_2_synthesis_access_method`
@@ -218,9 +222,7 @@ instance.property = value //  等价于 [instance setProperty:value]
 -(Fraction_2 *)add2:(Fraction_2 *)f;
 ```
 
-# 13 扩展类的定义和接口文件
-
-# 14 继承
+# 3 继承
 
 `_2_4_Inheritance`
 
@@ -240,8 +242,11 @@ instance.property = value //  等价于 [instance setProperty:value]
 - 向对象发送消息时，如何检查出正确的方法去执行？  
   从子类查找，如果找到，则停止查找。否则逐级在父类中查找，最终找不到则报错。
 
-- @class 指令提高了效率，因为告诉编译器这是一个类，不需要引入和处理 XYPoint.h 文件。
-  `_2_4_Inheritance\Rectangle.h, Rectangle.m, _2_4_main_4_Rectangle.m`
+## @class 指令
+
+@class 指令提高了效率，因为告诉编译器这是一个类，不需要引入和处理 XYPoint.h 文件。
+
+`_2_4_Inheritance\Rectangle.h, Rectangle.m, _2_4_main_4_Rectangle.m`
 
 ```c
 // Rectangle.m
@@ -275,107 +280,88 @@ setOrigin 修改前 ： Origin at:(50, 50)？
 ![oc_class_having_object_instance_2](https://yingvickycao.github.io/img/ios/oc_class_having_object_instance_2.jpg)  
 ![oc_class_having_object_instance_3](https://yingvickycao.github.io/img/ios/oc_class_having_object_instance_3.jpg)
 
-
 TODO: #import vs @class
 
-# 6 点语法
+## 覆写方法
 
-`_2_2_synthesis_access_method`
+`_2_3_Inheritance\ClassB.h`
 
+- 覆写方法时，方法的返回值、参数必须相同。
+- 选择哪种方法？
+  在不同的类中有名称相同的方法，则根据作为消息的接收者的类选择正确的方法。
+
+![oc_override](https://yingvickycao.github.io/img/ios/oc_override.jpg)
+
+## 抽象类
+
+TBD
+
+# 4 多态、动态类型 、 动态绑定
+
+## 多态
+
+`_2_4_polymorphism`
+多态能够使来自不同类的对象定义相同名称的方法。
+与 Java 中多态不同。Java 中多态：多态就是同一个接口，使用不同的实例而执行不同操作。
+
+## 动态类型
+
+`_2_4_polymorphism`
+
+动态类型能使程序直到执行时才确定对象所属的类。
+
+- id 用来存储任何类的对象。
+
+```c
+// 动态类型
+Fraction_2 *f1 = [[Fraction_2 alloc]init];
+// 编译时检查
+[f1 setTo:1 over:10];
+
+Complex *c1 = [[Complex alloc]init];
+[c1 setReal:18.0 andImaginary:2.5];
+
+id dataValue = f1;
+// 运行时检查：因为存储在id变量中的对象类型在编译时无法确定，因此一些测试推迟到运行时（执行时）进行。
+[dataValue print];  // numerator is 1, denominator is 10
+
+dataValue = c1;
+[dataValue print];  // 18 + 2.5
 ```
-// Progerty 能自动生成set 和 get 方法
-@property (nonatomic, strong)NSString *name;
-@property (nonatomic, assign)int age;
-@property (nonatomic, assign)float height;
-```
 
-nonatomic:跟多线程的同步有关  
-strong:继承 NSObject 的，用此关键字  
-assign：除了继承 NSObject 之外，都用此关键字
+- id 如何知道应该应该调用哪个 print 方法？  
+  Objective-C 系统总是跟踪对象所属的类。先判定对象所属的类，然后在运行时确定动态调用的方法，而不是在编译的时候。
 
-```
-// IOS 5.02之后，不用写,自动生成
-@synthesize name = _name,age = _age,height = _height;
-```
+  多态、动态类型 、 动态绑定都是基于这个原理。
 
----
+- 编译时检查和运行时检查  
+  编译时检查：If 代码有问题，编译器在编译器时报出警告或错误。  
+  运行时检查：If 代码有问题，编译器在编译时不报出警告或错误，在运行时报错，程序崩溃。
 
-- 字符串前面有一个@符号
-- 所有对象必须继承基类 NSObject
-- 单继承
-- 支持协议
-- 支持多态
-- Id 类型，类似范型对象，viold `*` 类似任意指针类型
+  id 相关的代码是运行时检查。
 
-# 4 构造函数
+- id 数据类型 与 静态类型  
+  id 数据类型数据类型既然可以存储任何类型的对象，为什么不把所有的对象都声明为 id 类型呢？  
+  不要养成滥用这种通用数据类型的习惯。
 
-- 以 int 开头
-- id 等价`*`
+  为什么使用静态类型？  
+  (1) 静态类型能更好地在编译阶段而不是运行时阶段指出错误。  
+  (2) 提高程序的可读性。
 
-```
-// - (Person *)init{
-// 等价
-- (id)init{
-```
+  静态类型 ？  
+  将一个变量定义为特定类的对象时，使用的是静态类型。  
+  “静态” 指：对存储在变量中的对象的类型进行显式声明，这样，存储在这种形态中的对象的类是预定义的，也就是静态的。  
+  使用静态类型时，编译器尽可能确保变量的用法在程序中保持一致。编译器能过通过检查来确定应用于对象的方法是由该类定义还是由该类继承的，否则，它将显示警告信息。
 
-- new 一个对象
+- 动态类型的参数与返回值
+在多个类中实现名称相同的方法，那么每个方法都必须符合各个参数的类型和返回值，这样编译器才能为消息表达式生成正确的代码。
+编译器对它所遇到的每个类声明执行一致性检查。如果有一个或多个方法在参数或返回值类型上存在冲突，编译器会显示警告信息。
 
-```
-Person *p = [[Person alloc]init];
-// p->age 直接调用
-NSLog(@"age is-%d, height is-%f, name is-%@",p->age,[p getHeight],[p getName]);
-```
+- 处理动态类型的方法
+这些问题的答案用来执行不同的代码序列，避免错误或在运行时检查程序的完整性。
 
-`Person * p = `：表示是一个引用变量
+TODO: 189 - 192
 
-# 5 方法
+## 动态绑定
 
-- `-`表示对象方法/消息。
-  Object - C 中没有方法一说，称呼为“消息”
-
-- 若方法不在.h 声明，则为 private，那么只能在此类中调用。
-
-- 调用  
-  `[p getHeight]`
-
-# 6 类方法
-
-`+`表示类法
-
-# 7 访问权限
-
-同 Java
-
-# 8 封装
-
-定义：通过定义方法来操作成员变量  
-目的：提高代码安全性、可行性和效率
-
-e.g., set 函数 > 成员变量：  
- set 函数中可以直接加很多限制 if 条件
-
-e.g., set 函数 > 成员变量：  
- 成员变量名字改变了，使用 set 函数不受影响。
-
-# 9 继承
-
-# 10 重写
-
-# 11 super
-
-表示父类.  
-init 方法中，super 含义：第一步,分类内存空间，第二步，内存空间指向 self
-
-# 12 self
-
-- 当前方法是谁在调用，self 就是谁。  
-  第 1 种：-方法 —— 对象本身  
-  第 2 种：+方法 —— 类
-
-# 14 Category
-
-| Item     | 继承     | Category |
-| -------- | -------- | -------- |
-| add 属性 | 可以     | 不可以   |
-| add 方法 | 可以     | 可以     |
-| 调用方   | 子类对象 | 原类对象 |
+动态绑定则能使程序直到执行时才确定实际要调用的对象方法。
