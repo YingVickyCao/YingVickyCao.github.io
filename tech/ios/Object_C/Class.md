@@ -306,7 +306,8 @@ TBD
 
 ## 动态类型
 
-`_2_4_polymorphism`
+`_2_5_main_4_ dynamic_type`  
+`_2_5_main_4_ check_dynamic_type`
 
 动态类型能使程序直到执行时才确定对象所属的类。
 
@@ -365,3 +366,7 @@ TODO: 189 - 192
 ## 动态绑定
 
 动态绑定则能使程序直到执行时才确定实际要调用的对象方法。
+
+
+
+![oc_check_dynamic_type](https://yingvickycao.github.io/img/ios/oc_check_dynamic_type.jpg)
