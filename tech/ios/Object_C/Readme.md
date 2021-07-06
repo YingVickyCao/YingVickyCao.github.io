@@ -1,21 +1,23 @@
 # Object C
 
-# [1 第一个程序](第一个程序.md)
-# [2 类、对象、和方法](Class.md)
+# [1 第一个程序](1_第一个程序.md)
+# [2 类、对象、和方法](2_Class.md)
 类、对象、创建、初始化、方法、局部变量、继承、子类、多态、动态类型、动态绑定
-# [3 数据类型](数据类型.md)
-# [4 表达式](表达式.md)
-# [5 循环结构](循环结构.md)
-# [6 选择结构](选择结构.md)
-# [7 异常处理](异常处理.md)
-# [8 内存管理](Memory_Management.md)
-# [9 区块](区块.md)
-# [10 协议](协议.md)
-# [11 分类](分类.md)
-# [12 预处理程序](预处理程序.md)
-# [13 Foundation框架](Foundation框架.md)
-# [14 Cocoa_and_Cocoa_Touch](Cocoa_and_Cocoa_Touch.md)
-# [15 iOS_SDK_and_UIKit](iOS_SDK_and_UIKit.md)
+# [3 数据类型](3_数据类型.md)
+数据类型、变量的作用域、对象的初始化方法。
+
+# [4 表达式](4_表达式.md)
+# [5 循环结构](5_循环结构.md)
+# [6 选择结构](6_选择结构.md)
+# [7 异常处理](7_异常处理.md)
+# [8 内存管理](8_内存管理.md)
+# [9 区块](9_区块.md)
+# [10 协议](10_协议.md)
+# [11 分类](11_分类.md)
+# [12 预处理程序](12_预处理程序.md)
+# [13 Foundation框架](13_Foundation框架.md)
+# [14 Cocoa_and_Cocoa_Touch](14_Cocoa_and_Cocoa_Touch.md)
+# [15 iOS_SDK_and_UIKit](15_iOS_SDK_and_UIKit.md)
 
 TBD：
 - [2 NSString, NSMutableString](NSString.md)œ
