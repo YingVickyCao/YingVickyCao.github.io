@@ -3,7 +3,9 @@
 Code Example : Mac, https://github.com/YingVickyCao/BuildAppBundle
 
 Requirement：
-
+- Android App Bundle  
+- Android Studio 3.2 and later  
+- Target SDK >=30 after 2021/8  
 
 # 1 Android App Bundles
 
@@ -143,16 +145,15 @@ MIN,MAX
 ```
 
 # Refs:
-
-https://developer.android.google.cn/studio/command-line/bundletool
-https://developer.android.google.cn/guide/app-bundle
-https://developer.android.google.cn/guide/app-bundle/configure-base
-https://developer.android.google.cn/guide/app-bundle/play-feature-delivery
-https://developer.android.google.cn/guide/app-bundle/dynamic-delivery
-https://developer.android.google.cn/guide/app-bundle/test
-https://developer.android.google.cn/topic/performance/reduce-apk-size
-https://developer.android.google.cn/studio/build/shrink-code
-https://developer.android.google.cn/studio/publish/upload-bundle
-https://developer.android.google.cn/studio/build/building-cmdline
-https://blog.csdn.net/chenjie19891104/article/details/113711009
-https://blog.csdn.net/qq_36168049/article/details/101002012
+- https://developer.android.google.cn/studio/command-line/bundletool  
+- https://developer.android.google.cn/guide/app-bundle  
+- https://developer.android.google.cn/guide/app-bundle/configure-base  
+- https://developer.android.google.cn/guide/app-bundle/play-feature-delivery  
+- https://developer.android.google.cn/guide/app-bundle/dynamic-delivery  
+- https://developer.android.google.cn/guide/app-bundle/test  
+- https://developer.android.google.cn/topic/performance/reduce-apk-size  
+- https://developer.android.google.cn/studio/build/shrink-code  
+- https://developer.android.google.cn/studio/publish/upload-bundle  
+- https://developer.android.google.cn/studio/build/building-cmdline
+- https://blog.csdn.net/chenjie19891104/article/details/113711009
+- https://blog.csdn.net/qq_36168049/article/details/101002012
