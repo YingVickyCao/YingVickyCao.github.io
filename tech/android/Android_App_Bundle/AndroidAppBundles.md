@@ -2,6 +2,9 @@
 
 Code Example : Mac, https://github.com/YingVickyCao/BuildAppBundle
 
+Requirement：
+
+
 # 1 Android App Bundles
 
 An Android App Bundle is a publishing format that includes all your app’s compiled code and resources, and defers APK generation and signing to Google Play.
@@ -26,6 +29,9 @@ bundletool is a command line tool that Android Studio, the Android Gradle plugin
 Use bundletool locally recreate to mockup how Google Play generates APKs and destirbute them to user.
 
 # 3 How to publish an app bundle ?
+
+![publish_android_app_bundle](https://yingvickycao.github.io/img/android/publish_android_app_bundle.jpg)
+
 
 ## Step 1 : Build an app bundle
 
