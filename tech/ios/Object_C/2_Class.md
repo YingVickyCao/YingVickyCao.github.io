@@ -295,7 +295,7 @@ TODO: #import vs @class
 
 TBD
 
-# 4 多态、动态类型 、 动态绑定
+# 4 多态
 
 ## 多态
 
@@ -303,7 +303,7 @@ TBD
 多态能够使来自不同类的对象定义相同名称的方法。
 与 Java 中多态不同。Java 中多态：多态就是同一个接口，使用不同的实例而执行不同操作。
 
-## 动态类型
+# 5 动态类型 、 动态绑定
 
 `_2_5_main_4_ dynamic_type`  
 
@@ -369,4 +369,5 @@ TODO: 189 - 192
 
 ![oc_check_dynamic_type](https://yingvickycao.github.io/img/ios/oc_check_dynamic_type.jpg) 
 
-# 5 合成(composite)对象
+# 6 合成(composite)对象
+类似于 Java 组合对象。
