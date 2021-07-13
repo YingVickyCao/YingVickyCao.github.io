@@ -368,3 +368,5 @@ TODO: 189 - 192
 `_2_5_main_4_ check_dynamic_type`
 
 ![oc_check_dynamic_type](https://yingvickycao.github.io/img/ios/oc_check_dynamic_type.jpg) 
+
+# 5 合成(composite)对象
