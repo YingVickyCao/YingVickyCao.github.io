@@ -60,7 +60,30 @@ void (^print_message)(void)=
 
 # 4 结构
 
+结构 vs 类 如何选择？  
+若只有数据，没有操作它们的方法，选结构。  
+若有数据，还有操作它们的方法，选类。
+
 # 5 指针
+
+指针是间接寻址，它是间接引用。它间接地访问特定数据项的值。
+在 Objective-C 中，将指针设置指向一些值之前，指针的值是没有意义的。
+
+- 指向
+  `&`是地址运算符，用来取得变量的指针。目的是建立指针变量 intPtr 与变量 count 之间的间接引用。
+
+```c
+int count  = 10;
+
+// 定义变量intPtr，它是int的指针类型，它可以间接访问一个或多个整型变量的值
+int *intPtr;
+intPtr = &count;
+```
+
+![oc_pointer](https://yingvickycao.github.io/img/android/oc_pointer.jpg)
+
+- 取值
+  `*`是间接寻址运算符。表示通过指针变量 intPtr 引用变量 count 的值。
 
 # 6 它们不是对象
 
