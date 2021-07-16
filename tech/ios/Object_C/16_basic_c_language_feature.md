@@ -80,10 +80,41 @@ int *intPtr;
 intPtr = &count;
 ```
 
-![oc_pointer](https://yingvickycao.github.io/img/android/oc_pointer.jpg)
+![oc_pointer](https://yingvickycao.github.io/img/ios/oc_pointer.jpg)
 
 - 取值
   `*`是间接寻址运算符。表示通过指针变量 intPtr 引用变量 count 的值。
+
+## 指针和结构体
+
+`->` 或 `(*).` 是结构指针运算符
+
+```c
+// 写法1
+datePtr->day = 25;
+// 写法2
+(*datePtr).day = 30;
+```
+
+## 指针和方法
+
+按一般方式将指针作为参数传递给方法或函数。也可以让函数或方法返回指针。alloc 和 init 方法就是返回指针。
+
+## 数组和指针
+
+数组名是指向数组的第一个元素的指针。
+
+```c
+int *ptr;
+// array 和 ptr 是指向数组的第一个元素的指针
+ptr = array;
+// 等价于
+ptr = &array[0];
+
+array[10] = 27;
+// 等价于
+*(array + 10) = 27; // array + 10 表示指向 array[10]中包含的值
+```
 
 # 6 它们不是对象
 
