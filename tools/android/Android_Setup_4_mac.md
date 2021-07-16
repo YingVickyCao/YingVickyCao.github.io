@@ -72,13 +72,6 @@ java -version
 - MAC JDK 版本切换  
   https://www.mkyong.com/java/how-to-set-java_home-environment-variable-on-mac-os-x/
 
-- 查看是否已经配置 JDK ？
-
-```
-$ echo $JAVA_HOME
-/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home
-```
-
 - 查看 Mac 安装了哪些 JDK 版本,以及其安装路径？
 
 ```
@@ -90,6 +83,15 @@ $ echo $JAVA_HOME
 ```
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home
 export PATH=$PATH:$JAVA_HOME/bin
+```
+
+- 查看是否已经配置 JDK ？
+
+```
+$ echo $JAVA_HOME
+/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home
+
+$ java -version
 ```
 
 - 如何在 Mac 上卸载 Java？
