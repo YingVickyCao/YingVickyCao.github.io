@@ -3,7 +3,9 @@
 # Command Tips
 
 ## Unix-based Operating System (Linux, Solaris and Mac OS X) Tips
+
 ### bash
+
 - 启动 Terminal 终端工具,在/Users/你的用户名 中创建`.bash_profile` File  
   `touch ~/.bash_profile`
 
@@ -19,17 +21,21 @@
 $ cat ~
 cat: /Users/user_name: Is a directory
 ```
-### zsh
-没有下面的步骤？  
-关掉terminal 窗口，重新打开一个，“adb not found”。
 
+### zsh
+
+没有下面的步骤？  
+关掉 terminal 窗口，重新打开一个，“adb not found”。
 
 ++  
 Step 1 : .zshrc
+
 ```
 source ~/.bash_profile
 ```
+
 Step 2 : source .zshrc
+
 ## Mac Mojave Version 10.14.4 (18E226)
 
 - terminal 中使用`export`设置，仅仅在当前 terminal session 有效。查看`echo $PATH`
@@ -66,35 +72,24 @@ java -version
 - MAC JDK 版本切换  
   https://www.mkyong.com/java/how-to-set-java_home-environment-variable-on-mac-os-x/
 
-```
-# JDK
-#  Mac自带JDK6,JDK7，JDK8则要自己下载安装
-# /usr/libexec/java_home -V
-# java -version
-
-# mac OSX < 10.5
-# export JAVA_6_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
-# export JAVA_7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0.jdk/Contents/Home
-# export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home
-# export JAVA_11_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home
-# export JAVA_OPEN_JDK_11_HOME=/Library/Java/JavaVirtualMachines/openjdk-11/Contents/Home
-# export JAVA_HOME=$JAVA_11_HOME
-
-# mac OSX > 10.5
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-```
-
-查看 mac jdk 安装路径
+- 查看是否已经配置 JDK ？
 
 ```
-# mac OSX < 10.5
 $ echo $JAVA_HOME
 /Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home
+```
 
-# mac OSX >= 10.5
-$ /usr/libexec/java_home -V
-Matching Java Virtual Machines (1):
-    1.8.0_161, x86_64:	"Java SE 8"	/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home
+- 查看 Mac 安装了哪些 JDK 版本,以及其安装路径？
+
+```
+# /usr/libexec/java_home -V
+```
+
+- **配置 JDK**
+
+```
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home
+export PATH=$PATH:$JAVA_HOME/bin
 ```
 
 - 如何在 Mac 上卸载 Java？
