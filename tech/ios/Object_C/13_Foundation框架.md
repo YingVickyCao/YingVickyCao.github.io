@@ -24,10 +24,18 @@ TBD:
 
 `_13_main_4_number.m`
 
+## NSNumber
+
 - int、float、long 等它们是基本数据类型，不是对象。若需要对象，使用 NSNumber。
 - 使用初始值创建 NSNumber 对象。
-- NSInteger、NSUInteger 不是一个对象，是基本数据类型的 typedef。  
-  NSInteger 是 64 位的 long，或 32 位的 int。
+- 允许通过`@`表达式创建 NSNumber 对象。
+
+## NSDecimalNumber
+
+## NSInteger、NSUInteger
+
+NSInteger、NSUInteger 不是一个对象，是基本数据类型的 typedef。  
+NSInteger 是 64 位的 long，或 32 位的 int。
 
 ```c
 #if __LP64__ || 0 || NS_BUILD_32_LIKE_64
@@ -44,6 +52,8 @@ NSInteger myInt = [intNumber integerValue];
 // 将变量转换为long，并使用%li，目的是确保值能够传递而且正确显示，即使编译后是32位架构的。
 NSLog(@"%li",(long)myInt);   // 100
 ```
+
+![oc_NSNumber](https://yingvickycao.github.io/img/ios/oc_NSNumber.jpg)
 
 # 3 字符串
 
