@@ -57,6 +57,63 @@ NSLog(@"%li",(long)myInt);   // 100
 
 # 3 字符串
 
+## 不可变对象 与 可变对象
+
+不可变对象：内容不可更改。  
+可变对象 ： 内容可更改。
+
+## NSString
+
+`_13_main_4_string_1.m`  
+`_13_main_4_string_2.m`
+
+不可变对象。
+
+- NSLog 不仅仅可以显示 NSString，还可以显示其他对象
+
+```c
+NSString *str = @"Programming is fun";  // Programming is fun
+NSLog(@"%@",str);
+
+// NSLog 不仅仅可以显示NSString，还可以显示其他对象
+NSNumber *intNumber = @100;
+NSLog(@"%@",intNumber); // 100
+```
+
+- 重写对象的 description 方法
+
+```c
+NSString *s2 = “abc”:指向一个不可变的地址.
+```
+
+C 样式字符串由 char 字符组成。
+
+NString 对象由 unichar 字符组成。  
+unichar 字符是符合 Unicode 标准的多字节字符。  
+目前 unichar 字符占 16 位，但 Unicode 标准规定的字符比这个尺寸大。所以在将来 unichar 字符可能大于 16 位，所以不要对 Unicode 字符的大小进行假设。
+
+- 判断是否相等
+- 比较大小  
+  与 C 语言一样，按位比较
+- get substring  
+  substringFromIndex:[index,end]  
+  substringToIndex:[0,index)  
+  substringWithRange:[index, index + len -1 ]
+- 是否包含 string  
+   rangeOfString
+- NString <=> UTF-8 NSData（二进制）：用于提交服务器，或者文件读写。  
+  服务器接受的数据一般是 UTF-8。
+
+## NSMutableString
+
+可变的对象
+
+- 常见操作  
+  增  
+  删  
+  改  
+  查:同 NString
+
 # 3 集合
 
 # 4 数组
