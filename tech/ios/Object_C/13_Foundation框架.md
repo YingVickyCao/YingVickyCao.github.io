@@ -1,13 +1,13 @@
 # Foundation 框架
 
-# 1 Foundation 文档
+- Foundation 文档
 
-(1) Developer Document
-(2) 在 XCode 编辑文件时，当光标定位于代码上，按 Option 键并单击，调出概要面板。
-(3) Online 文档
+(1) Developer Document  
+(2) 在 XCode 编辑文件时，当光标定位于代码上，按 Option 键并单击，调出概要面板。  
+(3) Online 文档  
 https://developer.apple.com/documentation
 
-# 头文件
+- 头文件
 
 Foundation 框架包含大量的类、方法和函数。在 OS X 下，大约有 125 个可用的头文件，通过下面的语句简单进行导入。
 
@@ -16,11 +16,12 @@ Foundation 框架包含大量的类、方法和函数。在 OS X 下，大约有
 #import <Foundation/Foundation.h>
 ```
 
-TBD:
-(1) 使用这条语句会明显增加程序的编译时间。然后，使用预编译的头文件可以避免额外的时间开销。预编译的头文件是编译器预先处理过的文件。通常所有 XCode 项目都会受益于预编译的头文件。  
+TBD:  
+(1) 使用这条语句会明显增加程序的编译时间。然后，使用预编译的头文件可以避免额外的时间开销。  
+预编译的头文件是编译器预先处理过的文件。通常所有 XCode 项目都会受益于预编译的头文件。  
 (2) XCode5 中，"模块"的新功能能够帮助加速编译，以及帮助避免应用程序中使用不同的库出现的命名冲突。
 
-# 2 数字
+# 1 数字
 
 `_13_main_4_number.m`
 
@@ -55,7 +56,7 @@ NSLog(@"%li",(long)myInt);   // 100
 
 ![oc_NSNumber](https://yingvickycao.github.io/img/ios/oc_NSNumber.jpg)
 
-# 3 字符串
+# 2 字符串
 
 ## 不可变对象 与 可变对象
 
@@ -67,7 +68,8 @@ NSLog(@"%li",(long)myInt);   // 100
 `_13_main_4_string_1.m`  
 `_13_main_4_string_2.m`
 
-不可变对象。
+不可变对象。  
+NSString 虽然是不可变对象，但是可以改变指向。
 
 - NSLog 不仅仅可以显示 NSString，还可以显示其他对象
 
@@ -104,9 +106,13 @@ unichar 字符是符合 Unicode 标准的多字节字符。
 - NString <=> UTF-8 NSData（二进制）：用于提交服务器，或者文件读写。  
   服务器接受的数据一般是 UTF-8。
 
+![oc_NSString](https://yingvickycao.github.io/img/ios/oc_NSString.jpg)
+
 ## NSMutableString
 
 可变的对象
+
+NSMutableString 是 NSString 的子类
 
 - 常见操作  
   增  
@@ -114,8 +120,10 @@ unichar 字符是符合 Unicode 标准的多字节字符。
   改  
   查:同 NString
 
-# 3 集合
+![oc_NSMutableString](https://yingvickycao.github.io/img/ios/oc_NSMutableString.jpg)
 
-# 4 数组
+# 3 数组
+
+# 3 集合
 
 # 5 字典
