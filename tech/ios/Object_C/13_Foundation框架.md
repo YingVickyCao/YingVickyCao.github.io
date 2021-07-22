@@ -124,6 +124,19 @@ NSMutableString 是 NSString 的子类
 
 # 3 数组
 
+键字 nonatomic 和 atomic 的区别及原理
+
+## `@property(copy,nonatomic, strong) UITextField *userName;`
+
+- `copy` vs `assign`  
+  assign ：属性的默认关键字。生成的方法不会生成副本，仅仅进行赋值。  
+  copy ： 在 setter 方法内生成实参变量的副本。
+
+- `atomic` vs `nonatomic`  
+  系统自动生成的 getter/setter 方法不一样。如果你自己写 getter/setter，那 atomic/nonatomic/retain/assign/copy 这些关键字只起提示作用，写不写都一样。  
+  atomic ：属性的默认关键字。与 nonatomic 相比，速度较慢，但线程安全。  
+  nonatomic ：与 atomic 相比，速度较快，但线程不安全。
+
 # 3 集合
 
 # 5 字典
