@@ -150,6 +150,18 @@ self.email = theEmail;
 }
 ```
 
+## 性能
+
+`_13_3_array_main_4_loop.m`
+ForLoop vs For-in vs enumerateObjectsUsingBlock
+
+- 遍历一个数组的时候使用 For-in 最快
+- 对于数组，通过 Value 找出 Index，enumerateObjectsWithOptions 最快。
+
 # 3 集合
 
 # 5 字典
+
+# 性能：For-in vs enumerateObjectsUsingBlock
+
+遍历字典，enumerateKeysAndObjectsUsingBlock 速度更快，也更优雅。

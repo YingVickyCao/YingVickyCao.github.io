@@ -25,11 +25,11 @@
   淘宝可以买 关键字：“ ios 真机调试证书”
 
 - 格式化
-Ctrl + i
+  Ctrl + i
 
 - 如何建立文件夹？
-New group  
-New group without folder.  
+  New group  
+  New group without folder.
 
 ## Swift
 
@@ -53,7 +53,9 @@ $ xcrun --find swift
 
 # FAQ
 
-## 1 The archive "XCode_10.1.xip" does not come from apple.
+## Q[1] The archive "XCode_10.1.xip" does not come from apple.
+
+A ：
 
 - Reason:  
   The zip is downloade long long ago, so certification is expired .
@@ -83,3 +85,9 @@ Package "Xcode_10.1.xip":
   https://developer.apple.com/downloads/  
   https://developer.apple.com/download/more/  
   https://download.developer.apple.com/Developer_Tools/Xcode_10.1/Xcode_10.1.xip
+
+## Q[2]:XCode 不能自动提示 Objective-C 代码
+
+A ：  
+首先重启 XCode。
+解决不了，尝试 https://www.cnblogs.com/leisurezxy/p/10329361.html。
