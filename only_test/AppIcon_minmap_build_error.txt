@@ -1,0 +1,45 @@
+2021-11-18 14:22:39.669 4041-4065/? D/DeviceStateHelper: Audo mode: 0
+2021-11-18 14:22:39.673 4041-4065/? D/DeviceStateHelper: Audo mode: 0
+2021-11-18 14:22:41.314 3108-32274/? W/chht: [{0}] Failed to resolve name. status={1}
+2021-11-18 14:22:42.323 1220-1220/? W/adbd: timeout expired while flushing socket, closing
+    
+    --------- beginning of system
+2021-11-18 14:22:42.589 1466-7121/? I/ActivityTaskManager: START u0 {act=android.content.pm.action.CONFIRM_INSTALL pkg=com.google.android.packageinstaller cmp=com.google.android.packageinstaller/com.android.packageinstaller.InstallStart (has extras)} from uid 10168
+2021-11-18 14:22:42.592 1466-7121/? I/ActivityTaskManager: START u0 {act=android.content.pm.action.CONFIRM_INSTALL pkg=com.google.android.packageinstaller cmp=com.google.android.packageinstaller/com.android.packageinstaller.InstallStart (has extras)} from uid 10168
+2021-11-18 14:22:42.602 1466-7121/? W/ActivityTaskManager: Tried to set launchTime (0) < mLastActivityLaunchTime (21400572)
+2021-11-18 14:22:42.602 1466-7121/? W/ActivityTaskManager: Tried to set launchTime (0) < mLastActivityLaunchTime (21400572)
+2021-11-18 14:22:42.607 1466-1527/? W/UsageStatsService: Unexpected activity event reported! (com.google.android.packageinstaller/com.android.packageinstaller.InstallStart event : 2 instanceId : 84777013)
+2021-11-18 14:22:42.615 1466-7052/? I/ActivityTaskManager: START u0 {act=android.content.pm.action.CONFIRM_INSTALL flg=0x2000001 pkg=com.google.android.packageinstaller cmp=com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity (has extras)} from uid 10103
+2021-11-18 14:22:42.624 1466-7052/? I/ActivityTaskManager: START u0 {act=android.content.pm.action.CONFIRM_INSTALL flg=0x2000001 pkg=com.google.android.packageinstaller cmp=com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity (has extras)} from uid 10103
+2021-11-18 14:22:42.629 1466-7052/? W/ActivityTaskManager: Tried to set launchTime (0) < mLastActivityLaunchTime (21430546)
+2021-11-18 14:22:42.629 1466-7052/? W/ActivityTaskManager: Tried to set launchTime (0) < mLastActivityLaunchTime (21430546)
+2021-11-18 14:22:42.633 1466-1527/? W/UsageStatsService: Unexpected activity event reported! (com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity event : 2 instanceId : 127806231)
+2021-11-18 14:22:42.697 1466-1527/? I/ActivityTaskManager: Displayed com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity: +99ms
+2021-11-18 14:22:42.700 1466-1527/? I/ActivityTaskManager: Displayed com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity: +104ms
+2021-11-18 14:22:43.305 1466-1519/? E/JobScheduler.Background: App com.google.android.gms became active but still in NEVER bucket
+2021-11-18 14:22:43.306 1466-1528/? I/DropBoxManagerService: add tag=system_server_wtf isTagEnabled=true flags=0x2
+2021-11-18 14:22:43.310 29704-29724/? D/OpenGLRenderer: endAllActiveAnimators on 0x777bc2c470 (RippleDrawable) with handle 0x769bc357d0
+2021-11-18 14:22:43.311 1466-1519/? E/JobScheduler.Background: App com.google.android.gms became active but still in NEVER bucket
+2021-11-18 14:22:43.316 4149-4149/? I/Finsky: [2] akck.b(3): Verification requested, id = 50
+2021-11-18 14:22:43.317 1466-1528/? I/DropBoxManagerService: add tag=system_server_wtf isTagEnabled=true flags=0x2
+2021-11-18 14:22:43.320 1466-1664/? W/RuleEvaluation: Integrity rule files are not available.
+2021-11-18 14:22:43.321 1466-1552/? I/PackageManager: Integrity check passed for file:///data/app/vmdl1979147611.tmp
+2021-11-18 14:22:43.325 4149-32195/? I/Finsky: [592] akeg.a(7): Single user settings service is not running, bind it now
+2021-11-18 14:22:43.333 4149-4149/? I/Finsky: [2] akef.onServiceConnected(1): Single user settings service is connected
+2021-11-18 14:22:43.342 4149-32195/? W/Settings: Setting install_non_market_apps has moved from android.provider.Settings.Global to android.provider.Settings.Secure, returning read-only value.
+2021-11-18 14:22:43.519 4149-32195/? I/Finsky: [592] VerifyAdvancedProtectionInstallTask.mE(1): Verify AP install started
+2021-11-18 14:22:43.520 4149-32195/? I/Finsky: [592] VerifyAdvancedProtectionInstallTask.mE(2): Allowing install because there are no Advanced Protection users
+2021-11-18 14:22:43.521 4149-4149/? I/Finsky: [2] VerifyAdvancedProtectionInstallTask.mC(2): Reported verification result: ALLOW
+2021-11-18 14:22:43.521 4149-32195/? I/Finsky: [592] VerifyPerSourceInstallationConsentInstallTask.mE(2): PSIC verification started with installer uid: 10168 package name: com.google.android.apps.nbu.files, originating uid: -1
+2021-11-18 14:22:43.523 4149-32195/? I/Finsky: [592] VerifyPerSourceInstallationConsentInstallTask.mE(11): Skipping logging for attempted installation. The source is a system package.
+2021-11-18 14:22:43.523 4149-4149/? I/Finsky: [2] VerifyInstallTask.g(3): Verifying id=50, result=1
+2021-11-18 14:22:43.524 4149-4149/? I/Finsky: [2] VerifyInstallTask.mC(6): Verification complete: id=50, package_name=com.hades.example.android.myapplication
+2021-11-18 14:22:43.567 1466-1552/? W/PackageManager: installPackageLI
+2021-11-18 14:22:43.569 1153-10117/? E/installd: Couldn't opendir /data/app/vmdl1979147611.tmp: No such file or directory
+2021-11-18 14:22:43.569 1153-10117/? E/installd: Failed to delete /data/app/vmdl1979147611.tmp: No such file or directory
+2021-11-18 14:22:43.573 32425-32458/? W/cri: Session ID is no longer active.
+2021-11-18 14:22:44.680 4041-4065/? D/DeviceStateHelper: Audo mode: 0
+2021-11-18 14:22:45.315 1466-1528/? W/BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.DROPBOX_ENTRY_ADDED flg=0x10 (has extras) } to com.google.android.gms/.stats.service.DropBoxEntryAddedReceiver
+2021-11-18 14:22:45.316 1466-1528/? W/BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.DROPBOX_ENTRY_ADDED flg=0x10 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+2021-11-18 14:22:44.683 4041-4065/? D/DeviceStateHelper: Audo mode: 0
+2021-11-18 14:22:45.565 3108-32274/? W/chht: [{0}] Failed to resolve name. status={1}

@@ -1,0 +1,198 @@
+2021-11-18 14:05:06.247 1220-1220/? W/adbd: timeout expired while flushing socket, closing
+2021-11-18 14:05:06.793 4041-4065/? D/DeviceStateHelper: Audo mode: 0
+    
+    --------- beginning of system
+2021-11-18 14:05:07.215 1466-5905/? I/ActivityTaskManager: START u0 {act=android.content.pm.action.CONFIRM_INSTALL pkg=com.google.android.packageinstaller cmp=com.google.android.packageinstaller/com.android.packageinstaller.InstallStart (has extras)} from uid 10168
+2021-11-18 14:05:07.223 1466-5905/? I/ActivityTaskManager: START u0 {act=android.content.pm.action.CONFIRM_INSTALL pkg=com.google.android.packageinstaller cmp=com.google.android.packageinstaller/com.android.packageinstaller.InstallStart (has extras)} from uid 10168
+2021-11-18 14:05:07.227 1466-5905/? W/ActivityTaskManager: Tried to set launchTime (0) < mLastActivityLaunchTime (20345570)
+2021-11-18 14:05:06.795 4041-4065/? D/DeviceStateHelper: Audo mode: 0
+2021-11-18 14:05:07.229 961-1021/? D/VSC: @ 86926.847: [WO] isFlat() nearest_rotation: 4, flat_angle: 65
+2021-11-18 14:05:07.229 961-1021/? D/VSC: @ 86926.847: [WO] orientation angle 344, orientation 4
+2021-11-18 14:05:07.229 961-1021/? D/VSC: @ 86926.847: [WO] rejected by isOrientationAngleAcceptable
+2021-11-18 14:05:07.228 1466-5905/? W/ActivityTaskManager: Tried to set launchTime (0) < mLastActivityLaunchTime (20345570)
+2021-11-18 14:05:07.234 1466-1527/? W/UsageStatsService: Unexpected activity event reported! (com.google.android.packageinstaller/com.android.packageinstaller.InstallStart event : 2 instanceId : 41696237)
+2021-11-18 14:05:07.238 1466-9163/? I/ActivityTaskManager: START u0 {act=android.content.pm.action.CONFIRM_INSTALL flg=0x2000001 pkg=com.google.android.packageinstaller cmp=com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity (has extras)} from uid 10103
+2021-11-18 14:05:07.247 1466-1864/? I/ActivityTaskManager: START u0 {act=android.content.pm.action.CONFIRM_INSTALL flg=0x2000001 pkg=com.google.android.packageinstaller cmp=com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity (has extras)} from uid 10103
+2021-11-18 14:05:07.254 1466-1864/? W/ActivityTaskManager: Tried to set launchTime (0) < mLastActivityLaunchTime (20375172)
+2021-11-18 14:05:07.255 1466-1523/? W/Choreographer: Frame time is 0.228803 ms in the future!  Check that graphics HAL is generating vsync timestamps using the correct timebase.
+2021-11-18 14:05:07.255 30977-30977/? W/Choreographer: Frame time is 0.228073 ms in the future!  Check that graphics HAL is generating vsync timestamps using the correct timebase.
+2021-11-18 14:05:07.254 1466-1864/? W/ActivityTaskManager: Tried to set launchTime (0) < mLastActivityLaunchTime (20375172)
+2021-11-18 14:05:07.258 1466-1527/? W/UsageStatsService: Unexpected activity event reported! (com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity event : 2 instanceId : 201257231)
+2021-11-18 14:05:07.315 1466-1527/? I/ActivityTaskManager: Displayed com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity: +86ms
+2021-11-18 14:05:07.317 1466-1527/? I/ActivityTaskManager: Displayed com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity: +96ms
+2021-11-18 14:05:08.244 1466-1519/? E/JobScheduler.Background: App com.google.android.gms became active but still in NEVER bucket
+2021-11-18 14:05:08.249 1466-1528/? I/DropBoxManagerService: add tag=system_server_wtf isTagEnabled=true flags=0x2
+2021-11-18 14:05:08.253 1220-1220/? W/adbd: timeout expired while flushing socket, closing
+2021-11-18 14:05:08.269 1466-1519/? E/JobScheduler.Background: App com.google.android.gms became active but still in NEVER bucket
+2021-11-18 14:05:08.270 1466-1528/? I/DropBoxManagerService: add tag=system_server_wtf isTagEnabled=true flags=0x2
+2021-11-18 14:05:08.275 4149-4149/? I/Finsky: [2] akck.b(3): Verification requested, id = 42
+2021-11-18 14:05:08.276 29704-29724/? D/OpenGLRenderer: endAllActiveAnimators on 0x777bc2d5b0 (RippleDrawable) with handle 0x769bc35380
+2021-11-18 14:05:08.281 1466-1664/? W/RuleEvaluation: Integrity rule files are not available.
+2021-11-18 14:05:08.284 1466-1552/? I/PackageManager: Integrity check passed for file:///data/app/vmdl1870978345.tmp
+2021-11-18 14:05:08.291 4149-31317/? I/Finsky: [534] akeg.a(7): Single user settings service is not running, bind it now
+2021-11-18 14:05:08.295 4149-4149/? I/Finsky: [2] akef.onServiceConnected(1): Single user settings service is connected
+2021-11-18 14:05:08.300 4149-31317/? W/Settings: Setting install_non_market_apps has moved from android.provider.Settings.Global to android.provider.Settings.Secure, returning read-only value.
+2021-11-18 14:05:08.490 4149-31317/? I/Finsky: [534] VerifyAdvancedProtectionInstallTask.mE(1): Verify AP install started
+2021-11-18 14:05:08.490 4149-31317/? I/Finsky: [534] VerifyAdvancedProtectionInstallTask.mE(2): Allowing install because there are no Advanced Protection users
+2021-11-18 14:05:08.491 4149-4149/? I/Finsky: [2] VerifyAdvancedProtectionInstallTask.mC(2): Reported verification result: ALLOW
+2021-11-18 14:05:08.492 4149-31317/? I/Finsky: [534] VerifyPerSourceInstallationConsentInstallTask.mE(2): PSIC verification started with installer uid: 10168 package name: com.google.android.apps.nbu.files, originating uid: -1
+2021-11-18 14:05:08.494 4149-31317/? I/Finsky: [534] VerifyPerSourceInstallationConsentInstallTask.mE(11): Skipping logging for attempted installation. The source is a system package.
+2021-11-18 14:05:08.494 4149-4149/? I/Finsky: [2] VerifyInstallTask.g(3): Verifying id=42, result=1
+2021-11-18 14:05:08.497 4149-4149/? I/Finsky: [2] VerifyInstallTask.mC(6): Verification complete: id=42, package_name=com.hades.example.android.myapplication
+2021-11-18 14:05:08.519 1466-1552/? D/CompatibilityChangeReporter: Compat change id reported: 135549675; UID 10282; state: ENABLED
+2021-11-18 14:05:08.588 1466-1552/? I/PackageDexOptimizer: Running dexopt (dexoptNeeded=1) on: /data/app/~~XQ5z1rYBdlk2QeVlePMUCQ==/com.hades.example.android.myapplication-5D0feueeJ8lnaawyq1gvvQ==/base.apk pkg=com.hades.example.android.myapplication isa=arm64 dexoptFlags=boot_complete,profile_guided,public,enable_hidden_api_checks targetFilter=speed-profile oatDir=/data/app/~~XQ5z1rYBdlk2QeVlePMUCQ==/com.hades.example.android.myapplication-5D0feueeJ8lnaawyq1gvvQ==/oat classLoaderContext=PCL[]{}
+2021-11-18 14:05:08.588 1153-9179/? V/installd: DexInv: --- BEGIN '/data/app/~~XQ5z1rYBdlk2QeVlePMUCQ==/com.hades.example.android.myapplication-5D0feueeJ8lnaawyq1gvvQ==/base.apk' ---
+2021-11-18 14:05:08.601 31321-31321/? I/dex2oat32: /apex/com.android.art/bin/dex2oat32 --input-vdex-fd=-1 --output-vdex-fd=9 --updatable-bcp-packages-file=/system/etc/updatable-bcp-packages.txt --resolve-startup-const-strings=true --max-image-block-size=524288 --compiler-filter=speed-profile --classpath-dir=/data/app/~~XQ5z1rYBdlk2QeVlePMUCQ==/com.hades.example.android.myapplication-5D0feueeJ8lnaawyq1gvvQ== --class-loader-context=PCL[]{} --generate-mini-debug-info --compact-dex-level=none --compilation-reason=install
+2021-11-18 14:05:08.603 31321-31321/? I/dex2oat32: setting boot class path to /apex/com.android.art/javalib/core-oj.jar:/apex/com.android.art/javalib/core-libart.jar:/apex/com.android.art/javalib/core-icu4j.jar:/apex/com.android.art/javalib/okhttp.jar:/apex/com.android.art/javalib/bouncycastle.jar:/apex/com.android.art/javalib/apache-xml.jar:/system/framework/framework.jar:/system/framework/ext.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/ims-common.jar:/system/framework/framework-atb-backward-compatibility.jar
+2021-11-18 14:05:08.918 31321-31321/? I/dex2oat32: dex2oat took 318.533ms (1.127s cpu) (threads: 8) arena alloc=7976B (7976B) java alloc=4716KB (4830008B) native alloc=4989KB (5108816B) free=2341KB (2397536B)
+2021-11-18 14:05:08.925 1153-9179/? V/installd: DexInv: --- END '/data/app/~~XQ5z1rYBdlk2QeVlePMUCQ==/com.hades.example.android.myapplication-5D0feueeJ8lnaawyq1gvvQ==/base.apk' (success) ---
+2021-11-18 14:05:08.927 1466-1552/? V/BackupManagerService: [UserID:0] restoreAtInstall pkg=com.hades.example.android.myapplication token=2b restoreSet=0
+2021-11-18 14:05:08.928 1466-1552/? V/BackupManagerService: [UserID:0] Finishing install immediately
+2021-11-18 14:05:08.929 1466-1519/? E/JobScheduler.Background: App com.google.android.gms became active but still in NEVER bucket
+2021-11-18 14:05:08.932 1153-9179/? E/installd: Couldn't opendir /data/app/vmdl1870978345.tmp: No such file or directory
+2021-11-18 14:05:08.932 1153-9179/? E/installd: Failed to delete /data/app/vmdl1870978345.tmp: No such file or directory
+2021-11-18 14:05:08.933 1466-1528/? I/DropBoxManagerService: add tag=system_server_wtf isTagEnabled=true flags=0x2
+2021-11-18 14:05:08.940 3013-3013/? I/MediaProvider: Invalidating LocalCallingIdentity cache for package com.hades.example.android.myapplication. Reason: package android.intent.action.PACKAGE_ADDED
+2021-11-18 14:05:08.942 3108-31332/? I/IntentFilterIntentOp: Verifying IntentFilter. verificationId:16 scheme:"https" hosts:"github.com" package:"com.hades.example.android.myapplication". [CONTEXT service_id=244 ]
+2021-11-18 14:05:08.958 1466-1519/? I/RoleManagerService: Granting default roles...
+2021-11-18 14:05:08.965 1466-1656/? I/InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS | 
+2021-11-18 14:05:08.968 2900-2900/? I/GsaVoiceInteractionSrv: O received Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.hades.example.android.myapplication flg=0x4000010 (has extras) }
+2021-11-18 14:05:08.976 4149-4149/? I/Finsky: [2] ycb.d(13): PackageMonitorReceiverImpl - Received: android.intent.action.PACKAGE_ADDED, [2HsWJrgy9S9L3Khufx54iMVi2wn0fwJwMil2fXzpzgU]
+2021-11-18 14:05:08.977 4149-4149/? I/Finsky: [2] ydc.g(1): Invalidating cached PackageState for com.hades.example.android.myapplication
+2021-11-18 14:05:08.989 29885-30077/? I/Bugle: BroadcastReceiverAsyncWorkTracker: Acknowledging broadcast of aaju@a70a262
+2021-11-18 14:05:08.989 30977-31009/? W/cri: Session ID is no longer active.
+2021-11-18 14:05:08.994 1466-9163/? W/BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.hades.example.android.myapplication flg=0x4000010 (has extras) } to com.google.android.packageinstaller/com.android.packageinstaller.PackageInstalledReceiver
+2021-11-18 14:05:09.004 1466-1528/? W/BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.hades.example.android.myapplication flg=0x4000010 (has extras) } to com.android.vending/com.google.android.finsky.packagemanager.impl.PackageMonitorReceiverImpl$RegisteredReceiver
+2021-11-18 14:05:09.005 1466-1528/? W/BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.hades.example.android.myapplication flg=0x4000010 (has extras) } to com.google.android.gms/.games.chimera.GamesSystemBroadcastReceiverProxy
+2021-11-18 14:05:09.005 1466-1528/? W/BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.hades.example.android.myapplication flg=0x4000010 (has extras) } to com.google.android.gms/.gass.chimera.PackageChangeBroadcastReceiver
+2021-11-18 14:05:09.005 1466-1528/? W/BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.hades.example.android.myapplication flg=0x4000010 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+2021-11-18 14:05:09.005 1466-1528/? W/BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.hades.example.android.myapplication flg=0x4000010 (has extras) } to com.google.android.googlequicksearchbox/com.google.android.apps.gsa.googlequicksearchbox.GelStubAppWatcher
+2021-11-18 14:05:09.006 1466-1466/? I/Telecom: DefaultDialerCache: Refreshing default dialer for user 0: now com.google.android.dialer: DDC.oR@Lmc
+2021-11-18 14:05:09.010 4149-31334/? I/Finsky: [538] otx.run(16): Wrote row to frosting DB: 1418
+2021-11-18 14:05:09.034 4149-4149/? I/Finsky: [2] ouk.d(2): Frosting ID looked up on UI thread. Caller should move to a background thread.
+2021-11-18 14:05:09.036 2920-2920/? D/RegisteredNfcFServicesCache: Service unchanged, not updating
+2021-11-18 14:05:09.039 1466-1466/? V/BackupManagerConstants: getFullBackupIntervalMilliseconds(...) returns 86400000
+2021-11-18 14:05:09.040 1466-1466/? V/BackupManagerConstants: getFullBackupRequiredNetworkType(...) returns 2
+2021-11-18 14:05:09.040 1466-1466/? V/BackupManagerConstants: getFullBackupRequireCharging(...) returns true
+2021-11-18 14:05:09.040 4149-4149/? I/Finsky: [2] alxk.a(3): Do not start WearSupportService due to Wear service optimization
+2021-11-18 14:05:09.041 1008-23370/? D/AF::TrackHandle: OpPlayAudio: track:55 usage:3 not muted
+2021-11-18 14:05:09.041 1008-23370/? I/chatty: uid=1041(audioserver) Binder:1008_9 identical 2 lines
+2021-11-18 14:05:09.044 1008-23370/? D/AF::TrackHandle: OpPlayAudio: track:55 usage:3 not muted
+2021-11-18 14:05:09.044 4149-31337/? I/Finsky: [539] jmd.a(15): [ContentSync] finished, scheduled=false
+2021-11-18 14:05:09.050 1008-23370/? D/AF::TrackHandle: OpPlayAudio: track:55 usage:3 not muted
+2021-11-18 14:05:09.051 4149-4149/? I/Finsky: [2] alxk.a(3): Do not start WearSupportService due to Wear service optimization
+2021-11-18 14:05:09.054 4149-4149/? I/Finsky: [2] adxl.a(8): Clearing split related stale data.
+2021-11-18 14:05:09.059 2192-2192/? E/PhoneInterfaceManager: [PhoneIntfMgr] getCarrierPackageNamesForIntentAndPhone: No UICC
+2021-11-18 14:05:09.060 2192-2192/? D/CarrierSvcBindHelper: No carrier app for: 0
+2021-11-18 14:05:09.060 4149-4149/? I/Finsky: [2] ouk.d(2): Frosting ID looked up on UI thread. Caller should move to a background thread.
+2021-11-18 14:05:09.062 4149-31340/? I/Finsky: [540] gvx.a(12): Asset module storage cleared for package com.hades.example.android.myapplication.
+2021-11-18 14:05:09.063 4149-31334/? I/Finsky: [538] otx.run(16): Wrote row to frosting DB: 1419
+2021-11-18 14:05:09.066 2192-2192/? E/VvmPkgInstalledRcvr: cannot create TelephonyManager from ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0}
+2021-11-18 14:05:09.072 2192-2192/? D/ImsResolver: maybeAddedImsService, packageName: com.hades.example.android.myapplication
+2021-11-18 14:05:09.081 2192-2192/? D/CarrierConfigLoader: mHandler: 9 phoneId: 0
+2021-11-18 14:05:09.087 3108-31350/? I/Auth: [SupervisedAccountIntentOperation] onHandleIntent(): android.intent.action.PACKAGE_ADDED
+2021-11-18 14:05:09.092 1466-1656/? I/InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS | 
+2021-11-18 14:05:09.097 29885-30076/? I/Bugle: BroadcastReceiverAsyncWorkTracker: Acknowledging broadcast of aaju@a70a262
+2021-11-18 14:05:09.103 3108-31339/? I/ChromeSync: [Sync,SyncIntentOperation] Handling the intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.hades.example.android.myapplication flg=0x4000010 cmp=com.google.android.gms/.chimera.GmsIntentOperationService (has extras) }.
+2021-11-18 14:05:09.104 4149-4149/? I/Finsky: [2] ycb.d(13): PackageMonitorReceiverImpl - Received: android.intent.action.PACKAGE_CHANGED, [2HsWJrgy9S9L3Khufx54iMVi2wn0fwJwMil2fXzpzgU]
+2021-11-18 14:05:09.104 4149-4149/? I/Finsky: [2] ydc.g(1): Invalidating cached PackageState for com.hades.example.android.myapplication
+2021-11-18 14:05:09.104 2499-31338/? W/GCM: Unexpected forwarded intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.hades.example.android.myapplication flg=0x4000010 cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) }
+2021-11-18 14:05:09.106 3108-31350/? I/FontLog: Package com.hades.example.android.myapplication has no metadata [CONTEXT service_id=132 ]
+2021-11-18 14:05:09.107 30086-30086/? I/EuiccGoogle: [2] EuiccServiceImpl.onCreate: onCreate Single-SIM mode: simCardState is 1
+2021-11-18 14:05:09.107 2499-31338/? W/GCM: Unexpected forwarded intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.hades.example.android.myapplication flg=0x4000010 cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) }
+2021-11-18 14:05:09.108 1466-1475/? I/system_server: Background concurrent copying GC freed 387319(19MB) AllocSpace objects, 124(7000KB) LOS objects, 64% free, 26MB/74MB, paused 994us total 175.643ms
+2021-11-18 14:05:09.109 4149-4149/? I/Finsky: [2] ouk.d(2): Frosting ID looked up on UI thread. Caller should move to a background thread.
+2021-11-18 14:05:09.112 1466-1477/? W/System: A resource failed to call release. 
+2021-11-18 14:05:09.113 1466-1477/? I/chatty: uid=1000(system) FinalizerDaemon identical 5 lines
+2021-11-18 14:05:09.113 1466-1477/? W/System: A resource failed to call release. 
+2021-11-18 14:05:09.113 4149-31334/? I/Finsky: [538] otx.run(16): Wrote row to frosting DB: 1420
+2021-11-18 14:05:09.113 1466-1477/? W/System: A resource failed to call release. 
+2021-11-18 14:05:09.113 1466-1477/? I/chatty: uid=1000(system) FinalizerDaemon identical 4 lines
+2021-11-18 14:05:09.113 1466-1477/? W/System: A resource failed to call release. 
+2021-11-18 14:05:09.113 1466-1477/? W/System: A resource failed to call close. 
+2021-11-18 14:05:09.113 1466-1477/? W/System: A resource failed to call close. 
+2021-11-18 14:05:09.114 1466-1477/? W/System: A resource failed to call release. 
+2021-11-18 14:05:09.117 1466-1477/? I/chatty: uid=1000(system) FinalizerDaemon identical 10 lines
+2021-11-18 14:05:09.117 1466-1477/? W/System: A resource failed to call release. 
+2021-11-18 14:05:09.159 3108-26751/? E/chhv: *~*~*~ Channel {0} was not shutdown properly!!! ~*~*~*
+        Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
+    java.lang.RuntimeException: ManagedChannel allocation site
+        at chhu.<init>(:com.google.android.gms@202117048@20.21.17 (150408-316502805):3)
+        at chhv.<init>(:com.google.android.gms@202117048@20.21.17 (150408-316502805):2)
+        at chbm.b(:com.google.android.gms@202117048@20.21.17 (150408-316502805):21)
+        at qhc.a(:com.google.android.gms@202117048@20.21.17 (150408-316502805):29)
+        at qhc.a(:com.google.android.gms@202117048@20.21.17 (150408-316502805):52)
+        at araw.a(:com.google.android.gms@202117048@20.21.17 (150408-316502805):8)
+        at araw.a(:com.google.android.gms@202117048@20.21.17 (150408-316502805):21)
+        at oiy.run(:com.google.android.gms@202117048@20.21.17 (150408-316502805):1)
+        at qmk.b(:com.google.android.gms@202117048@20.21.17 (150408-316502805):12)
+        at qmk.run(:com.google.android.gms@202117048@20.21.17 (150408-316502805):7)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+        at qsg.run(:com.google.android.gms@202117048@20.21.17 (150408-316502805):0)
+        at java.lang.Thread.run(Thread.java:923)
+2021-11-18 14:05:09.160 4149-4149/? I/Finsky: [2] ouk.d(2): Frosting ID looked up on UI thread. Caller should move to a background thread.
+2021-11-18 14:05:09.162 3108-26751/? W/chht: [{0}] Failed to resolve name. status={1}
+2021-11-18 14:05:09.162 3108-26751/? W/SingleHostAsyncVerifier: Error performing check:  [CONTEXT service_id=244 ]
+2021-11-18 14:05:09.163 4149-31334/? I/Finsky: [538] otx.run(16): Wrote row to frosting DB: 1421
+2021-11-18 14:05:09.171 1008-26144/? D/AF::TrackHandle: OpPlayAudio: track:55 usage:3 not muted
+2021-11-18 14:05:09.172 1008-26144/? I/chatty: uid=1041(audioserver) Binder:1008_A identical 1 line
+2021-11-18 14:05:09.176 1008-26144/? D/AF::TrackHandle: OpPlayAudio: track:55 usage:3 not muted
+2021-11-18 14:05:09.176 2920-2920/? D/RegisteredNfcFServicesCache: Service unchanged, not updating
+2021-11-18 14:05:09.178 1008-26144/? D/AF::TrackHandle: OpPlayAudio: track:55 usage:3 not muted
+2021-11-18 14:05:09.185 1466-1466/? I/Telecom: DefaultDialerCache: Refreshing default dialer for user 0: now com.google.android.dialer: DDC.oR@Lmo
+2021-11-18 14:05:09.182 1008-26144/? D/AF::TrackHandle: OpPlayAudio: track:55 usage:3 not muted
+2021-11-18 14:05:09.187 2192-2192/? E/PhoneInterfaceManager: [PhoneIntfMgr] getCarrierPackageNamesForIntentAndPhone: No UICC
+2021-11-18 14:05:09.187 2192-2192/? D/CarrierSvcBindHelper: No carrier app for: 0
+2021-11-18 14:05:09.188 2192-2192/? D/ImsResolver: maybeAddedImsService, packageName: com.hades.example.android.myapplication
+2021-11-18 14:05:09.192 30086-31362/? I/EuiccGoogle: [1461] EuiccServiceImpl.onGetEuiccProfileInfoList: onGetEuiccProfileInfoList: slotId = -1
+2021-11-18 14:05:09.205 30086-31362/? W/EuiccGoogle: [1461] EuiccServiceImpl.onGetEuiccProfileInfoList: slotId=-1. No eUICC is active. Return null.
+2021-11-18 14:05:09.212 3108-3699/? I/Icing: IndexChimeraService.getServiceInterface callingPackage=com.google.android.gms componentName=AppsCorpus serviceId=36 [CONTEXT service_id=21 ]
+2021-11-18 14:05:09.222 3108-31350/? I/ChmraDebugLogger: [80] null
+2021-11-18 14:05:09.229 961-1021/? D/VSC: @ 86928.846: [WO] isFlat() nearest_rotation: 4, flat_angle: 65
+2021-11-18 14:05:09.229 961-1021/? D/VSC: @ 86928.846: [WO] orientation angle 345, orientation 4
+2021-11-18 14:05:09.229 961-1021/? D/VSC: @ 86928.846: [WO] rejected by isOrientationAngleAcceptable
+2021-11-18 14:05:09.245 2499-31338/? I/Fitness: OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package:com.hades.example.android.myapplication flg=0x5000010 cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+2021-11-18 14:05:09.249 2499-31354/? I/Fitness: FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+2021-11-18 14:05:09.253 2499-31338/? I/Fitness: OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package:com.hades.example.android.myapplication flg=0x5000010 cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+2021-11-18 14:05:09.258 2499-31338/? I/Fitness: FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+2021-11-18 14:05:09.270 3108-30841/? I/GmsCoreXrpcWrapper: Returning a channel provider with trafficStatsTag=12803
+2021-11-18 14:05:09.277 1466-1519/? W/Looper: Slow delivery took 217ms android.fg h=android.os.Handler c=<recycled PooledLambda@7c5b702> m=0
+2021-11-18 14:05:09.285 25081-31146/? I/A: Writing data of size=405 bytes with N=1 keys to Geller corpus DEVICE_INSTALLED_APPS at ts=1637215509284000
+2021-11-18 14:05:09.287 25081-25114/? I/DeviceAppInfoWork: refreshDeviceAppInfoForAccount done.
+2021-11-18 14:05:09.291 25081-25138/? W/DeviceAppInfoWork: missing version info.
+2021-11-18 14:05:09.301 3108-27582/? I/Icing: IndexChimeraService.getServiceInterface callingPackage=com.google.android.gms componentName=null serviceId=30 [CONTEXT service_id=21 ]
+2021-11-18 14:05:09.330 3108-30841/? I/Icing: Usage reports ok 2, Failed Usage reports 0, indexed 0, rejected 0 [CONTEXT service_id=21 ]
+2021-11-18 14:05:09.331 3108-27582/? I/Icing: IndexChimeraService.getServiceInterface callingPackage=com.google.android.gms componentName=null serviceId=36 [CONTEXT service_id=21 ]
+2021-11-18 14:05:09.341 3108-30841/? I/GmsCoreXrpcWrapper: Returning a channel provider with trafficStatsTag=12803
+2021-11-18 14:05:09.342 3108-31339/? I/ChromeSync: [Persistence,AffiliationManager] Fetching affiliations from the server.
+2021-11-18 14:05:09.346 3108-31339/? E/ChromeSync: [Sync,SyncIntentOperation] Error handling the intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.hades.example.android.myapplication flg=0x4000010 cmp=com.google.android.gms/.chimera.GmsIntentOperationService (has extras) }.
+2021-11-18 14:05:09.350 3108-30841/? I/Icing: Usage reports ok 0, Failed Usage reports 0, indexed 0, rejected 0 [CONTEXT service_id=21 ]
+2021-11-18 14:05:09.351 3108-30841/? I/Icing: Indexing com.google.android.gms-internal.3p:MobileApplication from com.google.android.gms using seqno 236 [CONTEXT service_id=21 ]
+2021-11-18 14:05:09.352 3108-30841/? I/chatty: uid=10173(com.google.android.gms) lowpool[132] identical 1 line
+2021-11-18 14:05:09.353 3108-30841/? I/Icing: Indexing com.google.android.gms-internal.3p:MobileApplication from com.google.android.gms using seqno 236 [CONTEXT service_id=21 ]
+2021-11-18 14:05:09.359 3108-30841/? I/GmsCoreXrpcWrapper: Returning a channel provider with trafficStatsTag=12803
+2021-11-18 14:05:09.368 3108-30841/? I/Icing: Usage reports ok 0, Failed Usage reports 0, indexed 0, rejected 0 [CONTEXT service_id=21 ]
+2021-11-18 14:05:09.368 3108-30841/? I/Icing: Indexing com.google.android.gms-apps from com.google.android.gms [CONTEXT service_id=21 ]
+2021-11-18 14:05:09.410 3108-30841/? I/Icing: Indexing done com.google.android.gms-apps [CONTEXT service_id=21 ]
+2021-11-18 14:05:09.411 3108-30841/? I/Icing: Indexing com.google.android.gms-apps from com.google.android.gms [CONTEXT service_id=21 ]
+2021-11-18 14:05:09.411 3108-30841/? I/Icing: Indexing done com.google.android.gms-apps [CONTEXT service_id=21 ]
+2021-11-18 14:05:09.472 3108-30841/? I/Icing: Indexing com.google.android.gms-apps from com.google.android.gms [CONTEXT service_id=21 ]
+2021-11-18 14:05:09.483 30123-30140/? I/PermissionControllerServiceImpl: Updating user sensitive for uid 10282
+2021-11-18 14:05:09.483 30123-30140/? I/PermissionControllerServiceImpl: Updating user sensitive for uid 10282
+2021-11-18 14:05:09.504 3108-30841/? I/Icing: Indexing done com.google.android.gms-apps [CONTEXT service_id=21 ]
+2021-11-18 14:05:09.563 1466-1519/? W/Looper: Drained
+2021-11-18 14:05:09.777 1466-1466/? D/NotificationService: 0|com.google.android.apps.wellbeing|174344743|null|10149: granting content://settings/system/notification_sound
+2021-11-18 14:05:09.778 1466-1466/? I/chatty: uid=1000 system_server identical 3 lines
+2021-11-18 14:05:09.778 1466-1466/? D/NotificationService: 0|com.google.android.apps.wellbeing|174344743|null|10149: granting content://settings/system/notification_sound
+2021-11-18 14:05:09.787 1466-1466/? W/NotificationHistory: Attempted to add notif for locked/gone/disabled user 0
+2021-11-18 14:05:09.798 1907-1907/? D/InterruptionStateProvider: No bubble up: not allowed to bubble: 0|com.google.android.apps.wellbeing|174344743|null|10149
+2021-11-18 14:05:09.798 1907-1907/? D/InterruptionStateProvider: No heads up: unimportant notification: 0|com.google.android.apps.wellbeing|174344743|null|10149
+2021-11-18 14:05:10.258 1466-1528/? W/BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.DROPBOX_ENTRY_ADDED flg=0x10 (has extras) } to com.google.android.gms/.stats.service.DropBoxEntryAddedReceiver
+2021-11-18 14:05:10.258 1466-1528/? W/BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.DROPBOX_ENTRY_ADDED flg=0x10 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+2021-11-18 14:05:10.365 3108-31150/? W/chht: [{0}] Failed to resolve name. status={1}
+2021-11-18 14:05:11.235 961-1021/? D/VSC: @ 86930.848: [WO] isFlat() nearest_rotation: 4, flat_angle: 65
+2021-11-18 14:05:11.235 961-1021/? D/VSC: @ 86930.848: [WO] orientation angle 338, orientation 4
+2021-11-18 14:05:11.235 961-1021/? D/VSC: @ 86930.848: [WO] rejected by isOrientationAngleAcceptable
+2021-11-18 14:05:11.801 3108-31150/? W/chht: [{0}] Failed to resolve name. status={1}
+2021-11-18 14:05:11.805 4041-4065/? D/DeviceStateHelper: Audo mode: 0

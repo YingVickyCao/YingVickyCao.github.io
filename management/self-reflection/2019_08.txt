@@ -1,0 +1,12 @@
+# 2019_08_16
+- For app new avigation,  ask UI Designer for help: check and review special cases to improve UI pefformance.  
+Leader没有提出批评，而是给出不同账户，测试并截屏。     
+结论：批评往往导致更糟糕结果：翻旧账。不如直面解决当下问题。   
+- 人性的优点，一个月计划看完。现在已经2个月过去了，内心有种对自己的不信任。     
+结论：不可懒惰。做好计划阅读，并严格执行。    
+- 看React Native 官网 示例，计划内容没有看完。    
+原因：task拆分粗糙导致估算不准确。    
+结论：task拆分足够小，计划才有用。否则，每天做不完，只能继续堆积。这样计划也没有意义了。
+- online course 差与9天到期。   
+原因：拖延，没即使做。淹没在邮件，没在计划。
+结论：立刻做；及时做；每天定时check邮件；加入TO DO List    

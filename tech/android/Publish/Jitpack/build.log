@@ -1,0 +1,327 @@
+Build starting...
+Start: Mon Apr 3 13:39:31 UTC 2023 4ccb81124885
+Git:
+0.1x-11-g8c8df3e
+commit 8c8df3e59bc54ddec43de02435e5b90c8c91398c
+Author: Vicky 
+Date:   Mon Apr 3 21:00:03 2023 +0800
+
+    .
+
+
+Init SDKMan
+Found Android manifest
+Android SDK version: . Build tools: 
+Found gradle
+Gradle build script
+Found gradle version: 7.5.1.
+Using gradle wrapper
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF-8 -Dhttps.protocols=TLSv1.2
+Downloading https://services.gradle.org/distributions/gradle-7.5.1-bin.zip
+.10%.20%.30%.40%.50%.60%.70%.80%.90%.100%
+
+------------------------------------------------------------
+Gradle 7.5.1
+------------------------------------------------------------
+
+Build time:   2022-08-05 21:17:56 UTC
+Revision:     d1daa0cbf1a0103000b71484e1dbfe096e095918
+
+Kotlin:       1.6.21
+Groovy:       3.0.10
+Ant:          Apache Ant(TM) version 1.10.11 compiled on July 10 2021
+JVM:          11.0.2 (Oracle Corporation 11.0.2+9)
+OS:           Linux 4.18.0-25-generic amd64
+
+0m3.907s
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF-8 -Dhttps.protocols=TLSv1.2
+openjdk version "11.0.2" 2019-01-15
+OpenJDK Runtime Environment 18.9 (build 11.0.2+9)
+OpenJDK 64-Bit Server VM 18.9 (build 11.0.2+9, mixed mode)
+Getting tasks: ./gradlew tasks --all
+Tasks: publishToMavenLocal,
+Running: ./gradlew clean -Pgroup=com.github.YingVickyCao -Pversion=feature~0.1x-8c8df3e59b-1 -xtest -xlint assemble publishToMavenLocal
+Checking the license for package Android SDK Build-Tools 33.0.1 in /opt/android-sdk-linux/licenses
+License for package Android SDK Build-Tools 33.0.1 accepted.
+Preparing "Install Android SDK Build-Tools 33.0.1 (revision: 33.0.1)".
+"Install Android SDK Build-Tools 33.0.1 (revision: 33.0.1)" ready.
+Installing Android SDK Build-Tools 33.0.1 in /opt/android-sdk-linux/build-tools/33.0.1
+"Install Android SDK Build-Tools 33.0.1 (revision: 33.0.1)" complete.
+"Install Android SDK Build-Tools 33.0.1 (revision: 33.0.1)" finished.
+Checking the license for package Android SDK Platform 33 in /opt/android-sdk-linux/licenses
+License for package Android SDK Platform 33 accepted.
+Preparing "Install Android SDK Platform 33 (revision: 2)".
+"Install Android SDK Platform 33 (revision: 2)" ready.
+Installing Android SDK Platform 33 in /opt/android-sdk-linux/platforms/android-33
+"Install Android SDK Platform 33 (revision: 2)" complete.
+"Install Android SDK Platform 33 (revision: 2)" finished.
+Checking the license for package Android SDK Build-Tools 30.0.3 in /opt/android-sdk-linux/licenses
+License for package Android SDK Build-Tools 30.0.3 accepted.
+Preparing "Install Android SDK Build-Tools 30.0.3 (revision: 30.0.3)".
+"Install Android SDK Build-Tools 30.0.3 (revision: 30.0.3)" ready.
+Installing Android SDK Build-Tools 30.0.3 in /opt/android-sdk-linux/build-tools/30.0.3
+"Install Android SDK Build-Tools 30.0.3 (revision: 30.0.3)" complete.
+"Install Android SDK Build-Tools 30.0.3 (revision: 30.0.3)" finished.
+> Task :example:clean UP-TO-DATE
+> Task :lib:clean UP-TO-DATE
+> Task :example:preBuild UP-TO-DATE
+> Task :example:preDebugBuild UP-TO-DATE
+> Task :example:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :lib:preBuild UP-TO-DATE
+> Task :lib:preDebugBuild UP-TO-DATE
+> Task :lib:compileDebugAidl NO-SOURCE
+> Task :example:compileDebugAidl NO-SOURCE
+> Task :lib:packageDebugRenderscript NO-SOURCE
+> Task :example:compileDebugRenderscript NO-SOURCE
+> Task :example:generateDebugBuildConfig
+> Task :example:generateDebugResValues
+> Task :lib:compileDebugRenderscript NO-SOURCE
+> Task :lib:generateDebugResValues
+> Task :lib:generateDebugResources
+> Task :lib:writeDebugAarMetadata
+> Task :example:javaPreCompileDebug
+> Task :example:checkDebugAarMetadata
+> Task :lib:packageDebugResources
+> Task :example:mapDebugSourceSetPaths
+> Task :example:generateDebugResources
+> Task :example:packageDebugResources
+> Task :example:mergeDebugResources
+> Task :example:createDebugCompatibleScreenManifests
+> Task :example:parseDebugLocalResources
+> Task :example:extractDeepLinksDebug
+> Task :lib:extractDeepLinksDebug
+> Task :lib:processDebugManifest
+> Task :lib:compileDebugLibraryResources
+> Task :example:processDebugMainManifest
+> Task :example:processDebugManifest
+> Task :lib:generateDebugBuildConfig
+> Task :lib:javaPreCompileDebug
+> Task :lib:parseDebugLocalResources
+> Task :example:mergeDebugShaders
+> Task :example:compileDebugShaders NO-SOURCE
+> Task :example:generateDebugAssets UP-TO-DATE
+> Task :lib:mergeDebugShaders
+> Task :lib:compileDebugShaders NO-SOURCE
+> Task :lib:generateDebugAssets UP-TO-DATE
+> Task :lib:packageDebugAssets
+> Task :lib:generateDebugRFile
+> Task :example:mergeDebugAssets
+
+> Task :lib:compileDebugJavaWithJavac
+
+> Task :example:compressDebugAssets
+> Task :example:processDebugJavaRes NO-SOURCE
+> Task :lib:processDebugJavaRes NO-SOURCE
+> Task :lib:bundleLibResDebug NO-SOURCE
+> Task :lib:bundleLibCompileToJarDebug
+> Task :example:desugarDebugFileDependencies
+> Task :example:mergeDebugJniLibFolders
+> Task :lib:mergeDebugJniLibFolders
+> Task :lib:bundleLibRuntimeToDirDebug
+> Task :lib:mergeDebugNativeLibs NO-SOURCE
+> Task :example:checkDebugDuplicateClasses
+> Task :lib:copyDebugJniLibsProjectOnly
+> Task :example:mergeDebugJavaResource
+> Task :example:processDebugManifestForPackage
+> Task :example:mergeLibDexDebug
+> Task :example:mergeDebugNativeLibs NO-SOURCE
+> Task :example:stripDebugDebugSymbols NO-SOURCE
+> Task :example:processDebugResources
+> Task :example:validateSigningDebug
+> Task :example:mergeExtDexDebug
+> Task :example:compileDebugJavaWithJavac
+> Task :example:dexBuilderDebug
+> Task :example:writeDebugAppMetadata
+> Task :example:writeDebugSigningConfigVersions
+> Task :lib:preReleaseBuild UP-TO-DATE
+> Task :lib:compileReleaseAidl NO-SOURCE
+> Task :lib:mergeReleaseJniLibFolders
+> Task :lib:mergeReleaseNativeLibs NO-SOURCE
+> Task :lib:stripReleaseDebugSymbols NO-SOURCE
+> Task :lib:copyReleaseJniLibsProjectAndLocalJars
+> Task :lib:compileReleaseRenderscript NO-SOURCE
+> Task :lib:generateReleaseResValues
+> Task :lib:extractDeepLinksForAarRelease
+> Task :lib:generateReleaseBuildConfig
+> Task :lib:generateReleaseResources
+> Task :lib:packageReleaseResources
+> Task :lib:parseReleaseLocalResources
+> Task :lib:processReleaseManifest
+> Task :lib:javaPreCompileRelease
+> Task :lib:mergeReleaseShaders
+> Task :lib:compileReleaseShaders NO-SOURCE
+> Task :lib:generateReleaseAssets UP-TO-DATE
+> Task :lib:generateReleaseRFile
+> Task :lib:packageReleaseAssets
+> Task :example:mergeProjectDexDebug
+> Task :lib:compileReleaseJavaWithJavac
+> Task :lib:mergeReleaseGeneratedProguardFiles
+> Task :lib:mergeReleaseConsumerProguardFiles
+> Task :lib:packageReleaseRenderscript NO-SOURCE
+> Task :lib:prepareLintJarForPublish
+> Task :lib:prepareReleaseArtProfile
+> Task :lib:processReleaseJavaRes NO-SOURCE
+> Task :lib:mergeReleaseJavaResource
+> Task :example:preReleaseBuild UP-TO-DATE
+> Task :lib:writeReleaseAarMetadata
+> Task :example:compileReleaseAidl NO-SOURCE
+> Task :example:compileReleaseRenderscript NO-SOURCE
+> Task :example:generateReleaseBuildConfig
+> Task :example:javaPreCompileRelease
+> Task :example:generateReleaseResValues
+> Task :example:checkReleaseAarMetadata
+> Task :example:mapReleaseSourceSetPaths
+> Task :example:generateReleaseResources
+> Task :example:packageReleaseResources
+> Task :example:createReleaseCompatibleScreenManifests
+> Task :example:extractDeepLinksRelease
+> Task :lib:extractDeepLinksRelease
+> Task :example:parseReleaseLocalResources
+> Task :example:processReleaseMainManifest
+> Task :example:processReleaseManifest
+> Task :lib:compileReleaseLibraryResources
+> Task :example:packageDebug
+> Task :example:createDebugApkListingFileRedirect
+> Task :example:assembleDebug
+> Task :lib:bundleLibCompileToJarRelease
+> Task :example:extractProguardFiles
+> Task :lib:bundleLibResRelease NO-SOURCE
+> Task :lib:bundleLibRuntimeToJarRelease
+> Task :lib:createFullJarRelease
+> Task :lib:writeReleaseLintModelMetadata
+> Task :example:mergeReleaseJniLibFolders
+> Task :lib:copyReleaseJniLibsProjectOnly
+> Task :example:mergeReleaseNativeLibs NO-SOURCE
+> Task :example:stripReleaseDebugSymbols NO-SOURCE
+> Task :example:extractReleaseNativeSymbolTables NO-SOURCE
+> Task :example:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :example:processReleaseManifestForPackage
+> Task :example:desugarReleaseFileDependencies
+> Task :example:checkReleaseDuplicateClasses
+> Task :lib:bundleLibRuntimeToDirRelease
+> Task :example:mergeReleaseResources
+> Task :lib:extractReleaseAnnotations
+> Task :lib:syncReleaseLibJars
+> Task :lib:bundleReleaseLocalLintAar
+> Task :example:mergeReleaseArtProfile
+> Task :example:mergeReleaseShaders
+> Task :example:compileReleaseShaders NO-SOURCE
+> Task :example:generateReleaseAssets UP-TO-DATE
+> Task :example:mergeReleaseAssets
+> Task :example:compressReleaseAssets
+> Task :example:processReleaseJavaRes NO-SOURCE
+> Task :example:collectReleaseDependencies
+> Task :example:mergeReleaseJavaResource
+> Task :example:sdkReleaseDependencyData
+> Task :example:writeReleaseAppMetadata
+> Task :example:writeReleaseSigningConfigVersions
+> Task :lib:stripDebugDebugSymbols NO-SOURCE
+> Task :lib:copyDebugJniLibsProjectAndLocalJars
+> Task :lib:extractDeepLinksForAarDebug
+> Task :lib:mergeDebugGeneratedProguardFiles
+> Task :lib:mergeDebugConsumerProguardFiles
+> Task :lib:prepareDebugArtProfile
+> Task :lib:mergeDebugJavaResource
+> Task :lib:bundleReleaseAar
+> Task :lib:extractDebugAnnotations
+> Task :lib:mapReleaseSourceSetPaths
+> Task :lib:syncDebugLibJars
+> Task :example:processReleaseResources
+> Task :lib:bundleDebugAar
+> Task :example:compileReleaseJavaWithJavac
+> Task :example:mergeExtDexRelease
+> Task :example:dexBuilderRelease
+> Task :lib:assembleDebug
+> Task :lib:mergeReleaseResources
+> Task :publishToMavenLocal UP-TO-DATE
+> Task :lib:verifyReleaseResources
+> Task :example:mergeDexRelease
+> Task :example:lintVitalAnalyzeRelease
+> Task :lib:assembleRelease
+> Task :lib:assemble
+> Task :example:lintVitalReportRelease
+> Task :lib:sourceReleaseJar
+> Task :example:lintVitalRelease
+> Task :lib:generatePomFileForReleasePublication
+> Task :example:optimizeReleaseResources
+> Task :example:compileReleaseArtProfile
+> Task :example:packageRelease
+> Task :example:createReleaseApkListingFileRedirect
+> Task :example:assembleRelease
+> Task :example:assemble
+
+> Task :lib:javaDocReleaseGeneration
+Initializing plugins
+Dokka is performing: documentation for :lib
+Validity check
+Creating documentation models
+
+
+> Task :lib:javaDocReleaseGeneration
+Transforming documentation model before merging
+Merging documentation models
+Transforming documentation model after merging
+Creating pages
+Transforming pages
+Rendering
+
+Initializing plugins
+Dokka is performing: documentation for :lib
+Validity check
+Creating documentation models
+
+
+> Task :lib:javaDocReleaseGeneration
+Transforming documentation model before merging
+Merging documentation models
+Transforming documentation model after merging
+Creating pages
+Transforming pages
+Rendering
+
+
+> Task :lib:javaDocReleaseJar
+> Task :lib:generateMetadataFileForReleasePublication
+> Task :lib:publishReleasePublicationToMavenLocal
+> Task :lib:publishToMavenLocal
+
+BUILD SUCCESSFUL in 2m 6s
+137 actionable tasks: 135 executed, 2 up-to-date
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF-8 -Dhttps.protocols=TLSv1.2
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF-8 -Dhttps.protocols=TLSv1.2
+
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF-8 -Dhttps.protocols=TLSv1.2
+
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF-8 -Dhttps.protocols=TLSv1.2
+
+WARN: The registry key 'java.correct.class.type.by.place.resolve.scope' accessed, but not loaded yet
+WARN: The registry key 'java.correct.class.type.by.place.resolve.scope' accessed, but not loaded yet
+WARN: The registry key 'java.correct.class.type.by.place.resolve.scope' accessed, but not loaded yet
+WARN: The registry key 'java.correct.class.type.by.place.resolve.scope' accessed, but not loaded yet
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF-8 -Dhttps.protocols=TLSv1.2
+Publication: com.github.YingVickyCao:SimplePermissions:0.1
+Build tool exit code: 0
+Looking for artifacts...
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF-8 -Dhttps.protocols=TLSv1.2
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF-8 -Dhttps.protocols=TLSv1.2
+Looking for pom.xml in build directory and ~/.m2
+[Fatal Error] lint-resources-release.xml:1:1: Content is not allowed in prolog.
+Found artifact: com.github.YingVickyCao:SimplePermissions:0.1
+Found artifact: com.github.YingVickyCao:SimplePermissions:0.1
+2023-04-03T13:42:17.135925104Z
+Exit code: 0
+
+✅ Build artifacts:
+com.github.YingVickyCao:SimplePermissions:feature~0.1x-8c8df3e59b-1
+
+Files: 
+com/github/YingVickyCao/SimplePermissions/feature~0.1x-8c8df3e59b-1
+com/github/YingVickyCao/SimplePermissions/feature~0.1x-8c8df3e59b-1/SimplePermissions-feature~0.1x-8c8df3e59b-1-javadoc.jar
+com/github/YingVickyCao/SimplePermissions/feature~0.1x-8c8df3e59b-1/SimplePermissions-feature~0.1x-8c8df3e59b-1-sources.jar
+com/github/YingVickyCao/SimplePermissions/feature~0.1x-8c8df3e59b-1/SimplePermissions-feature~0.1x-8c8df3e59b-1.aar
+com/github/YingVickyCao/SimplePermissions/feature~0.1x-8c8df3e59b-1/SimplePermissions-feature~0.1x-8c8df3e59b-1.module
+com/github/YingVickyCao/SimplePermissions/feature~0.1x-8c8df3e59b-1/SimplePermissions-feature~0.1x-8c8df3e59b-1.pom
+com/github/YingVickyCao/SimplePermissions/feature~0.1x-8c8df3e59b-1/SimplePermissions-feature~0.1x-8c8df3e59b-1.pom.md5
+com/github/YingVickyCao/SimplePermissions/feature~0.1x-8c8df3e59b-1/SimplePermissions-feature~0.1x-8c8df3e59b-1.pom.sha1
+com/github/YingVickyCao/SimplePermissions/feature~0.1x-8c8df3e59b-1/build.log
+
