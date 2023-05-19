@@ -16,9 +16,7 @@ git version 2.38.1
 
 # [4 Git 基本知识](./4_git_basic.md)
 
-# [5 Git 安装](./5_git_installation.md)
-
-# [6 Github](./6_Github.md)
+# [5 Github](./6_Github.md)
 
 # 7 GitLab
 
