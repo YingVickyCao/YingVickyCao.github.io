@@ -192,3 +192,10 @@ Password: YOUR_TOKEN
 
 Ref:  
 https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#using-a-personal-access-token-on-the-command-line
+
+
+# 8 每次git pull 提示"Enter passphrase for key `/Users/account/.ssh/id_rsa'`?
+
+Reason : create SSH key时，设置本地的SSH 密码。    
+Fix:    
+删除 ~/.ssh 文件夹，重新设置SSH，设置时不要设置任何密码，直接回车。     
