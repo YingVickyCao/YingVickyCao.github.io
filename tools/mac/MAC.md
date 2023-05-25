@@ -191,3 +191,10 @@ https://zhuanlan.zhihu.com/p/40683011
 # 19 Mac 自定义快捷输入
 
 https://jingyan.baidu.com/article/d45ad148b50dac69552b8008.html
+
+# 20 Macbook Pro M2 Wifi连上但不能访问网络？    
+多次重启，也没有用。  
+Fix：  
+https://blog.csdn.net/weixin_43726274/article/details/120785463  
+
+尝试二、四 ， 可以解决问题。  

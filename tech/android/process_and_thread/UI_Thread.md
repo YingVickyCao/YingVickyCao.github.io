@@ -15,8 +15,6 @@ ANR异常，只要在 UI 线程中执行耗时操作，都会引发 ANR。因为
 ---
 
 # Rule
-- Rule1: Do not block the UI thread
-- Rule2: Don't access the Android UI from outside the UI thread.
 
 ## Rule1: Do not block the UI thread
 - Block the UI thread
@@ -29,7 +27,7 @@ ANR异常，只要在 UI 线程中执行耗时操作，都会引发 ANR。因为
 1. disk I/O  => background work
 2. DB Access  => background work
 3. network calls  => background work
-4. long-running operations  => background work
+4. long-running operations  such as 数据拼装 => background work
 
 ## Rule2: Don't access the Android UI from outside the UI thread.
 1. Activity.runOnUiThread(Runnable)  
