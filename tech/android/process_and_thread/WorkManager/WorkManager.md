@@ -1,6 +1,8 @@
 # WorkManager
 
+[Code](https://github.com/yingvickycao/android-about-demos/blob/main/app/src/main/java/com/hades/example/android/_process_and_thread/workmanager/WorkManagerFragment.java) 
 ![WorkManager_origin](./WorkManager_origin.svg)
+
 ![WorkManager_xmind](./WorkManager_xmind.svg)
 
 
@@ -20,3 +22,10 @@ AlarmManager
 # Refs:
 - [Schedule tasks with WorkManager](https://developer.android.google.cn/topic/libraries/architecture/workmanager/)
 - [Guide to background processing](https://developer.android.google.cn/guide/background/)
+- https://developer.android.google.cn/topic/libraries/architecture/workmanager/basics?hl=zh-cn
+- https://developer.android.google.cn/courses/pathways/android-basics-compose-unit-7-pathway-1
+- https://developer.android.google.cn/jetpack/androidx/releases/work
+- https://developer.android.google.cn/guide/background/testing/persistent/debug?hl=en
+- https://developer.android.google.cn/codelabs/android-adv-workmanager?hl=en#0
+- https://developer.android.google.cn/guide/background/persistent/threading?hl=en
+- https://developer.android.google.cn/courses/pathways/kotlin-fundamentals-nine?hl=zh_cn
