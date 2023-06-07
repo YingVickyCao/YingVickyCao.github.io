@@ -379,7 +379,33 @@ import org.example.Message
 import org.test.Message as TestMessage
 ```
 
-# 7 Class
+# 4 Java 与 Kotlin 互相调用
+
+// TODO:性能 java vs kotl
+
+# 7 函数
+
+```kotlin
+fun printCourse(course: String): String {
+    println("String is $course")
+    return course
+}
+```
+
+- param of functioon is val
+
+```kotlin
+// While.kt
+// param is val. if you need to modify it, pass an object to wrapper it
+fun while_loops(x: Int) {
+   while (x > 0) {
+       x -= 1  // Error : compile error - Val cannot be reassigned
+   }
+}
+```
+
+
+# 8 Class
 
 ## class declation
 
@@ -413,7 +439,7 @@ the one or more initializer blocks `init`
 
 `_3_Inheritance.kt`
 
-- [1] Kotlin classes has a common supoerlcass,`Any`(equals()/hashCode()/toString())
+- [1] Kotlin classes has a common superlcass,`Any`(equals()/hashCode()/toString())
 - [2] By default, Kotlin classes are `final` - can not be inherited. To make a class inherited, use `open` keyword.
 
 ```kotlin
@@ -431,7 +457,7 @@ class Sub : Example2() {
 }
 ```
 
-- [3] Derived class can declare an explicit supertype, and init the base class
+- [3] Constructor : Derived class can declare an explicit supertype, and init the base class
 
 ```kotlin
 open class Base(n: Int) {
@@ -450,39 +476,67 @@ class Derived2 : Base { constructor which does.
 }
 ```
 
-- [4] Overriding methods
+- [4] Overriding methods     
+- [6] Derived class initialization order
+```
+First, Base class - Constructor -> init blocks -> property initializer
+Then,  Derived class - Constructor -> init blocks -> property initializer
+```
+- [7] Calling superclass implementation  
+`super`
 
 ## Abstract Classes
 
 `_2_Abstract_Classes.kt`
 Same as Java
 
+
+## Properties 
+`_4_Properties.kt`  
+https://kotlinlang.org/docs/properties.html  
+
+
+val : only get  
+val : (1) set and get. (2) set can be private (3) set and get can be custom
+
+- Kotlin provides an implicit backing field for a property
+- Developer can provide an explicit backing field for a property
+- [Compile-time constants](https://kotlinlang.org/docs/properties.html#compile-time-constants)    
+`const val`  0000 
+- [Overriding properties](https://kotlinlang.org/docs/inheritance.html#overriding-properties)      
+`override`  
+- Delegated properties : //TODO
+
+
 ## Companon objects
 
-# 8 函数
 
-```kotlin
-fun printCourse(course: String): String {
-    println("String is $course")
-    return course
-}
-```
+## Visibility modifiers  
+`private < protected < internal < public`  
 
-- param of functioon is val
+https://kotlinlang.org/docs/visibility-modifiers.html
 
-```kotlin
-// While.kt
-// param is val. if you need to modify it, pass an object to wrapper it
-fun while_loops(x: Int) {
-   while (x > 0) {
-       x -= 1  // Error : compile error - Val cannot be reassigned
-   }
-}
-```
 
-# 4 Java 与 Kotlin 互相调用
+## Extension  
+https://kotlinlang.org/docs/extensions.html    
+(1) Extension function : receiver type, and receiver object  
+Nullable receiver 
+(2) Extension properties     
+(3) Companion object extensions      
+(4) Declaring extensions as members      
+multiple implicit receivers  : extension receiver > a dispatch receiver  
 
-// TODO:性能 java vs kotl
+## data class  
+`data class`
+
+# 9 Interface
+https://kotlinlang.org/docs/interfaces.html  
+
+`interface`
+- class can be derived from multiple interface
+
+## Functional (SAM) interface : // TODO
+https://kotlinlang.org/docs/fun-interfaces.html  
 
 # Ref
 
