@@ -130,18 +130,20 @@ println(boxedB == anotherBoxedB)     // true
   If value in [-128,127] , `Int?` -> java `Integer` -> `int`.  
   If not in [-128,127] , then `Int?` -> java `Integer`
 
-| Kotlin Type | Kotlin boxed Java Class | cached ranged in Java Class | If value in cached ranged, stores as Java Primitive Type |
-| ----------- | ----------------------- | --------------------------- | -------------------------------------------------------- |
-| Byte?       | Byte                    | [-128,127]                  | byte                                                     |
-| Short?      | Short                   | [-128,127]                  | short                                                    |
-| Int?        | Int                     | [-128,127]                  | int                                                      |
-| Long?       | Long                    | [-128,127]                  | long                                                     |
-| Bool?       | Bool                    | true/false                  | bool                                                     |
-| Char?       | Char                    | [0,127]                     | char                                                     |
+  | Kotlin Type | Kotlin boxed Java Class | cached ranged in Java Class | If value in cached ranged, stores as Java Primitive Type |
+  | ----------- | ----------------------- | --------------------------- | -------------------------------------------------------- |
+  | Byte?       | Byte                    | [-128,127]                  | byte                                                     |
+  | Short?      | Short                   | [-128,127]                  | short                                                    |
+  | Int?        | Int                     | [-128,127]                  | int                                                      |
+  | Long?       | Long                    | [-128,127]                  | long                                                     |
+  | Bool?       | Bool                    | true/false                  | bool                                                     |
+  | Char?       | Char                    | [0,127]                     | char                                                     |
 
-- check  
-  === : check object reference
-  == : check value
+- check
+```kotlin  
+  === / !== : check object reference  
+  == / !=: check value, uses `equals()`
+```
 
 - All number types support conversions to other types: e.g., b.toInt (byte -> Int)
 
@@ -383,7 +385,7 @@ import org.test.Message as TestMessage
 
 // TODO:性能 java vs kotl
 
-# 7 函数
+# 7 Function(函数)
 
 ```kotlin
 fun printCourse(course: String): String {
@@ -403,6 +405,8 @@ fun while_loops(x: Int) {
    }
 }
 ```
+
+## Destructuring declarations
 
 
 # 8 Class
@@ -508,9 +512,6 @@ val : (1) set and get. (2) set can be private (3) set and get can be custom
 - Delegated properties : //TODO
 
 
-## Companon objects
-
-
 ## Visibility modifiers  
 `private < protected < internal < public`  
 
@@ -527,7 +528,25 @@ Nullable receiver
 multiple implicit receivers  : extension receiver > a dispatch receiver  
 
 ## data class  
-`data class`
+https://kotlinlang.org/docs/data-classes.html   
+`data class` 
+
+
+- default auto generated function
+```kotlin
+                                    explicit implementation
+equals()/hashCode() pair          : enable
+toString()                        : enable
+componentN()                      : disable
+copy()                            : disable
+```
+
+## Sealed class
+
+
+
+## Companon objects 
+
 
 # 9 Interface
 https://kotlinlang.org/docs/interfaces.html  
