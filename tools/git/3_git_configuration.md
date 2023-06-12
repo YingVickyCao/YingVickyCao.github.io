@@ -110,14 +110,14 @@ Step 2 : Terminal
 
 ```
 / As diff tool
-git config --global diff.tool bc3
-git config --global difftool.bc3.trustExitCode true   // ?
-git config --global difftool.prompt false             // Launch 'bc3' [Y/N]
+git config --global diff.tool bc
+git config --global difftool.bc.trustExitCode true   // ?
+git config --global difftool.prompt false             // Launch 'bc' [Y/N]
 
 // As Merge tool
-git config --global merge.tool bc3
-git config --global mergetool.bc3.trustExitCode true  // ?
-git config --global mergetool.prompt false            // Launch 'bc3' [Y/N]
+git config --global merge.tool bc
+git config --global mergetool.bc.trustExitCode true  // ?
+git config --global mergetool.prompt false            // Launch 'bc' [Y/N]
 git config --global mergetool.keepBackup false        // Merge confict.  删除解决冲突后生成的备份文件 (*.orig)
 ```
 

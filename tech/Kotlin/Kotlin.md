@@ -541,12 +541,15 @@ componentN()                      : disable
 copy()                            : disable
 ```
 
-## Sealed class
-
-
-
 ## Companon objects 
 
+## Sealed class
+
+## Sealed interface
+
+
+## enum classes
+the set of values for an enum type is also restricted, but each enum constant exists only as a single instance,
 
 # 9 Interface
 https://kotlinlang.org/docs/interfaces.html  
@@ -556,6 +559,17 @@ https://kotlinlang.org/docs/interfaces.html
 
 ## Functional (SAM) interface : // TODO
 https://kotlinlang.org/docs/fun-interfaces.html  
+
+
+
+
+# 10 Operator
+
+- Elvis operator
+
+x?:y                              // yield x  if x is not null, y otherwise
+x?:throw exception`               // yield x  if x is not null ,throw exception  otherwise
+
 
 # Ref
 
