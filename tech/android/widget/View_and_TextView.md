@@ -2,12 +2,6 @@
 
 Common attribue for Widget.
 
-- View 绘制流程
-  ![view_draw_process](https://yingvickycao.github.io/img/android/widget/view_draw_process.png)
-
-- View Tree
-  ![viewgroup_2x](https://yingvickycao.github.io/img/android/widget/viewgroup_2x.png)
-
 # 1 `onClick` vs `android:clickable`
 
 `TestTextViewClickFragment.java`

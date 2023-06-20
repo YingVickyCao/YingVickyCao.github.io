@@ -24,7 +24,7 @@ plugins {
     ...
     id 'kotlin-android'
 }
-/
+  /
 apply plugin: 'kotlin-android'
 // Case 1 : Inside each module(app , android library) using kotlin, END
 

@@ -1,4 +1,4 @@
-# Readme
+# Android Optimization Performance
 
 - 从用户体验的角度，性能问题分为 4 类，也是性能优化的目标：  
    （1）、快：流畅的体验  
@@ -88,3 +88,4 @@
 
 - 《Android 应用性能优化最佳实践》
 - https://developer.android.google.cn/topic/performance
+- https://developer.android.google.cn/studio/profile?hl=zh_cn
