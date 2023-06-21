@@ -87,5 +87,6 @@
 # Ref：
 
 - 《Android 应用性能优化最佳实践》
-- https://developer.android.google.cn/topic/performance
+- https://developer.android.google.cn/topic/performance/overview?hl=zh-cn
 - https://developer.android.google.cn/studio/profile?hl=zh_cn
+- https://developer.android.google.cn/guide/topics/graphics/hardware-accel#tips  
