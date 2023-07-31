@@ -6,7 +6,10 @@
 
 # 1 SQLite
 
-- Android Use sqlite3
+- Android    
+`sqlite3``     
+`SQLiteOpenHelper`  
+
 - 跨平台
 - Android 运行时集成了 SQLite，每个应用都可以使用
 - 支持基本 SQL 语法
