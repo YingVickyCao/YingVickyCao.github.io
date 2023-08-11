@@ -27,10 +27,8 @@ Help -> Local IP Address
 
 浏览器输入 `chls.pro/ssl` 来下载证书。
 
-Settings -> Search "User certifications"  
-`Clear credentials`.  
-`Install from device storrage`.  
-`User certifications` to view installed certs.
+Settings -> Search "User certifications" ->  `Install from device storrage` ->  `WLAN certificate`
+Other :  `Clear credentials`, `User certificates` to view installed certs.
 
 => Enable HTTPS
 
