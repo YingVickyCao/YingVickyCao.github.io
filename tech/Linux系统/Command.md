@@ -1,6 +1,13 @@
 # Linux 命令
 
-命令行（Command Line）： （Linux 作为服务方）相当于我们请求服务使用的专业术语。
+- 命令行（Command Line）： （Linux 作为服务方）相当于我们请求服务使用的专业术语。  
+- CLI and GUI    
+CLI（command-line interface，命令行界面）        
+GUI（Graphical User Interface，图形用户接口/图形用户界面）        
+“图形用户界面让简单的任务更容易完成， 而命令行界面使完成复杂的任务成为可能”    
+- Platform    
+Unix / Linux / MacOS X / Windows  
+
 
 # 1 用户与密码
 
