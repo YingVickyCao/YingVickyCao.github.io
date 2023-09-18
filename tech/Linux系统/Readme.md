@@ -34,9 +34,16 @@ Linux 只是操作系统的内核名字，没别的含义。内核非常重要�
   
   “Linux”指的是内核以及在一个典型的 Linux 发行版中所包含的所有免费及开源软件； 也就是说，整个 Linux 生态系统，不只有 GNU 项目软件。    
 
+- Platform    
+Unix / Linux / MacOS X / Windows  
+
 # 2 [学习路径](学习路径.md)
 
 
+# 3 Comand line
+## [Linux command line的基本知识](./Common_basic.md)
+
+## [常见 command 命令](./Common_Command.md.md)
 
 Ref：  
 - Book《The Linux Command Line》  

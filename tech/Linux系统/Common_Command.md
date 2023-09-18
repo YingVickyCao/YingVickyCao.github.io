@@ -1,13 +1,50 @@
 # Linux 命令
 
-- 命令行（Command Line）： （Linux 作为服务方）相当于我们请求服务使用的专业术语。  
-- CLI and GUI    
-CLI（command-line interface，命令行界面）        
-GUI（Graphical User Interface，图形用户接口/图形用户界面）        
-“图形用户界面让简单的任务更容易完成， 而命令行界面使完成复杂的任务成为可能”    
-- Platform    
-Unix / Linux / MacOS X / Windows  
+- date, 获取当前时间和日期
 
+```
+# date
+Tue Jan 17 09:29:22 PM CST 2023
+```
+
+- cal，它默认显示当前月份的日历。  
+```
+[test@localhost ~]$ cal
+     August 2023    
+Su Mo Tu We Th Fr Sa
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30 31
+```
+
+- df, 查看磁盘剩余空间的数量  
+```                    
+[test@localhost ~]$ df
+Filesystem          1K-blocks    Used Available Use% Mounted on
+devtmpfs                 4096       0      4096   0% /dev
+tmpfs                 2089400       0   2089400   0% /dev/shm
+tmpfs                  835764   10956    824808   2% /run
+/dev/mapper/cs-root  22802432 4348596  18453836  20% /
+/dev/nvme0n1p2         983040  273828    709212  28% /boot
+/dev/nvme0n1p1         613184    7092    606092   2% /boot/efi
+tmpfs                  417880     120    417760   1% /run/user/1000
+```
+
+- fee, 显示空闲内存的数量
+```
+[test@localhost ~]$ free
+               total        used        free      shared  buff/cache   available
+Mem:         4178804     1716288     1737940       28756      919716     2462516
+Swap:        2727932           0     2727932
+
+```
+
+- exit, 结束终端会话
+```
+[test@localhost ~]$ exit
+```
 
 # 1 用户与密码
 
@@ -77,9 +114,14 @@ root:x:0:
 cos:x:1000:
 ```
 
-# 2 浏览文件
+# 2 文件系统
 
-- cd : change directory，切换目录
+- pwd (print working directory)， 打印出当前工作目录名
+```
+[test@localhost ~]$ pwd  
+/home/test  
+```
+- cd : change directory，更改目录
   Windows，同 cd。
 
 ```
@@ -87,8 +129,7 @@ cd .  切换到当前目录
 cd .. 切换到上一级
 ```
 
-## ls: list,列出目录下的文件
-
+- ls: list,列出目录  
 Windows，dir。
 
 ```
@@ -170,6 +211,7 @@ total 40
 chmod 711 Downloads
 ```
 
+
 # 3 安装软件
 
 ## 没有软件管家的情况
@@ -184,7 +226,10 @@ Linux                         .rpm
 Linux                         .tar.gz
 Windows                       .exe
 Windows                       .zip
-```
+Mac                           .dmg
+Mac                           .tgz，需要自己编译,e.g., 
+```  
+Mac OS 安装 tree 命令: 下载并编译tree https://www.jianshu.com/p/e038506da986 
 
 - Linux 的软件安装包可以下载 rpm 或 deb。  
   Linux 常用的有两大体系，CentOS 用 rpm，Ubuntu 用 deb。
@@ -259,7 +304,9 @@ dpkg -r
 
 ## 有软件管家的情况
 
-- Linux 有软件管家。CentOS 有 yum，Ubuntu 有 apt-get
+- Linux 有软件管家。   
+CentOS 有 yum，Ubuntu 有 apt-get  
+Mac 中 有 MacPorts、Homebrew
 - 根据关键字搜索 `yum search` / `apt-cache search`
   Example : 搜索 jdk
 
@@ -590,12 +637,6 @@ $ less 1.txt | grep google
 tar xvzf jdk-XXX_linux-x64_bin.tar.gz
 ```
 
-- date 获取当前时间
-
-```
-# date
-Tue Jan 17 09:29:22 PM CST 2023
-```
 
 - awk ： // TODO
   灵活地对文本进行处理
