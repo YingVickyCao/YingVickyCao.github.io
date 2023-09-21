@@ -102,10 +102,10 @@ root:x:0:0:root:/root:/bin/bash
 cos:x:1000:1000:cos:/home/cos:/bin/bash
 ```
 
-x 的地方应该是密码。密码没有显示在这里。
-接下来的是用户 ID 1000 和 组 ID 1000。
+x 的地方应该是密码。密码没有显示在这里。  
+接下来的是用户 ID 1000 和 组 ID 1000。   
 /root 和 /home/cos，是 root 用户和 cos 用户的主目录。什么是主目录？主目录是用户登陆进去后默认的路径。类似，Windows，C:\Users\cos
-/bin/bash 的位置是用于配制登陆后的默认交互命令行。Linux 登陆后的交互命令行是一个解析脚本的程序，这里配置的是/bin/bash。不同的是，Windows，登陆进去是界面，也就是程序 explorer.
+/bin/bash 的位置是用于配制登陆后的默认交互命令行。Linux 登陆后的交互命令行是一个解析脚本的程序，这里配置的是/bin/bash。不同的是，Windows，登陆进去是界面，也就是程序 explorer.  
 
 ```
 $ cat /etc/group
@@ -116,21 +116,39 @@ cos:x:1000:
 
 # 2 文件系统
 
-- pwd (print working directory)， 打印出当前工作目录名
+## pwd (print working directory)， 打印出当前工作目录名
 ```
 [test@localhost ~]$ pwd  
 /home/test  
 ```
-- cd : change directory，更改目录
+## cd : change directory，更改目录
   Windows，同 cd。
 
+
+路径：相对路径，据对路径
 ```
-cd .  切换到当前目录
-cd .. 切换到上一级
+.  工作目录
+.. 工作目录的父目录
 ```
 
-- ls: list,列出目录  
-Windows，dir。
+```
+当前目录为/home，切换到子目录test
+$ cd test/ （与下面等价，隐含地省略了./）
+$ cd ./test/
+```
+
+
+| 快捷键           | 运行结果           |
+|---------------|----------------|
+| cd            | 更改工作目录到Home目录  |
+| cd ~          | 更改工作目录到Home目录  |
+| cd ~user_home | 更改工作目录用户目录     |
+| cd -          | 更改工作目录到先前的工作目录 |
+
+
+
+## ls: list,列出目录  
+Windows为dir。
 
 ```
 $ ls
@@ -138,16 +156,10 @@ Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
 
 // 以列表的方式列出文件
 
-
-$ ls -l
-total 4
--rw-r--r--. 1 cos cos 7 Jan 12 21:26 1.txt
-
 # ls -l
 total 40
 -rw-r--r--. 1 cos  cos  29290 Jan 12 21:56 1.txt
 -rw-r--r--. 1 root root    12 Jan 17 21:29 hello.txt
--rw-r--r--. 1 cos  cos     54 Jan 17 21:36 out.file.txt
 ```
 
 分析 ls -l：  
@@ -155,7 +167,7 @@ total 40
 “-”表示普通文件。  
 “d”表示目录  
 （2）第一个字段的剩下 9 个字符是模式，即“权限位”（access permission bits）。
-3 个一组，每一组表示“读（r，read）”“写（w，write）”“执行（x，execute）”。如果是字母，有这个权限；如果是横向，没有这个权限。  
+3 个一组，每一组表示“读（r，read）”“写（w，write）”“执行（x，execute）”。如果是字母，有这个权限；如果是横向，没有这个权限。    
 这三组分别表示文件所属的用户权限、文件所属的组权限、其他用户的权限。  
 更改权限，用 chmod。  
 （3）第 2 个字段是硬连接（hard link）数目  
@@ -166,46 +178,26 @@ total 40
 （8）最后一个是文件名
 
 ```
-]# ls -lh
+# ls -lh
 total 40K
 -rw-r--r--. 1 cos  cos  29K Jan 12 21:56 1.txt
 -rw-r--r--. 1 root root  12 Jan 17 21:29 hello.txt
--rw-r--r--. 1 cos  cos   54 Jan 17 21:36 out.file.txt
 ```
 
 ```
-// 显示隐藏文件
-# ls -al
-total 32
-drwx------. 14 cos  cos  4096 Jan 13 23:10 .
-drwxr-xr-x.  3 root root   17 Jan  5 13:54 ..
--rw-r--r--.  1 cos  cos    18 Nov 24 22:20 .bash_logout
--rw-r--r--.  1 cos  cos   492 Nov 24 22:20 .bashrc
-drwxr-xr-x. 11 cos  cos  4096 Jan 13 08:38 .cache
-...
+ls        // 当前目录
+ls /usr   // 指定目录
+ls ~ /usr // 指定多个目录。例子中为家目录和usr目录
+
+改变输出格式：
+ls -l     // Long list
+ls -a 或 ls -all     // List all, 包括隐藏文件
+ls -al    // 显示隐藏文件, Long format list
+ls -lS    // Long format list sorted by size (descending)
+ls -ltr   // Long format list of all files, sorted by modification date (oldest first)
 ```
 
-```
-// Long format list sorted by size (descending)
-# ls -lS
-total 40
--rw-r--r--. 1 cos  cos  29290 Jan 12 21:56 1.txt
--rw-r--r--. 1 cos  cos     54 Jan 17 21:36 out.file.txt
--rw-r--r--. 1 root root    12 Jan 17 21:29 hello.txt
-
-```
-
-```
-// Long format list of all files, sorted by modification date (oldest first)
- # ls -ltr
-total 40
--rw-r--r--. 1 cos  cos  29290 Jan 12 21:56 1.txt
--rw-r--r--. 1 root root    12 Jan 17 21:29 hello.txt
--rw-r--r--. 1 cos  cos     54 Jan 17 21:36 out.file.txt
-
-```
-
-- chmod：更改文件权限
+## chmod：更改文件权限
 
 ```
 chmod 711 Downloads
