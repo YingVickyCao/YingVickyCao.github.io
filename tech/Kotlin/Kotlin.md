@@ -64,9 +64,80 @@ android {
 
 # 1 Basic
 
-## 常量 、 变量
+## 1.1 程序入口
+```kotlin
+fun main(args: Array<String>) {
+}
 
-常量 val (value)
+fun main() {
+    println("hi")
+}
+```
+
+## 1.2 Package
+Yes
+
+
+## 1.3 语句
+
+一条语句，不用加`;`
+
+## 1.4 文件名
+
+- kotlin_name.kt -> kotlin_nameKt.class having kotlin_nameKt
+- 只有fun在.kt时，那么生成的fun是static
+
+```kotlin
+//Main.kt
+fun main() {
+    Test.message("welcome")
+}
+
+
+MainKt.kt -> MainKt.class having class MainKt
+/**
+ * public final class MainKt {
+ *    public static final void main() {
+ *       Test.INSTANCE.message("welcome");
+ *    }
+ *
+ *    // $FF: synthetic method
+ *    public static void main(String[] var0) {
+ *       main();
+ *    }
+ * }
+ */
+```
+
+- 如何修改生成的文件名和class 名？
+
+```kotlin
+//Main.kt
+@file:JvmName("LoginUtils")
+
+MainKt.kt -> LoginUtils.class having class LoginUtils
+```
+
+```kotlin
+// Utils1.kt
+@file:JvmName("MyUtils")
+@file:JvmMultifileClass
+
+// Utils2.kt
+@file:JvmName("MyUtils")
+@file:JvmMultifileClass
+
+MyUtils.class
+Utils1.kt -> MyUtils__Utils1Kt.class having MyUtils__Utils1Kt
+Utils2.kt -> MyUtils__Utils2Kt.class having MyUtils__Utils2Kt
+```
+## 1.5 Java 与 Kotlin 互相调用
+
+// TODO:性能 java vs kotl
+
+## 1.6 常量 、 变量
+
+常量 val (value)  
 变量 var (variable)
 
 ```kotlin
@@ -74,15 +145,11 @@ var age: Int = 18
 val num = 10
 ```
 
-## 语句
-
-一条语句，不用加`;`
-
 # 2 数据类型
 
 - Octal literals are not supported in Kotlin.
-- Numbers, characters and booleans can be represented as primitive values at runtime
-- Signed and unsigned  
+- Numbers, characters and booleans can be represented as primitive values at runtime  
+- Signed and unsigned   
    e.g., Int, UInt  
   Don't do : signed <-> unsigned
 
@@ -146,25 +213,6 @@ println(boxedB == anotherBoxedB)     // true
 ```
 
 - All number types support conversions to other types: e.g., b.toInt (byte -> Int)
-
-## 空安全类型(Null safety)
-
-(1) non-null type, 不能赋值 null . e.g., String  
-(2) nullable type (null / not null) .e.g., String?  
-(3) non-null type cannot= nullable typ, but can force nameOfNon_null = nameOfNullable!!
-
-```kotlin
-var nameOfNon_null: String = "Vicky"
-var nameOfNullable: String? = null
-
-nameOfNon_null = nameOfNullable!!   // wrong
-
-if (null != nameOfNullable) {       // right
- nameOfNon_null = nameOfNullable!!
-}
-```
-
-(4) nullable type can= non-null type
 
 ## Integer
 
@@ -232,6 +280,25 @@ Array can be used for any type
 
 TODO:`it`  
  `IntArray`, `ByteArray`, `ShortArray`
+
+## 空安全类型(Null safety)
+
+(1) non-null type, 不能赋值 null . e.g., String  
+(2) nullable type (null / not null) .e.g., String?  
+(3) non-null type cannot= nullable typ, but can force nameOfNon_null = nameOfNullable!!
+
+```kotlin
+var nameOfNon_null: String = "Vicky"
+var nameOfNullable: String? = null
+
+nameOfNon_null = nameOfNullable!!   // wrong
+
+if (null != nameOfNullable) {       // right
+ nameOfNon_null = nameOfNullable!!
+}
+```
+
+(4) nullable type can= non-null type
 
 # 2 Type checks and casts
 
@@ -381,10 +448,6 @@ import org.example.Message
 import org.test.Message as TestMessage
 ```
 
-# 4 Java 与 Kotlin 互相调用
-
-// TODO:性能 java vs kotl
-
 # 7 Function(函数)
 
 ```kotlin
@@ -410,6 +473,8 @@ fun while_loops(x: Int) {
 
 
 # 8 Class
+
+
 
 ## class declation
 
@@ -559,7 +624,6 @@ https://kotlinlang.org/docs/interfaces.html
 
 ## Functional (SAM) interface : // TODO
 https://kotlinlang.org/docs/fun-interfaces.html  
-
 
 
 
