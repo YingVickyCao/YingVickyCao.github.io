@@ -8,23 +8,6 @@
 
 # [4 Exception](./4_exception.md)
 
-# 5 Packages
-
-https://kotlinlang.org/docs/packages.html
-
-- If package is not specified, uses the default package with no name.
-
-# 6 Imports
-
-https://kotlinlang.org/docs/packages.html
-
-- Default imports can be imported into each Kotlin file by default or depending on target platform.
-- Us as to rename clashing name.
-
-```
-import org.example.Message
-import org.test.Message as TestMessage
-```
 
 # 7 Function(函数)
 

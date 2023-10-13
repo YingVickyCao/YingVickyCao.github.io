@@ -71,15 +71,31 @@ fun main() {
 }
 ```
 
-# 2 Package
+# 2 Package and imports
 Yes
 
+https://kotlinlang.org/docs/packages.html
 
-# 3 语句
+- If package is not specified, uses the default package with no name.
+
+
+# 3 Imports
+
+https://kotlinlang.org/docs/packages.html
+
+- Default imports can be imported into each Kotlin file by default or depending on target platform.
+- Us as to rename clashing name.
+
+```
+import org.example.Message
+import org.test.Message as TestMessage
+```
+
+# 4 语句
 
 一条语句，不用加`;`
 
-# 4 文件名
+# 5 文件名
 
 - kotlin_name.kt -> kotlin_nameKt.class having kotlin_nameKt
 - 只有fun在.kt时，那么生成的fun是static
@@ -128,11 +144,11 @@ MyUtils.class
 Utils1.kt -> MyUtils__Utils1Kt.class having MyUtils__Utils1Kt
 Utils2.kt -> MyUtils__Utils2Kt.class having MyUtils__Utils2Kt
 ```
-# 5 Java 与 Kotlin 互相调用
+# 6 Java 与 Kotlin 互相调用
 
 // TODO:性能 java vs kotl
 
-# 6 常量 、 变量
+# 7 常量 、 变量
 
 常量 val (value)  
 变量 var (variable)
