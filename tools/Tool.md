@@ -83,4 +83,7 @@ Ant
 
 # decode url
 
-Chrome -> console -> decodeURIComponent("")
+- Chrome -> console -> `decodeURIComponent("")`
+- 拷贝chrome地址栏中的url到粘贴板:   
+Console中使用`copy(decodeURIComponent（location.href)`
+
