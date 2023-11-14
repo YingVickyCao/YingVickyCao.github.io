@@ -2,18 +2,30 @@
 
 MVC is short for Model（模型）-View（视图）-Controller（控制器）
 
-# 1 What is MVC
+ M(model) : 数据层。  
+ （1）、提供数据给View。  
+ （2）、数据来自于I/O、DB、网络请求等。  
+ 
+ C(Controller)：业务逻辑层。  
+ （1）、决定是否显示View.  
+ （2）、决定如何去实现业务逻辑。  
+ （3）、决定如何调用model。  
+ （4）、大部分逻辑都会在Controller。包括数据校验，数据转化等。
+ 
+ V(View)：视图层。  
+ （1）、传递用户事件  
+ （2）、接受来自Controller层的数据并显示。  
 
-- 设计模式是 MVC 的钥匙
+# 1 MVC
 - 如何学习 MVC？  
   MVC 由多个设计模式结合起来，清楚 MVC 内部的各个模式，MVC 也清楚好懂了。
 
-![MVC_1](https://yingvickycao.github.io/img/MVC_1.png)
+![MVC_1](https://yingvickycao.github.io/img/book/design_pattern/MVC_1.png)
 
 ![a-common-mvc-implementation](https://www.oracle.com/a/tech/img/a-common-mvc-implementation.gif)  
 Figure1. A Common MVC Implementation
 
-## Interaction Between MVC Components
+## 1.1 Interaction Between MVC Components
 
 ![a-java-se-application-using-mvc](https://www.oracle.com/a/tech/img/a-java-se-application-using-mvc.gif)  
 Figure 2. A Java SE Application Using MVC
@@ -21,19 +33,18 @@ Figure 2. A Java SE Application Using MVC
 ![multiple-views-using-the-same-model](https://www.oracle.com/a/tech/img/multiple-views-using-the-same-model.gif)  
 Figure 3. Multiple Views Using the Same Model
 
-## 结构
+## 1.2 结构
 
 ### Model
 
-- Q : 模型可以变成模型的观察者？  
-  A :  
-  可以  
-  在某些设计中，控制器向模型注册。  
-  Model -> Controller -> View:界面中某些按钮变成有效或无效
+- Q : 模型可以变成模型的观察者？   
+A :  
+可以  
+在某些设计中，控制器向模型注册。  
+Model -> Controller -> View:界面中某些按钮变成有效或无效
 
-### View
-
-- How does View get model data?
+### View  
+- Q : How does View get model data?
 
 ```
 // push mode
@@ -44,46 +55,43 @@ View ————> Model
 View <———— Model
 ```
 
-- How does View set model data?
+  - Q : How does View set model data?
 
 ```
 View  ————> Controller ————>  Model
 ```
 
-### Controller
+### Controller  
+协调 Model 和 View 之间的数据流动.    
+控制 Model 和 View 之间状态的改变，数据的同步，负责将每个改变的状态送进送出。
+控制器把控制逻辑从视图中分离，让模型和视图之间解耦。通过保持视图和控制器之间的松耦合、设计更有弹性而容易扩展。
 
-- 协调 Model 和 View 之间的数据流动
-- 控制 Model 和 View 之间状态的改变，数据的同步，负责将每个改变的状态送进送出。
-- 控制器把控制逻辑从视图中分离，让模型和视图之间解耦。  
-  通过保持视图和控制器之间的松耦合、设计更有弹性而容易扩展。
+  Q : 控制器做的事是把用户的输入从视图发送到模型。那么控制器是否有必要存在，把代码放在视图也可以？      
+  控制器做的事：发送给模型，解读输入，并根据输入操作模型。  
 
-- Q : 控制器做的事是把用户的输入从视图发送到模型。那么控制器是否有必要存在，把代码放在视图也可以？  
-  A :  
-  控制器做的事：发送给模型，解读输入，并根据输入操作模型。
+  Q: 为什么不把代码放在视图中？  
+  原因 1，视图会有 2 个责任：管理用户界面、处理如何控制模型的逻辑。    
+  原因 2:模型和视图之间紧耦合，那么视图不能处理其他模型。  
 
-  为什么不把代码放在视图中？  
-  原因 1，视图会有 2 个责任：管理用户界面、处理如何控制模型的逻辑。  
-  原因 2:模型和视图之间紧耦合，那么视图不能处理其他模型。
+## 1.3 Example ： MP3 播放器, DJView
 
-## Example ： MP3 播放器, DJView
-
-![MVC_2](https://yingvickycao.github.io/img/MVC_2.png)
+![MVC_2](https://yingvickycao.github.io/img/book/design_pattern/MVC_2.png)
 
 ---
 
-![MVC_3](https://yingvickycao.github.io/img/MVC_3.png)
+![MVC_3](https://yingvickycao.github.io/img/book/design_pattern/MVC_3.png)
 
 ---
 
-![MVC_4](https://yingvickycao.github.io/img/MVC_4.png)
+![MVC_4](https://yingvickycao.github.io/img/book/design_pattern/MVC_4.png)
 
 ## MVC 是复合模式，结合了：观察者模式、组合模式、策略模式。
 
-![MVC_5](https://yingvickycao.github.io/img/MVC_5.png)
+![MVC_5](https://yingvickycao.github.io/img/book/design_pattern/MVC_5.png)
 
 ---
 
-![MVC_6](https://yingvickycao.github.io/img/MVC_6.png)
+![MVC_6](https://yingvickycao.github.io/img/book/design_pattern/MVC_6.png)
 
 ### 观察者模式
 
@@ -116,8 +124,7 @@ View ——————>Controller 1
 
 将新的 Model 适配成已有的视图和控制器。
 
-# 2 Modifying the MVC Design
-
+# 2 Modifying the MVC Design (Deprecated)
 ![an-mvc-design-placing-the-controller-between-the-model-and-the-view](https://www.oracle.com/a/tech/img/an-mvc-design-placing-the-controller-between-the-model-and-the-view.gif)  
 Figure 4. An MVC Design Placing the Controller Between the Model and the View : Apple Cocoa framework
 
@@ -130,7 +137,7 @@ View 1      Controller      Model 1
 View N                      Model N
 ```
 
-## 结构
+## 2.2 结构
 
 ### View
 
@@ -143,7 +150,7 @@ View ————> Controller ————> Model
 View <———— Controller <———— Model
 ```
 
-## `Model 2`:MVC 与 Web,Mode 2 是 MVC 在 Web 上的调整
+## 2.3 `Model 2`:MVC 与 Web,Mode 2 是 MVC 在 Web 上的调整
 
 - “Model 2”  
    Web 也使用 MVC，使它符合浏览器/服务器模型。称这样的适配为“Model 2”。  
@@ -153,11 +160,12 @@ View <———— Controller <———— Model
   Model 2 是 MVC 在 Web 上的应用。  
   在 Model 2 中，控制器实现成 Servlet，而 JSP/HTML 实现视图。
 
-  ![MVC_7](https://yingvickycao.github.io/img/MVC_7.png)
+  ![MVC_7](https://yingvickycao.github.io/img/book/design_pattern/MVC_7.png)
 
 ---
 
-![MVC_8](https://yingvickycao.github.io/img/MVC_8.png)
+
+![MVC_8](https://yingvickycao.github.io/img/book/design_pattern/MVC_8.png)
 
 - Model 2 的好处：  
   帮助网站避免限于混乱。  
@@ -170,11 +178,11 @@ View <———— Controller <———— Model
   模型：数据库
   ```
 
-## Example ： DJView 的手机 Web 版本。
+## 2.4 Example ： DJView 的手机 Web 版本。
 
 创建 Servlet 控制器
 
-## Model 2 的差异在哪里？
+## 2.5 Model 2 的差异在哪里？
 
 ### 观察者
 
@@ -218,8 +226,6 @@ View <———— Controller <———— Model
 
 # Refs
 
-https://www.oracle.com/technical-resources/articles/javase/mvc.html
-
-```
-
-```
+- https://www.oracle.com/technical-resources/articles/javase/mvc.html
+- https://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html
+- https://blog.51cto.com/u_14850/6852160
