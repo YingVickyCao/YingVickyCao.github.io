@@ -49,8 +49,18 @@ If the derived class has no primary constructor, then each secondary constructor
 open 修饰符对final class 无效。    
 用`final`修饰fun可以防止被重写。    
 
-- Overriding properties?
+- Overriding properties?  
+`override` modifier  
 
+- Derived class initialization order  
+first, the base class initialization is done as the first step :   
+base class - Primary constructor    
+->  base class - {Initializer blocks and Property initializers according to  defined order }   
+-> base class - Secondary constructors      
+then , derived class is  initialized:  
+derived class - Primary constructor  
+-> derived class - {Initializer blocks and Property   initializers according to  defined order }  
+-> derived class - Secondary constructors  
 
 # 3 Properties
 # 4 Interfaces
