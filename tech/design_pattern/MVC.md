@@ -2,20 +2,6 @@
 
 MVC is short for Model（模型）-View（视图）-Controller（控制器）
 
- M(model) : 数据层。  
- （1）、提供数据给View。  
- （2）、数据来自于I/O、DB、网络请求等。  
- 
- C(Controller)：业务逻辑层。  
- （1）、决定是否显示View.  
- （2）、决定如何去实现业务逻辑。  
- （3）、决定如何调用model。  
- （4）、大部分逻辑都会在Controller。包括数据校验，数据转化等。
- 
- V(View)：视图层。  
- （1）、传递用户事件  
- （2）、接受来自Controller层的数据并显示。  
-
 # 1 MVC
 - 如何学习 MVC？  
   MVC 由多个设计模式结合起来，清楚 MVC 内部的各个模式，MVC 也清楚好懂了。
@@ -227,5 +213,3 @@ View <———— Controller <———— Model
 # Refs
 
 - https://www.oracle.com/technical-resources/articles/javase/mvc.html
-- https://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html
-- https://blog.51cto.com/u_14850/6852160
