@@ -37,3 +37,12 @@ allprojects {
     }
 }
 ```
+
+# Ref:
+- [Java versions in Android builds](https://developer.android.google.cn/build/jdks?hl=en)
+- https://developer.android.google.cn/build/build-variants
+- https://developer.android.google.cn/build/dependencies
+- https://developer.android.google.cn/build/migrate-to-ksp
+- https://developer.android.google.cn/build/releases/gradle-plugin-api-updates
+- https://developer.android.google.cn/build/manage-manifests
+- https://developer.android.google.cn/build/profile-your-build
