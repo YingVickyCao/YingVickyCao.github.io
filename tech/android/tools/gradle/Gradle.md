@@ -326,13 +326,57 @@ Solution3 : force
 
 ```
 configurations.all {
- resolutionStrategy {
- // 强制整个project使用某版本依赖
- force 'io.reactivex.rxjava2:rxjava:2.1.13'
- }
+  resolutionStrategy {
+    // 强制整个project使用某版本依赖
+    force 'io.reactivex.rxjava2:rxjava:2.1.13'
+  }
 }
 ```
 
+```
+configurations.all {
+  resolutionStrategy.force 'org.jetbrains.kotlin:kotlin-stdlib:1.8.0'
+  resolutionStrategy.force 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0'
+  resolutionStrategy.force 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0'
+}
+```
+
+Example :
+```groovy
+Error : Duplicate class kotlin.collections.jdk8.CollectionsJDK8Kt found in modules jetified-kotlin-stdlib-1.8.0 (org.jetbrains.kotlin:kotlin-stdlib:1.8.0) and jetified-kotlin-stdlib-jdk8-1.6.10 (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10)
+    Duplicate class kotlin.internal.jdk7.JDK7PlatformImplementations found in modules jetified-kotlin-stdlib-1.8.0 (org.jetbrains.kotlin:kotlin-stdlib:1.8.0) and jetified-kotlin-stdlib-jdk7-1.6.10 (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10)
+    Duplicate class kotlin.internal.jdk8.JDK8PlatformImplementations found in modules jetified-kotlin-stdlib-1.8.0 (org.jetbrains.kotlin:kotlin-stdlib:1.8.0) and jetified-kotlin-stdlib-jdk8-1.6.10 (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10)
+```
+Fix:
+Way 1 :
+```groovy
+// Fix : https://juejin.cn/post/7195113801035808823
+// build.gradle in model level
+dependencies {
+  constraints {
+    add("implementation", "org.jetbrains.kotlin:kotlin-stdlib-jdk7") {
+        version {
+            require("1.8.0")
+        }
+    }
+    add("implementation", "org.jetbrains.kotlin:kotlin-stdlib-jdk8") {
+        version {
+            require("1.8.0")
+        }
+    }
+  }
+}
+```
+
+Way 2 :
+```groovy
+// build.gradle in project level
+configurations.all {
+   resolutionStrategy.force 'org.jetbrains.kotlin:kotlin-stdlib:1.8.0'
+   resolutionStrategy.force 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0'
+   resolutionStrategy.force 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0'
+}
+```
 - Notes:
 
 1. 不同 lib 依赖某个 lib 同一个版本，不是版本依赖冲突，不需要 exclude
@@ -387,8 +431,14 @@ apply plugin: 'plugin id'
 
 (1)更灵活
 
----
 
+
+# Refs
+
+- [Configure your build](https://developer.android.google.cn/studio/build)
+- [Build your app from the command line](https://developer.android.google.cn/studio/build/building-cmdline)
+- [Build and run your app](https://developer.android.google.cn/studio/run/index.html)
+- https://docs.gradle.org/current/userguide/plugins.html
 - [Gradle 依赖项学习总结，dependencies、transitive、force、exclude 的使用与依赖冲突解决](http://www.paincker.com/gradle-dependencies)
 - [使用 Gradle 统一配置依赖版本](http://www.cnblogs.com/whycxb/p/9377643.html)
 - [使用 Gradle 统一配置依赖版本](https://blog.csdn.net/u014651216/article/details/54602354)
@@ -397,10 +447,3 @@ apply plugin: 'plugin id'
 - [解决 Error:All flavors must now belong to a named flavor dimension](https://blog.csdn.net/syif88/article/details/75009663/)
 - Android 工程 gradle 详解 https://www.jianshu.com/p/3e66d36455f4
 - Gradle 配置代理服务器 https://www.jianshu.com/p/3f3e81c5f597
-
-# Refs
-
-- [Configure your build](https://developer.android.google.cn/studio/build)
-- [Build your app from the command line](https://developer.android.google.cn/studio/build/building-cmdline)
-- [Build and run your app](https://developer.android.google.cn/studio/run/index.html)
-- https://docs.gradle.org/current/userguide/plugins.html

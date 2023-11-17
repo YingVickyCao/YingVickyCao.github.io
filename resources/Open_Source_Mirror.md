@@ -1,4 +1,4 @@
-# Media
+# Open Mirror
 
 # China
 
@@ -12,9 +12,11 @@
 
 5.华为云开源镜像站：https://mirrors.huaweicloud.com
 
-6.搜狐开源镜像站：http://mirrors.sohu.com
+6.搜狐开源镜像站：http://mirrors.sohu.com  
+7 南京大学 https://mirror.nju.edu.cn/gradle/
 
 # Maven
+
 
 ```
 // MAVEN_CENTRAL, Official Maven 2 repository, Maven Central US repository
@@ -23,18 +25,25 @@ https://repo.maven.apache.org/maven2/
 // Google
 https://dl.google.com/dl/android/maven2/
 
-// China
-http://mirror.bit.edu.cn
-http://mirror.bit6.edu.cn
-http://mirrors.tuna.tsinghua.edu.cn/
-http://maven.aliyun.com/nexus/content/groups/public/
-https://registry.npm.taobao.org/
-东软 https://mirrors.neusoft.edu.cn
-
 // jcenter
 https://jcenter.bintray.com
 https://www-eu.apache.org/dist/
 https://www-us.apache.org/dist/
+```
+
+```
+// China
+http://mirror.bit.edu.cn
+http://mirror.bit6.edu.cn
+http://mirrors.tuna.tsinghua.edu.cn/
+https://registry.npm.taobao.org/
+东软 https://mirrors.neusoft.edu.cn
+
+// used in gradle of android project
+https://maven.aliyun.com/repository/google
+https://maven.aliyun.com/repository/cencentraltral
+https://maven.aliyun.com/repository/public
+https://repo.nju.edu.cn/repository/maven-public/ (Recommended)
 ```
 
 # 国内的 Android 代理镜像服务器
