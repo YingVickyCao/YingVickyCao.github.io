@@ -68,6 +68,25 @@ derived class - Primary constructor
 当 class 继承了多个实现时，用`super<Base>`指定 supertype name。    
 
 # 3 Properties
+https://kotlinlang.org/docs/properties.html#compile-time-constants
+
+- Backing fields : 用 field identifier  
+- Backing properties  
+
+- Compile-time constants: 用`const val`.   
+a top-level property, or a member of an object declaration or a companion object.    
+https://www.jianshu.com/p/1fbba238cfa5 
+
+  top-level property ?    
+  把属性的声明不写在 class 里面。    
+
+  top-level function?   
+  把函数的声明不写在 class 里面。  
+
+- Late-initialized properties and variables : 用 `lateinit var`   
+ `::属性名称.isInitialized`用来 检查属性是否初始化。
+ https://cloud.tencent.com/developer/article/2254148     
+
 # 4 Interfaces
 # 5 Functional (SAM) interfaces
 # 6 Visibility modifiers
