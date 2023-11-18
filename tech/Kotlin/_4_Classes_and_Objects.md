@@ -45,7 +45,7 @@ If the derived class has a primary constructor, the base class must be initializ
 If the derived class has no primary constructor, then each secondary constructor has to initialize the base type using the `super` keyword  
 
 - Overriding methods？  
- `override` modifier 来重写`open` keyword 标注的fun。  
+ `override` modifier 来重写`open` keyword 标注的fun。    
 open 修饰符对final class 无效。    
 用`final`修饰fun可以防止被重写。    
 
@@ -61,6 +61,11 @@ then , derived class is  initialized:
 derived class - Primary constructor  
 -> derived class - {Initializer blocks and Property   initializers according to  defined order }  
 -> derived class - Secondary constructors  
+
+-  Calling the superclass implementation  
+`super` keyword.    
+调用外部类的superclass implementation，用`super@Outer`。    
+当 class 继承了多个实现时，用`super<Base>`指定 supertype name。    
 
 # 3 Properties
 # 4 Interfaces
