@@ -2,7 +2,7 @@
 
 
 # 1 Class
-
+https://kotlinlang.org/docs/classes.html 
 ## Constructors﻿
 
 ### Primary constructor  
@@ -31,6 +31,8 @@ Primary constructor -> (Initializer blocks and Property initializers,按在body�
 ## Companion objects : TO DO 
 
 # 2 Inheritance
+https://kotlinlang.org/docs/inheritance.html
+
 - Root class？  
 All classes in Kotlin have a common superclass, `Any`
 
@@ -88,6 +90,10 @@ https://www.jianshu.com/p/1fbba238cfa5
  https://cloud.tencent.com/developer/article/2254148     
 
 # 4 Interfaces
+https://kotlinlang.org/docs/interfaces.html 
+- keyword `interface`
+- Interfaces中可以定义Properties
+
 # 5 Functional (SAM) interfaces
 # 6 Visibility modifiers
 # 7 Extensions
