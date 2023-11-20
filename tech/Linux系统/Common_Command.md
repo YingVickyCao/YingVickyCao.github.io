@@ -202,7 +202,20 @@ ls -ltr   // Long format list of all files, sorted by modification date (oldest 
 ```
 chmod 711 Downloads
 ```
+## checksum
+```
+// tesed on mac
+md5 filePath
+```
 
+```
+// tesed on mac
+shasum [-a 224/256/384/512] filePath
+
+e.g., 
+% shasum kotlin-compiler-embeddable-1.9.20.pom 
+23708dbf881db9113d723ede3309461e63b95cb0  kotlin-compiler-embeddable-1.9.20.pom
+```
 
 # 3 安装软件
 
