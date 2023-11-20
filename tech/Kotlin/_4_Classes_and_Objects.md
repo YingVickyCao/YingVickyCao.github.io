@@ -104,6 +104,9 @@ TODO
 
 
 # 7 Extensions
+- Extension functions: 不使用继承的情况来一个类或一个接口的函数。    
+- extension properties：不使用继承的情况来一个类或一个接口的属性。    
+- Companion object extensions
 
 # 8 Data classes  
 https://kotlinlang.org/docs/data-classes.html
