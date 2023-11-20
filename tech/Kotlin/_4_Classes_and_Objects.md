@@ -127,6 +127,9 @@ https://kotlinlang.org/docs/sealed-classes.html
 # 11 Nested and inner classes
 
 # 12 Enum classes
+https://kotlinlang.org/docs/enum-classes.html
+
+
 
 # 13 Inline value classes
 

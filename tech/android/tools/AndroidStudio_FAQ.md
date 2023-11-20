@@ -375,3 +375,41 @@ adb start-server
 ```
 
 Way 4 : 检查手机的是否连接了两台 PC （Recommended）
+
+
+# 25 下载kotlin-compiler-embeddable 非常慢？
+https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-compiler-embeddable/1.9.20/kotlin-compiler-embeddable-1.9.20.jar
+
+
+
+
+Step 1 : 下载这个三个文件  
+https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.9.20  -> View all ,go to    
+https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-compiler-embeddable/1.9.20/  
+
+
+kotlin-compiler-embeddable-1.9.20.pom    
+kotlin-compiler-embeddable-1.9.20.jar   
+kotlin-compiler-embeddable-1.9.20-sources.jar   
+
+Step 2 ： 计算这个文件的 SHA1   
+e.g.   
+```
+% shasum kotlin-compiler-embeddable-1.9.20.pom 
+23708dbf881db9113d723ede3309461e63b95cb0  kotlin-compiler-embeddable-1.9.20.pom
+```
+
+Step 3 ：根据SHA1的value新建文件夹，并把对应的文件放进去。
+e.g. 
+```
+~/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.9.20/23708dbf881db9113d723ede3309461e63b95cb0/kotlin-compiler-embeddable-1.9.20.pom
+```
+
+Step 4 : Re-build project
+
+Ref：  
+https://blog.csdn.net/cjz010/article/details/129613760  
+https://blog.csdn.net/u012233285/article/details/62041476  
+https://juejin.cn/post/7142679159683153950  
+
+
