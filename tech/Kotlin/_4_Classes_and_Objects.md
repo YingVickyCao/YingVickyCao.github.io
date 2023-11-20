@@ -107,6 +107,7 @@ TODO
 - Extension functions: 不使用继承的情况来一个类或一个接口的函数。    
 - extension properties：不使用继承的情况来一个类或一个接口的属性。    
 - Companion object extensions
+- Declaring extensions as members
 
 # 8 Data classes  
 https://kotlinlang.org/docs/data-classes.html
@@ -119,15 +120,20 @@ https://kotlinlang.org/docs/data-classes.html
 .copy()  
 
 # 9 Sealed classes and interfaces
+https://kotlinlang.org/docs/sealed-classes.html
+
 # 10 Generics: in, out, where
+
 # 11 Nested and inner classes
+
 # 12 Enum classes
+
 # 13 Inline value classes
+
 # 14 Object expressions and declarations
 
 ## Companion objects
 - `companion object` 相当于  factory method
-- 
 # 15 Delegation
 # 16 Delegated properties
 # 17 Type aliases
