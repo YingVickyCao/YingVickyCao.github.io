@@ -95,9 +95,23 @@ https://kotlinlang.org/docs/interfaces.html
 - Interfaces中可以定义Properties
 
 # 5 Functional (SAM) interfaces
+- An interface with only one abstract method is called a `functional interface``, or a `Single Abstract Method (SAM) interface``.   
+- `fun interface`  
+
 # 6 Visibility modifiers
+
 # 7 Extensions
-# 8 Data classes
+
+# 8 Data classes  
+https://kotlinlang.org/docs/data-classes.html
+
+- 使用`data class`
+- 默认实现了    
+.equals()/.hashCode() pair    
+.componentN() functions    
+.toString()  
+.copy()  
+
 # 9 Sealed classes and interfaces
 # 10 Generics: in, out, where
 # 11 Nested and inner classes
