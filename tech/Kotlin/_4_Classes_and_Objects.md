@@ -97,8 +97,11 @@ https://kotlinlang.org/docs/interfaces.html
 # 5 Functional (SAM) interfaces
 - An interface with only one abstract method is called a `functional interface``, or a `Single Abstract Method (SAM) interface``.   
 - `fun interface`  
+TODO
 
 # 6 Visibility modifiers
+- visibility modifiers in Kotlin: private < protected < internal < and public(default).
+
 
 # 7 Extensions
 
