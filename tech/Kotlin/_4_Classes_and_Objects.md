@@ -120,10 +120,21 @@ https://kotlinlang.org/docs/data-classes.html
 .copy()  
 
 # 9 Sealed classes and interfaces : TODO
-https://kotlinlang.org/docs/sealed-classes.html
-
+https://kotlinlang.org/docs/sealed-classes.html  
 - `sealed interface` and `sealed class`不能被扩展
-# 10 Generics: in, out, where
+
+# 10 Generics: in, out, where : TODO 
+https://kotlinlang.org/docs/generics.html    
+https://book.kotlincn.net/text/generics.html      
+https://www.jianshu.com/p/c5ef8b30d768    
+https://zhuanlan.zhihu.com/p/59349736  
+
+- Generics type : in(下界) / out(上界) / in and out.  
+Java : 
+生产者适合用 `上界 <? extends T>`，而消费者适合用 `下界 <? super T`，  
+生产者指的是能用来读取的对象，  
+消费者指的是用来写入的对象  
+
 
 # 11 Nested and inner classes
 
