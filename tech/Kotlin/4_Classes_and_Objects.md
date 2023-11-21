@@ -137,6 +137,9 @@ Java :
 
 
 # 11 Nested and inner classes
+https://kotlinlang.org/docs/inline-classes.html
+https://book.kotlincn.net/text/nested-classes.html
+
 
 # 12 Enum classes
 https://kotlinlang.org/docs/enum-classes.html
