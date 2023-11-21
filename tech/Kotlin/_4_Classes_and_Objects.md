@@ -119,9 +119,10 @@ https://kotlinlang.org/docs/data-classes.html
 .toString()  
 .copy()  
 
-# 9 Sealed classes and interfaces
+# 9 Sealed classes and interfaces : TODO
 https://kotlinlang.org/docs/sealed-classes.html
 
+- `sealed interface` and `sealed class`不能被扩展
 # 10 Generics: in, out, where
 
 # 11 Nested and inner classes
