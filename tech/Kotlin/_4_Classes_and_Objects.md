@@ -128,8 +128,9 @@ https://kotlinlang.org/docs/sealed-classes.html
 
 # 12 Enum classes
 https://kotlinlang.org/docs/enum-classes.html
-
-
+- `enum`
+-  自带属性：properties: `name` and `ordinal`
+- accessed in a generic way ： `enumValues<T>()` and `enumValueOf<T>()` functions
 
 # 13 Inline value classes
 
