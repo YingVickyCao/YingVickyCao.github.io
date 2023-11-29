@@ -194,6 +194,45 @@ padding ：icon 与 TextView 之间的距离，即内边距。
 Way 1 : RelativeLayout 的 `android:layout_alignBaseline="@id/left"`  
 Way 2 : ConstraintLayout 的 `app:layout_constraintBaseline_toBaselineOf="@id/left2"`
 
+
+# 10 set text size programmatically?
+
+```xml
+<dimen name="text_size_30">30sp</dimen>
+<dimen name="size_30">30dp</dimen>
+
+<!-- mTextSizeExample1 -->
+android:textSize="@dimen/text_size_30"
+```
+```java
+getResources().getDimensionPixelSize(R.dimen.size_30)           // 79
+getResources().getDimensionPixelSize(R.dimen.text_size_30))     // 79
+getResources().getDimension(R.dimen.text_size_30));             // 78.75
+
+// error
+mTextSizeExample2.setTextSize(getResources().getDimension(R.dimen.text_size_30)); // error，getTextSize() = 206.71875
+mTextSizeExample2.setTextSize(TypedValue.COMPLEX_UNIT_SP, getResources().getDimensionPixelSize(R.dimen.text_size_30)); // error，getTextSize() =207.375
+mTextSizeExample2.setTextSize(TypedValue.COMPLEX_UNIT_DIP, getResources().getDimensionPixelSize(R.dimen.text_size_30)); // error，getTextSize() =207.375
+
+float scaledDensity = getResources().getDisplayMetrics().scaledDensity;
+mTextSizeExample2.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30 / scaledDensity); //  error, 30
+
+// ok
+mTextSizeExample2.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimensionPixelSize(R.dimen.text_size_30)); // ok，getTextSize() =79 . Recommended
+mTextSizeExample2.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.text_size_30)); // ok，getTextSize() =78.75 . Recommended
+mTextSizeExample2.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);  // ok. 78.75
+Log.d(TAG, "getTextSize: mTextSizeExample1 textSize= " + mTextSizeExample2.getTextSize());
+```
+
+结论：
+- getDimensionPixelSize() vs getDimension() :无论对dp还是sp，返回的单位是px。 前者是四舍五入，返回为int。后者是返回为float。  
+30dp的px = 30sp 的px
+- setTextSize(float size)：size使用的单位是sp  
+- setTextSize(int unit, float size) : 指定size使用的单位  
+TypedValue.COMPLEX_UNIT_PX : Pixels，即px。    
+TypedValue.COMPLEX_UNIT_SP : Scaled Pixels，即sp。       
+TypedValue.COMPLEX_UNIT_DIP : Device Independent Pixels，即dp。    
+- getTextSize()返回的单位是px  
 # Refs
 
 - http://blog.csdn.net/hzc_01/article/details/50093989
