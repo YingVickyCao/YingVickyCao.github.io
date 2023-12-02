@@ -233,6 +233,21 @@ TypedValue.COMPLEX_UNIT_PX : Pixels，即px。
 TypedValue.COMPLEX_UNIT_SP : Scaled Pixels，即sp。       
 TypedValue.COMPLEX_UNIT_DIP : Device Independent Pixels，即dp。    
 - getTextSize()返回的单位是px  
+
+
+# 如何调整 drawableStart / drawableTop / drawableEnd / drawableBottom 的图片大小？
+drawableStart / drawableTop / drawableEnd / drawableBottom 使用的是原图大小，没有API来调整大小图片。
+ 
+如何解决？  
+用xml wrapper图片来改变图片的显示大小，然后使用这个xml。
+
+e.g., 
+smaller_icon.xml   
+
+Ref:
+https://qastack.cn/programming/23079355/android-bitmap-image-size-in-xml
+
+
 # Refs
 
 - http://blog.csdn.net/hzc_01/article/details/50093989
