@@ -287,6 +287,20 @@ userOrg = USER_ORG
 
 # 3 Publish to Maven Local
 
+# 4 Maven-publish plugin ：可以发布 jar/aar/.apk/.zip/android bundle 到 local、remote repo
+Maven plugin is deprecated, use Maven-publish    
+code : https://github.com/YingVickyCao/android-about-demos/tree/main/examples/publish  
+
+- https://developer.android.google.cn/studio/build/maven-publish-plugin?hl=zh-cn
+- https://docs.gradle.org/current/userguide/publishing_maven.html#publishing_maven:repositories
+- https://blog.csdn.net/lucky_tom/article/details/120738113
+- https://blog.csdn.net/lyabc123456/article/details/133849824
+- https://juejin.cn/post/7064160157604773925
+
+# 5 org.jetbrains.dokka plugin  
+使用Dokka为Kotlin代码生成KDoc  
+实际上，Maven-publish plugin也能为kotlin 生成doc，没有必要非要使用dokka。  
+
 # Refs:
 
 - https://sonatype.org/
