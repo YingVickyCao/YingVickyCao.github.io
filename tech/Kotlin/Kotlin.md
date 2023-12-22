@@ -43,7 +43,46 @@ https://kotlinlang.org/docs/fun-interfaces.html
 x?:y                              // yield x  if x is not null, y otherwise
 x?:throw exception`               // yield x  if x is not null ,throw exception  otherwise
 
+# 11 符号
+
+## `!!` 加在变量名后
+如果对象为null，那么系统一定会报异常！
+```kotlin
+_binding!!   
+```
+
+## `?` 加在变量名后
+使用 ？时，程序会进行非空判断，如为空，则返回 null ，不会造成程序报错。
+```kotlin
+myList!!.size
+// myList 为null 的时候直接打印出null ，不会抛出 NullPointerException 。  
+```
+
+
+## ` ?：`
+当 ?: 前面的对象为空时，返回后面的值
+```kotlin
+val roomList: ArrayList<Room>? = null
+val mySize= roomList?.size ?: 0  
+// 当roomList为空时，返回0，否则返回它的size。
+```
+
+## `::`
+把方法当作一个参数，传递到另一个方法中使用，即引用一个方法。
+
+## `->`
+函数类型 (R, T) -> R
+
+
+## `=== `
+
+== 表示比较对象地址
+
+## `==`
+== 表示比较两个值大小。
+
 
 # Ref
 
-https://developer.android.google.cn/kotlin/add-kotlin
+https://developer.android.google.cn/kotlin/add-kotlin  
+https://book.kotlincn.net/text/keyword-reference.html  
