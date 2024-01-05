@@ -81,6 +81,11 @@ val mySize= roomList?.size ?: 0
 ## `==`
 == 表示比较两个值大小。
 
+# 12 创建问题
+
+- Kotlin:Java里的static在Kotlin里如何实现？  
+https://www.jianshu.com/p/2869d660ef75
+
 
 # Ref
 
