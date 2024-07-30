@@ -129,12 +129,20 @@ https://book.kotlincn.net/text/generics.html
 https://www.jianshu.com/p/c5ef8b30d768    
 https://zhuanlan.zhihu.com/p/59349736  
 
-- Generics type : in(下界) / out(上界) / in and out.  
-Java : 
-生产者适合用 `上界 <? extends T>`，而消费者适合用 `下界 <? super T`，  
-生产者指的是能用来读取的对象，  
-消费者指的是用来写入的对象  
+- Generics type : in(下界) / out(上界) / in and out.    
 
+- out 等价于Java `上界 <? extends T>`，accepct E or a subtype of E，适合于生产者。  
+生产者指的是能用来读取的对象。=> Producer out to read.   
+E.g., `Foo<out T : TUpper>` : Foo<*> equals to `Foo<out TUpper>` 
+
+
+- in  等价于Java `下界 <? super T>`，accepct E or a supertypes of E。  
+适用于消费者。消费者指的是用来写入的对象。=> Consumer in to write.  
+E.g., `Foo<in T>` : Foo<*> equals to `Foo<in Nothing>`  
+
+- in and out  
+=> Producer out to read, and Consumer in to write.    
+E.g., `Foo<T : TUpper>`: Foo<*> equals to `Foo<out TUpper>`for reading and `Foo<in Nothing>`  for writing. 
 
 # 11 Nested and inner classes
 https://kotlinlang.org/docs/inline-classes.html
