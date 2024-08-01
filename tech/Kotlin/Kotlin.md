@@ -509,6 +509,12 @@ https://kotlinlang.org/docs/fun-interfaces.html
 
 # 6 Null safety
 
+nullable :   
+check if (a != null)  
+ `?.`  
+ `?.let`  
+
+
 
 # 10 Operator
 
