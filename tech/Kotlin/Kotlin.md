@@ -514,14 +514,39 @@ check if (a != null)
  `?.`  
  `?.let`  
 
+- Elvis operator
+
+x?:y                              // yield x  if x is not null, y otherwise    
+x?:throw exception`               // yield x  if x is not null ,throw exception  otherwise
+
+- not-null assertion operator (!!)   
+not-null assertion operator (!!) converts any value to a non-nullable type and throws an exception if the value is null. 
+
+
+# 7 Equality
+ 
+- Structural equality (==) :   
+1 the class which manually or automatically override (data class / value calss) the equals() function       
+2 primitive types's === check is equivalent to the == check  
+
+- Referential equality (===) : the class which not manually and automatically override the equals() function   
+When overriding the equals() function, you should also override the hashCode() function to keep consistency between equality and hashing and ensure a proper behavior of these functions.
+
+- Floating-point numbers equality
+
+- Array equality   
+To compare whether two arrays have the same elements in the same order, use contentEquals().  
+
+
+# 8 This expressions
 
 
 # 10 Operator
 
 - Elvis operator
 
-x?:y                              // yield x  if x is not null, y otherwise
-x?:throw exception`               // yield x  if x is not null ,throw exception  otherwise
+- not-null assertion operator (!!) 
+
 
 # 11 符号
 
