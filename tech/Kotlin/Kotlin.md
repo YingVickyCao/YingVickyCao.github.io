@@ -552,24 +552,23 @@ To compare whether two arrays have the same elements in the same order, use cont
 
 ## `!!` 加在变量名后
 如果对象为null，那么系统一定会报异常！
-```kotlin
-_binding!!   
-```
 
-## `?` 加在变量名后
-使用 ？时，程序会进行非空判断，如为空，则返回 null ，不会造成程序报错。
 ```kotlin
 myList!!.size
 // myList 为null 的时候直接打印出null ，不会抛出 NullPointerException 。  
 ```
 
+## `?.` If-not-null shorthand
+`?` 加在变量名后.使用 ？时，程序会进行非空判断，如为空，则返回 null ，不会造成程序报错。
+```
+str?.length : return length if str is not null
+```
 
-## ` ?：`
+## `?：`  If-not-null-else shorthand﻿
 当 ?: 前面的对象为空时，返回后面的值
 ```kotlin
-val roomList: ArrayList<Room>? = null
+// If roomList is not null, return size , otherwise return 0
 val mySize= roomList?.size ?: 0  
-// 当roomList为空时，返回0，否则返回它的size。
 ```
 
 ## `::`
