@@ -19,6 +19,13 @@ https://kotlinlang.org/docs/coroutines-guide.html
 - main cortoutine builder : launch , async, runBlocking.  
 - default libraries can define additional coroutines builders.  
 
+## actor
+https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.channels/actor.html  
+https://github.com/Kotlin/kotlinx.coroutines/blob/master/ui/coroutines-guide-ui.md
+
+- The actor coroutine builder accepts an optional capacity parameter that controls the implementation of the channel that this actor is using for its mailbox. 
+- ignoring events while we were busy processing the previous one.
+
 
 # suspend
 - suspend 用于暂停执行当前协程，并保存所有局部变量，被标记为 suspend 的函数只能运行在协程或者其他 suspend 函数。 
