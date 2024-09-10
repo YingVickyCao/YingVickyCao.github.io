@@ -6,13 +6,15 @@ https://kotlinlang.org/docs/coroutines-guide.html
 
 
 
-- Debug Coroutines
+# Debug Coroutines
 ```
 -Dkotlinx.coroutines.debug
 
 ```
 
-- [Job lifecycle](Coroutines_Job_Lifecycle.webp)
+# Job lifecycle
+
+![Job lifecycle](Coroutines_Job_Lifecycle.webp)
 
 
 # 类比  
