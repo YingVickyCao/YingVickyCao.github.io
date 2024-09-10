@@ -9,7 +9,11 @@ https://kotlinlang.org/docs/coroutines-guide.html
 - Debug Coroutines
 ```
 -Dkotlinx.coroutines.debug
+
 ```
+
+- [Job lifecycle](Coroutines_Job_Lifecycle.webp)
+
 
 # 类比  
 - block -> suspend  
@@ -89,7 +93,9 @@ Android
 - withContext() calls the given code with the specified coroutine context, is suspended until it completes, and returns the result. 
 
 
-# coroutine scope  
+# Coroutine scope  
+- A CoroutineScope keeps track of any coroutine. The ongoing work (running coroutines) can be canceled by calling scope.cancel() at any point in time.
+
 - The coroutine scope is responsible for the structure and parent-child relationships between different coroutines. New coroutines usually need to be started inside a scope.
 
 - When launch, async, or runBlocking are used to start a new coroutine, they automatically create the corresponding scope. (CoroutineScope)
