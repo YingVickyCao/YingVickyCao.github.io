@@ -4,6 +4,7 @@ https://developer.android.google.cn/codelabs/kotlin-coroutines?hl=zh-cn
 https://kotlinlang.org/docs/coroutines-overview.html  
 https://kotlinlang.org/docs/coroutines-guide.html
 
+https://developer.android.google.cn/codelabs/kotlin-coroutines
 
 
 # Debug Coroutines
@@ -11,6 +12,23 @@ https://kotlinlang.org/docs/coroutines-guide.html
 -Dkotlinx.coroutines.debug
 
 ```
+
+
+
+# kotlinx-coroutines-core
+Main interface for using coroutine in Kotlin
+
+# kotlinx-coroutines-android
+Support for Android Main thread in coroutine
+
+# lifecycle-viewmodel-ktx 
+The AndroidX lifecycle-viewmodel-ktx library adds a CoroutineScope to ViewModels that's configured to start UI-related coroutines. 
+
+``` 
+ implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:x.x.x"
+```
+The library adds a viewModelScope as an extension function of the ViewModel class. This scope is bound to Dispatchers.Main and will automatically be cancelled when the ViewModel is cleared.
+
 
 # Job lifecycle
 
