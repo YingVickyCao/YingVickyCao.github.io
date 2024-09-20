@@ -1,11 +1,14 @@
 # Collections
 https://kotlinlang.org/docs/collections-overview.html
 
+# Collection (Iterable)
+Suitable : processing smaller collections or doing simpler computations.
 
-# Kotlin collection interfaces
+
+## Kotlin collection interfaces
 ![a diagram of the Kotlin collection interfaces](https://kotlinlang.org/docs/images/collections-diagram.png)
 
-# Collection types
+## Collection types
 
 A read-only interface that provides operations for accessing collection elements.
 
@@ -13,23 +16,27 @@ A mutable interface that extends the corresponding read-only interface with writ
 
 default implementation
 
-# List
+## List
 
 
-# Set
+## Set
 
-## LinkedHashSet 
+### LinkedHashSet 
 LinkedHashSet - preserves the order of elements insertion. 
 
-## HashSet
+### HashSet
 HashSet – says nothing about the elements order,
 
 
-# Map
+## Map
 
-## LinkedHashMap
+### LinkedHashMap
  LinkedHashMap – preserves the order of elements insertion when iterating the map. 
 
- ## HashMap
+### HashMap
  
  HashMap – says nothing about the elements order.
+
+
+ # Sequence
+ Suitable : processing larger collections or doing complicated computations.
