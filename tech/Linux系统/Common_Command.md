@@ -93,18 +93,22 @@ New password:
 useradd test
 ```
 
-创建的用户，放在 /etc/passwd. 组的信息，放在/etc/group
+创建的用户，放在 /etc/passwd.   
+组的信息，放在/etc/group
 
 ```
 $ cat /etc/passwd
 root:x:0:0:root:/root:/bin/bash
 ...
-cos:x:1000:1000:cos:/home/cos:/bin/bash
+cacos:x:1000:1000:cos:/home/cos:/bin/bash
 ```
 
 x 的地方应该是密码。密码没有显示在这里。  
 接下来的是用户 ID 1000 和 组 ID 1000。   
-/root 和 /home/cos，是 root 用户和 cos 用户的主目录。什么是主目录？主目录是用户登陆进去后默认的路径。类似，Windows，C:\Users\cos
+/root 和 /home/cos，是 root 用户和 cos 用户的主目录。  
+
+什么是主目录？主目录是用户登陆进去后默认的路径。类似，Windows C:\Users\cos 
+
 /bin/bash 的位置是用于配制登陆后的默认交互命令行。Linux 登陆后的交互命令行是一个解析脚本的程序，这里配置的是/bin/bash。不同的是，Windows，登陆进去是界面，也就是程序 explorer.  
 
 ```
@@ -140,8 +144,7 @@ $ cd ./test/
 
 | 快捷键           | 运行结果           |
 |---------------|----------------|
-| cd            | 更改工作目录到Home目录  |
-| cd ~          | 更改工作目录到Home目录  |
+| cd   / cd ~   | 更改工作目录到Home目录  |
 | cd ~user_home | 更改工作目录用户目录     |
 | cd -          | 更改工作目录到先前的工作目录 |
 
@@ -167,7 +170,8 @@ total 40
 “-”表示普通文件。  
 “d”表示目录  
 （2）第一个字段的剩下 9 个字符是模式，即“权限位”（access permission bits）。
-3 个一组，每一组表示“读（r，read）”“写（w，write）”“执行（x，execute）”。如果是字母，有这个权限；如果是横向，没有这个权限。    
+3 个一组，每一组表示（r，read）,（w，write）,（x，execute）。  
+如果是字母，有这个权限；如果是横向，没有这个权限。      
 这三组分别表示文件所属的用户权限、文件所属的组权限、其他用户的权限。  
 更改权限，用 chmod。  
 （3）第 2 个字段是硬连接（hard link）数目  
@@ -199,22 +203,55 @@ ls -ltr   // Long format list of all files, sorted by modification date (oldest 
 
 ## chmod：更改文件权限
 
+
+https://blog.csdn.net/qq_42289214/article/details/87996211  
+
+chmod [who][operator][right] file_name     
+who:  u / g / o / a   
+operator : + /- /=  
+right（二进制，十进制）: r(100, 4) /w(010, 2) /x(001, 1) 
+
 ```
-chmod 711 Downloads
+$ ls -l 1.txt 
+-rw-r--r--. 1 test test 0 Feb  1 20:01 1.txt
+
+$ chmod a=rwx 1.txt / chmod 777 1.txt
+
+$ ls -l 1.txt 
+-rwxrwxrwx. 1 test test 0 Feb  1 20:01 1.txt
+
 ```
+
+
+
+
+
+
 ## checksum
-```
-// tesed on mac
+
+- MD 5
+
 md5 filePath
 ```
+// tesed on mac
+% md5 1.txt 
+MD5 (1.txt) = 9b98ba74e0ad9ea87aa31463444c6652
+```
+- SHA  
+shasum [-a 1(default)/224/256/384/512] filePath
 
 ```
 // tesed on mac
-shasum [-a 224/256/384/512] filePath
 
-e.g., 
-% shasum kotlin-compiler-embeddable-1.9.20.pom 
-23708dbf881db9113d723ede3309461e63b95cb0  kotlin-compiler-embeddable-1.9.20.pom
+% shasum  1.txt      
+6ac5ffd3add91e13ea0a2d6f8416c25828bd6c62  1.txt
+
+% shasum -a 256 1.txt 
+a2f33ea41316ba391375b18e799730a5fafb01b11e33b352cb7406e48b133db4  1.txt
+
+
+// Type shasum -h for help
+% shasum -h
 ```
 
 # 3 安装软件

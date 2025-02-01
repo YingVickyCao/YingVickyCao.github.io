@@ -41,9 +41,9 @@ Unix / Linux / MacOS X / Windows
 
 
 # 3 Comand line
-## [Linux command line的基本知识](./Common_basic.md)
+## [Linux command line的基本知识](./Common_Command_Basic_.md)
 
-## [常见 command 命令](./Common_Command.md.md)
+## [常见 command 命令](./Common_Command.md)
 
 Ref：  
 - Book《The Linux Command Line》  

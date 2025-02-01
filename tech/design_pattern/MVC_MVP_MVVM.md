@@ -2,6 +2,8 @@
 
 ![MVC VS MVP VS MVVM](https://s2.51cto.com/images/blog/202308/22172305_64e47e79364be13990.jpg)
 
+![https://outcomeschool.com/blog/mvvm-architecture-android](https://outcomeschool.com/_next/image?url=%2Fstatic%2Fimages%2Fblog%2Fmvvm-diagram.png&w=1200&q=75)
+
 # MVC（Model-View-Controller）：
 - 视图（View）：用户界面。  
 - 控制器（Controller）：业务逻辑层。大部分逻辑在此层。    
@@ -33,12 +35,13 @@
 # MVP（Model - View - Presenter） :
 MVP 模式将 Controller 改名为 Presenter，同时改变了通信方向。  
 
-# MVVC（Model - ViewModel - View）:  
+# MVVM（Model - View - ViewModel）:  
 MVVM 模式将 Presenter 改名为 ViewModel，基本上与 MVP 模式完全一致。  
 唯一的区别是，它采用双向绑定（data-binding）：View的变动，自动反映在 ViewModel，反之亦然。
 
 - ViewModel：负责业务逻辑，实现View与Model的双向绑定。        
 ViewModel中“Model”指的是View的Model，它包含View的一些数据属性和操作的东西。
+
 
 # Conclusion  
 由此可见，MVC、MVP、MVVP三个模型差不多，最大区别在于通信方面不同。
