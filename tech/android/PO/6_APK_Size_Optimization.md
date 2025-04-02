@@ -1,6 +1,88 @@
-# 6 安装包大小的优化
+# APk Size Optimization(安装包大小的优化)
 
-# 1 代码混淆 [Proguard](../tools/Proguard.md)
+https://developer.android.com/topic/performance/reduce-apk-size
+
+
+# 1 Upload app with Android App Bundles
+https://developer.android.com/topic/performance/reduce-apk-size#app_bundle
+
+# 2 Understand the APK structure
+https://developer.android.com/topic/performance/reduce-apk-size#apk-structure
+
+.so  / image
+
+# 3 Reduce resource count and size
+
+## 3.2 Remove unused resources
+https://developer.android.com/topic/performance/reduce-apk-size#remove-unused
+
+Android Studio - Lint  / Run Inspection by Name -> "Unused reources"   
+Gradle file - shrinkResources = true  
+Gradle file - resourceConfigurations of defaultConfig option  
+
+
+## 3.3 Minimize resource use from libraries
+https://developer.android.com/topic/performance/reduce-apk-size#minimize
+
+## 3.4 Native animated image decoding
+https://developer.android.com/topic/performance/reduce-apk-size#image-decoder
+
+ImageDecoder
+
+## 3.5 Support only specific densities
+https://developer.android.com/topic/performance/reduce-apk-size#support-densities
+-  supports different screen densities for the po
+- If app needs only scaled images, drawable-nodpi according to percentage.
+- at least an xxhdpi 
+
+
+## 3.6 Use drawable objects
+https://developer.android.com/topic/performance/reduce-apk-size#use-drawables
+ The framework can dynamically draw the image at runtime. 
+ - Drawable objects
+ - `<shape>` in XML
+-  XML Drawable objects
+
+## 3.7 Reuse resources
+https://developer.android.com/topic/performance/reduce-apk-size#reuse-resources
+
+- android:tint
+- android:tintMode
+- rotate in XML
+
+
+## 3.8 Render from code
+https://developer.android.com/topic/performance/reduce-apk-size#render-code
+
+procedurally rendering images
+
+## 3.9 Crunch PNG files
+https://developer.android.com/topic/performance/reduce-apk-size#crunch
+
+
+# 4 Reduce native and Java code
+https://developer.android.com/topic/performance/reduce-apk-size#reduce-code
+
+## 4.1 Remove unnecessary generated code
+https://developer.android.com/topic/performance/reduce-apk-size#remove-generated
+
+## 4.2 Avoid enumerations
+https://developer.android.com/topic/performance/reduce-apk-size#remove-enums
+
+`@IntDef`
+
+## 4.3 Reduce the size of native binaries
+https://developer.android.com/topic/performance/reduce-apk-size#reduce-binaries
+
+ - Removing debug symbols "arm-eabi-strip"
+ - Not extracting native libraries. "useLegacyPackaging"
+
+
+# 5 Maintain multiple lean APKs
+https://developer.android.com/topic/performance/reduce-apk-size#multiple-apks
+
+
+# 1 Proguard [Proguard](../tools/Proguard.md)
 
 # 2 资源文件最小化
 
@@ -61,7 +143,8 @@ release apk 90MB => after wrappered,65MB
 
 移动端大部分基于ARM或ARM-V7a架构，因此大部分包含ARM和ARM-V7a的.so  
 
-## 3 Android Lint 删除无用的资源
-Android Studio -> Run Inspection by Name -> "Unused reources"  
+## 3 Android Studio - Lint  / Run Inspection by Name -> "Unused reources" 
+/res folder
+
 Android Studio 不分析 asserts 文件夹下的资源，因为asserts通过文件名直接访问，不通过具体的引用。     
 
