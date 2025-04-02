@@ -123,7 +123,6 @@ getWindow().setBackgroundDrawable(null);
  Canvas.clipRect():指定要绘制的矩形区域。 
 
 
-
 # 5 Don't create render objects,e.g., `Paint`,`Path`, in draw methods
 
 ```java
@@ -163,7 +162,7 @@ When applying alpha on very large views, consider setting the view's layer type 
 ## 8.5 Reduce fade-outs    
 
 
-# 9 Start optimization
+# 9 Startup optimization
 ## 9.1 Split UI init and non-UI init(necessay? delay? async task?)          
     Example :  Activity start and it's UI render is very slow.          
     Split UI init and non-UI init in activity onCreate().           
