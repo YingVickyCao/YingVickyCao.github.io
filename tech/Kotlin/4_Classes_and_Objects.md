@@ -163,4 +163,15 @@ https://kotlinlang.org/docs/enum-classes.html
 - `companion object` 相当于  factory method
 # 15 Delegation
 # 16 Delegated properties
+
+Setup a property when used?    
+Nullable / later init (var) / lazy(val,thread safe)
+
+- lazy  
+https://kotlinlang.org/docs/delegated-properties.html#lazy-properties
+
+- later init vs lazy  
+https://medium.com/huawei-developers/kotlin-lateinit-vs-by-lazy-initialization-example-tutorial-c19d84216480
+https://medium.com/programming-lite/kotlin-lateinit-keyword-and-lazy-initialization-ab8d84374875
+
 # 17 Type aliases
