@@ -1,6 +1,6 @@
 # 安全
 
-# 1 使用本地广播（LocalBroadcast） 代替 全局广播
+# 1 Deprecated - 使用本地广播（LocalBroadcast） 代替 全局广播
 
 # 2 Sensitive Data Protective
 
@@ -14,19 +14,30 @@
   Bank recording history.  
   shopping recording history, e.g., JingDong app,  
   passort number
+- don't memory cache senditive data cleartext
+- don't store senditive data, save in server.
+- Input Validation
 
 # 2 Data in Transit
 
 ## 2.1 TLS  
   TLS Man-in-Middle Attacher
 
-## 2.2 Forbid  
-  Appache HTTP - SSLSocketFactory - AllowAllHostnameVerfier  
+  不同Android版本针对于TLS协议的默认配置.  
+  - 服务器配置兼容支持TLS版本（TLS1.0、TLS1.1、TLS1.2），否则Android系统在进行HTTPS访问时产生异常"javax.net.ssl.SSLProtocolException: SSL handshake aborted:"。
+- set client supported TLS version:"TLSv1.1", "TLSv1.2", "TLSv1.3"    
+E.g., SSLSocketFactory to OkHttpClient / HttpsURLConnection.  
 
-## 2.3 HTTPS compatibled with TLS    
-  HTTPS - TLS -Certificate  
+- check host name and certification for each request : HostnameVerifier / SSLSocketFactory (X509TrustManager)
+E.g., setHostnameVerifier to OkHttpClient / HttpsURLConnection.   
+E.g., SSLSocketFactory to OkHttpClient / HttpsURLConnection.  
 
-## 2.4 Use HttpsURLConnection instead of HttpURLConnection.  
+
+## 2.2 HTTPS
+- HTTPS compatibled with TLS    
+- Use HTTPS intead of HTTP  
+
+## 2.3 Use HttpsURLConnection instead of HttpURLConnection.  
 
 Android >=24, Android's SSLEngine use secure ciphe suites and protocols by default.
 
@@ -38,56 +49,8 @@ URL url = new URL(URL);
 Android <= 23,Android API still enbale insecure algorithms such as RC4 by default. So, use NetCipher.  
 RC4 ： 对称加密
 
-## 2.5 NetCipher : set TLS version  
-https://guardianproject.info/code/netcipher/
-https://www.it1352.com/1922502.html
 
-```java
-HttpsURLConnection connection = NetCipher.getHttpsURLConnection(sourceUrl);
-```
-
-```java
-public class StrongConstants {
-
-   /**
-    * Ordered to prefer the stronger cipher suites as noted
-    * http://op-co.de/blog/posts/android_ssl_downgrade/
-    */
-   public static final String ENABLED_CIPHERS[] = {
-           "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
-           "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
-           "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
-           "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
-           "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
-           "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
-           "TLS_DHE_DSS_WITH_AES_128_CBC_SHA",
-           "TLS_ECDHE_RSA_WITH_RC4_128_SHA", // X
-           "TLS_ECDHE_ECDSA_WITH_RC4_128_SHA",  // X
-"TLS_RSA_WITH_AES_128_CBC_SHA",
-           "TLS_RSA_WITH_AES_256_CBC_SHA",
-"SSL_RSA_WITH_3DES_EDE_CBC_SHA", // X
-           "SSL_RSA_WITH_RC4_128_SHA", // X
-"SSL_RSA_WITH_RC4_128_MD5"// X};
-
-   /**
-    * Ordered to prefer the stronger/newer TLS versions as noted
-    * http://op-co.de/blog/posts/android_ssl_downgrade/
-    */
-   public static final String ENABLED_PROTOCOLS[] = {
-"TLSv1.2",
-"TLSv1.1",
-        "TLSv1"  // X };
-
-   private StrongConstants() {
-       // this is a utility class with only static methods
-   }
-}
-```
-
-## 2.6 Android Shared Preferences  
-  can not store senstive data.
-
-## 2.7 Android Network Security Configuatin
+## 2.4 Android Network Security Configuatin
 
 ```xml
 android:networkSecurityConfig="@xml/network_security_config"
@@ -112,16 +75,18 @@ android:networkSecurityConfig="@xml/network_security_config"
 <network-security-config/>
 ```
 
-X509TrustManager : check publick key, and host name
-
 - Android N's Security Configuration  
   Never use in PROC app:  
   Debug only override  
   cleartext traffic opt-out, e.g, log/requests
 
-## 2.8 Verify domain for every reqeust  
+## 2.5 Interceptor (OkHttp)
 
-OkHttp can verify domain 
+- check domain 
+- add or remove speical header
+- check status code, session/cookie expired
+
+
 ## 2.9 Data At-Rest
 
 - Store sensitive data in server, not in device.
@@ -258,8 +223,8 @@ Use : java.security.SecureRandom
 Not Use : java.until.Random  
 
 ## 7 Android Manifest
-
-## 7.1 `tools:remove`:移除 app 中由第三方 sdk 引入的权限
+ 
+## 7.1 `tools:remove`:移除 app 中由第三方 sdk 引入的权限 以及不需要的权限 
 
 ## 7.1 `android:exported=true` only when needed  
 
@@ -268,15 +233,20 @@ Not Use : java.until.Random
 # 9 Screen overlay to hiding datas when app is not visile to users
 
 # 10 Vulnerabilities scanning
-- Blackduck (IBM): paied   
-- Sonarqube scan: 
+- Blackduck (IBM): paied : library license, library having Vulnerabilities
+- Sonarqube scan: deprecated code / Vulnerabilities api
 - VA testing: paied, API(header/cookie/receiver data), limited scope/full scope.  
 
 # 11 Info user to update SDK, then plan to update SDK reguly
 
-# 12 Keep update libraries 
+# 12 Keep update libraries / SDK 
 
-
-# Tools
+# 13 Tools
 ## Android Studio - Lint
 ## Android Studio - Run analysis 
+
+# 14 检测是root设备，直接退出app
+
+# 15 APK 插入代码
+- appdome 插入代码：检测root，截屏，不能破解，re-login again when back from background
+- 插入代码，不能破解
