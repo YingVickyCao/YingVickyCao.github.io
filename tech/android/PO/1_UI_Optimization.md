@@ -186,3 +186,5 @@ E.g., If Appdome detects that show or hide a view manyt time at short time, Appd
 
 ## Android Studio - Layout Inspector
 https://developer.android.com/studio/debug/layout-inspector
+
+## Android Studio - Editor : layout
