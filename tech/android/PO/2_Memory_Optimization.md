@@ -22,6 +22,7 @@ Bitmap offten causes OutOfMemory。
 
 ## 2.2 How to choose the bitmap？  
 
+tint color > bitmap.  
 For simpel image, XML > Vector / NinePatch  
 For complicated image, WebP > PNG > jpg > Dynamic gif  
 
@@ -137,6 +138,8 @@ https://developer.android.com/topic/performance/memory#ExternalLibs
 
 When you use an external library, you might need to optimize that library for mobile devices.  
 Avoid using a shared library for just one or two features out of dozens. 
+
+## 5.4 跨平台: html / React Native / Flutter
 
 # Tools
 
