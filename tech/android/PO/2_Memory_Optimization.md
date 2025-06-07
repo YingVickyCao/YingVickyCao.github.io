@@ -124,6 +124,8 @@ https://developer.android.com/topic/performance/memory#churn
 
 Often, memory churn can cause a large number of garbage collection events to occur. In practice, memory churn describes the number of allocated temporary objects that occur in a given amount of time.
 
+## 4.6 Use a good stretrgy to remove unused global data.
+
 # 5 Remove memory-intensive resources and libraries
 https://developer.android.com/topic/performance/memory#remove
 
@@ -140,6 +142,9 @@ When you use an external library, you might need to optimize that library for mo
 Avoid using a shared library for just one or two features out of dozens. 
 
 ## 5.4 跨平台: html / React Native / Flutter
+配置是app 级别的，一旦设置，除非进程被杀死，否则一直都在。    
+UI 没有重用机制。   
+对象不能及时释放。   
 
 # Tools
 
