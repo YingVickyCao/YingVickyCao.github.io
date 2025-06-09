@@ -232,6 +232,89 @@ the instances of AppDatabase within other processes.
 
 ## 3.2 Doesn't use database access on the main thread.
 
+## 3.3 分页查询，不要一次性查询所有数据
+
+https://blog.51cto.com/u_12972174/11586658
+
+
+## 3.4 使用LiveData或Flow，实现逐渐加载数据，减少内存
+https://blog.51cto.com/u_12972174/11586658
+
+## 3.5 限制查询的数据量(imit ，offset) 而不是查询所有数据
+https://blog.51cto.com/u_12972174/11586658
+
+
+## 3.6 使用SQLite内存管理
+https://blog.51cto.com/u_12972174/11586658
+
+
+## 3.7 数据量很大时，使用Cursor逐步处理，而不是一次性加载所有数据
+https://blog.51cto.com/u_12972174/11586658
+
+
+## 3.8 检查数据库，确保索引和外键等设计合理，来提高查询效率。
+https://blog.51cto.com/u_12972174/11586658
+
+
+## 3.9 手动管理Cursor时，及时被 close。
+https://blog.51cto.com/u_12972174/11586658
+
+## 3.10 try cacth with resouces 来自动关闭资源
+https://blog.51cto.com/u_12972174/11586658
+
+
+## 3.11 若ViewModule或Respository中使用Cursor，确保ViewModule销毁时在Cursor 被 close
+https://blog.51cto.com/u_12972174/11586658
+
+## 3.12 后台处理数据时，在任务完成时，close Cursor
+https://blog.51cto.com/u_12972174/11586658
+
+
+## 3.13 Content Provider 中使用Cursor，在onLoadFinished中 close Cursor。
+
+https://blog.51cto.com/u_12972174/11586658
+
+
+## 3.13 Room >= 2.2.0 返回Cursor Wrapper，在操作完成时，自动关闭关闭
+https://blog.51cto.com/u_12972174/11586658
+
+## 3.14 Zoom - @Transaction 确保操作的原子性
+https://blog.51cto.com/u_12972174/11586658  
+比如：   
+多个表中操作数据  
+更新和删除某些数据  
+
+
+## 3.15 翻页查询时传入offset要考虑数据库越界的问题。
+https://blog.51cto.com/u_12972174/11586658  
+
+分页查询时，查询数据库中记录总数，根据总记录数来判断offset是否超出范围，确保查询不超过数据库实际存在的记录数。
+
+
+```
+1 all count e.g., 1000  // 询数据库中记录总数
+2 page size, e.g., 20// 每页个数
+3 total pagge value = (all count  + page size -1) / page size // 计算总页数
+4 current page index // save current index
+5 next page index =  current page index  + 1
+if(next page index < total page value ){
+  offset = next page index * page size
+  db.getUserWithLimitOffset(page size, offset)
+}
+else{
+  print log
+}
+
+```
+
+## 3.16 使用SQL Cipher 加密Zoom
+https://blog.51cto.com/u_12972174/11586658  
+
+
+## 3.17 Room 中Entility 实体类不能以is开头，因为被视为bool值。用@ColumnInfo来注解
+https://blog.51cto.com/u_12972174/11586658  
+
+
 # 4 TBD
 
 - FTS 性能测试
@@ -239,3 +322,4 @@ the instances of AppDatabase within other processes.
 - Room PO
 - [[Android]Room Persistence Library - 7 Pro-tips for Room](https://developer.android.google.cn/topic/libraries/architecture/room)
 - http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2017/1123/8794.html
+- [数据库必会必知 之 SQL 四种语言：DDL DML DCL TCL](https://www.cnblogs.com/Alandre/p/5572720.html)
