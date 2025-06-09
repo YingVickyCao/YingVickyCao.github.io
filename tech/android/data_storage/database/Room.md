@@ -315,6 +315,14 @@ https://blog.51cto.com/u_12972174/11586658
 https://blog.51cto.com/u_12972174/11586658  
 
 
+## 3.18 Room操作数据库时发生异常 ： try cath
+https://blog.51cto.com/u_12972174/11586658  
+
+## 3.19 Room 处理大批量数据时发生OOM：分页 
+https://blog.51cto.com/u_12972174/11586658  
+
+
+
 # 4 TBD
 
 - FTS 性能测试
